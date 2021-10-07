@@ -1,11 +1,12 @@
 import SectionWrapper from "../generics/SectionWrapper";
 import HomePageButton from "../HomePageButton";
+import MySkillsButton from "../MySkillsButton/MySkillsButton";
 
 const Landing = () => {
   return (
     <SectionWrapper>
-      Strona główna
       <HomePageButton />
+      <MySkillsButton />
     </SectionWrapper>
   );
 };
