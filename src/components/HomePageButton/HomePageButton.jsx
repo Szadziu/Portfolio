@@ -12,7 +12,7 @@ const HomePageButton = () => {
     gsap.set(button, { transformOrigin: "center top" });
     tl.to(button, { y: "110vh" }).to(
       button,
-      { rotation: 270, fontSize: "55px", letterSpacing: "4px" },
+      { rotation: 270, fontSize: "32px" },
       "-=1.2"
     );
   }, []);

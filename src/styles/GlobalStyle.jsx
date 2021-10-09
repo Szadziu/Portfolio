@@ -8,6 +8,12 @@ const GlobalStyle = createGlobalStyle`
         color: rgb(26, 26, 26);
     }
 
+    body {
+        background-color: #000000;
+background-image: linear-gradient(326deg, #000000 0%, #ce203c 74%);
+
+    }
+
     ul, ol {
         list-style: none;
     }

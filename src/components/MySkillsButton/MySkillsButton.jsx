@@ -2,7 +2,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import * as P from "./parts";
 import { useEffect } from "react";
-import calc from "postcss-calc";
 
 const MySkillsButton = () => {
   const skillsButton = useRef(null);
@@ -27,22 +26,13 @@ const MySkillsButton = () => {
       })
       .to(button, {
         opacity: 1,
-        borderColor: "transparent",
-        backgroundImage: "linear-gradient(326deg, #f8002f 0%, #000c14 74%)",
+        backgroundColor: "whitesmoke",
+        color: "rgb(26,26,26)",
+        fontSize: "32px",
       })
       .to(button, { transform: "rotate(20deg)" })
       .to(button, { transform: "rotate(-40deg)", ease: "bounce.in" })
-      .to(button, 2, { transform: "rotate(5deg)" })
-      .to(button, { color: "whitesmoke", fontSize: "32px" });
-
-    // tl.from(button, {
-    //   x: "5vw",
-    //   y: "-50vh",
-    //   width: "20px",
-    //   height: "20px",
-    //   duration: 1,
-    // });
-    // tl.from(button, { scale: 0, ease: "back", delay: 1.5 });
+      .to(button, 1, { transform: "rotate(5deg)" });
   }, []);
   return (
     <>
