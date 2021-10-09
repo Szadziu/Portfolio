@@ -12,4 +12,7 @@ export const Button = styled.a`
   background-color: whitesmoke;
   border-radius: 15px;
   font-size: 22px;
+  &:hover {
+    cursor: pointer;
+  }
 `;

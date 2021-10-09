@@ -9,9 +9,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        /* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap'); */
+        /* chwilowo nie działa */
         background-color: #000000;
-background-image: linear-gradient(326deg, #000000 0%, #ce203c 74%);
-
+        background-image: linear-gradient(326deg, #000000 0%, #ce203c 74%);
+        /* font-family: 'Source Code Pro', monospace; */
     }
 
     ul, ol {
