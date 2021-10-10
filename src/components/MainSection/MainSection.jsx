@@ -1,12 +1,12 @@
 import * as P from "./parts";
 import SectionWrapper from "../generics/SectionWrapper";
-import ProgressBar from "../generics/ProgressBar";
+import ProgressWrapper from "../ProgressWrapper";
 
 const MainSection = () => {
   return (
     <SectionWrapper>
       <P.AnimationBlock>tutaj będzie animacja...</P.AnimationBlock>
-      <ProgressBar />
+      <ProgressWrapper />
     </SectionWrapper>
   );
 };
