@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import * as P from "./parts";
 import { useEffect } from "react";
+import crush from "../../assets/crush.png";
 
 const MySkillsButton = () => {
   const skillsButton = useRef(null);
@@ -37,7 +38,9 @@ const MySkillsButton = () => {
   return (
     <>
       <P.WaterDrop ref={waterDrop} />
-      <P.Button ref={skillsButton}>aboutMySkills</P.Button>
+      <P.Button image={crush} ref={skillsButton}>
+        aboutMySkills
+      </P.Button>
     </>
   );
 };

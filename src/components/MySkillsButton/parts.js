@@ -13,6 +13,8 @@ export const Button = styled.a`
   border-radius: 15px;
   box-shadow: 0 0 3px 0 black;
   color: transparent;
+  background-image: url(${({ image }) => image});
+  background-size: 200px;
   background-repeat: no-repeat;
   transform-origin: left center;
 

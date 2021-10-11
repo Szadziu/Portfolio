@@ -5,7 +5,7 @@ export const SkillContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 300px;
+  width: 400px;
   height: 300px;
   border: 3px solid white;
   border-radius: 5px;

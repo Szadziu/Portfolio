@@ -1,11 +1,7 @@
 import * as P from "./parts";
 
-const SectionWrapper = ({ children, gradient, bgColor }) => {
-  return (
-    <P.Wrapper gradient={gradient} bgColor={bgColor}>
-      {children}
-    </P.Wrapper>
-  );
+const SectionWrapper = ({ children, bgColor }) => {
+  return <P.Wrapper>{children}</P.Wrapper>;
 };
 
 export default SectionWrapper;

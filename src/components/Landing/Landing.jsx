@@ -1,4 +1,3 @@
-import { mainBackgroundGradient } from "../../constants";
 import ContactButton from "../ContactButton/ContactButton";
 import SectionWrapper from "../generics/SectionWrapper";
 import HomePageButton from "../HomePageButton";
@@ -7,7 +6,7 @@ import ProjectsButton from "../ProjectsButton";
 
 const Landing = () => {
   return (
-    <SectionWrapper gradient={mainBackgroundGradient}>
+    <SectionWrapper>
       <HomePageButton />
       <MySkillsButton />
       <ProjectsButton />
