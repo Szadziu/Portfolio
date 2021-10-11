@@ -34,3 +34,51 @@ export const SKILL_BUNDLE = [
     advancement: 1,
   },
 ];
+
+export const PROJECTS = [
+  {
+    id: 0,
+    name: "Calculator",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 1,
+    name: "Shop",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 2,
+    name: "Color Generator",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 3,
+    name: "Currency Exchanger",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 4,
+    name: "Farmer",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 5,
+    name: "Layout Page",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 6,
+    name: "Paper, stone and scissors",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 7,
+    name: "Tic Tac Toe",
+    link: "https://www.google.pl",
+  },
+  {
+    id: 8,
+    name: "Blog",
+    link: "https://www.google.pl",
+  },
+];
