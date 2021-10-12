@@ -6,7 +6,7 @@ import { ProjectsWrapper } from "../PuzzleBoxWrapper/parts";
 const Projects = () => {
   const generateProjects = () => {
     return PROJECTS.map((project) => (
-      <SingleProject>{project.name}</SingleProject>
+      <SingleProject link={project.link}>{project.name}</SingleProject>
     ));
   };
 
