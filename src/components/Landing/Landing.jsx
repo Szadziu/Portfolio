@@ -8,9 +8,9 @@ const Landing = () => {
   return (
     <SectionWrapper>
       <HomePageButton />
-      <MySkillsButton />
-      <ProjectsButton />
-      <ContactButton />
+      {/* <MySkillsButton /> */}
+      {/* <ProjectsButton /> */}
+      {/* <ContactButton /> */}
     </SectionWrapper>
   );
 };

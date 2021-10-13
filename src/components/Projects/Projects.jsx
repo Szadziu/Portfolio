@@ -6,7 +6,9 @@ import { ProjectsWrapper } from "../PuzzleBoxWrapper/parts";
 const Projects = () => {
   const generateProjects = () => {
     return PROJECTS.map((project) => (
-      <SingleProject link={project.link}>{project.name}</SingleProject>
+      <SingleProject key={project.id} link={project.link}>
+        {project.name}
+      </SingleProject>
     ));
   };
   // projekty w modalach

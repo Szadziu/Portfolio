@@ -6,12 +6,10 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         color: ${(props) => props.theme.fontColor};
+
     }
 
     body {
-        /* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap'); */
-        /* chwilowo nie działa */
-        /* font-family: 'Source Code Pro', monospace; */
         background: ${(props) => `linear-gradient${props.theme.mainGradient}`};
     }
 

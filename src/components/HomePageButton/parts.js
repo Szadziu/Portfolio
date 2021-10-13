@@ -6,11 +6,10 @@ export const Button = styled.a`
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
-  height: 300px;
-  width: 75px;
+  height: 25vw;
+  width: 15vh;
   border-radius: 15px;
   box-shadow: 0 0 3px 0 black;
-  font-size: 30px;
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   position: absolute;

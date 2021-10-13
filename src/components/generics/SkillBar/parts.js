@@ -12,6 +12,7 @@ export const Bar = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0 5px;
+  opacity: 0;
 `;
 
 export const BoxOfSkill = styled.div`

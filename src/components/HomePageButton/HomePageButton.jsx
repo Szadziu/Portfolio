@@ -1,6 +1,8 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import * as P from "./parts";
+import { buttonHoverAnimate } from "../../animations/buttonHoverAnimate";
+import { buttonLeaveAnimate } from "../../animations/buttonLeaveAnimate";
 
 const HomePageButton = () => {
   useEffect(() => {
@@ -10,15 +12,25 @@ const HomePageButton = () => {
     });
 
     gsap.set(button, { transformOrigin: "center top" });
-    tl.to(button, { y: "110vh" }).to(
+    tl.to(button, 2, { y: "110vh", filter: "invert(100%)" }).to(
       button,
-      { rotation: 270, fontSize: "32px" },
+      2,
+      { rotation: 270, fontSize: "3rem", opacity: "0.8" },
       "-=1.2"
     );
   }, []);
   const buttonRef = useRef(null);
 
-  return <P.Button ref={buttonRef}>homePage</P.Button>;
+  return (
+    <P.Button
+      onClick={() => buttonRef}
+      onMouseEnter={() => buttonHoverAnimate(buttonRef)}
+      onMouseLeave={() => buttonLeaveAnimate(buttonRef)}
+      ref={buttonRef}
+    >
+      homePage
+    </P.Button>
+  );
 };
 
 export default HomePageButton;
