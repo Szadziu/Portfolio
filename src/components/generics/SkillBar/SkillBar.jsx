@@ -1,10 +1,19 @@
 import * as P from "./parts";
 import { useRef } from "react";
+import { useIntersection } from "react-use";
 import gsap from "gsap";
 import { useEffect } from "react";
 import { colorOfSkillAdvancement } from "../../../utils";
 
 const SkillBar = ({ children, advancement }) => {
+  const skillBarRef = useRef(null);
+  const skillTitleRef = useRef(null);
+  const intersection = useIntersection(skillBarRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0,
+  });
+
   useEffect(() => {
     const boxesOfSkill = skillBarRef.current.children;
     const titleOfSkill = skillTitleRef.current;
@@ -26,19 +35,20 @@ const SkillBar = ({ children, advancement }) => {
     for (let i = 0; i < advancement; i++) {
       advancementLevel.push(<P.BoxOfSkill color={color} />);
     }
-    // const a = [...Array(advancement).keys()].map(el => <P.BoxOfSkill>{advancement}</P.BoxOfSkill>)
     return advancementLevel;
   };
+  // intersection && generateAdvancementLevel();
 
-  const skillBarRef = useRef(null);
-  const skillTitleRef = useRef(null);
+  const observer = intersection && generateAdvancementLevel();
 
   return (
     <>
       <P.TitleOfSkill ref={skillTitleRef}>{children}</P.TitleOfSkill>
       <P.Bar ref={skillBarRef}>
-        {/* <P.BoxOfSkill>{advancement}</P.BoxOfSkill> */}
-        {generateAdvancementLevel()}
+        {observer}
+        {/* {intersection &&
+          intersection.intersectionRatio < 1 &&
+          generateAdvancementLevel()} */}
       </P.Bar>
     </>
   );

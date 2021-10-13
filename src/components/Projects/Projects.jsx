@@ -9,7 +9,7 @@ const Projects = () => {
       <SingleProject link={project.link}>{project.name}</SingleProject>
     ));
   };
-
+  // projekty w modalach
   return (
     <SectionWrapper>
       <ProjectsWrapper>{generateProjects()}</ProjectsWrapper>
