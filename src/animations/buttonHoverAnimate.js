@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-export const buttonHoverAnimate = (element) => {
+export const buttonHoverAnimate = (element, setColor) => {
   console.log("hover");
   const button = element.current;
   const tl = gsap.timeline();
@@ -13,5 +13,6 @@ export const buttonHoverAnimate = (element) => {
     backgroundColor: "white",
     color: "black",
     boxShadow: "0 0 150px 0 white",
+    onComplete: setColor("black"),
   });
 };

@@ -2,6 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import * as P from "./parts";
 import { useEffect } from "react";
+import { buttonMySkillsAnimate } from "../../animations/buttonMySkillsAnimate";
 
 const MySkillsButton = () => {
   const skillsButton = useRef(null);
@@ -19,9 +20,13 @@ const MySkillsButton = () => {
 
   return (
     <>
-      <P.Button ref={skillsButton}>aboutMySkills</P.Button>
+      <P.Button
+        onClick={() => buttonMySkillsAnimate(skillsButton)}
+        ref={skillsButton}
+      >
+        aboutMySkills
+      </P.Button>
     </>
   );
 };
-
 export default MySkillsButton;

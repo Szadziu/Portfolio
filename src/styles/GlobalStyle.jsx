@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background: ${(props) => `linear-gradient${props.theme.mainGradient}`};
+        font-family: 'Source Code Pro', monospace;
+        /* font-family: Arial, Helvetica, sans-serif; */
     }
 
     ul, ol {

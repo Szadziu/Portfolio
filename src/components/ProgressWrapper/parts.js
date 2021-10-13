@@ -25,6 +25,7 @@ export const Quote = styled.div`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   /* background-color: white; */
   font-size: 48px;
+  opacity: 0;
   color: whitesmoke;
   width: 650px;
   height: 80%;

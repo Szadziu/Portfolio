@@ -4,7 +4,7 @@ import * as P from "./parts";
 import { buttonHoverAnimate } from "../../animations/buttonHoverAnimate";
 import { buttonLeaveAnimate } from "../../animations/buttonLeaveAnimate";
 
-const HomePageButton = () => {
+const HomePageButton = ({ setColor }) => {
   useEffect(() => {
     const button = buttonRef.current;
     const tl = gsap.timeline({
@@ -23,9 +23,8 @@ const HomePageButton = () => {
 
   return (
     <P.Button
-      onClick={() => buttonRef}
-      onMouseEnter={() => buttonHoverAnimate(buttonRef)}
-      onMouseLeave={() => buttonLeaveAnimate(buttonRef)}
+      onMouseEnter={() => buttonHoverAnimate(buttonRef, setColor)}
+      onMouseLeave={() => buttonLeaveAnimate(buttonRef, setColor)}
       ref={buttonRef}
     >
       homePage

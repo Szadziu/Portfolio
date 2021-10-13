@@ -12,13 +12,13 @@ export const Bar = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 0 5px;
-  opacity: 0;
 `;
 
 export const BoxOfSkill = styled.div`
   width: 30px;
   height: 30px;
   background-color: ${(props) => props.color};
+  transform: scale(0);
 `;
 
 export const TitleOfSkill = styled.p`

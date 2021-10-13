@@ -1,6 +1,7 @@
 import gsap from "gsap";
+import { THEME } from "../constants";
 
-export const buttonLeaveAnimate = (element) => {
+export const buttonLeaveAnimate = (element, setColor) => {
   console.log("leaveHover");
   const button = element.current;
   const tl = gsap.timeline();
@@ -13,4 +14,5 @@ export const buttonLeaveAnimate = (element) => {
     backgroundColor: "black",
     color: "white",
   });
+  setColor(THEME.mainGradient);
 };

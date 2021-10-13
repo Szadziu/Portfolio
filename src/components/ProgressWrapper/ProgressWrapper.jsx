@@ -1,28 +1,18 @@
 import * as P from "./parts";
 import SkillBar from "../generics/SkillBar";
 import { SKILL_BUNDLE, QUOTE } from "../../constants";
-import { useRef } from "react";
-import { useIntersection } from "react-use";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { useInView } from "react-intersection-observer";
 
 const ProgressWrapper = () => {
-  const quoteRef = useRef(null);
+  const { ref, inView, entry } = useInView({ threshold: 1 });
 
-  const intersection = useIntersection(quoteRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1,
-  });
-
-  const quoteAnimate = (visible, color) => {
-    const quote = quoteRef.current;
-    const tl = gsap.timeline();
-
-    tl.to(quote, 1, { opacity: visible });
-  };
-  intersection && intersection.intersectionRatio >= 1
-    ? quoteAnimate("1")
-    : quoteAnimate("0");
+  useEffect(() => {
+    if (inView) {
+      gsap.to(entry.target, { duration: 1, opacity: 1 });
+    }
+  }, [inView]);
 
   const renderListOfSkills = () => {
     return SKILL_BUNDLE.map((skill) => (
@@ -32,10 +22,10 @@ const ProgressWrapper = () => {
       </SkillBar>
     ));
   };
-
+  //! nazwa komponentu do >>>>!!!!!!<<<< zmiany
   return (
     <P.SkillContainer>
-      <P.Quote ref={quoteRef}>{QUOTE}</P.Quote>
+      <P.Quote ref={ref}>{QUOTE}</P.Quote>
       {renderListOfSkills()}
     </P.SkillContainer>
   );
