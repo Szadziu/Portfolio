@@ -12,8 +12,8 @@ const Landing = () => {
     <SectionWrapper bgColor={color}>
       <HomePageButton setColor={setColor} />
       <MySkillsButton />
-      <ProjectsButton />
-      <ContactButton />
+      {/* <ProjectsButton /> */}
+      {/* <ContactButton /> */}
     </SectionWrapper>
   );
 };

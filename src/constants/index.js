@@ -1,5 +1,8 @@
+import deepWeb from "../assets/deepWeb.jpg";
+
 export const THEME = {
   mainGradient: "(326deg, #000000 0%, #ce203c 74%)",
+  landingSectionBackground: deepWeb,
   darkOrange: "#D12917",
   lightOrange: "#C74116",
   lightPurple: "#D11793",

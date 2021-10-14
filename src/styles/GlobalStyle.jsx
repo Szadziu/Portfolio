@@ -10,7 +10,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: ${(props) => `linear-gradient${props.theme.mainGradient}`};
+        background: url(${(props) => props.theme.landingSectionBackground});
+        background-size: contain;
+        background-repeat: no-repeat;
         font-family: 'Source Code Pro', monospace;
         /* font-family: Arial, Helvetica, sans-serif; */
     }
