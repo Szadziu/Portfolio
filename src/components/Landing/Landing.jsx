@@ -4,17 +4,26 @@ import SectionWrapper from "../generics/SectionWrapper";
 import HomePageButton from "../HomePageButton";
 import MySkillsButton from "../MySkillsButton";
 import ProjectsButton from "../ProjectsButton";
+import { createContext } from "react";
 
+export const Context = createContext("Default value");
 const Landing = () => {
   const [color, setColor] = useState("");
 
+  const value = {
+    color,
+    setColor,
+  };
+
   return (
-    <SectionWrapper bgColor={color}>
-      <HomePageButton setColor={setColor} />
-      <MySkillsButton />
-      {/* <ProjectsButton /> */}
-      {/* <ContactButton /> */}
-    </SectionWrapper>
+    <Context.Provider value={value}>
+      <SectionWrapper bgColor={color}>
+        <HomePageButton />
+        <MySkillsButton />
+        {/* <ProjectsButton /> */}
+        {/* <ContactButton /> */}
+      </SectionWrapper>
+    </Context.Provider>
   );
 };
 

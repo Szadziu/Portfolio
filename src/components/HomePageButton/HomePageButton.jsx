@@ -1,10 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import gsap from "gsap";
 import * as P from "./parts";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { THEME } from "../../constants";
+import { Context } from "../Landing/Landing";
 
-const HomePageButton = ({ setColor }) => {
+const HomePageButton = () => {
+  const value = useContext(Context);
+
   useEffect(() => {
     const button = buttonRef.current;
     const tl = gsap.timeline({
@@ -47,7 +50,7 @@ const HomePageButton = ({ setColor }) => {
       onMouseEnter={() =>
         buttonAnimation(
           buttonRef,
-          setColor,
+          value.setColor,
           startAnimateOptions,
           "rgba(0,0,0,0.9)"
         )
@@ -55,7 +58,7 @@ const HomePageButton = ({ setColor }) => {
       onMouseLeave={() => {
         buttonAnimation(
           buttonRef,
-          setColor,
+          value.setColor,
           endAnimateOptions,
           THEME.mainGradient
         );
