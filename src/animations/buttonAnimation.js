@@ -6,5 +6,4 @@ export const buttonAnimation = (element, setColor, animateOptions, color) => {
   const tl = gsap.timeline();
   tl.to(button, animateOptions);
   setColor(color);
-  // button.style.padding = "10px";
 };

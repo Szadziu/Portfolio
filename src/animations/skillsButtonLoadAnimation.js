@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-export const skillsButtonLoadAnimation = (element) => {
+export const skillsButtonLoadAnimation = (element, setColor) => {
   const tl = gsap.timeline();
   tl.to(element, { duration: 0.5, top: "20vh", ease: "power2.in" })
     .to(element, {

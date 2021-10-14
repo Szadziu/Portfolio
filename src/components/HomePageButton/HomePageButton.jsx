@@ -3,10 +3,10 @@ import gsap from "gsap";
 import * as P from "./parts";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { THEME } from "../../constants";
-import { Context } from "../Landing/Landing";
+import { BackgroundContext } from "../Landing/Landing";
 
 const HomePageButton = () => {
-  const value = useContext(Context);
+  const value = useContext(BackgroundContext);
 
   useEffect(() => {
     const button = buttonRef.current;
@@ -29,12 +29,9 @@ const HomePageButton = () => {
   const startAnimateOptions = {
     x: "50px",
     width: "20vh",
-    // opacity: "1",
-
     backgroundColor: "white",
     color: "black",
     boxShadow: "0 0 150px 0 white",
-    // onComplete: setColor(THEME.mainGradient),
   };
   const endAnimateOptions = {
     opacity: "1",

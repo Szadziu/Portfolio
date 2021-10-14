@@ -6,7 +6,7 @@ import MySkillsButton from "../MySkillsButton";
 import ProjectsButton from "../ProjectsButton";
 import { createContext } from "react";
 
-export const Context = createContext("Default value");
+export const BackgroundContext = createContext("Default value");
 const Landing = () => {
   const [color, setColor] = useState("");
 
@@ -16,14 +16,14 @@ const Landing = () => {
   };
 
   return (
-    <Context.Provider value={value}>
+    <BackgroundContext.Provider value={value}>
       <SectionWrapper bgColor={color}>
         <HomePageButton />
         <MySkillsButton />
         {/* <ProjectsButton /> */}
         {/* <ContactButton /> */}
       </SectionWrapper>
-    </Context.Provider>
+    </BackgroundContext.Provider>
   );
 };
 
