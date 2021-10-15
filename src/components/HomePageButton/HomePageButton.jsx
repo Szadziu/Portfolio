@@ -3,7 +3,7 @@ import gsap from "gsap";
 import * as P from "./parts";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { THEME } from "../../constants";
-import { BackgroundContext } from "../Landing/Landing";
+import { BackgroundContext } from "../App/App";
 
 const HomePageButton = () => {
   const value = useContext(BackgroundContext);

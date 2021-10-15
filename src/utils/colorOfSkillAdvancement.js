@@ -19,9 +19,3 @@ export const colorOfSkillAdvancement = (level) => {
       console.log("Value is not valid");
   }
 };
-// rozbić na osobne pliki
-
-export const setRandomColor = () => {
-  const color = Math.floor(Math.random() * 16777215).toString(16);
-  return color;
-};

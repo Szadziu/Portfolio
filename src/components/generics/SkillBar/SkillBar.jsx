@@ -1,5 +1,5 @@
 import * as P from "./parts";
-import { colorOfSkillAdvancement } from "../../../utils";
+import { colorOfSkillAdvancement } from "../../../utils/colorOfSkillAdvancement";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 

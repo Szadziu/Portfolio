@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: url(${(props) => props.theme.landingSectionBackground});
+        background: url(${(props) => props.theme.landingSectionBackground}); 
         background-size: contain;
         background-repeat: no-repeat;
         font-family: 'Source Code Pro', monospace;

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { skillsButtonLoadAnimation } from "../../animations/skillsButtonLoadAnimation";
 import { useContext } from "react";
 import { buttonAnimation } from "../../animations/buttonAnimation";
-import { BackgroundContext } from "../Landing/Landing";
+import { BackgroundContext } from "../App/App";
 
 const MySkillsButton = () => {
   const { setColor } = useContext(BackgroundContext);

@@ -1,34 +1,50 @@
 import { useEffect, useRef } from "react";
 import * as P from "./parts";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { buttonAnimation } from "../../animations/buttonAnimation";
+import { useContext } from "react";
+import { BackgroundContext } from "../App/App";
 
 const ProjectsButton = () => {
   const projectsButton = useRef(null);
-  const innerText = useRef(null);
+  const { setColor } = useContext(BackgroundContext);
 
   useEffect(() => {
-    const tl = gsap.timeline();
     const button = projectsButton.current;
-    const text = innerText.current;
+    gsap.registerPlugin(ScrollTrigger);
 
-    tl.to(button, 4, { bottom: "20vh", display: "flex" })
-      .to(
-        button,
-        {
-          width: "220px",
-          height: "220px",
-        },
-        4
-      )
-      .to(text, { y: "50px" })
-      .to(text, { x: "50px" })
-      .to(text, { y: "0px" })
-      .to(text, { x: "0px" });
+    gsap.set(button, { transformPerspective: 500 });
+
+    gsap.to(button, {
+      x: 0,
+      left: "70vw",
+      rotateY: 720,
+      rotateX: 0,
+      autoAlpha: 1,
+      duration: 3.5,
+      ease: "power2.out",
+      delay: 0.5,
+    });
+
+    // ScrollTrigger.create({
+    //   trigger: document.querySelector("#root"),
+    //   start: "bottom bottom",
+    //   end: "top top",
+    //   animation: imganim2,
+    //   toggleActions: "play reverse play reverse",
+    // });
   }, []);
 
   return (
-    <P.Button ref={projectsButton}>
-      <P.innerText ref={innerText}>myProjects</P.innerText>
+    <P.Button
+      ref={projectsButton}
+      onMouseEnter={() =>
+        buttonAnimation(projectsButton, setColor, {}, "rgba(0,0,0,0.9)")
+      }
+      onMouseLeave={() => buttonAnimation(projectsButton, setColor, {}, "")}
+    >
+      myProjects
     </P.Button>
   );
 };

@@ -1,4 +1,4 @@
-import { setRandomColor } from "../../../utils";
+import { setRandomColor } from "../../../utils/setRandomColor";
 import * as P from "./parts";
 
 const SingleProject = ({ children, link }) => {
