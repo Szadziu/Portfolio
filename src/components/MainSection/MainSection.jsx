@@ -6,7 +6,7 @@ import { QUOTE } from "../../constants";
 
 const MainSection = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper bgColor="black">
       <P.MainSectionWrapper>
         <Quote>{QUOTE}</Quote>
         <SkillsWrapper />

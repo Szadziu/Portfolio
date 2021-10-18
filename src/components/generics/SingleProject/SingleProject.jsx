@@ -1,9 +1,9 @@
 import { setRandomColor } from "../../../utils/setRandomColor";
 import * as P from "./parts";
 
-const SingleProject = ({ children, link }) => {
+const SingleProject = ({ children, onClick }) => {
   return (
-    <P.Project href={link} color={setRandomColor()}>
+    <P.Project onClick={onClick} color={setRandomColor()}>
       {children}
     </P.Project>
   );

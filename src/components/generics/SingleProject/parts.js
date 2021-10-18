@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Project = styled.a`
+export const Project = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,4 +11,7 @@ export const Project = styled.a`
   color: ${(props) => props.theme.fontColor};
   text-decoration: none;
   background-color: ${(props) => `#${props.color}`};
+  &:hover {
+    cursor: pointer;
+  }
 `;
