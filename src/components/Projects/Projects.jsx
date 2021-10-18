@@ -9,7 +9,8 @@ const Projects = () => {
   const [isDisplayProject, setIsDisplayProject] = useState(false);
   const [currentProject, setCurrentProject] = useState("");
 
-  const openModal = (id) => {
+  const openModal = (project) => {
+    setCurrentProject(project);
     setIsDisplayProject(!isDisplayProject);
   };
 
@@ -22,7 +23,7 @@ const Projects = () => {
       <SingleProject
         key={project.id}
         link={project.link}
-        onClick={() => openModal(project.id)}
+        onClick={() => openModal(project)}
       >
         {project.name}
       </SingleProject>
@@ -32,7 +33,9 @@ const Projects = () => {
   return (
     <SectionWrapper bgColor="black">
       <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
-      {isDisplayProject && <Modal closeModal={closeModal} />}
+      {isDisplayProject && (
+        <Modal currentProject={currentProject} closeModal={closeModal} />
+      )}
     </SectionWrapper>
   );
 };

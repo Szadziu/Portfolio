@@ -1,4 +1,5 @@
 import deepWeb from "../assets/deepWeb.jpg";
+import calcImg from "../assets/calculatorImg.jpg";
 
 export const THEME = {
   mainGradient: "(326deg, #000000 0%, #ce203c 74%)",
@@ -42,46 +43,64 @@ export const PROJECTS = [
   {
     id: 0,
     name: "Calculator",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 1,
     name: "Shop",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 2,
     name: "Color Generator",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 3,
     name: "Currency Exchanger",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 4,
     name: "Farmer",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 5,
     name: "Layout Page",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 6,
     name: "Paper, stone and scissors",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 7,
     name: "Tic Tac Toe",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 8,
     name: "Blog",
+    img: calcImg,
     link: "https://www.google.pl",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
 ];
