@@ -2,9 +2,11 @@ import * as P from "./parts";
 import { colorOfSkillAdvancement } from "../../../utils/colorOfSkillAdvancement";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useInView } from "react-intersection-observer";
 
 const SkillBar = ({ children, advancement }) => {
-  const barRef = useRef(null);
+  // const barRef = useRef(null);
+  const [ref, inView, entry] = useInView();
 
   const generateAdvancementLevel = () => {
     const color = colorOfSkillAdvancement(advancement);
@@ -15,17 +17,20 @@ const SkillBar = ({ children, advancement }) => {
     return advancementLevel;
   };
   const boxesOfSkillsAnimation = () => {
-    const boxes = barRef.current.children;
-    gsap.to(boxes, { scale: 1, stagger: 0.3 });
+    gsap.to(entry.target.children, { scale: 1, stagger: 0.5 });
   };
 
-  useEffect(() => boxesOfSkillsAnimation(), []);
+  useEffect(() => {
+    if (inView) {
+      boxesOfSkillsAnimation();
+    }
+  }, [inView]);
 
   return (
-    <>
+    <P.Bar>
       <P.TitleOfSkill>{children}</P.TitleOfSkill>
-      <P.Bar ref={barRef}>{generateAdvancementLevel()}</P.Bar>
-    </>
+      <P.Boxes ref={ref}>{generateAdvancementLevel()}</P.Boxes>
+    </P.Bar>
   );
 };
 
