@@ -6,13 +6,13 @@ export const SkillContainer = styled.div`
   align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%;
-  height: 400px;
-  /* border: 3px solid white;
-  border-radius: 5px; */
+  width: 100%;
+  height: 50%;
+  /* background-color: black; */
   position: absolute;
-  top: 55%;
-  right: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Quote = styled.div`

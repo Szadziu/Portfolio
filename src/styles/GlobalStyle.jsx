@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
         background-size: contain;
         background-repeat: no-repeat;
         font-family: 'Source Code Pro', monospace;
-        /* font-family: Arial, Helvetica, sans-serif; */
     }
 
     ul, ol {
