@@ -10,8 +10,10 @@ export const Project = styled.div`
   text-align: center;
   color: ${(props) => props.theme.fontColor};
   text-decoration: none;
-  background-color: ${(props) => `#${props.color}`};
+  background-color: ${(props) => `${props.color}`};
+  transition: 0.5s;
   &:hover {
     cursor: pointer;
+    transform: scale(0.8);
   }
 `;
