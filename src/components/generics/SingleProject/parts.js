@@ -4,16 +4,27 @@ export const Project = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 0;
   width: 33.33%;
   height: 33.33%;
   text-align: center;
-  color: ${(props) => props.theme.fontColor};
+  /* color: ${(props) => props.theme.fontColor}; */
+  color: white;
   text-decoration: none;
-  background-color: ${(props) => `${props.color}`};
+  text-transform: uppercase;
+  /* background-color: ${(props) => `${props.color}`}; */
+  background-image: linear-gradient(to bottom, #000, #0f9b0f);
   transition: 0.5s;
+  border: 10px solid white;
+  filter: blur(10px);
+  /* filter: contrast(0); */
   &:hover {
     cursor: pointer;
-    transform: scale(0.8);
+    border-radius: 50%;
+    transform: scale(1.3) rotate(1turn);
+    z-index: 100;
+    filter: blur(0);
+    font-size: 1.5rem;
+    /* filter: contrast(1); */
   }
 `;
