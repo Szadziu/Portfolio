@@ -26,14 +26,6 @@ const ProjectsButton = () => {
       ease: "power2.out",
       delay: 0.5,
     });
-
-    // ScrollTrigger.create({
-    //   trigger: document.querySelector("#root"),
-    //   start: "bottom bottom",
-    //   end: "top top",
-    //   animation: imganim2,
-    //   toggleActions: "play reverse play reverse",
-    // });
   }, []);
 
   return (

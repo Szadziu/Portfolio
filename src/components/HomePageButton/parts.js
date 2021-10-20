@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import crushSrc from "../../assets/crush.png";
 
 export const Button = styled.a`
   display: flex;
@@ -28,13 +27,4 @@ export const Button = styled.a`
     height: 20px;
     margin-bottom: 15px;
   }
-`;
-
-export const CrushStamp = styled.img`
-  background-image: url(${crushSrc});
-  position: absolute;
-  top: 70%;
-  left: 0;
-  height: 75px;
-  width: 75px;
 `;

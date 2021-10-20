@@ -1,4 +1,12 @@
 import styled from "styled-components";
+import { Field } from "formik";
+
+export const Input = styled(Field)`
+  margin-left: 30px;
+  width: 240px;
+  height: 40px;
+  font-size: 1.2rem;
+`;
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -13,9 +21,10 @@ export const Wrapper = styled.div`
 `;
 
 export const FormTitle = styled.span`
+  display: block;
   margin: 30px;
   color: whitesmoke;
-  display: block;
+  font-size: 1.7rem;
 `;
 
 export const FormButton = styled.button`
@@ -29,17 +38,49 @@ export const FormButton = styled.button`
   color: ${(props) => props.theme.fontColor};
   transition: 0.3s;
   font-size: 1.2rem;
+
+  &::before {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    content: "✈️";
+    background-color: skyblue;
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    color: transparent;
+  }
+
   &:hover {
     background-color: grey;
-    color: white;
+    color: transparent;
     cursor: pointer;
+    &::before {
+      width: 100%;
+      color: white;
+    }
   }
 `;
 
-export const FormTextArea = styled.textarea`
+export const FormTextArea = styled(Field)`
   position: absolute;
+  width: 45%;
+  height: 60%;
   bottom: 20%;
   right: 5%;
-  background-color: pink;
+  background-color: black;
   resize: none;
+  color: white;
+`;
+
+export const Comment = styled.p`
+  position: absolute;
+  top: ${(props) => props.cords.x}%;
+  left: ${(props) => props.cords.y}%;
+  margin: 10px 30px;
+  color: red;
 `;

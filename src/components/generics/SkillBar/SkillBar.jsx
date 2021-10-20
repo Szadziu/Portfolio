@@ -1,11 +1,10 @@
 import * as P from "./parts";
 import { colorOfSkillAdvancement } from "../../../utils/colorOfSkillAdvancement";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { useInView } from "react-intersection-observer";
 
 const SkillBar = ({ children, advancement }) => {
-  // const barRef = useRef(null);
   const [ref, inView, entry] = useInView();
 
   const generateAdvancementLevel = () => {
