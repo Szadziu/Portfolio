@@ -37,7 +37,7 @@ export const ProjectModal = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-image: linear-gradient(#780206, #061161);
+  background-image: ${({ theme }) => theme.redBlueGradient};
   border: 5px solid white;
   width: 50%;
   height: 50%;

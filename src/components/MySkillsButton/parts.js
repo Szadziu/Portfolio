@@ -20,13 +20,11 @@ export const Button = styled.a`
     width: 20px;
     height: 100px;
     margin-right: 15px;
-    /* transform-origin: bottom bottom; */
   }
 
   &:hover {
     cursor: pointer;
     color: orange;
-    /* text-shadow: 20px 0 white; */
     box-shadow: 0 0 20px 0 white;
     &::before {
       transform: translateX(25vw);

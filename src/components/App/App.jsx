@@ -8,7 +8,7 @@ import { THEME } from "../../constants";
 import { useState, createContext } from "react";
 
 export const BackgroundContext = createContext({});
-
+// ten context docelowo będzie w contextach, ale był problem z przeniesieniem
 const App = () => {
   const [color, setColor] = useState("");
 

@@ -1,5 +1,7 @@
 import { THEME } from "../constants";
 
+// obecnie nie używany util, który zostawiłem w celu potencjalnego refactora obecnego systemu, który dobiera kolory boxów od poziomu umiejętności.
+
 export const colorOfSkillAdvancement = (level) => {
   switch (level) {
     case 1:

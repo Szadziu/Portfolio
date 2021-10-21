@@ -17,7 +17,5 @@ export const MainSectionWrapper = styled.div`
   left: 0;
   border-top: 5px solid white;
   border-bottom: 5px solid white;
-  /* border-bottom: white 5px solid; */
   border-radius: 50px;
-  /* opacity: 0.9; */
 `;

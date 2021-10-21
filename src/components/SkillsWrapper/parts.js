@@ -5,7 +5,6 @@ export const SkillContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  /* background-color: rosybrown; */
   width: 30%;
   height: 80%;
 `;

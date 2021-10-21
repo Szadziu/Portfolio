@@ -14,7 +14,7 @@ export const Img = styled.img`
 export const Banner = styled.div`
   position: absolute;
   top: 80vh;
-  left: 50vw;
+  left: -15vw;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;

@@ -35,7 +35,7 @@ export const FormButton = styled.button`
   height: 50px;
   border: none;
   background-color: white;
-  color: ${(props) => props.theme.fontColor};
+  color: ${({ theme }) => theme.fontColor};
   transition: 0.3s;
   font-size: 1.2rem;
 
@@ -79,8 +79,8 @@ export const FormTextArea = styled(Field)`
 
 export const Comment = styled.p`
   position: absolute;
-  top: ${(props) => props.cords.x}%;
-  left: ${(props) => props.cords.y}%;
+  top: ${({ cords }) => cords.x}%;
+  left: ${({ cords }) => cords.y}%;
   margin: 10px 30px;
   color: red;
 `;

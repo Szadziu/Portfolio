@@ -29,7 +29,6 @@ const Projects = () => {
       </SingleProject>
     ));
   };
-  // projekty w modalach
   return (
     <SectionWrapper bgColor="black">
       <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>

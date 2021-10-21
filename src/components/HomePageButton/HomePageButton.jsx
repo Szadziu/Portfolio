@@ -1,66 +1,42 @@
 import { useRef, useEffect, useContext } from "react";
-import gsap from "gsap";
 import * as P from "./parts";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { THEME } from "../../constants";
 import { BackgroundContext } from "../App/App";
+import { homePageButtonLoadAnimation } from "../../animations/homePageButtonLoadAnimation";
+import {
+  startAnimationSetup,
+  endAnimationSetup,
+} from "../../styles/setupsAnimations";
 
 const HomePageButton = () => {
-  const value = useContext(BackgroundContext);
+  const { setColor } = useContext(BackgroundContext);
+  const homePageButton = useRef(null);
 
   useEffect(() => {
-    const button = buttonRef.current;
-    const tl = gsap.timeline({
-      defaults: { ease: "bounce.out", duration: "2" },
-    });
-
-    gsap.set(button, {
-      transformOrigin: "center top",
-      backgroundColor: "transparent",
-      color: "white",
-    });
-    tl.to(button, { duration: 2, y: "110vh" }).to(
-      button,
-      { rotation: 270, duration: 2, fontSize: "3rem" },
-      "-=1.2"
-    );
+    homePageButtonLoadAnimation(homePageButton);
   }, []);
-  const buttonRef = useRef(null);
-  const startAnimateOptions = {
-    x: "50px",
-    width: "20vh",
-    backgroundColor: "white",
-    color: "black",
-    boxShadow: "0 0 150px 0 white",
-  };
-  const endAnimateOptions = {
-    opacity: "1",
-    x: "-50px",
-    width: "15vh",
 
-    boxShadow: "none",
-    backgroundColor: "black",
-    color: "white",
-  };
+  // homePageButton ma zastosowaną troszkę inną metodę używania animacji niż pozostałe trzy buttony, właściwie wyszło to przypadkiem, ale może któryś jest lepszy/gorszy to też zostawiam do oceny troszkę inną implementację.
   return (
     <P.Button
       onMouseEnter={() =>
         buttonAnimation(
-          buttonRef,
-          value.setColor,
-          startAnimateOptions,
-          "rgba(0,0,0,0.9)"
+          homePageButton,
+          setColor,
+          startAnimationSetup,
+          THEME.darkenedBackground
         )
       }
       onMouseLeave={() => {
         buttonAnimation(
-          buttonRef,
-          value.setColor,
-          endAnimateOptions,
+          homePageButton,
+          setColor,
+          endAnimationSetup,
           THEME.mainGradient
         );
       }}
-      ref={buttonRef}
+      ref={homePageButton}
     >
       homePage
     </P.Button>

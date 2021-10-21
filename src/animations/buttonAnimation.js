@@ -7,3 +7,4 @@ export const buttonAnimation = (element, setColor, animateOptions, color) => {
   tl.to(button, animateOptions);
   setColor(color);
 };
+// potencjalne ulepszenie, które chciałem zastosować to pobieranie z contextu backgroundContext właściwości setColor w tym miejscu zamiast w czterech komponentach osobno, natomiast niezbyt mi to wyszło :P Stąd rozwiązanie jest jakie jest na tą chwilę.

@@ -7,15 +7,14 @@ import messengerIcon from "../assets/messenger.png";
 import whatsappIcon from "../assets/whatsapp.png";
 
 export const THEME = {
-  mainGradient: "(326deg, #000000 0%, #ce203c 74%)",
   landingSectionBackground: deepWeb,
+  redBlueGradient: "linear-gradient(#780206, #061161)",
+  darkGreenGradient: "linear-gradient(to bottom, #000, #0f9b0f)",
   darkOrange: "#D12917",
-  lightOrange: "#C74116",
-  lightPurple: "#D11793",
-  darkPurple: "#B716C7",
   yellow: "#D4D20B",
   green: "#00BD3C",
   fontColor: "rgb(26, 26, 26)",
+  darkenedBackground: "rgba(0,0,0,0.9)",
 };
 
 export const QUOTE = `"The wise keep learning, the fools know everything." 
@@ -25,21 +24,26 @@ export const SKILL_BUNDLE = [
   {
     id: 0,
     name: "HTML 5",
-    advancement: 2,
+    advancement: 8,
   },
   {
     id: 1,
     name: "CSS",
-    advancement: 4,
+    advancement: 7,
   },
   {
     id: 2,
     name: "JavaScript",
-    advancement: 10,
+    advancement: 6,
   },
   {
     id: 3,
     name: "React",
+    advancement: 4,
+  },
+  {
+    id: 4,
+    name: "TypeScript",
     advancement: 1,
   },
 ];

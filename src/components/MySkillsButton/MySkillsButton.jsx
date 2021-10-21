@@ -5,14 +5,14 @@ import { skillsButtonLoadAnimation } from "../../animations/skillsButtonLoadAnim
 import { useContext } from "react";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { BackgroundContext } from "../App/App";
+import { THEME } from "../../constants";
 
 const MySkillsButton = () => {
   const { setColor } = useContext(BackgroundContext);
 
   const skillsButton = useRef(null);
   useEffect(() => {
-    const button = skillsButton.current;
-    skillsButtonLoadAnimation(button);
+    skillsButtonLoadAnimation(skillsButton);
   }, []);
 
   return (
@@ -24,7 +24,7 @@ const MySkillsButton = () => {
             skillsButton,
             setColor,
             { color: "orange" },
-            "rgba(0,0,0,0.9)"
+            THEME.darkenedBackground
           )
         }
         onMouseLeave={() =>
