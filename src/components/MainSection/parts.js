@@ -22,3 +22,10 @@ export const MainSectionWrapper = styled.div`
   border-radius: 50px;
   padding-top: 30px;
 `;
+
+export const AboutMeDesc = styled.p`
+  width: 50%;
+  color: white;
+  line-height: 48px;
+  font-size: 28px;
+`;

@@ -17,7 +17,7 @@ export const THEME = {
   darkenedBackground: "rgba(0,0,0,0.9)",
 };
 
-export const QUOTE = `"The wise keep learning, the fools know everything." 
+export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją." 
   Apolinary Despinoix`;
 
 export const SKILL_BUNDLE = [
@@ -146,3 +146,6 @@ export const SOCIALS = [
     link: "https://www.instagram.com",
   },
 ];
+
+export const DESC_ABOUT_ME =
+  "Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku, w tym czasie udało mi się przyswoić fundamentalną wiedzę z zakresu html, css oraz javascript. Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React oraz języku Typescript. Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia konkretnych działań jakie należy podjąć, by móc wejść do świata IT i zająć się tym zawodowo. Jestem również absolwentem studiów inżynierskich o kierunku edukacja techniczno-informatyczna.";

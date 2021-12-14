@@ -8,12 +8,13 @@ export const Button = styled.a`
   width: 25vw;
   position: relative;
   top: -20vh;
-  left: 31vw;
+  left: 30vw;
   font-size: 3rem;
   color: white;
   transform-origin: left center;
 
   &::before {
+    border-radius: 10px;
     transition: 0.8s;
     content: "";
     background-color: orange;
@@ -24,8 +25,6 @@ export const Button = styled.a`
 
   &:hover {
     cursor: pointer;
-    color: orange;
-    box-shadow: 0 0 20px 0 white;
     &::before {
       transform: translateX(25vw);
       height: 5px;

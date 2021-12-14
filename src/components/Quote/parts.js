@@ -7,9 +7,11 @@ export const QuoteParam = styled.p`
   opacity: 0;
   color: whitesmoke;
   width: 30%;
-  height: 80%;
+  height: 30%;
   display: flex;
   align-items: center;
+  align-self: flex-start;
   justify-content: center;
   margin-left: 10%;
+  padding-bottom: 40px;
 `;

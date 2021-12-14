@@ -15,6 +15,7 @@ export const Button = styled.a`
   color: white;
   transition: 0.8s;
   &::before {
+    border-radius: 10px;
     position: absolute;
     top: 15%;
     left: 2%;
@@ -24,15 +25,14 @@ export const Button = styled.a`
     background-color: blue;
     width: 20px;
     height: 100px;
-    margin-right: 15px;
+    margin-left: -15px;
   }
   &:hover {
     cursor: pointer;
     &::before {
-      height: 20px;
-      width: 400px;
-      top: 75%;
-      opacity: 0.5;
+      height: 5px;
+      top: 50%;
+      left: 100%;
     }
   }
 `;

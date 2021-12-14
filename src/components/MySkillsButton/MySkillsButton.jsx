@@ -23,7 +23,7 @@ const MySkillsButton = () => {
           buttonAnimation(
             skillsButton,
             setColor,
-            { color: "orange" },
+            { color: "white" },
             THEME.darkenedBackground
           )
         }

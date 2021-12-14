@@ -15,12 +15,15 @@ export const Button = styled.a`
   &:hover {
     cursor: pointer;
     &::before {
-      transform: scale(0);
-      background-color: transparent;
+      width: 5px;
+      top: 32vh;
     }
   }
   &::before {
-    transition: 0.5s;
+    border-radius: 20px;
+    position: absolute;
+    top: -3vh;
+    transition: 0.8s;
     content: "";
     background-color: red;
     width: 100px;

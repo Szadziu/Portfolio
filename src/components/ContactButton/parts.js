@@ -13,6 +13,7 @@ export const Button = styled.a`
   font-size: 3rem;
   color: white;
   &::before {
+    border-radius: 20px;
     position: absolute;
     top: 5%;
     left: 0;
@@ -22,13 +23,14 @@ export const Button = styled.a`
     background-color: green;
     width: 20px;
     height: 100px;
-    margin-right: 15px;
+    margin-left: -15px;
   }
   &:hover {
     cursor: pointer;
     &::before {
-      width: 100%;
-      opacity: 0.2;
+      height: 5px;
+      top: 50%;
+      left: 105%;
     }
   }
 `;
