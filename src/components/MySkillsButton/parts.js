@@ -8,9 +8,9 @@ export const Button = styled.a`
   width: 25vw;
   position: relative;
   top: -20vh;
-  left: 30vw;
+  left: 40vw;
   font-size: 3rem;
-  color: white;
+  color: black;
   transform-origin: left center;
 
   &::before {

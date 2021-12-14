@@ -28,7 +28,7 @@ const MySkillsButton = () => {
           )
         }
         onMouseLeave={() =>
-          buttonAnimation(skillsButton, setColor, { color: "white" }, "")
+          buttonAnimation(skillsButton, setColor, { color: "black" }, "")
         }
       >
         aboutMySkills

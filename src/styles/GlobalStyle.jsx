@@ -5,14 +5,16 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: ${(props) => props.theme.fontColor};
+        color: ${({ theme }) => theme.fontColor};
 
     }
 
     body {
-        background: url(${(props) => props.theme.landingSectionBackground}); 
-        background-size: contain;
+        background: url(${({ theme }) => theme.landingSectionBackground}); 
         background-repeat: no-repeat;
+        /* background-position: 700% 20%; */
+        background-position: -25vw 0vh;
+        background-size: 55%;
         font-family: 'Source Code Pro', monospace;
     }
 

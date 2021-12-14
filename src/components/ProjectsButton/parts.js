@@ -12,7 +12,7 @@ export const Button = styled.a`
   width: 20vw;
   height: 15vh;
   font-size: 3rem;
-  color: white;
+  color: black;
   transition: 0.8s;
   &::before {
     border-radius: 10px;
@@ -29,6 +29,7 @@ export const Button = styled.a`
   }
   &:hover {
     cursor: pointer;
+    color: white;
     &::before {
       height: 5px;
       top: 50%;

@@ -1,4 +1,4 @@
-import deepWeb from "../assets/deepWeb.jpg";
+import personalPhoto from "../assets/personal.jpg";
 import calcImg from "../assets/calculatorImg.jpg";
 import youtubeIcon from "../assets/youtube.png";
 import instaIcon from "../assets/insta.png";
@@ -7,7 +7,7 @@ import messengerIcon from "../assets/messenger.png";
 import whatsappIcon from "../assets/whatsapp.png";
 
 export const THEME = {
-  landingSectionBackground: deepWeb,
+  landingSectionBackground: personalPhoto,
   redBlueGradient: "linear-gradient(#780206, #061161)",
   darkGreenGradient: "linear-gradient(to bottom, #000, #0f9b0f)",
   darkOrange: "#D12917",
@@ -148,4 +148,5 @@ export const SOCIALS = [
 ];
 
 export const DESC_ABOUT_ME =
+  //ignore-prettier
   "Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku, w tym czasie udało mi się przyswoić fundamentalną wiedzę z zakresu html, css oraz javascript. Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React oraz języku Typescript. Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia konkretnych działań jakie należy podjąć, by móc wejść do świata IT i zająć się tym zawodowo. Jestem również absolwentem studiów inżynierskich o kierunku edukacja techniczno-informatyczna.";
