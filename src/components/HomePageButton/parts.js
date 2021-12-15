@@ -30,5 +30,6 @@ export const Button = styled.a`
     width: 100px;
     height: 20px;
     margin-bottom: 15px;
+    box-shadow: 0 0 15px 1px black;
   }
 `;

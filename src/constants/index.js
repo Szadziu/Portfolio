@@ -1,4 +1,4 @@
-import personalPhoto from "../assets/personal.jpg";
+import personalPhoto from "../assets/personalPng.png";
 import calcImg from "../assets/calculatorImg.jpg";
 import youtubeIcon from "../assets/youtube.png";
 import instaIcon from "../assets/insta.png";

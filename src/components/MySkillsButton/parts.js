@@ -21,6 +21,7 @@ export const Button = styled.a`
     width: 20px;
     height: 100px;
     margin-right: 15px;
+    box-shadow: 0 0 15px 1px black;
   }
 
   &:hover {
