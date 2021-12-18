@@ -15,26 +15,29 @@ const SkillBar = ({ children, advancement }) => {
   const generateAdvancementLevel = () => {
     const advancementLevel = [];
 
-    const addBoxOfSkill = (array, color) => {
-      array.push(<P.BoxOfSkill color={color} />);
+    const addBoxOfSkill = (array, color, height) => {
+      array.push(<P.BoxOfSkill color={color} height={height} />);
     };
     // zdaję sobie sprawę, że refactor tego DRY kodu aż się prosi, lecz w danym momencie nie miałem pomysłu jak to przerobić. Do zmiany.
     for (let i = 0; i < advancement; i++) {
-      let color;
+      let color, height;
 
       if (advancementLevel.length <= 2) {
         color = THEME.darkOrange;
-        addBoxOfSkill(advancementLevel, color);
+        height = "15px";
+        addBoxOfSkill(advancementLevel, color, height);
         continue;
       }
       if (advancementLevel.length <= 5) {
         color = THEME.yellow;
-        addBoxOfSkill(advancementLevel, color);
+        height = "20px";
+        addBoxOfSkill(advancementLevel, color, height);
         continue;
       }
       if (advancementLevel.length <= 9) {
         color = THEME.green;
-        addBoxOfSkill(advancementLevel, color);
+        height = "25px";
+        addBoxOfSkill(advancementLevel, color, height);
         continue;
       }
     }

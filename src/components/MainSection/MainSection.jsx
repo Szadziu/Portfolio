@@ -7,9 +7,9 @@ import SectionTitle from "../generics/SectionTitle";
 
 const MainSection = () => {
   return (
-    <SectionWrapper bgColor="black">
+    <SectionWrapper bgColor="white">
       <P.MainSectionWrapper>
-        <SectionTitle>kilka słów o mnie ...</SectionTitle>
+        <SectionTitle color="white">kilka słów o mnie ...</SectionTitle>
         <P.AboutMeDesc>{DESC_ABOUT_ME}</P.AboutMeDesc>
         <Quote>{QUOTE}</Quote>
         <SkillsWrapper />

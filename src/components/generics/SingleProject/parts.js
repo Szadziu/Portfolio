@@ -11,17 +11,22 @@ export const Project = styled.div`
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: ${({ theme }) => theme.darkGreenGradient};
+  background-image: url(${({ thumbnail }) => thumbnail});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: 0.5s;
   border: 10px solid white;
-  filter: blur(10px);
+  filter: grayscale(100%);
+
   &:hover {
     cursor: pointer;
+    border: 10px solid gray;
     border-radius: 50%;
     /* zdaję sobie sprawę, że animacja działa tak sobie, bo jak zatrzymasz kursor w narożniku jednego z projektów no to się jakby zapętla :P */
-    transform: scale(1.3) rotate(1turn);
+    transform: scale(1.5) rotate(1turn);
     z-index: 100;
-    filter: blur(0);
+    filter: grayscale(0);
     font-size: 1.5rem;
   }
 `;

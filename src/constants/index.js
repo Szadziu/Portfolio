@@ -1,10 +1,19 @@
 import personalPhoto from "../assets/personalPng.png";
 import calcImg from "../assets/calculatorImg.jpg";
+import creditCalculatorIcon from "../assets/creditCalculator.png";
 import youtubeIcon from "../assets/youtube.png";
 import instaIcon from "../assets/insta.png";
 import facebookIcon from "../assets/facebook.png";
 import messengerIcon from "../assets/messenger.png";
 import whatsappIcon from "../assets/whatsapp.png";
+import maptyIcon from "../assets/map.png";
+import cssGenerator from "../assets/layers.png";
+import shopingList from "../assets/shopping-list.png";
+import clickerIcon from "../assets/clickerGameIcon.png";
+import cafeIcon from "../assets/cafe.png";
+import calendarIcon from "../assets/calendar.png";
+import timerIcon from "../assets/timer.png";
+import drawingAppIcon from "../assets/drawingApp.png";
 
 export const THEME = {
   landingSectionBackground: personalPhoto,
@@ -51,64 +60,64 @@ export const SKILL_BUNDLE = [
 export const PROJECTS = [
   {
     id: 0,
-    name: "Calculator",
-    img: calcImg,
+    name: "Credit Calculator",
+    img: creditCalculatorIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 1,
-    name: "Shop",
-    img: calcImg,
+    name: "Mapty App",
+    img: maptyIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 2,
-    name: "Color Generator",
-    img: calcImg,
+    name: "Box-shadow generator",
+    img: cssGenerator,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 3,
-    name: "Currency Exchanger",
-    img: calcImg,
+    name: "Shoping App",
+    img: shopingList,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 4,
-    name: "Farmer",
-    img: calcImg,
+    name: "Clicker Browser Game",
+    img: clickerIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 5,
-    name: "Layout Page",
-    img: calcImg,
+    name: "Cafe Layout",
+    img: cafeIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 6,
-    name: "Paper, stone and scissors",
-    img: calcImg,
+    name: "Calendar",
+    img: calendarIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 7,
-    name: "Tic Tac Toe",
-    img: calcImg,
+    name: "Timer",
+    img: timerIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 8,
-    name: "Blog",
-    img: calcImg,
+    name: "Drawing App",
+    img: drawingAppIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
@@ -149,4 +158,4 @@ export const SOCIALS = [
 
 export const DESC_ABOUT_ME =
   //ignore-prettier
-  "Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku, w tym czasie udało mi się przyswoić fundamentalną wiedzę z zakresu html, css oraz javascript. Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React oraz języku Typescript. Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia konkretnych działań jakie należy podjąć, by móc wejść do świata IT i zająć się tym zawodowo. Jestem również absolwentem studiów inżynierskich o kierunku edukacja techniczno-informatyczna.";
+  "Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku, w tym czasie przyswoiłem fundamentalną wiedzę z zakresu html, css oraz javascript. Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React oraz języku Typescript. Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia konkretnych działań jakie należy podjąć, by móc wejść do świata IT i zająć się tym zawodowo. Jestem również absolwentem studiów inżynierskich o kierunku edukacja techniczno-informatyczna.";

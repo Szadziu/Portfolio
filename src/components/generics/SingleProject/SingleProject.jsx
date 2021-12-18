@@ -1,7 +1,11 @@
 import * as P from "./parts";
 
-const SingleProject = ({ children, onClick }) => {
-  return <P.Project onClick={onClick}>{children}</P.Project>;
+const SingleProject = ({ children, onClick, thumbnail }) => {
+  return (
+    <P.Project thumbnail={thumbnail} onClick={onClick}>
+      {children}
+    </P.Project>
+  );
 };
 
 export default SingleProject;

@@ -6,18 +6,23 @@ export const Bar = styled.div`
 `;
 
 export const Boxes = styled.div`
-  color: white;
   width: 90%;
   display: flex;
   position: relative;
   gap: 5px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
+  transition: 0.5s;
+  &:hover {
+    cursor: pointer;
+    gap: 15px;
+  }
 `;
 
 export const BoxOfSkill = styled.div`
+  border-radius: 3px;
   width: 30px;
-  height: 30px;
+  height: ${({ height }) => height};
   background-color: ${({ color }) => color};
   transform: scale(0);
 `;

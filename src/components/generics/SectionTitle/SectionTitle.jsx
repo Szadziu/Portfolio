@@ -1,7 +1,7 @@
 import * as P from "./parts";
 
-const SectionTitle = ({ children }) => {
-  return <P.Title>{children}</P.Title>;
+const SectionTitle = ({ children, color }) => {
+  return <P.Title color={color}>{children}</P.Title>;
 };
 
 export default SectionTitle;

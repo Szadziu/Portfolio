@@ -17,8 +17,8 @@ export const MainSectionWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;
   border-radius: 50px;
   padding-top: 30px;
 `;

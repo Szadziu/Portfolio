@@ -3,6 +3,7 @@ import { PROJECTS } from "../../constants";
 import Modal from "../generics/Modal/Modal";
 import SectionWrapper from "../generics/SectionWrapper";
 import SingleProject from "../generics/SingleProject/SingleProject";
+import SectionTitle from "../generics/SectionTitle";
 import * as P from "./parts";
 
 const Projects = () => {
@@ -24,13 +25,15 @@ const Projects = () => {
         key={project.id}
         link={project.link}
         onClick={() => openModal(project)}
+        thumbnail={project.img}
       >
         {project.name}
       </SingleProject>
     ));
   };
   return (
-    <SectionWrapper bgColor="black">
+    <SectionWrapper bgColor="white">
+      <SectionTitle color="black">Moje projekty</SectionTitle>
       <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
       {isDisplayProject && (
         <Modal currentProject={currentProject} closeModal={closeModal} />
