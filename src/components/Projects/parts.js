@@ -4,9 +4,9 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 80vh;
-  height: 80vh;
+  height: 90vh;
   position: absolute;
-  top: 55%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;

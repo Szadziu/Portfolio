@@ -33,8 +33,10 @@ const Projects = () => {
   };
   return (
     <SectionWrapper bgColor="white">
-      <SectionTitle color="black">Moje projekty</SectionTitle>
-      <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
+      <P.ProjectsWrapper id="projects">
+        <SectionTitle color="black">Moje projekty</SectionTitle>
+        {generateProjects()}
+      </P.ProjectsWrapper>
       {isDisplayProject && (
         <Modal currentProject={currentProject} closeModal={closeModal} />
       )}

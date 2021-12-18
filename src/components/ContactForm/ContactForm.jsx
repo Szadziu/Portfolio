@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <Formik
         initialValues={{ username: "", body: "" }}
         onSubmit={(values) => handleSubmit(values)}

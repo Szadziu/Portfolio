@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-scroll";
 import * as P from "./parts";
 import { useEffect } from "react";
 import { skillsButtonLoadAnimation } from "../../animations/skillsButtonLoadAnimation";
@@ -16,7 +17,7 @@ const MySkillsButton = () => {
   }, []);
 
   return (
-    <>
+    <Link to="about" spy={true} smooth={true}>
       <P.Button
         ref={skillsButton}
         onMouseEnter={() =>
@@ -33,7 +34,7 @@ const MySkillsButton = () => {
       >
         aboutMySkills
       </P.Button>
-    </>
+    </Link>
   );
 };
 export default MySkillsButton;

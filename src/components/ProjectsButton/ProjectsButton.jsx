@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-scroll";
 import * as P from "./parts";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { useContext } from "react";
@@ -13,15 +14,22 @@ const ProjectsButton = () => {
   useEffect(() => projectsButtonLoadAnimation(projectsButton), []);
 
   return (
-    <P.Button
-      ref={projectsButton}
-      onMouseEnter={() =>
-        buttonAnimation(projectsButton, setColor, {}, THEME.darkenedBackground)
-      }
-      onMouseLeave={() => buttonAnimation(projectsButton, setColor, {}, "")}
-    >
-      myProjects
-    </P.Button>
+    <Link to="projects" spy={true} smooth={true}>
+      <P.Button
+        ref={projectsButton}
+        onMouseEnter={() =>
+          buttonAnimation(
+            projectsButton,
+            setColor,
+            {},
+            THEME.darkenedBackground
+          )
+        }
+        onMouseLeave={() => buttonAnimation(projectsButton, setColor, {}, "")}
+      >
+        myProjects
+      </P.Button>
+    </Link>
   );
 };
 

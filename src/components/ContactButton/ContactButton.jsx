@@ -1,4 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
+import { Link } from "react-scroll";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { contactButtonLoadAnimation } from "../../animations/contactButtonLoadAnimation";
 import { THEME } from "../../constants";
@@ -13,15 +14,17 @@ const ContactButton = () => {
   useEffect(() => contactButtonLoadAnimation(contactButton), []);
 
   return (
-    <P.Button
-      onMouseEnter={() =>
-        buttonAnimation(contactButton, setColor, {}, THEME.darkenedBackground)
-      }
-      onMouseLeave={() => buttonAnimation(contactButton, setColor, {}, "")}
-      ref={contactButton}
-    >
-      contactToMe
-    </P.Button>
+    <Link to="contact" spy={true} smooth={true}>
+      <P.Button
+        onMouseEnter={() =>
+          buttonAnimation(contactButton, setColor, {}, THEME.darkenedBackground)
+        }
+        onMouseLeave={() => buttonAnimation(contactButton, setColor, {}, "")}
+        ref={contactButton}
+      >
+        contactToMe
+      </P.Button>
+    </Link>
   );
 };
 
