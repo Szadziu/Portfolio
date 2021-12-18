@@ -1,22 +1,21 @@
-import personalPhoto from "../assets/personalPng.png";
-import calcImg from "../assets/calculatorImg.jpg";
+import personalPhotoIcon from "../assets/personalPhoto.png";
 import creditCalculatorIcon from "../assets/creditCalculator.png";
 import youtubeIcon from "../assets/youtube.png";
 import instaIcon from "../assets/insta.png";
 import facebookIcon from "../assets/facebook.png";
 import messengerIcon from "../assets/messenger.png";
 import whatsappIcon from "../assets/whatsapp.png";
-import maptyIcon from "../assets/map.png";
-import cssGenerator from "../assets/layers.png";
-import shopingList from "../assets/shopping-list.png";
-import clickerIcon from "../assets/clickerGameIcon.png";
-import cafeIcon from "../assets/cafe.png";
+import maptyIcon from "../assets/mapty.png";
+import cssGeneratorIcon from "../assets/cssGenerator.png";
+import shoppingListIcon from "../assets/shoppingList.png";
+import clickerGameIcon from "../assets/clickerGame.png";
+import cafeLayoutIcon from "../assets/cafeLayout.png";
 import calendarIcon from "../assets/calendar.png";
 import timerIcon from "../assets/timer.png";
 import drawingAppIcon from "../assets/drawingApp.png";
 
 export const THEME = {
-  landingSectionBackground: personalPhoto,
+  landingSectionBackground: personalPhotoIcon,
   redBlueGradient: "linear-gradient(#780206, #061161)",
   darkGreenGradient: "linear-gradient(to bottom, #000, #0f9b0f)",
   darkOrange: "#D12917",
@@ -75,28 +74,28 @@ export const PROJECTS = [
   {
     id: 2,
     name: "Box-shadow generator",
-    img: cssGenerator,
+    img: cssGeneratorIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 3,
     name: "Shoping App",
-    img: shopingList,
+    img: shoppingListIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 4,
     name: "Clicker Browser Game",
-    img: clickerIcon,
+    img: clickerGameIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
   {
     id: 5,
     name: "Cafe Layout",
-    img: cafeIcon,
+    img: cafeLayoutIcon,
     link: "https://www.google.pl",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
   },
