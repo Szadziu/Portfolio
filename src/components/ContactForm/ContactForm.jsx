@@ -34,26 +34,31 @@ const ContactForm = () => {
       >
         {({ errors }) => (
           <Form>
-            <P.FormTitle>Contact Form</P.FormTitle>
-            <P.Input type="text" name="username" id="username" />
+            <P.FormTitle>Skontaktuj się ze mną</P.FormTitle>
+            <P.Input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="wpisz swoje imię"
+            />
+            <P.Input
+              type="text"
+              name="e-mail"
+              id="e-mail"
+              placeholder="podaj e-mail"
+            />
             <P.Comment style={{ color: "red" }} cords={{ x: 35, y: 0 }}>
               {errors.username}
             </P.Comment>
             <P.FormButton ref={buttonRef} type="submit">
-              Fly
+              Wyślij
             </P.FormButton>
             <P.FormTextArea
               name="body"
               id="body"
               ref={formRef}
-              placeholder="enter your message here..."
-              type="textarea"
-              cols="50"
-              rows="5"
-              onFocus={(e) =>
-                changeBackgroundAndFontColors(e, "white", "black")
-              }
-              onBlur={(e) => changeBackgroundAndFontColors(e, "black", "white")}
+              placeholder="wpisz swoją wiadomość tutaj..."
+              as="textarea"
             />
             <br />
             <P.Comment cords={{ x: 85, y: 50 }} style={{ color: "red" }}>

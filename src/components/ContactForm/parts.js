@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Field } from "formik";
 
 export const Input = styled(Field)`
-  margin-left: 30px;
+  display: block;
+  margin: 30px 0 0 30px;
   width: 240px;
   height: 40px;
   font-size: 1.2rem;
@@ -72,9 +73,10 @@ export const FormTextArea = styled(Field)`
   height: 60%;
   bottom: 20%;
   right: 5%;
-  background-color: black;
+  background-color: white;
+  padding: 15px;
   resize: none;
-  color: white;
+  color: black;
 `;
 
 export const Comment = styled.p`
