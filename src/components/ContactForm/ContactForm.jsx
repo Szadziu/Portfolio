@@ -1,5 +1,5 @@
 import { Formik, Form } from "formik";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Wrapper } from "./parts";
 import * as Yup from "yup";
 import * as P from "./parts";
@@ -8,11 +8,12 @@ import { submitAnimate } from "../../animations/submitAnimate";
 
 // tutaj istnieje problem dotyczący weryfikacji wysłania pustego formularza, obecnie nie jest to w żaden sposób chronione. Nie bardzo rozumiem dlaczego warunek min(2) tego nie objął. Do poprawy później.
 const VALIDATION_SCHEMA = Yup.object({
-  username: Yup.string().min(2, "Fill in this field!"),
+  username: Yup.string().min(2, "Wpisz minimum 2 znaki!"),
   body: Yup.string().min(5, "No content!"),
 });
 
 const ContactForm = () => {
+  const [isSendForm, setIsSendForm] = useState(false);
   const formRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -23,6 +24,11 @@ const ContactForm = () => {
     );
     values.username = "";
     values.body = "";
+
+    setTimeout(() => {
+      setIsSendForm(true);
+      setTimeout(() => setIsSendForm(false), 5000);
+    }, 200);
   };
 
   return (
@@ -47,12 +53,20 @@ const ContactForm = () => {
               id="e-mail"
               placeholder="podaj e-mail"
             />
-            <P.Comment style={{ color: "red" }} cords={{ x: 35, y: 0 }}>
+            <P.Comment style={{ color: "red" }} cords={{ top: 35, left: 0 }}>
               {errors.username}
             </P.Comment>
             <P.FormButton ref={buttonRef} type="submit">
               Wyślij
             </P.FormButton>
+            {isSendForm && (
+              <P.Comment
+                style={{ color: "green" }}
+                cords={{ top: 75, left: 8 }}
+              >
+                Wysłano
+              </P.Comment>
+            )}
             <P.FormTextArea
               name="body"
               id="body"
@@ -61,8 +75,8 @@ const ContactForm = () => {
               as="textarea"
             />
             <br />
-            <P.Comment cords={{ x: 85, y: 50 }} style={{ color: "red" }}>
-              {errors.body}
+            <P.Comment cords={{ top: 80, left: 47 }} style={{ color: "red" }}>
+              Error
             </P.Comment>
           </Form>
         )}

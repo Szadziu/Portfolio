@@ -3,7 +3,7 @@ import { Field } from "formik";
 
 export const Input = styled(Field)`
   display: block;
-  margin: 30px 0 0 30px;
+  margin: 35px 0 0 30px;
   width: 240px;
   height: 40px;
   font-size: 1.2rem;
@@ -81,8 +81,8 @@ export const FormTextArea = styled(Field)`
 
 export const Comment = styled.p`
   position: absolute;
-  top: ${({ cords }) => cords.x}%;
-  left: ${({ cords }) => cords.y}%;
+  top: ${({ cords }) => cords.top}%;
+  left: ${({ cords }) => cords.left}%;
   margin: 10px 30px;
   color: red;
 `;
