@@ -1,4 +1,4 @@
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
 import { useRef, useState } from "react";
 import { Wrapper } from "./parts";
 import * as Yup from "yup";
@@ -10,11 +10,11 @@ import { submitAnimate } from "../../animations/submitAnimate";
 const VALIDATION_SCHEMA = Yup.object({
   username: Yup.string().min(2, "Wpisz minimum 2 znaki!"),
   body: Yup.string().min(5, "No content!"),
+  email: Yup.string().email("Niepoprawny adres e-mail"),
 });
 
 const ContactForm = () => {
   const [isSendForm, setIsSendForm] = useState(false);
-  const formRef = useRef(null);
   const buttonRef = useRef(null);
 
   const handleSubmit = (values) => {
@@ -24,6 +24,7 @@ const ContactForm = () => {
     );
     values.username = "";
     values.body = "";
+    values.email = "";
 
     setTimeout(() => {
       setIsSendForm(true);
@@ -34,7 +35,7 @@ const ContactForm = () => {
   return (
     <Wrapper id="contact">
       <Formik
-        initialValues={{ username: "", body: "" }}
+        initialValues={{ username: "", body: "", email: "" }}
         onSubmit={(values) => handleSubmit(values)}
         validationSchema={VALIDATION_SCHEMA}
       >
@@ -49,8 +50,8 @@ const ContactForm = () => {
             />
             <P.Input
               type="text"
-              name="e-mail"
-              id="e-mail"
+              name="email"
+              id="email"
               placeholder="podaj e-mail"
             />
             <P.Comment style={{ color: "red" }} cords={{ top: 35, left: 0 }}>
@@ -70,13 +71,21 @@ const ContactForm = () => {
             <P.FormTextArea
               name="body"
               id="body"
-              ref={formRef}
               placeholder="wpisz swoją wiadomość tutaj..."
               as="textarea"
+              type="text"
             />
+            {/* doczytać dokumentację z wersji 5.1.0 odnośnie przekazywania propsów */}
+            {/* <Field
+              name="body"
+              id="body"
+              placeholder="wpisz swoją wiadomość tutaj..."
+              as="textarea"
+              component={P.FormTextArea}
+            /> */}
             <br />
             <P.Comment cords={{ top: 80, left: 47 }} style={{ color: "red" }}>
-              Error
+              {errors.body}
             </P.Comment>
           </Form>
         )}
