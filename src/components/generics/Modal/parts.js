@@ -4,11 +4,18 @@ export const ProjectDesc = styled.p`
   color: white;
   width: 40%;
   height: 60%;
+  line-height: 32px;
 `;
 
 export const PhotoOfProject = styled.img`
   height: 50%;
-  border: 3px solid white;
+  border-bottom: 3px solid transparent;
+  transition: 0.5s;
+  padding-bottom: 20px;
+  cursor: pointer;
+  &:hover {
+    border-color: gold;
+  }
 `;
 
 export const CloseButton = styled.button`

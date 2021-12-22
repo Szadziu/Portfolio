@@ -110,8 +110,8 @@ export const PROJECTS = [
     id: 7,
     name: "Timer",
     img: timerIcon,
-    link: "https://www.google.pl",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet accumsan porttitor. Suspendisse condimentum tortor eget cursus dictum. Duis tempor tincidunt accumsan. Donec placerat augue et dui hendrerit efficitur. Praesent dictum cursus tempus. Donec malesuada nisi magna, eu ultrices turpis eleifend non. Vestibulum commodo purus a feugiat iaculis. Aliquam vel elit nisi. Nam eu libero pulvinar, pellentesque lacus eu, eleifend sem.",
+    link: "https://szadziu.github.io/stoper",
+    desc: "Aplikacja Stoper pozwala zmierzyć określoną długość czasu, a na jej punkt startowy oraz końcowy wpływa działanie użytkownika. Czas, który został wstrzymany może być wznowiony od tego miejsca. Dodatkowo istnieje możliwość zresetowania całego pomiaru.",
   },
   {
     id: 8,
