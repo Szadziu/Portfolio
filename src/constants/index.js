@@ -111,7 +111,7 @@ export const PROJECTS = [
     name: "Timer",
     img: timerIcon,
     link: "https://szadziu.github.io/stoper",
-    desc: "Aplikacja Stoper pozwala zmierzyć określoną długość czasu, a na jej punkt startowy oraz końcowy wpływa działanie użytkownika. Czas, który został wstrzymany może być wznowiony od tego miejsca. Dodatkowo istnieje możliwość zresetowania całego pomiaru.",
+    desc: "Aplikacja Stoper pozwala zmierzyć określoną długość czasu, a na jej punkt startowy oraz końcowy wpływa działanie użytkownika. Czas, który został wstrzymany może być wznowiony od tego miejsca. Dodatkowo istnieje możliwość zresetowania całego pomiaru. Technologie, które zostały zastosowane w projekcie to: React (functional components), styled-components",
   },
   {
     id: 8,

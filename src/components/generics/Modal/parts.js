@@ -4,7 +4,7 @@ export const ProjectDesc = styled.p`
   color: white;
   width: 40%;
   height: 60%;
-  line-height: 32px;
+  line-height: 28px;
 `;
 
 export const PhotoOfProject = styled.img`
@@ -44,7 +44,7 @@ export const ProjectModal = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-image: ${({ theme }) => theme.redBlueGradient};
+  background-image: ${({ theme }) => theme.darkenedBackground};
   border: 5px solid white;
   width: 50%;
   height: 50%;

@@ -12,6 +12,9 @@ const Modal = ({ closeModal, currentProject }) => {
         <P.Title>{currentProject.name}</P.Title>
         <P.CloseButton onClick={closeModal}>❌</P.CloseButton>
         <P.PhotoOfProject
+          onLoad={setTimeout(() => {
+            console.log("wczytało się");
+          }, 1000)}
           onClick={() => triggerLinkProject(currentProject.link)}
           src={currentProject.img}
         />
