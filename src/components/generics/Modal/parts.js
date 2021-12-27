@@ -44,7 +44,7 @@ export const ProjectModal = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-image: ${({ theme }) => theme.darkenedBackground};
+  background-color: ${({ theme }) => theme.darkOrange};
   border: 5px solid white;
   width: 50%;
   height: 50%;

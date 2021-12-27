@@ -1,3 +1,4 @@
+import { device } from "../constants/devices";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -12,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         background: url(${({ theme }) => theme.landingSectionBackground}); 
         background-repeat: no-repeat;
-        /* background-position: 700% 20%; */
         background-position: -25vw 0vh;
         background-size: 55%;
         font-family: 'Source Code Pro', monospace;
@@ -27,6 +27,13 @@ const GlobalStyle = createGlobalStyle`
         border: none;
         &:focus, &:active {
             outline: none;
+        }
+    }
+
+    @media ${device.mobileS}{
+        body{
+            background-position: -75vw 40vh;
+            background-size: 150%;
         }
     }
 `;
