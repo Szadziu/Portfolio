@@ -30,17 +30,31 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    @media ${device.desktopHD} {
+    @media ${device.mobileS}{
+        body{
+            background-position: -75vw 30vh;
+            background-size: 150%;
+        }
+    }
+
+    @media ${device.mobileSL} and (orientation:landscape){
         body{
             background-position: -45vw -20vh;
             background-size: 90%;
         }
     }
 
-    @media ${device.laptop15} {
+    @media ${device.tabletS}{
         body{
-            background-position: -50vw -30vh;
+            background-position: -50vw -10vh;
             background-size: 100%;
+        }
+    }
+
+    @media ${device.tabletSP} and (orientation: portrait){
+        body{
+            background-position: -100vw -10vh;
+            background-size: 190%;
         }
     }
 
@@ -51,63 +65,20 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    @media ${device.tabletL} {
+    @media ${device.laptop15} {
         body{
-            background-position: -60vw 20vh;
-            background-size: 120%;
+            background-position: -50vw -30vh;
+            background-size: 100%;
         }
     }
-
-    @media ${device.tabletL} and (orientation: landscape){
+    
+    @media ${device.desktopHD} {
         body{
-            background-position: -65vw -20vh;
-            background-size: 130%;
+            background-position: -45vw -20vh;
+            background-size: 90%;
         }
-    }
-
-    @media ${device.tabletM}{
-        body{
-            background-position: -75vw 0vh;
-            background-size: 150%;
-        }
-    }
-
-    @media ${device.tabletM} and (orientation: landscape){
-        body{
-            background-position: -60vw -20vh;
-            background-size: 120%;
-        }
-    }
-
-    @media ${device.tabletS}{
-        body{
-            background-position: -60vw -20vh;
-            background-size: 120%;
-        }
-    }
-
-
-    @media ${device.mobileL}{
-        body{
-            background-position: -80vw 20vh;
-            background-size: 160%;
-        }
-    }
-
-    @media ${device.mobileM}{
-        body{
-            background-position: -80vw 20vh;
-            background-size: 160%;
-        }
-    }
-
-
-    @media ${device.mobileS}{
-        body{
-            background-position: -75vw 30vh;
-            background-size: 150%;
-        }
-    }
+    } 
+    
 `;
 
 export default GlobalStyle;
