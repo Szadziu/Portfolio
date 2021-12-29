@@ -7,6 +7,8 @@ import { ThemeProvider } from "styled-components";
 import { THEME } from "../../constants";
 import { useState, createContext } from "react";
 
+//! problem ze stylowaniem Link (react-scroll)
+
 export const BackgroundContext = createContext({});
 // ten context docelowo będzie w contextach, ale był problem z przeniesieniem
 const App = () => {

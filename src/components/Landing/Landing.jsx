@@ -1,10 +1,6 @@
-import ContactButton from "../ContactButton/ContactButton";
 import SectionWrapper from "../generics/SectionWrapper";
 import * as P from "./parts.js";
 import Button from "../generics/Button";
-import HomePageButton from "../HomePageButton";
-import MySkillsButton from "../MySkillsButton";
-import ProjectsButton from "../ProjectsButton";
 
 const Landing = () => {
   // const dupa = useRef();
@@ -14,16 +10,14 @@ const Landing = () => {
 
   return (
     <SectionWrapper>
-      {/* <HomePageButton />
-      <MySkillsButton />
-      <ProjectsButton />
-      <ContactButton /> */}
-      <P.Menu>
-        <Button text="homePage" />
-        <Button text="aboutMySkills" />
-        <Button text="myProjects" />
-        <Button text="contactToMe" />
-      </P.Menu>
+      <P.Wrapper>
+        <P.Menu id="home">
+          <Button text="homePage" link="home" />
+          <Button text="aboutMySkills" link="skills" />
+          <Button text="myProjects" link="projects" />
+          <Button text="contactToMe" link="contact" />
+        </P.Menu>
+      </P.Wrapper>
     </SectionWrapper>
   );
 };
