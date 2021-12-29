@@ -14,6 +14,7 @@ export const Button = styled.a`
   transform-origin: left center;
 
   &::before {
+    position: absolute;
     border-radius: 10px;
     transition: 0.8s;
     content: "";

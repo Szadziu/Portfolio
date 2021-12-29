@@ -22,6 +22,7 @@ export const THEME = {
   yellow: "#D4D20B",
   green: "#00BD3C",
   fontColor: "rgb(26, 26, 26)",
+  black: "rgb(26, 26, 26)",
   darkenedBackground: "rgba(0,0,0,0.9)",
 };
 

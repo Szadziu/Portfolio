@@ -1,20 +1,29 @@
 import ContactButton from "../ContactButton/ContactButton";
 import SectionWrapper from "../generics/SectionWrapper";
+import * as P from "./parts.js";
+import Button from "../generics/Button";
 import HomePageButton from "../HomePageButton";
 import MySkillsButton from "../MySkillsButton";
 import ProjectsButton from "../ProjectsButton";
-import { useContext } from "react";
-import { BackgroundContext } from "../App/App";
 
 const Landing = () => {
-  const { color } = useContext(BackgroundContext);
+  // const dupa = useRef();
+  // useEffect(() => {
+  //   gsap.to(dupa.current, {});
+  // }, []);
 
   return (
-    <SectionWrapper bgColor={color}>
-      <HomePageButton />
+    <SectionWrapper>
+      {/* <HomePageButton />
       <MySkillsButton />
       <ProjectsButton />
-      <ContactButton />
+      <ContactButton /> */}
+      <P.Menu>
+        <Button text="homePage" />
+        <Button text="aboutMySkills" />
+        <Button text="myProjects" />
+        <Button text="contactToMe" />
+      </P.Menu>
     </SectionWrapper>
   );
 };

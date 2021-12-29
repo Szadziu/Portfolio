@@ -4,6 +4,7 @@ import * as P from "./parts";
 
 const Modal = ({ closeModal, currentProject }) => {
   const [imageDisplay, setImageDisplay] = useState(false);
+  const ref = useRef();
   // const [ref, inView, entry] = useInView();
 
   // useEffect(() => {
@@ -12,33 +13,30 @@ const Modal = ({ closeModal, currentProject }) => {
   //   }
   // }, [inView]);
 
-  const photoAnimation = (image) => {
-    gsap.to(image.target, { scale: 2, stagger: 0.5 });
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setImageDisplay(true);
+      photoAnimation();
+    }, 1000);
+  }, []);
 
-  const triggerLinkProject = (link) => {
-    window.open(link, "_blank");
+  const photoAnimation = () => {
+    gsap.to(ref.current, { scale: 2, stagger: 0.5 });
   };
 
   return (
     <>
       <P.OverlayWrapper onClick={closeModal}></P.OverlayWrapper>
       <P.ProjectModal
-        // ref={ref}
-        onLoad={setTimeout(() => {
-          // const imageRef = entry.current;
-          setImageDisplay(true);
-          // photoAnimation(imageRef);
-        }, 1000)}
+
+      // onLoad={}
       >
         <P.Title>{currentProject.name}</P.Title>
         <P.CloseButton onClick={closeModal}>❌</P.CloseButton>
-        {imageDisplay && (
-          <P.PhotoOfProject
-            onClick={() => triggerLinkProject(currentProject.link)}
-            src={currentProject.img}
-          />
-        )}
+        <a href={currentProject.link} ref={ref}>
+          <P.PhotoOfProject src={currentProject.img} />
+        </a>
+
         <P.ProjectDesc>{currentProject.desc}</P.ProjectDesc>
       </P.ProjectModal>
       ;

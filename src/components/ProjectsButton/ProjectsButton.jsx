@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import * as P from "./parts";
+import Button from "../generics/Button";
+// import * as P from "./parts";
 import { buttonAnimation } from "../../animations/buttonAnimation";
 import { useContext } from "react";
 import { BackgroundContext } from "../App/App";
@@ -15,7 +16,9 @@ const ProjectsButton = () => {
 
   return (
     <Link to="projects" spy={true} smooth={true}>
-      <P.Button
+      <Button
+        fontSize="medium"
+        position={{ top: "-10vh", left: "40vw" }}
         ref={projectsButton}
         onMouseEnter={() =>
           buttonAnimation(
@@ -28,7 +31,7 @@ const ProjectsButton = () => {
         onMouseLeave={() => buttonAnimation(projectsButton, setColor, {}, "")}
       >
         myProjects
-      </P.Button>
+      </Button>
     </Link>
   );
 };

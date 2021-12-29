@@ -11,7 +11,7 @@ export const Button = styled.a`
   transform: rotate(-180deg);
   position: absolute;
   top: -50vh;
-  left: 15vw;
+  left: 35vw;
   &:hover {
     cursor: pointer;
     color: white;

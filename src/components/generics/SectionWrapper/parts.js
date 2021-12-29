@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  min-height: 100vh;
   position: relative;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  height: 100vh;
   background-color: ${(props) => props.bgColor};
   background-image: ${(props) => props.theme.landingSectionBackground};
   overflow: hidden;
