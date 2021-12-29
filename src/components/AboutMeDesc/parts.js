@@ -2,12 +2,9 @@ import styled from "styled-components";
 import sign from "../../assets/sign.png";
 
 export const Container = styled.div`
-  width: 50%;
-  height: 40%;
   font-weight: 700;
-  font-size: 12px;
-  background-color: blue;
-  grid-area: 3/6/9/1;
+  font-size: 32px;
+  grid-area: 3/9/10/2;
 `;
 
 export const Line = styled.span`
