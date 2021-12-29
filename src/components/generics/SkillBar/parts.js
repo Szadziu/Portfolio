@@ -30,5 +30,4 @@ export const BoxOfSkill = styled.div`
 export const TitleOfSkill = styled.p`
   width: 90%;
   margin-bottom: 20px;
-  color: whitesmoke;
 `;

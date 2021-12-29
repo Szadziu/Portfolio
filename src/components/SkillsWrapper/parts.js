@@ -7,4 +7,5 @@ export const SkillContainer = styled.div`
   justify-content: flex-start;
   width: 30%;
   height: 80%;
+  grid-area: 2/13/11/6;
 `;

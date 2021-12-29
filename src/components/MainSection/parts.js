@@ -1,31 +1,26 @@
 import styled from "styled-components";
-import matrix from "../../assets/matrix.jpg";
+import fingerPrint from "../../assets/fingerprint.png";
 
 export const MainSectionWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   width: 100%;
   height: 100%;
-  background-color: black;
-  background-image: url(${matrix});
-  background-size: contain;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-top: 5px solid gray;
-  border-bottom: 5px solid gray;
-  border-radius: 50px;
+  position: relative;
   padding-top: 30px;
 `;
 
-export const AboutMeDesc = styled.p`
-  width: 50%;
-  color: white;
-  line-height: 48px;
-  font-size: 28px;
+export const Background = styled.div`
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  bottom: 0;
+  right: 0;
+  /* opacity: 0.2; */
+  /* background-image: url(${fingerPrint});
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat; */
 `;

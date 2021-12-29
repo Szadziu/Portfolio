@@ -155,7 +155,3 @@ export const SOCIALS = [
     link: "https://www.instagram.com",
   },
 ];
-
-export const DESC_ABOUT_ME =
-  //ignore-prettier
-  "Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku, w tym czasie przyswoiłem fundamentalną wiedzę z zakresu html, css oraz javascript. Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React oraz języku Typescript. Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia konkretnych działań jakie należy podjąć, by móc wejść do świata IT i zająć się tym zawodowo. Jestem również absolwentem studiów inżynierskich o kierunku edukacja techniczno-informatyczna.";

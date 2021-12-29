@@ -31,7 +31,7 @@ export const Button = styled.a`
     top: 0;
     left: 0;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.5s;
     content: "";
     background-color: orange;
     width: 10px;
@@ -41,6 +41,14 @@ export const Button = styled.a`
   }
 
   &:active {
+    &::before {
+      left: calc(100% - 10px);
+      top: 50%;
+      height: 5px;
+    }
+  }
+
+  &:hover {
     &::before {
       left: calc(100% - 10px);
       top: 50%;
