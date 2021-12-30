@@ -1,10 +1,22 @@
 import styled from "styled-components";
-import sign from "../../assets/sign.png";
+import { device } from "../../constants/devices";
 
 export const Container = styled.div`
   font-weight: 700;
-  font-size: 32px;
+  font-size: 24px;
   grid-area: 3/9/10/2;
+
+  @media ${device.mobileS} {
+    font-size: 12px;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 14px;
+  }
+
+  @media ${device.tabletM} {
+    font-size: 22px;
+  }
 `;
 
 export const Line = styled.span`
@@ -31,9 +43,6 @@ export const Line = styled.span`
     right: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(255, 239, 181, 1); */
-    /* background-image: url(${sign});
-    background-size: contain; */
     background: white;
     animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
     transform: translateX(0);

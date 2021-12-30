@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../constants/devices";
 
 export const QuoteParam = styled.p`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -7,4 +8,17 @@ export const QuoteParam = styled.p`
   font-size: 34px;
   opacity: 0;
   grid-area: 10/5/12/2;
+
+  @media ${device.mobileS} {
+    font-size: 14px;
+    grid-area: 11/8/12/2;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 16px;
+  }
+
+  @media ${device.tabletM} {
+    font-size: 28px;
+  }
 `;
