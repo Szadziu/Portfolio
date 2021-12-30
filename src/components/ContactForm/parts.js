@@ -1,21 +1,13 @@
 import styled from "styled-components";
 import { Field } from "formik";
 
-export const Input = styled(Field)`
-  display: block;
-  margin: 35px 0 0 30px;
-  width: 240px;
-  height: 40px;
-  font-size: 1.2rem;
-`;
-
 export const Wrapper = styled.div`
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 45%;
+  width: 90%;
+  height: 70%;
   background-color: black;
   border: 15px solid grey;
   border-radius: 20px;
@@ -25,20 +17,28 @@ export const FormTitle = styled.span`
   display: block;
   margin: 30px;
   color: whitesmoke;
-  font-size: 1.7rem;
+  font-size: 0.8rem;
+`;
+
+export const Input = styled(Field)`
+  display: block;
+  margin: 30px 0 0 15px;
+  width: 150px;
+  height: 25px;
+  font-size: 0.7rem;
 `;
 
 export const FormButton = styled.button`
   position: absolute;
-  bottom: 20%;
-  left: 10%;
-  width: 100px;
-  height: 50px;
+  bottom: 5%;
+  right: 5%;
+  width: 80px;
+  height: 30px;
   border: none;
   background-color: white;
   color: ${({ theme }) => theme.fontColor};
   transition: 0.3s;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 
   &::before {
     position: absolute;
@@ -69,14 +69,15 @@ export const FormButton = styled.button`
 
 export const FormTextArea = styled(Field)`
   position: absolute;
-  width: 45%;
-  height: 60%;
+  width: 90%;
+  height: 30%;
   bottom: 20%;
   right: 5%;
   background-color: white;
   padding: 15px;
   resize: none;
   color: black;
+  font-size: 0.7rem;
 `;
 
 export const Comment = styled.p`
@@ -85,4 +86,5 @@ export const Comment = styled.p`
   left: ${({ cords }) => cords.left}%;
   margin: 10px 30px;
   color: red;
+  font-size: 0.6rem;
 `;

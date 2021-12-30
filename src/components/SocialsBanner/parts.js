@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Img = styled.img`
-  margin-left: 30px;
+  margin-left: 10px;
   width: auto;
-  height: 50px;
+  height: 40px;
   transition: 0.4s;
   &:hover {
     cursor: pointer;

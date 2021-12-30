@@ -1,6 +1,5 @@
 import { Formik, Form, Field } from "formik";
 import { useRef, useState } from "react";
-import { Wrapper } from "./parts";
 import * as Yup from "yup";
 import * as P from "./parts";
 import { changeBackgroundAndFontColors } from "../../utils/changeBackgroundAndFontColors";
@@ -9,7 +8,7 @@ import { submitAnimate } from "../../animations/submitAnimate";
 // tutaj istnieje problem dotyczący weryfikacji wysłania pustego formularza, obecnie nie jest to w żaden sposób chronione. Nie bardzo rozumiem dlaczego warunek min(2) tego nie objął. Do poprawy później.
 const VALIDATION_SCHEMA = Yup.object({
   username: Yup.string().min(2, "Wpisz minimum 2 znaki!"),
-  body: Yup.string().min(5, "No content!"),
+  body: Yup.string().min(5, "Wpisz minimum 5 znaków!"),
   email: Yup.string().email("Niepoprawny adres e-mail"),
 });
 
@@ -33,7 +32,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Wrapper id="contact">
+    <P.Wrapper id="contact">
       <Formik
         initialValues={{ username: "", body: "", email: "" }}
         onSubmit={(values) => handleSubmit(values)}
@@ -54,8 +53,11 @@ const ContactForm = () => {
               id="email"
               placeholder="podaj e-mail"
             />
-            <P.Comment style={{ color: "red" }} cords={{ top: 35, left: 0 }}>
+            <P.Comment style={{ color: "red" }} cords={{ top: 27, left: -5 }}>
               {errors.username}
+            </P.Comment>
+            <P.Comment style={{ color: "red" }} cords={{ top: 42, left: -5 }}>
+              {errors.email}
             </P.Comment>
             <P.FormButton ref={buttonRef} type="submit">
               Wyślij
@@ -63,7 +65,7 @@ const ContactForm = () => {
             {isSendForm && (
               <P.Comment
                 style={{ color: "green" }}
-                cords={{ top: 75, left: 8 }}
+                cords={{ top: 10, left: 8 }}
               >
                 Wysłano
               </P.Comment>
@@ -84,13 +86,13 @@ const ContactForm = () => {
               component={P.FormTextArea}
             /> */}
             <br />
-            <P.Comment cords={{ top: 80, left: 47 }} style={{ color: "red" }}>
+            <P.Comment cords={{ top: 10, left: 7 }} style={{ color: "red" }}>
               {errors.body}
             </P.Comment>
           </Form>
         )}
       </Formik>
-    </Wrapper>
+    </P.Wrapper>
   );
 };
 
