@@ -8,6 +8,10 @@ export const Bar = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  @media ${device.laptop13} {
+    margin-bottom: 25px;
+  }
 `;
 
 export const Boxes = styled.div`
@@ -38,6 +42,22 @@ export const BoxOfSkill = styled.div`
 
   @media ${device.tabletM} {
     width: 15px;
+  }
+
+  @media ${device.tabletL} {
+    width: 20px;
+  }
+
+  @media ${device.laptop13} {
+    width: 25px;
+  }
+
+  @media ${device.desktopHD} {
+    width: 30px;
+  }
+
+  @media ${device.desktop4k} {
+    width: 60px;
   }
 `;
 
@@ -104,5 +124,15 @@ export const TitleOfSkill = styled.p`
   @media ${device.tabletM} {
     font-size: 22px;
     margin-bottom: 70px;
+  }
+
+  @media ${device.desktop4k} {
+    font-size: 42px;
+    margin-bottom: 70px;
+
+    &::after {
+      width: 55px;
+      height: 55px;
+    }
   }
 `;

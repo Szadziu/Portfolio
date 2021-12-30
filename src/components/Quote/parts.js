@@ -21,4 +21,16 @@ export const QuoteParam = styled.p`
   @media ${device.tabletM} {
     font-size: 28px;
   }
+
+  @media ${device.tabletL} {
+    font-size: 32px;
+  }
+
+  @media ${device.laptop13} {
+    font-size: 36px;
+  }
+
+  @media ${device.desktop4k} {
+    font-size: 56px;
+  }
 `;

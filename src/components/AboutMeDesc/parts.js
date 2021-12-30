@@ -17,6 +17,22 @@ export const Container = styled.div`
   @media ${device.tabletM} {
     font-size: 22px;
   }
+
+  @media ${device.tabletL} {
+    font-size: 24px;
+  }
+
+  @media ${device.laptop13} {
+    font-size: 26px;
+  }
+
+  @media ${device.desktopHD} {
+    font-size: 36px;
+  }
+
+  @media ${device.desktop4k} {
+    font-size: 64px;
+  }
 `;
 
 export const Line = styled.span`

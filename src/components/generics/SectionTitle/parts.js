@@ -8,7 +8,6 @@ export const Title = styled.h1`
   font-size: 48px;
   font-weight: 900;
   letter-spacing: -2px;
-  /* transform: skew(30deg, 0deg) scaleY(0.667); */
   grid-area: 1/9/2/1;
 
   @media ${device.mobileS} {
@@ -17,5 +16,13 @@ export const Title = styled.h1`
 
   @media ${device.tabletM} {
     font-size: 36px;
+  }
+
+  @media ${device.desktopHD} {
+    font-size: 42px;
+  }
+
+  @media ${device.desktop4k} {
+    font-size: 84px;
   }
 `;
