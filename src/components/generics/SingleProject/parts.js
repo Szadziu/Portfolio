@@ -5,8 +5,8 @@ export const Project = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 0;
-  width: 30%;
-  height: 30%;
+  width: 26%;
+  height: 26%;
   text-align: center;
   color: white;
   -webkit-text-stroke: 3px white;
