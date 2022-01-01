@@ -7,7 +7,6 @@ import { ThemeProvider } from "styled-components";
 import { THEME } from "../../constants";
 
 //! problem ze stylowaniem Link (react-scroll)
-//! zdjecie profilowe - nie background
 //! wyjustować tekst w main section
 //! formularz - zmiana stylu
 //! zmienić formularz mobile - inputy cala szerokosc + label

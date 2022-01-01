@@ -38,7 +38,7 @@ export const Container = styled.div`
 export const Line = styled.span`
   position: relative;
   overflow: hidden;
-  display: block;
+  display: none;
   line-height: 1.2;
   &::after {
     content: "";

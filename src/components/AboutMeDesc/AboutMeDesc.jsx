@@ -1,8 +1,19 @@
 import * as P from "./parts";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 const AboutMeDesc = () => {
+  const { ref, inView, entry } = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    if (inView) {
+      gsap.to(entry.target.children, { display: "block" });
+    }
+  }, [inView]);
+
   return (
-    <P.Container>
+    <P.Container ref={ref}>
       <P.Line>
         Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku,
         w tym czasie
