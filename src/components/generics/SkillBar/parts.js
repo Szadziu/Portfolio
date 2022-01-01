@@ -24,6 +24,16 @@ export const Boxes = styled.div`
   margin: 10px;
 `;
 
+// function getBackgroundColor({index, theme}) {
+//     if(index < 5) {
+//       return theme.colors.red
+//     } else if (index < 10) {
+//       return theme.colors.yellow
+//     } else {
+//       return theme.color.green
+//     }
+// }
+
 export const BoxOfSkill = styled.div`
   border-radius: 3px;
   width: 30px;

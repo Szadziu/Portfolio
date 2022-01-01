@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 import { device } from "../../../constants/devices";
 
 const fontSizes = {
@@ -9,7 +10,7 @@ const fontSizes = {
   huge: "4rem",
 };
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;

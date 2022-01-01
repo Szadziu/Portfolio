@@ -35,7 +35,7 @@ const ContactForm = () => {
     <P.Wrapper id="contact">
       <Formik
         initialValues={{ username: "", body: "", email: "" }}
-        onSubmit={(values) => handleSubmit(values)}
+        onSubmit={handleSubmit}
         validationSchema={VALIDATION_SCHEMA}
       >
         {({ errors }) => (
@@ -47,6 +47,7 @@ const ContactForm = () => {
               id="username"
               placeholder="wpisz swoje imię"
             />
+            {/* stworzyc osobny komponent input + komentarz */}
             <P.Input
               type="text"
               name="email"

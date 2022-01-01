@@ -26,7 +26,7 @@ export const THEME = {
   darkenedBackground: "rgba(0,0,0,0.9)",
 };
 
-export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją." 
+export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją."
   Apolinary Despinoix`;
 
 export const SKILL_BUNDLE = [

@@ -5,32 +5,26 @@ import Projects from "../Projects";
 import GlobalStyle from "../../styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { THEME } from "../../constants";
-import { useState, createContext } from "react";
 
 //! problem ze stylowaniem Link (react-scroll)
+//! zdjecie profilowe - nie background
+//! wyjustować tekst w main section
+//! formularz - zmiana stylu
+//! zmienić formularz mobile - inputy cala szerokosc + label
+//! przeniesc theme provider do nowego komponentu
+//! migające ikonki info
+//! font awesome
+//! floating button dolozyc
 
-export const BackgroundContext = createContext({});
-// ten context docelowo będzie w contextach, ale był problem z przeniesieniem
 const App = () => {
-  const [color, setColor] = useState("");
-
-  const value = {
-    color,
-    setColor,
-  };
-
   return (
-    <>
-      <BackgroundContext.Provider value={value}>
-        <ThemeProvider theme={THEME}>
-          <GlobalStyle />
-          <Landing />
-          <MainSection />
-          <Projects />
-          <Footer />
-        </ThemeProvider>
-      </BackgroundContext.Provider>
-    </>
+    <ThemeProvider theme={THEME}>
+      <GlobalStyle />
+      <Landing />
+      <MainSection />
+      <Projects />
+      <Footer />
+    </ThemeProvider>
   );
 };
 
