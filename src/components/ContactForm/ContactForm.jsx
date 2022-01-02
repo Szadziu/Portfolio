@@ -1,4 +1,4 @@
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import { useRef, useState } from "react";
 import * as Yup from "yup";
 import * as P from "./parts";
@@ -39,8 +39,8 @@ const ContactForm = () => {
         validationSchema={VALIDATION_SCHEMA}
       >
         {({ errors }) => (
-          <Form>
-            <P.FormTitle>Skontaktuj się ze mną</P.FormTitle>
+          <P.FormWrapper>
+            <P.FormTitle>kontakt do mnie</P.FormTitle>
             <P.Input
               type="text"
               name="username"
@@ -60,9 +60,7 @@ const ContactForm = () => {
             <P.Comment style={{ color: "red" }} cords={{ top: 42, left: -5 }}>
               {errors.email}
             </P.Comment>
-            <P.FormButton ref={buttonRef} type="submit">
-              Wyślij
-            </P.FormButton>
+
             {isSendForm && (
               <P.Comment
                 style={{ color: "green" }}
@@ -86,11 +84,13 @@ const ContactForm = () => {
               as="textarea"
               component={P.FormTextArea}
             /> */}
-            <br />
             <P.Comment cords={{ top: 10, left: 7 }} style={{ color: "red" }}>
               {errors.body}
             </P.Comment>
-          </Form>
+            <P.FormButton ref={buttonRef} type="submit">
+              Wyślij
+            </P.FormButton>
+          </P.FormWrapper>
         )}
       </Formik>
     </P.Wrapper>

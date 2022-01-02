@@ -23,7 +23,6 @@ export const Title = styled.h1`
     }
     70% {
       background-position: center;
-      color: black;
     }
     100% {
       background-position: top right;

@@ -1,44 +1,93 @@
 import styled from "styled-components";
-import { Field } from "formik";
+import { Field, Form } from "formik";
 
 export const Wrapper = styled.div`
-  position: absolute;
+  position: relative;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
+  max-width: 1000px;
   height: 70%;
-  background-color: black;
-  border: 15px solid grey;
-  border-radius: 20px;
+  max-height: 700px;
+  background-color: #3e3e3e;
+  border-radius: 15px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+`;
+
+export const FormWrapper = styled(Form)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const FormTitle = styled.span`
-  display: block;
-  margin: 30px;
-  color: whitesmoke;
-  font-size: 0.8rem;
+  position: relative;
+  align-self: flex-start;
+  color: #ea1d6f;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 30px 0 30px 30px;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ea1d6f;
+  }
 `;
 
 export const Input = styled(Field)`
-  display: block;
-  margin: 30px 0 0 15px;
-  width: 150px;
-  height: 25px;
-  font-size: 0.7rem;
+  width: 90%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: #666;
+  }
+
+  &:focus {
+    border-bottom-color: #ddd;
+  }
 `;
 
 export const FormButton = styled.button`
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  width: 80px;
-  height: 30px;
+  align-self: flex-end;
+  margin-top: 5%;
+  margin-right: 10%;
+  background: none;
   border: none;
-  background-color: white;
-  color: ${({ theme }) => theme.fontColor};
-  transition: 0.3s;
-  font-size: 0.8rem;
+  color: #ea1d6f;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
 
   &::before {
     position: absolute;
@@ -57,27 +106,15 @@ export const FormButton = styled.button`
   }
 
   &:hover {
-    background-color: grey;
-    color: transparent;
-    cursor: pointer;
-    &::before {
-      width: 100%;
-      color: white;
-    }
+    color: #b9134f;
   }
 `;
 
-export const FormTextArea = styled(Field)`
-  position: absolute;
+export const FormTextArea = styled(Input)`
+  margin-top: 5%;
   width: 90%;
-  height: 30%;
-  bottom: 20%;
-  right: 5%;
-  background-color: white;
-  padding: 15px;
+  height: 50%;
   resize: none;
-  color: black;
-  font-size: 0.7rem;
 `;
 
 export const Comment = styled.p`

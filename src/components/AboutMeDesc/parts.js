@@ -4,6 +4,8 @@ import { device } from "../../constants/devices";
 export const Container = styled.div`
   font-weight: 700;
   font-size: 24px;
+  text-align: justify;
+  margin-right: 5vw;
   grid-area: 3/9/10/2;
 
   @media ${device.mobileS} {
