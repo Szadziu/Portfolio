@@ -1,0 +1,30 @@
+import styled from "styled-components";
+import { Field } from "formik";
+
+export const Input = styled(Field)`
+  width: 90%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: #666;
+  }
+
+  &:focus {
+    border-bottom-color: #ddd;
+  }
+`;
+
+export const Comment = styled.p`
+  margin: 10px 50px;
+  align-self: flex-start;
+  color: red;
+  font-size: 0.8rem;
+`;

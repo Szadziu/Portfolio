@@ -6,8 +6,6 @@ import GlobalStyle from "../../styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { THEME } from "../../constants";
 
-//! problem ze stylowaniem Link (react-scroll)
-//! wyjustować tekst w main section
 //! formularz - zmiana stylu
 //! zmienić formularz mobile - inputy cala szerokosc + label
 //! przeniesc theme provider do nowego komponentu

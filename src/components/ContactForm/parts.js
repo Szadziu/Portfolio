@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Field, Form } from "formik";
+import { Form } from "formik";
+import { Input } from "./Input/parts";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -43,7 +44,7 @@ export const FormTitle = styled.span`
   font-size: 26px;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 30px 0 30px 30px;
+  margin: 30px 50px;
 
   &:after {
     content: "";
@@ -57,27 +58,6 @@ export const FormTitle = styled.span`
   }
 `;
 
-export const Input = styled(Field)`
-  width: 90%;
-  padding: 10px 0;
-  background: none;
-  border: none;
-  border-bottom: 1px solid #666;
-  color: #ddd;
-  font-size: 1rem;
-  text-transform: uppercase;
-  outline: none;
-  transition: border-color 0.2s;
-
-  &::placeholder {
-    color: #666;
-  }
-
-  &:focus {
-    border-bottom-color: #ddd;
-  }
-`;
-
 export const FormButton = styled.button`
   align-self: flex-end;
   margin-top: 5%;
@@ -88,6 +68,9 @@ export const FormButton = styled.button`
   font-size: 14px;
   cursor: pointer;
   outline: none;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 
   &::before {
     position: absolute;
@@ -115,13 +98,4 @@ export const FormTextArea = styled(Input)`
   width: 90%;
   height: 50%;
   resize: none;
-`;
-
-export const Comment = styled.p`
-  position: absolute;
-  top: ${({ cords }) => cords.top}%;
-  left: ${({ cords }) => cords.left}%;
-  margin: 10px 30px;
-  color: red;
-  font-size: 0.6rem;
 `;

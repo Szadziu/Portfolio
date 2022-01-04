@@ -1,5 +1,6 @@
 import { Formik, Form } from "formik";
 import { useRef, useState } from "react";
+import Input from "./Input";
 import * as Yup from "yup";
 import * as P from "./parts";
 import { changeBackgroundAndFontColors } from "../../utils/changeBackgroundAndFontColors";
@@ -41,20 +42,28 @@ const ContactForm = () => {
         {({ errors }) => (
           <P.FormWrapper>
             <P.FormTitle>kontakt do mnie</P.FormTitle>
-            <P.Input
-              type="text"
+
+            <Input
+              errors={errors.username}
               name="username"
               id="username"
               placeholder="wpisz swoje imię"
             />
+
+            {/* <P.Input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="wpisz swoje imię"
+            /> */}
             {/* stworzyc osobny komponent input + komentarz */}
-            <P.Input
+            {/* <P.Input
               type="text"
               name="email"
               id="email"
               placeholder="podaj e-mail"
-            />
-            <P.Comment style={{ color: "red" }} cords={{ top: 27, left: -5 }}>
+            /> */}
+            {/* <P.Comment style={{ color: "red" }} cords={{ top: 27, left: -5 }}>
               {errors.username}
             </P.Comment>
             <P.Comment style={{ color: "red" }} cords={{ top: 42, left: -5 }}>
@@ -68,7 +77,7 @@ const ContactForm = () => {
               >
                 Wysłano
               </P.Comment>
-            )}
+            )} */}
             <P.FormTextArea
               name="body"
               id="body"
@@ -76,17 +85,9 @@ const ContactForm = () => {
               as="textarea"
               type="text"
             />
-            {/* doczytać dokumentację z wersji 5.1.0 odnośnie przekazywania propsów */}
-            {/* <Field
-              name="body"
-              id="body"
-              placeholder="wpisz swoją wiadomość tutaj..."
-              as="textarea"
-              component={P.FormTextArea}
-            /> */}
-            <P.Comment cords={{ top: 10, left: 7 }} style={{ color: "red" }}>
+            {/* <P.Comment cords={{ top: 10, left: 7 }} style={{ color: "red" }}>
               {errors.body}
-            </P.Comment>
+            </P.Comment> */}
             <P.FormButton ref={buttonRef} type="submit">
               Wyślij
             </P.FormButton>
