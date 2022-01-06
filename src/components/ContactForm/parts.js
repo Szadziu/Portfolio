@@ -34,7 +34,6 @@ export const FormWrapper = styled(Form)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
 `;
 
 export const FormTitle = styled.span`
@@ -60,7 +59,6 @@ export const FormTitle = styled.span`
 
 export const FormButton = styled.button`
   align-self: flex-end;
-  margin-top: 5%;
   margin-right: 10%;
   background: none;
   border: none;
@@ -71,6 +69,7 @@ export const FormButton = styled.button`
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  padding: 2vw;
 
   &::before {
     position: absolute;

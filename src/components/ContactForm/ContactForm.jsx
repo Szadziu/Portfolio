@@ -1,6 +1,7 @@
 import { Formik, Form } from "formik";
 import { useRef, useState } from "react";
 import Input from "./Input";
+import FormButton from "./FormButton";
 import * as Yup from "yup";
 import * as P from "./parts";
 import { changeBackgroundAndFontColors } from "../../utils/changeBackgroundAndFontColors";
@@ -19,9 +20,6 @@ const ContactForm = () => {
 
   const handleSubmit = (values) => {
     submitAnimate(buttonRef);
-    console.log(
-      `potentially, data has been sent: ${values.username} ${values.body}`
-    );
     values.username = "";
     values.body = "";
     values.email = "";
@@ -49,27 +47,13 @@ const ContactForm = () => {
               id="username"
               placeholder="wpisz swoje imię"
             />
-
-            {/* <P.Input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="wpisz swoje imię"
-            /> */}
-            {/* stworzyc osobny komponent input + komentarz */}
-            {/* <P.Input
-              type="text"
+            <Input
+              errors={errors.email}
               name="email"
               id="email"
               placeholder="podaj e-mail"
-            /> */}
-            {/* <P.Comment style={{ color: "red" }} cords={{ top: 27, left: -5 }}>
-              {errors.username}
-            </P.Comment>
-            <P.Comment style={{ color: "red" }} cords={{ top: 42, left: -5 }}>
-              {errors.email}
-            </P.Comment>
-
+            />
+            {/*
             {isSendForm && (
               <P.Comment
                 style={{ color: "green" }}
@@ -85,12 +69,9 @@ const ContactForm = () => {
               as="textarea"
               type="text"
             />
-            {/* <P.Comment cords={{ top: 10, left: 7 }} style={{ color: "red" }}>
-              {errors.body}
-            </P.Comment> */}
-            <P.FormButton ref={buttonRef} type="submit">
+            <FormButton ref={buttonRef} isSubmitted={isSendForm} type="submit">
               Wyślij
-            </P.FormButton>
+            </FormButton>
           </P.FormWrapper>
         )}
       </Formik>
