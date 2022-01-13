@@ -5,7 +5,12 @@ import { Field } from 'formik';
 const TextArea = ({ errors, name, id, placeholder }) => {
   return (
     <>
-      <Field as='textarea' name={name} id={id} placeholder={placeholder} />
+      <Field
+        as={P.TextAreaField}
+        name={name}
+        id={id}
+        placeholder={placeholder}
+      />
       <Comment>{errors}</Comment>
     </>
   );
