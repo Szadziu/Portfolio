@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Img = styled.img`
   margin-left: 10px;
@@ -22,3 +22,5 @@ export const Banner = styled.div`
   width: 30vw;
   height: 10vh;
 `;
+
+export const SocialLink = styled.a``;

@@ -1,11 +1,11 @@
-import { SOCIALS } from "../../constants";
-import ContactForm from "../ContactForm";
-import SectionWrapper from "../generics/SectionWrapper";
-import SocialsBanner from "../SocialsBanner/SocialsBanner";
+import { SOCIALS } from '../../constants';
+import ContactForm from '../ContactForm';
+import SectionWrapper from '../generics/SectionWrapper';
+import SocialsBanner from '../SocialsBanner/SocialsBanner';
 
 const Footer = () => {
   return (
-    <SectionWrapper bgColor="black">
+    <SectionWrapper bgColor='black'>
       <ContactForm />
       <SocialsBanner icons={SOCIALS} />
     </SectionWrapper>

@@ -1,7 +1,7 @@
-import * as P from "./parts";
-import { socialsAnimation } from "../../animations/socialAnimation";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import * as P from './parts';
+import { socialsAnimation } from '../../animations/socialAnimation';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
 const SocialsBanner = ({ icons }) => {
   const [ref, inView, entry] = useInView();
@@ -14,9 +14,9 @@ const SocialsBanner = ({ icons }) => {
 
   const generateIcons = () => {
     return icons.map((social) => (
-      <a href={social.link} target="_blank" rel="noreferrer">
+      <P.SocialLink href={social.link} target='_blank' rel='noreferrer'>
         <P.Img alt={social.name} src={social.icon}></P.Img>
-      </a>
+      </P.SocialLink>
     ));
   };
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Button = styled.button`
   align-self: flex-end;
@@ -26,7 +26,7 @@ export const Button = styled.button`
     top: 0;
     left: 0;
     opacity: 1;
-    content: "";
+    content: '';
     background-color: skyblue;
     width: 0;
     height: 100%;
@@ -39,7 +39,8 @@ export const Comment = styled.p`
   position: absolute;
   bottom: 0;
   margin: 10px 50px;
-  align-self: flex-end;
+  align-self: center;
   color: green;
-  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
 `;
