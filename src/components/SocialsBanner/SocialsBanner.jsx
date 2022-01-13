@@ -1,7 +1,7 @@
 import * as P from './parts';
-import { socialsAnimation } from '../../animations/socialAnimation';
-import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { socialsAnimation } from './socialAnimation';
 
 const SocialsBanner = ({ icons }) => {
   const [ref, inView, entry] = useInView();

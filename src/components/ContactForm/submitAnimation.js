@@ -1,6 +1,6 @@
-import gsap from "gsap";
+import gsap from 'gsap';
 
-export const submitAnimate = (element) => {
+export const submitAnimation = (element) => {
   const button = element.current;
   const tl = gsap.timeline();
   tl.to(button, { x: 400, y: -280, duration: 3, scale: 0, opacity: 0 })

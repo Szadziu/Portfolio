@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { device } from "../../constants/devices";
+import styled from 'styled-components';
+import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
   font-weight: 700;
@@ -43,7 +43,7 @@ export const Line = styled.span`
   display: none;
   line-height: 1.2;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -55,7 +55,7 @@ export const Line = styled.span`
     transform: translateX(-101%);
   }
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;

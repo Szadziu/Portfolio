@@ -1,5 +1,5 @@
-import { Field } from 'formik';
 import styled from 'styled-components';
+import { Field } from 'formik';
 import { Input } from '../Input/parts';
 
 export const TextAreaField = styled.textarea`

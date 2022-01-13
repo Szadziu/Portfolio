@@ -1,8 +1,11 @@
+import { Field, useFormikContext } from 'formik';
+import Comment from '../../generics/Comment';
 import * as P from './parts';
-import { Comment } from '../parts';
-import { Field } from 'formik';
 
-const TextArea = ({ errors, name, id, placeholder }) => {
+const TextArea = ({ name, id, placeholder }) => {
+  // const { errors, touched } = useFormikContext();
+  // console.log(touched);
+
   return (
     <>
       <Field
@@ -11,7 +14,7 @@ const TextArea = ({ errors, name, id, placeholder }) => {
         id={id}
         placeholder={placeholder}
       />
-      <Comment>{errors}</Comment>
+      {/* <Comment error>{touched.body ? errors.body : ''}</Comment> */}
     </>
   );
 };

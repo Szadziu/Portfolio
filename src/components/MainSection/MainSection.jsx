@@ -1,17 +1,17 @@
-import * as P from "./parts";
-import AboutMeDesc from "../AboutMeDesc";
-import SectionWrapper from "../generics/SectionWrapper";
-import SkillsWrapper from "../SkillsWrapper/SkillsWrapper";
-import Quote from "../Quote";
-import { QUOTE } from "../../constants";
-import SectionTitle from "../generics/SectionTitle";
+import * as P from './parts';
+import AboutMeDesc from './AboutMeDesc';
+import SectionWrapper from '../generics/SectionWrapper';
+import SkillsWrapper from './SkillsWrapper';
+import Quote from '../generics/Quote';
+import { QUOTE } from '../../constants';
+import SectionTitle from '../generics/SectionTitle';
 
 const MainSection = () => {
   return (
-    <SectionWrapper bgColor="white">
-      <P.MainSectionWrapper id="skills">
+    <SectionWrapper bgColor='white'>
+      <P.MainSectionWrapper id='skills'>
         <P.Background />
-        <SectionTitle color="black">kilka słów o mnie ...</SectionTitle>
+        <SectionTitle color='black'>kilka słów o mnie ...</SectionTitle>
         <AboutMeDesc />
         <Quote>{QUOTE}</Quote>
         <SkillsWrapper />

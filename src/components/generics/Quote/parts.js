@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { device } from "../../constants/devices";
+import styled from 'styled-components';
+import { device } from '../../../constants/devices';
 
 export const QuoteParam = styled.p`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: italic;
   font-size: 34px;
   opacity: 0;

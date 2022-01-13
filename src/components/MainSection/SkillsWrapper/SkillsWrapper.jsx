@@ -1,6 +1,6 @@
-import * as P from "./parts";
-import SkillBar from "../generics/SkillBar";
-import { SKILL_BUNDLE } from "../../constants";
+import * as P from './parts';
+import SkillBar from '../../generics/SkillBar';
+import { SKILL_BUNDLE } from '../../../constants';
 
 const SkillsWrapper = () => {
   const renderListOfSkills = () => {

@@ -1,14 +1,12 @@
-import { Formik, Form } from 'formik';
 import { useRef, useState } from 'react';
 import Input from './Input';
 import FormButton from './FormButton';
 import TextArea from './TextArea';
 import * as Yup from 'yup';
+import { Formik } from 'formik';
+import { submitAnimation } from './submitAnimation';
 import * as P from './parts';
-import { submitAnimate } from '../../animations/submitAnimate';
-import { TextAreaField } from './TextArea/parts';
 
-// tutaj istnieje problem dotyczący weryfikacji wysłania pustego formularza, obecnie nie jest to w żaden sposób chronione. Nie bardzo rozumiem dlaczego warunek min(2) tego nie objął. Do poprawy później.
 const VALIDATION_SCHEMA = Yup.object({
   username: Yup.string()
     .min(2, 'Wpisz minimum 2 znaki!')
@@ -26,7 +24,7 @@ const ContactForm = () => {
   const buttonRef = useRef(null);
 
   const handleSubmit = (values) => {
-    submitAnimate(buttonRef);
+    submitAnimation(buttonRef);
     values.username = '';
     values.body = '';
     values.email = '';

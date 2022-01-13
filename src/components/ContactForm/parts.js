@@ -88,10 +88,3 @@ export const FormButton = styled.button`
     color: #b9134f;
   }
 `;
-
-export const Comment = styled.p`
-  margin: 10px 50px;
-  align-self: flex-start;
-  color: red;
-  font-size: 0.8rem;
-`;

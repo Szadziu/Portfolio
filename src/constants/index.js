@@ -1,17 +1,19 @@
 import personalPhotoIcon from '../assets/personalPhoto.png';
-import creditCalculatorIcon from '../assets/creditCalculator.png';
+
 import facebookIcon from '../assets/socialIcons/facebook.png';
 import whatsappIcon from '../assets/socialIcons/whatsapp.png';
 import linkedinIcon from '../assets/socialIcons/linkedin.png';
 import githubIcon from '../assets/socialIcons/github.png';
-import maptyIcon from '../assets/mapty.png';
-import cssGeneratorIcon from '../assets/cssGenerator.png';
-import shoppingListIcon from '../assets/shoppingList.png';
-import clickerGameIcon from '../assets/clickerGame.png';
-import cafeLayoutIcon from '../assets/cafeLayout.png';
-import calendarIcon from '../assets/calendar.png';
-import timerIcon from '../assets/timer.png';
-import drawingAppIcon from '../assets/drawingApp.png';
+
+import creditCalculatorIcon from '../assets/projectsIcons/creditCalculator.png';
+import maptyIcon from '../assets/projectsIcons/mapty.png';
+import cssGeneratorIcon from '../assets/projectsIcons/cssGenerator.png';
+import shoppingListIcon from '../assets/projectsIcons/shoppingList.png';
+import clickerGameIcon from '../assets/projectsIcons/clickerGame.png';
+import cafeLayoutIcon from '../assets/projectsIcons/cafeLayout.png';
+import calendarIcon from '../assets/projectsIcons/calendar.png';
+import timerIcon from '../assets/projectsIcons/timer.png';
+import drawingAppIcon from '../assets/projectsIcons/drawingApp.png';
 
 export const THEME = {
   landingSectionBackground: personalPhotoIcon,
