@@ -1,15 +1,11 @@
-import * as P from "./parts";
+import * as P from './parts';
+import { Comment } from '../parts';
 
 const Input = ({ errors, name, id, placeholder }) => {
   return (
     <>
-      <P.Input
-        type="text"
-        name={name}
-        id={id}
-        placeholder={placeholder}
-      ></P.Input>
-      <P.Comment>{errors}</P.Comment>
+      <P.Input name={name} id={id} placeholder={placeholder}></P.Input>
+      <Comment>{errors}</Comment>
     </>
   );
 };

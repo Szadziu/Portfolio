@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { Form } from "formik";
-import { Input } from "./Input/parts";
+import styled from 'styled-components';
+import { Form } from 'formik';
 
 export const Wrapper = styled.div`
   position: relative;
@@ -15,7 +14,7 @@ export const Wrapper = styled.div`
   border-radius: 15px;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: 0;
@@ -46,7 +45,7 @@ export const FormTitle = styled.span`
   margin: 30px 50px;
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -79,8 +78,6 @@ export const FormButton = styled.button`
     top: 0;
     left: 0;
     opacity: 1;
-    content: "✈️";
-    background-color: skyblue;
     width: 0;
     height: 100%;
     transition: 0.3s;
@@ -92,9 +89,9 @@ export const FormButton = styled.button`
   }
 `;
 
-export const FormTextArea = styled(Input)`
-  margin-top: 5%;
-  width: 90%;
-  height: 50%;
-  resize: none;
+export const Comment = styled.p`
+  margin: 10px 50px;
+  align-self: flex-start;
+  color: red;
+  font-size: 0.8rem;
 `;

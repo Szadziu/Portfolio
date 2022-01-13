@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Field } from "formik";
+import styled from 'styled-components';
+import { Field } from 'formik';
 
 export const Input = styled(Field)`
   width: 90%;
@@ -20,11 +20,4 @@ export const Input = styled(Field)`
   &:focus {
     border-bottom-color: #ddd;
   }
-`;
-
-export const Comment = styled.p`
-  margin: 10px 50px;
-  align-self: flex-start;
-  color: red;
-  font-size: 0.8rem;
 `;
