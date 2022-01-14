@@ -3,8 +3,8 @@ import Comment from '../../generics/Comment';
 import * as P from './parts';
 
 const TextArea = ({ name, id, placeholder }) => {
-  // const { errors, touched } = useFormikContext();
-  // console.log(touched);
+  const { errors, touched } = useFormikContext();
+  console.log(errors);
 
   return (
     <>
@@ -14,7 +14,7 @@ const TextArea = ({ name, id, placeholder }) => {
         id={id}
         placeholder={placeholder}
       />
-      {/* <Comment error>{touched.body ? errors.body : ''}</Comment> */}
+      <Comment error>{touched[name] ? errors[name] : ''}</Comment>
     </>
   );
 };
