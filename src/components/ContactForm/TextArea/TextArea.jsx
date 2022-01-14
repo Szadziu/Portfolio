@@ -4,8 +4,6 @@ import * as P from './parts';
 
 const TextArea = ({ name, id, placeholder }) => {
   const { errors, touched } = useFormikContext();
-  console.log(errors);
-
   return (
     <>
       <Field

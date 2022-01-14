@@ -1,15 +1,17 @@
 import * as P from './parts';
 import { useEffect } from 'react';
+import { useTheme } from 'styled-components';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 
-const SkillBar = ({ children, advancement }, theme) => {
+const SkillBar = ({ children, advancement }) => {
   const [ref, inView, entry] = useInView();
   useEffect(() => {
     if (inView) {
       boxesOfSkillsAnimation();
     }
   }, [inView]);
+  const theme = useTheme();
 
   const generateAdvancementLevel = () => {
     const advancementLevel = [];

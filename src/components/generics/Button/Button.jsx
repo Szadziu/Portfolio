@@ -1,19 +1,11 @@
-import { forwardRef } from "react";
-import * as P from "./parts";
+import * as P from './parts';
 
-const Button = forwardRef(({ text, size, position = {}, link }, ref) => {
+const Button = ({ text, link }) => {
   return (
-    <P.Button
-      size={size}
-      ref={ref}
-      position={position}
-      to={link}
-      spy={true}
-      smooth={true}
-    >
+    <P.Button to={link} spy={true} smooth={true}>
       {text}
     </P.Button>
   );
-});
+};
 
 export default Button;

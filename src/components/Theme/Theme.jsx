@@ -10,6 +10,8 @@ const THEME = {
   green: '#00BD3C',
   fontColor: 'rgb(26, 26, 26)',
   black: 'rgb(26, 26, 26)',
+  gray: '#777',
+  mint: '#62D9C7',
   darkenedBackground: 'rgba(0,0,0,0.9)',
   fontSizes: {
     default: '1.5rem',

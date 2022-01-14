@@ -26,18 +26,17 @@ export const Button = styled(Link)`
     border-radius: 10px;
     transition: 0.5s;
     content: '';
-    background-color: ${({ theme }) => theme.darkOrange};
+    background-color: ${({ theme }) => theme.mint};
     width: 10px;
     margin-right: 15px;
     height: 100%;
-    box-shadow: 0 0 15px 1px black;
+    box-shadow: 0 0 15px 4px black;
   }
 
   &:active {
     &::before {
       left: calc(100% - 10px);
       top: 50%;
-      height: 5px;
     }
   }
 
