@@ -1,10 +1,9 @@
-import * as P from "./parts";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { useInView } from "react-intersection-observer";
-import { THEME } from "../../../constants";
+import * as P from './parts';
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { useInView } from 'react-intersection-observer';
 
-const SkillBar = ({ children, advancement }) => {
+const SkillBar = ({ children, advancement }, theme) => {
   const [ref, inView, entry] = useInView();
   useEffect(() => {
     if (inView) {
@@ -24,13 +23,13 @@ const SkillBar = ({ children, advancement }) => {
       let color;
       boxHeight += 2;
       if (advancementLevel.length <= 2) {
-        color = THEME.darkOrange;
+        color = theme.darkOrange;
         addBoxOfSkill(color, `${boxHeight}px`);
       } else if (advancementLevel.length <= 5) {
-        color = THEME.yellow;
+        color = theme.yellow;
         addBoxOfSkill(color, `${boxHeight}px`);
       } else if (advancementLevel.length <= 9) {
-        color = THEME.green;
+        color = theme.green;
         addBoxOfSkill(color, `${boxHeight}px`);
       }
     }

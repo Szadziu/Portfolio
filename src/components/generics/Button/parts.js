@@ -1,14 +1,6 @@
-import styled from "styled-components";
-import { Link } from "react-scroll";
-import { device } from "../../../constants/devices";
-
-const fontSizes = {
-  default: "1.5rem",
-  small: "1rem",
-  medium: "2rem",
-  large: "3rem",
-  huge: "4rem",
-};
+import styled from 'styled-components';
+import { Link } from 'react-scroll';
+import { device } from '../../../constants/devices';
 
 export const Button = styled(Link)`
   position: relative;
@@ -25,7 +17,7 @@ export const Button = styled(Link)`
   cursor: pointer;
 
   grid-area: 3/11/4/6;
-  font-size: ${fontSizes.small};
+  font-size: ${({ theme }) => theme.fontSizes.small};
 
   &::before {
     position: absolute;
@@ -33,8 +25,8 @@ export const Button = styled(Link)`
     left: 0;
     border-radius: 10px;
     transition: 0.5s;
-    content: "";
-    background-color: orange;
+    content: '';
+    background-color: ${({ theme }) => theme.darkOrange};
     width: 10px;
     margin-right: 15px;
     height: 100%;
@@ -67,7 +59,7 @@ export const Button = styled(Link)`
   @media ${device.tabletM} {
     & {
       width: 75%;
-      font-size: ${fontSizes.medium};
+      font-size: ${({ theme }) => theme.fontSizes.medium};
     }
   }
 
@@ -79,7 +71,7 @@ export const Button = styled(Link)`
 
   @media ${device.tabletL} {
     & {
-      font-size: ${fontSizes.large};
+      font-size: ${({ theme }) => theme.fontSizes.large};
     }
   }
 
@@ -91,7 +83,7 @@ export const Button = styled(Link)`
 
   @media ${device.desktop4k} {
     & {
-      font-size: ${fontSizes.huge};
+      font-size: ${({ theme }) => theme.fontSizes.huge};
       &::before {
         width: 20px;
       }

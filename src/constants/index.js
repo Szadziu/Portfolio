@@ -1,5 +1,3 @@
-import personalPhotoIcon from '../assets/personalPhoto.png';
-
 import facebookIcon from '../assets/socialIcons/facebook.png';
 import whatsappIcon from '../assets/socialIcons/whatsapp.png';
 import linkedinIcon from '../assets/socialIcons/linkedin.png';
@@ -14,18 +12,6 @@ import cafeLayoutIcon from '../assets/projectsIcons/cafeLayout.png';
 import calendarIcon from '../assets/projectsIcons/calendar.png';
 import timerIcon from '../assets/projectsIcons/timer.png';
 import drawingAppIcon from '../assets/projectsIcons/drawingApp.png';
-
-export const THEME = {
-  landingSectionBackground: personalPhotoIcon,
-  redBlueGradient: 'linear-gradient(#780206, #061161)',
-  darkGreenGradient: 'linear-gradient(to bottom, #000, #0f9b0f)',
-  darkOrange: '#D12917',
-  yellow: '#D4D20B',
-  green: '#00BD3C',
-  fontColor: 'rgb(26, 26, 26)',
-  black: 'rgb(26, 26, 26)',
-  darkenedBackground: 'rgba(0,0,0,0.9)',
-};
 
 export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją."
   Apolinary Despinoix`;
