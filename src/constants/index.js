@@ -21,6 +21,7 @@ export const SKILL_BUNDLE = [
     id: 0,
     name: 'HTML 5',
     advancement: 8,
+    desc: 'opanowane podstawy języka znaczników jak również jego semantyczne zastosowanie, tworzenie i walidacja formularzy',
   },
   {
     id: 1,

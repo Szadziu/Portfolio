@@ -1,17 +1,27 @@
 import * as P from './parts';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
+import Modal from '../../generics/Modal';
+import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
+import InfoBubble from '../InfoBubble';
 
-const SkillBar = ({ children, advancement }) => {
+const SkillBar = ({ children, skill }) => {
   const [ref, inView, entry] = useInView();
   useEffect(() => {
     if (inView) {
       boxesOfSkillsAnimation();
     }
   }, [inView]);
+
+  const [isDisplayInfoBubble, setIsDisplayInfoBubble] = useState(false);
+
   const theme = useTheme();
+
+  const showInfoBubble = () => {
+    setIsDisplayInfoBubble((value) => !value);
+  };
 
   const generateAdvancementLevel = () => {
     const advancementLevel = [];
@@ -21,7 +31,7 @@ const SkillBar = ({ children, advancement }) => {
       advancementLevel.push(<P.BoxOfSkill color={color} height={height} />);
     };
     // zdaję sobie sprawę, że refactor tego DRY kodu aż się prosi, lecz w danym momencie nie miałem pomysłu jak to przerobić. Do zmiany.
-    for (let i = 0; i < advancement; i++) {
+    for (let i = 0; i < skill.advancement; i++) {
       let color;
       boxHeight += 2;
       if (advancementLevel.length <= 2) {
@@ -44,7 +54,11 @@ const SkillBar = ({ children, advancement }) => {
 
   return (
     <P.Bar>
-      <P.TitleOfSkill>{children}</P.TitleOfSkill>
+      <P.TitleOfSkill>
+        {children}
+        <P.InfoIcon icon={faInfo} onClick={showInfoBubble} />
+        {isDisplayInfoBubble && <InfoBubble description={skill.desc} />}
+      </P.TitleOfSkill>
       <P.Boxes ref={ref}>{generateAdvancementLevel()}</P.Boxes>
     </P.Bar>
   );

@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { device } from "../../../constants/devices";
-import info from "../../../assets/info.png";
+import styled from 'styled-components';
+import { device } from '../../../constants/devices';
+import info from '../../../assets/info.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Bar = styled.div`
   width: 100%;
@@ -23,16 +24,6 @@ export const Boxes = styled.div`
   justify-content: flex-start;
   margin: 10px;
 `;
-
-// function getBackgroundColor({index, theme}) {
-//     if(index < 5) {
-//       return theme.colors.red
-//     } else if (index < 10) {
-//       return theme.colors.yellow
-//     } else {
-//       return theme.color.green
-//     }
-// }
 
 export const BoxOfSkill = styled.div`
   border-radius: 3px;
@@ -72,13 +63,15 @@ export const BoxOfSkill = styled.div`
 `;
 
 export const TitleOfSkill = styled.p`
+  position: relative;
+  display: flex;
+  gap: 20px;
   margin-bottom: 30px;
-  /* background: red; */
-  width: 100%;
+  /* width: 100%; */
   height: 10%;
-  &::after {
-    position: absolute;
-    content: "";
+  /* &::after {
+    position: relative;
+    content: '';
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -89,21 +82,18 @@ export const TitleOfSkill = styled.p`
   }
   &:hover::after {
     cursor: pointer;
-  }
+  } */
 
   @keyframes pulse {
     0% {
-      transform: scale(0.75);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
     }
 
     70% {
-      transform: scale(1);
       box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
     }
 
     100% {
-      transform: scale(0.75);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
   }
@@ -145,4 +135,8 @@ export const TitleOfSkill = styled.p`
       height: 55px;
     }
   }
+`;
+
+export const InfoIcon = styled(FontAwesomeIcon)`
+  cursor: pointer;
 `;
