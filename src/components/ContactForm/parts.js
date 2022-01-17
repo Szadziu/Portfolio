@@ -31,8 +31,8 @@ export const FormWrapper = styled(Form)`
   width: 100%;
   height: 100%;
   display: flex;
+  margin-left: 5%;
   flex-direction: column;
-  align-items: center;
 `;
 
 export const FormTitle = styled.span`
@@ -42,7 +42,7 @@ export const FormTitle = styled.span`
   font-size: 26px;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 30px 50px;
+  margin: 30px 0;
 
   &:after {
     content: '';
@@ -93,4 +93,5 @@ export const CooperateInfo = styled.p`
   align-self: flex-start;
   margin: 0 0 20px 40px;
   color: ${({ theme }) => theme.gray};
+  user-select: none;
 `;

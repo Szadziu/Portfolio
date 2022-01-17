@@ -9,9 +9,9 @@ const infoComment = css`
 `;
 
 export const Comment = styled.p`
+  height: 0.8rem;
   font-size: 0.8rem;
-  margin: 10px 50px;
-  align-self: flex-start;
+  margin: 10px;
   color: ${({ error }) => (error ? 'red' : 'green')};
   ${({ info }) => (info ? infoComment : null)};
 `;

@@ -3,8 +3,11 @@ import { Field } from 'formik';
 import { Input } from '../Input/parts';
 
 export const TextAreaField = styled.textarea`
+  position: absolute;
+  left: 10%;
   width: 90%;
-  padding: 10px 0;
+  height: 30vh;
+  padding: 50px 0;
   background: none;
   border: none;
   border-bottom: 1px solid #666;
@@ -21,8 +24,12 @@ export const TextAreaField = styled.textarea`
   &:focus {
     border-bottom-color: #ddd;
   }
-  margin-top: 5%;
-  width: 90%;
-  height: 70%;
   resize: none;
+`;
+
+export const TextAreaWrapper = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 `;

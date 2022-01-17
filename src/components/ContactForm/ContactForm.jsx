@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import Input from './Input';
 import FormButton from './FormButton';
 import TextArea from './TextArea';
+import Label from '../generics/Label';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { submitAnimation } from './submitAnimation';
@@ -49,6 +50,7 @@ const ContactForm = () => {
               errors={errors.username}
               type='text'
               name='username'
+              label='Imię'
               id='username'
               placeholder='wpisz swoje imię'
             />
@@ -56,6 +58,7 @@ const ContactForm = () => {
               errors={errors.email}
               type='email'
               name='email'
+              label='E-mail'
               id='email'
               placeholder='podaj e-mail'
             />
@@ -63,15 +66,16 @@ const ContactForm = () => {
               errors={errors.body}
               name='body'
               id='body'
+              label='Wiadomość'
               placeholder='wpisz swoją wiadomość tutaj...'
               as='textarea'
             />
-            <FormButton ref={buttonRef} isSubmitted={isSendForm} type='submit'>
+            {/* <FormButton ref={buttonRef} isSubmitted={isSendForm} type='submit'>
               Wyślij
             </FormButton>
             <P.CooperateInfo>
               W celu nawiązania współpracy proszę o kontakt
-            </P.CooperateInfo>
+            </P.CooperateInfo> */}
           </P.FormWrapper>
         )}
       </Formik>

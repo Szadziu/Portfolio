@@ -3,7 +3,6 @@ import { Field } from 'formik';
 
 export const Input = styled(Field)`
   width: 90%;
-  padding: 10px 0;
   background: none;
   border: none;
   border-bottom: 1px solid #666;
@@ -20,4 +19,11 @@ export const Input = styled(Field)`
   &:focus {
     border-bottom-color: #ddd;
   }
+`;
+
+export const InputWrapper = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 `;
