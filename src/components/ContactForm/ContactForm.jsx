@@ -45,7 +45,6 @@ const ContactForm = () => {
         {({ errors }) => (
           <P.FormWrapper>
             <P.FormTitle>kontakt do mnie</P.FormTitle>
-
             <Input
               errors={errors.username}
               type='text'
@@ -70,6 +69,9 @@ const ContactForm = () => {
             <FormButton ref={buttonRef} isSubmitted={isSendForm} type='submit'>
               Wyślij
             </FormButton>
+            <P.CooperateInfo>
+              W celu nawiązania współpracy proszę o kontakt
+            </P.CooperateInfo>
           </P.FormWrapper>
         )}
       </Formik>

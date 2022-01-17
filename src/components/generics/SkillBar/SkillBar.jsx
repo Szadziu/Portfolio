@@ -1,13 +1,12 @@
 import * as P from './parts';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'styled-components';
-import Modal from '../../generics/Modal';
 import { faInfo } from '@fortawesome/free-solid-svg-icons';
 import gsap from 'gsap';
 import { useInView } from 'react-intersection-observer';
 import InfoBubble from '../InfoBubble';
 
-const SkillBar = ({ children, skill }) => {
+const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
   const [ref, inView, entry] = useInView();
   useEffect(() => {
     if (inView) {
@@ -15,12 +14,11 @@ const SkillBar = ({ children, skill }) => {
     }
   }, [inView]);
 
-  const [isDisplayInfoBubble, setIsDisplayInfoBubble] = useState(false);
-
   const theme = useTheme();
 
-  const showInfoBubble = () => {
-    setIsDisplayInfoBubble((value) => !value);
+  const showInfoBubble = (e, skill) => {
+    // console.log(e.target.data, skill.id);
+    // if (skill.id === id) setIsVisible((value) => !value);
   };
 
   const generateAdvancementLevel = () => {
@@ -56,8 +54,12 @@ const SkillBar = ({ children, skill }) => {
     <P.Bar>
       <P.TitleOfSkill>
         {children}
-        <P.InfoIcon icon={faInfo} onClick={showInfoBubble} />
-        {isDisplayInfoBubble && <InfoBubble description={skill.desc} />}
+        <P.InfoIcon
+          icon={faInfo}
+          data={skill}
+          onClick={(e) => showInfoBubble(e, skill)}
+        />
+        {/* {isVisible && <InfoBubble id={skill.id} description={skill.desc} />} */}
       </P.TitleOfSkill>
       <P.Boxes ref={ref}>{generateAdvancementLevel()}</P.Boxes>
     </P.Bar>

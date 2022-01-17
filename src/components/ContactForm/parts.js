@@ -88,3 +88,9 @@ export const FormButton = styled.button`
     color: #b9134f;
   }
 `;
+
+export const CooperateInfo = styled.p`
+  align-self: flex-start;
+  margin: 0 0 20px 40px;
+  color: ${({ theme }) => theme.gray};
+`;
