@@ -9,10 +9,10 @@ const LandingPage = () => {
       <P.Wrapper>
         <P.Menu id='home'>
           <P.BackgroundPhoto src={personalPortrait} />
-          <Button text='homePage' link='home' />
-          <Button text='aboutMySkills' link='skills' />
-          <Button text='myProjects' link='projects' />
-          <Button text='contactToMe' link='contact' />
+          <Button text='Strona Główna' link='home' />
+          <Button text='Umiejętności' link='skills' />
+          <Button text='Moje projekty' link='projects' />
+          <Button text='Kontakt' link='contact' />
         </P.Menu>
       </P.Wrapper>
     </SectionWrapper>

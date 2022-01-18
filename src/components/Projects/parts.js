@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProjectsWrapper = styled.div`
   display: flex;
@@ -17,3 +17,5 @@ export const ProjectsWrapper = styled.div`
     height: 40vw;
   }
 `;
+
+export const Navigator = styled.div``;

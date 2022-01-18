@@ -1,28 +1,26 @@
-import styled from "styled-components";
-import { device } from "../../../constants/devices";
+import styled from 'styled-components';
+import { device } from '../../../constants/devices';
 
 export const Title = styled.h1`
-  font-family: "Lato", sans-serif;
-  color: grey;
-  background: #acacac -webkit-gradient(linear, 100% 0, 0 0, from(black), color-stop(0.5, #fff), to(black));
-  background-position: -50rem top;
+  font-family: 'Lato', sans-serif;
+  background: #acacac -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, ${({ color }) => color}));
+  background-position: -65rem top;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 3s infinite;
-  background-size: 50rem 100%;
+  animation: shimmer 2s infinite alternate;
+  background-size: 65rem 100%;
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: -2px;
   grid-area: 1/9/2/1;
+  width: 500px;
+  margin: 0 auto;
 
   @keyframes shimmer {
     0% {
       background-position: top left;
-    }
-    70% {
-      background-position: center;
     }
     100% {
       background-position: top right;
