@@ -5,10 +5,13 @@ import SkillsWrapper from './SkillsWrapper';
 import Quote from '../generics/Quote';
 import { QUOTE } from '../../constants';
 import SectionTitle from '../generics/SectionTitle';
+import { useTheme } from 'styled-components';
 
 const MainSection = () => {
+  const theme = useTheme();
+
   return (
-    <SectionWrapper bgColor='white'>
+    <SectionWrapper bgColor={theme.gray}>
       <P.MainSectionWrapper id='skills'>
         <P.Background />
         <SectionTitle color='black'>kilka słów o mnie ...</SectionTitle>

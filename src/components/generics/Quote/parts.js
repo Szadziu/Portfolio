@@ -8,7 +8,7 @@ export const QuoteParam = styled.p`
   font-size: 34px;
   opacity: 0;
   grid-area: 10/5/12/2;
-
+  color: ${({ theme }) => theme.darkGray};
   @media ${device.mobileS} {
     font-size: 14px;
     grid-area: 11/8/12/2;

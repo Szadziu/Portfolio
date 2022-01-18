@@ -58,6 +58,7 @@ const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
           icon={faInfo}
           data={skill}
           onClick={(e) => showInfoBubble(e, skill)}
+          color='blue'
         />
         {/* {isVisible && <InfoBubble id={skill.id} description={skill.desc} />} */}
       </P.TitleOfSkill>

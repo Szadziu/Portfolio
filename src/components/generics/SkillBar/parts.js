@@ -67,22 +67,8 @@ export const TitleOfSkill = styled.p`
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
-  /* width: 100%; */
   height: 10%;
-  /* &::after {
-    position: relative;
-    content: '';
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-image: url(${info});
-    background-size: contain;
-    margin-left: 10px;
-    animation: pulse 2s infinite;
-  }
-  &:hover::after {
-    cursor: pointer;
-  } */
+  color: ${({ theme }) => theme.black};
 
   @keyframes pulse {
     0% {

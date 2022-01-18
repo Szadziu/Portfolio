@@ -42,6 +42,7 @@ export const Line = styled.span`
   overflow: hidden;
   display: none;
   line-height: 1.2;
+  color: ${({ theme }) => theme.white};
   &::after {
     content: '';
     position: absolute;
@@ -49,7 +50,7 @@ export const Line = styled.span`
     right: 0;
     width: 100%;
     height: 100%;
-    background: black;
+    background: ${({ theme }) => theme.white};
 
     animation: a-ltr-after 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
     transform: translateX(-101%);
@@ -61,7 +62,7 @@ export const Line = styled.span`
     right: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: ${({ theme }) => theme.gray};
     animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
     transform: translateX(0);
   }
