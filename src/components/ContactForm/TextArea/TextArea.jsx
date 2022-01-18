@@ -11,6 +11,7 @@ const TextArea = ({ name, id, placeholder, label }) => {
       <Label htmlFor={name}>
         {label}
         <Field
+          error={errors[name] && touched[name]}
           as={P.TextAreaField}
           name={name}
           id={id}

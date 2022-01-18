@@ -70,10 +70,10 @@ const ContactForm = () => {
               placeholder='wpisz swoją wiadomość tutaj...'
               as='textarea'
             />
-            {/* <FormButton ref={buttonRef} isSubmitted={isSendForm} type='submit'>
+            <FormButton ref={buttonRef} isSubmitted={isSendForm} type='submit'>
               Wyślij
             </FormButton>
-            <P.CooperateInfo>
+            {/* <P.CooperateInfo>
               W celu nawiązania współpracy proszę o kontakt
             </P.CooperateInfo> */}
           </P.FormWrapper>

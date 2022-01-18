@@ -10,7 +10,8 @@ export const TextAreaField = styled.textarea`
   padding: 50px 0;
   background: none;
   border: none;
-  border-bottom: 1px solid #666;
+  border-bottom: ${({ error, theme }) =>
+    error ? `1px solid ${theme.pink}` : '1px solid #666'};
   color: #ddd;
   font-size: 1rem;
   text-transform: uppercase;

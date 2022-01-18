@@ -10,7 +10,12 @@ const Input = ({ label, name, id, placeholder }) => {
       <Comment error>{touched[name] ? errors[name] : ''}</Comment>
       <Label>
         {label}
-        <P.Input name={name} id={id} placeholder={placeholder} />
+        <P.Input
+          error={touched[name] && errors[name]}
+          name={name}
+          id={id}
+          placeholder={placeholder}
+        />
       </Label>
     </P.InputWrapper>
   );
