@@ -18,4 +18,4 @@ export const ProjectsWrapper = styled.div`
   }
 `;
 
-export const Navigator = styled.div``;
+export const Wrapper = styled.div``;

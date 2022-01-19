@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Menu = styled.div`
   display: flex;
@@ -21,13 +21,13 @@ export const BackgroundPhoto = styled.img`
   }
 `;
 
-export const Wrapper = styled.div`
-  position: relative;
-  display: grid;
-  grid-template-rows: repeat(12, 1fr);
-  grid-template-columns: repeat(12, 1fr);
-  height: 100vh;
-  background-color: ${(props) => props.bgColor};
-  overflow: hidden;
-  transition: 0.8s;
-`;
+// export const Wrapper = styled.div`
+//   position: relative;
+//   display: grid;
+//   grid-template-rows: repeat(12, 1fr);
+//   grid-template-columns: repeat(12, 1fr);
+//   height: 100vh;
+//   background-color: ${(props) => props.bgColor};
+//   overflow: hidden;
+//   transition: 0.8s;
+// `;

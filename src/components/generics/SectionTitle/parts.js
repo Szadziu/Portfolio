@@ -14,9 +14,7 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: -2px;
-  grid-area: 1/9/2/1;
-  width: 500px;
-  margin: 0 auto;
+  grid-area: 1/12/1/2;
 
   @keyframes shimmer {
     0% {

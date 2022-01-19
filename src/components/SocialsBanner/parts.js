@@ -12,15 +12,10 @@ export const Img = styled.img`
 `;
 
 export const Banner = styled.div`
-  position: absolute;
-  top: 80vh;
-  left: -15vw;
-  transform: translateX(-50%);
+  grid-area: 11/11/12/2;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30vw;
-  height: 10vh;
 `;
 
 export const SocialLink = styled.a``;

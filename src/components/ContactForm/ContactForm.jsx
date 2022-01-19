@@ -1,24 +1,11 @@
 import { useRef, useState } from 'react';
 import Input from './Input';
 import FormButton from './FormButton';
+import VALIDATION_SCHEMA from '../../utils/validationSchema';
 import TextArea from './TextArea';
-import Label from '../generics/Label';
-import * as Yup from 'yup';
 import { Formik } from 'formik';
 import { submitAnimation } from './submitAnimation';
 import * as P from './parts';
-
-const VALIDATION_SCHEMA = Yup.object({
-  username: Yup.string()
-    .min(2, 'Wpisz minimum 2 znaki!')
-    .required('Imię jest wymagane'),
-  body: Yup.string()
-    .min(5, 'Wpisz minimum 5 znaków!')
-    .required('Uzupełnij pole wiadomości'),
-  email: Yup.string()
-    .email('Niepoprawny adres e-mail')
-    .required('Adres e-mail jest wymagany'),
-});
 
 const ContactForm = () => {
   const [isSendForm, setIsSendForm] = useState(false);

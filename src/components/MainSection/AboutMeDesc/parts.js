@@ -6,7 +6,7 @@ export const Container = styled.div`
   font-size: 24px;
   text-align: justify;
   margin-right: 5vw;
-  grid-area: 3/9/10/2;
+  grid-area: 2/9/11/2;
 
   @media ${device.mobileS} {
     font-size: 12px;

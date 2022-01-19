@@ -36,7 +36,6 @@ const Projects = () => {
   };
   return (
     <SectionWrapper bgColor='white'>
-      <P.Navigator id='projects'></P.Navigator>
       <SectionTitle color={theme.mint}>Moje projekty</SectionTitle>
       <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
       {isDisplayProject && (

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  position: absolute;
-  bottom: 10%;
-  color: ${({ theme }) => theme.darkGray};
+  margin-top: 100px;
+  color: ${({ theme }) => theme.pink};
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 1.2px;

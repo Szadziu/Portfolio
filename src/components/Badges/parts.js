@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const BadgesList = styled.ul``;
+export const BadgesList = styled.ul`
+  grid-area: 10/2/12/1;
+`;
 
 export const Badge = styled.li`
   width: 150px;
