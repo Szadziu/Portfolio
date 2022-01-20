@@ -15,6 +15,7 @@ const THEME = {
   darkGray: '#3E3E3E',
   green: 'rgb(26, 244, 143)',
   pink: 'rgb(255, 147, 147)',
+  brighterPink: 'rgb(255, 187, 187)',
   mint: '#62D9C7',
   darkenedBackground: 'rgba(0,0,0,0.9)',
   fontSizes: {

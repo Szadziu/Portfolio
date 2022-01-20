@@ -1,16 +1,18 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  margin-top: 100px;
+  position: absolute;
+  bottom: 20px;
   color: ${({ theme }) => theme.pink};
   cursor: pointer;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   align-self: flex-start;
-  padding: 5px;
-
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   &:hover {
-    color: #b9134f;
+    color: ${({ theme }) => theme.brighterPink};
   }
 `;

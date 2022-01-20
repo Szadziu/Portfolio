@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
 `;
 
 export const FormWrapper = styled(Form)`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;

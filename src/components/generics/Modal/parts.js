@@ -1,28 +1,56 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProjectDesc = styled.p`
-  color: white;
-  width: 40%;
+  color: ${({ theme }) => theme.white};
+  width: 60%;
   height: 60%;
-  line-height: 28px;
+  margin-left: 5%;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: justify;
+  padding-right: 15px;
+
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
 `;
 
 export const PhotoOfProject = styled.img`
-  height: 50%;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-bottom: 3px solid transparent;
   transition: 0.5s;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   cursor: pointer;
   &:hover {
     border-color: gold;
   }
 `;
 
+export const ProjectLink = styled.a`
+  margin-left: 5%;
+  height: 60%;
+`;
+
 export const CloseButton = styled.button`
-  font-size: 2rem;
   position: absolute;
-  right: 10px;
   top: 10px;
+  right: 10px;
+  font-size: 2rem;
   transition: 0.5s;
   &:hover {
     transform: scale(1.2);
@@ -32,20 +60,24 @@ export const CloseButton = styled.button`
 
 export const Title = styled.p`
   text-transform: uppercase;
+  font-weight: 700;
   width: 80%;
   height: 10%;
   color: white;
   font-size: 2rem;
-  border-bottom: white solid 2px;
+  border-bottom: ${({ theme }) => theme.white} solid 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ProjectModal = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
-  background-color: ${({ theme }) => theme.darkOrange};
+  justify-content: center;
+  background-color: ${({ theme }) => theme.darkGray};
   border: 5px solid white;
+  border-radius: 20px;
   width: 50%;
   height: 50%;
   position: absolute;
