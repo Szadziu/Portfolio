@@ -12,7 +12,12 @@ export const Img = styled.img`
 `;
 
 export const Banner = styled.div`
-  grid-area: 11/11/12/2;
+  position: absolute;
+  bottom: 10vh;
+  left: -60vw;
+  width: 60vw;
+  height: 10vh;
+  background-color: skyblue;
   display: flex;
   justify-content: space-between;
   align-items: center;

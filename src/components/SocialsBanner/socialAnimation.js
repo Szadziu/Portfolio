@@ -3,10 +3,9 @@ import gsap from 'gsap';
 export const socialsAnimation = (elements) => {
   const tl = gsap.timeline();
   tl.to(elements.target.children, {
-    x: '65vw',
+    x: '80vw',
     duration: 4,
-    opacity: 1,
-    stagger: 0.8,
+    stagger: 0.7,
     ease: 'expo',
     rotation: 720,
   });

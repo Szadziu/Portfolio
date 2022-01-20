@@ -4,7 +4,7 @@ import { Form } from 'formik';
 export const Wrapper = styled.div`
   background-color: #3e3e3e;
   border-radius: 15px;
-  grid-area: 2/11/10/2;
+  grid-area: 2/11/10/3;
 
   &:after {
     content: '';
@@ -31,7 +31,7 @@ export const FormWrapper = styled(Form)`
 export const FormTitle = styled.span`
   position: relative;
   align-self: flex-start;
-  color: #ea1d6f;
+  color: ${({ theme }) => theme.pink};
   font-size: 26px;
   text-transform: uppercase;
   font-weight: 700;
@@ -45,7 +45,7 @@ export const FormTitle = styled.span`
     bottom: -10px;
     width: 25px;
     height: 4px;
-    background: #ea1d6f;
+    background: ${({ theme }) => theme.pink};
   }
 `;
 
