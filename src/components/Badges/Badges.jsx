@@ -6,11 +6,6 @@ const BUNCH_OF_BADGES = [
     name: 'codewars',
     link: 'https://www.codewars.com/users/Szadziu/badges/micro',
   },
-  {
-    id: 1,
-    name: 'github',
-    link: 'https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white',
-  },
 ];
 const Badges = () => {
   const renderBadges = () => {

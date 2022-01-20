@@ -35,13 +35,15 @@ const Projects = () => {
     ));
   };
   return (
-    <SectionWrapper bgColor='white'>
-      <SectionTitle color={theme.mint}>Moje projekty</SectionTitle>
-      <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
-      {isDisplayProject && (
-        <Modal currentProject={currentProject} closeModal={closeModal} />
-      )}
-    </SectionWrapper>
+    <P.Wrapper id='projects'>
+      <SectionWrapper bgColor='white'>
+        <SectionTitle color={theme.mint}>Moje projekty</SectionTitle>
+        <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
+        {isDisplayProject && (
+          <Modal currentProject={currentProject} closeModal={closeModal} />
+        )}
+      </SectionWrapper>
+    </P.Wrapper>
   );
 };
 

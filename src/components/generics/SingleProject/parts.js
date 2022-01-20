@@ -7,6 +7,8 @@ export const Project = styled.div`
   font-size: 0;
   width: 26%;
   height: 26%;
+  border-radius: 50%;
+  border: 4px solid black;
   text-align: center;
   color: ${({ theme }) => theme.white};
   letter-spacing: 2px;
@@ -22,10 +24,8 @@ export const Project = styled.div`
 
   &:hover {
     cursor: pointer;
-    border: 4px solid black;
     box-shadow: 0 0 0 10px ${({ theme }) => theme.mint}, 0 0 0 14px black,
       0 0 10rem 100px black;
-    border-radius: 50%;
     transform: scale(1.5) rotate(1turn);
     z-index: 10;
     filter: grayscale(0);

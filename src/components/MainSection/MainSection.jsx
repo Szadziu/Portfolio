@@ -11,15 +11,14 @@ const MainSection = () => {
   const theme = useTheme();
 
   return (
-    <SectionWrapper bgColor={theme.gray}>
-      {/* <P.MainSectionWrapper id='skills'> */}
-      {/* <P.Background /> */}
-      <SectionTitle color={theme.white}>kilka słów o mnie ...</SectionTitle>
-      <AboutMeDesc />
-      <Quote>{QUOTE}</Quote>
-      <SkillsWrapper />
-      {/* </P.MainSectionWrapper> */}
-    </SectionWrapper>
+    <P.MainSectionWrapper id='skills'>
+      <SectionWrapper bgColor={theme.gray}>
+        <SectionTitle color={theme.white}>kilka słów o mnie ...</SectionTitle>
+        <AboutMeDesc />
+        <Quote>{QUOTE}</Quote>
+        <SkillsWrapper />
+      </SectionWrapper>
+    </P.MainSectionWrapper>
   );
 };
 

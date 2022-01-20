@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const InfoModal = styled.div`
   position: absolute;
   top: 0;
-  right: -10%;
+  right: -30%;
   z-index: 1;
   height: 20vh;
   width: 20vh;

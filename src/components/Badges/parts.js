@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BadgesList = styled.ul`
-  grid-area: 10/2/12/1;
+  grid-area: 12/2/13/1;
 `;
 
 export const Badge = styled.li`

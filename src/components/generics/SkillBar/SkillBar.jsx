@@ -54,12 +54,12 @@ const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
     <P.Bar>
       <P.TitleOfSkill>
         {children}
-        <P.InfoIcon
+        {/* <P.InfoIcon
           icon={faInfo}
           data={skill}
           onClick={(e) => showInfoBubble(e, skill)}
           color='blue'
-        />
+        /> */}
         {/* {isVisible && <InfoBubble id={skill.id} description={skill.desc} />} */}
       </P.TitleOfSkill>
       <P.Boxes ref={ref}>{generateAdvancementLevel()}</P.Boxes>
