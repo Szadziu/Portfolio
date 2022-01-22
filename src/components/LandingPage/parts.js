@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../constants/devices';
 
 export const Menu = styled.div`
   display: flex;
@@ -6,7 +7,6 @@ export const Menu = styled.div`
   align-items: center;
   justify-content: center;
   grid-area: 2/13/12/6;
-
   gap: 10%;
 `;
 
@@ -16,18 +16,22 @@ export const BackgroundPhoto = styled.img`
   top: 0;
   left: -25vw;
 
-  @media (orientation: portrait) {
-    left: -80vw;
+  @media ${device.mobileS} {
+    left: -120vw;
+  }
+  @media ${device.mobileL} {
+    left: -100vw;
+  }
+  @media ${device.tabletS} {
+    left: -40vw;
+  }
+  @media ${device.tabletM} {
+    left: -70vw;
+  }
+  @media ${device.desktop13} {
+    left: -20vw;
+  }
+  @media ${device.desktop4k} {
+    left: -30vw;
   }
 `;
-
-// export const Wrapper = styled.div`
-//   position: relative;
-//   display: grid;
-//   grid-template-rows: repeat(12, 1fr);
-//   grid-template-columns: repeat(12, 1fr);
-//   height: 100vh;
-//   background-color: ${(props) => props.bgColor};
-//   overflow: hidden;
-//   transition: 0.8s;
-// `;

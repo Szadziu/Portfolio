@@ -12,6 +12,7 @@ const THEME = {
   black: 'rgb(26, 26, 26)',
   white: 'rgb(255, 253, 250)',
   gray: '#777',
+  blue: '#3b5998',
   darkGray: '#3E3E3E',
   green: 'rgb(26, 244, 143)',
   pink: 'rgb(255, 147, 147)',

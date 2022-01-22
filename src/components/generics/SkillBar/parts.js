@@ -4,71 +4,50 @@ import info from '../../../assets/info.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Bar = styled.div`
+  position: relative;
   width: 100%;
-  height: 15%;
+  height: 20%;
   display: flex;
+  /* border: 2px solid black; */
   flex-direction: column;
-  margin-bottom: 10px;
-
-  @media ${device.laptop13} {
-    margin-bottom: 25px;
-  }
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: coral; */
 `;
 
 export const Boxes = styled.div`
-  width: 90%;
-  height: 10%;
+  width: 80%;
+  height: 30%;
   display: flex;
   gap: 5px;
   align-items: flex-end;
-  justify-content: flex-start;
-  margin: 10px;
+  /* background-color: red; */
+  justify-content: flex-end;
+  border-bottom: 2px black solid;
+  padding-bottom: 10px;
+  /* margin-bottom: 10px; */
 `;
 
 export const BoxOfSkill = styled.div`
   border-radius: 3px;
-  width: 30px;
+  width: 5px;
   height: ${({ height }) => height};
   background-color: ${({ color }) => color};
   transform: scale(0);
   box-shadow: 0 0 5px 2px black;
-
-  @media ${device.mobileS} {
-    width: 2px;
-  }
-
-  @media ${device.mobileL} {
-    width: 5px;
-  }
-
-  @media ${device.tabletM} {
-    width: 15px;
-  }
-
-  @media ${device.tabletL} {
-    width: 20px;
-  }
-
-  @media ${device.laptop13} {
-    width: 25px;
-  }
-
-  @media ${device.desktopHD} {
-    width: 30px;
-  }
-
-  @media ${device.desktop4k} {
-    width: 60px;
-  }
 `;
 
 export const TitleOfSkill = styled.p`
-  position: relative;
+  /* background: yellow; */
+  width: 100%;
   display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   color: ${({ theme }) => theme.black};
+  font-size: 0.6rem;
 
   /* @keyframes pulse {
     0% {

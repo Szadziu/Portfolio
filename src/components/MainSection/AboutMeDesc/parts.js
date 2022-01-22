@@ -2,42 +2,17 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
-  font-weight: 700;
-  font-size: 24px;
-  text-align: justify;
-  margin-right: 5vw;
-  grid-area: 2/9/11/2;
-
-  @media ${device.mobileS} {
-    font-size: 12px;
-  }
-
-  @media ${device.mobileL} {
-    font-size: 14px;
-  }
-
-  @media ${device.tabletM} {
-    font-size: 22px;
-  }
-
-  @media ${device.tabletL} {
-    font-size: 24px;
-  }
-
-  @media ${device.laptop13} {
-    font-size: 26px;
-  }
-
-  @media ${device.desktopHD} {
-    font-size: 36px;
-  }
-
-  @media ${device.desktop4k} {
-    font-size: 64px;
-  }
+  /* font-weight: 400; */
+  font-size: 0.78rem;
+  /* text-align: justify; */
+  /* text-justify: inter-word; */
+  margin-left: 20px;
+  grid-area: 2/9/11/1;
+  /* background-color: coral; */
 `;
 
 export const Line = styled.span`
+  /* background-color: cadetblue; */
   position: relative;
   overflow: hidden;
   display: none;

@@ -7,6 +7,7 @@ export const Button = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
   width: 90%;
   max-width: 1000px;
   height: 10%;
@@ -48,51 +49,27 @@ export const Button = styled(Link)`
     }
   }
 
-  @media (orientation: landscape) {
-    & {
-      width: 60%;
-      height: 15%;
-    }
+  @media ${device.mobileS} {
+    font-size: 0.8rem;
   }
-
+  @media ${device.mobileM} {
+    font-size: 1rem;
+  }
+  @media ${device.tabletS} {
+    width: 70%;
+  }
   @media ${device.tabletM} {
-    & {
-      width: 75%;
-      font-size: ${({ theme }) => theme.fontSizes.medium};
-    }
+    font-size: 1.8rem;
   }
-
-  @media ${device.tabletM} {
-    & {
-      height: 15%;
-    }
+  @media ${device.desktop13} {
+    font-size: 1.8rem;
+    width: 50%;
+    height: 15%;
   }
-
-  @media ${device.tabletL} {
-    & {
-      font-size: ${({ theme }) => theme.fontSizes.large};
-    }
+  @media ${device.desktopHD} {
+    font-size: 2.5rem;
   }
-
-  @media ${device.laptop15} {
-    & {
-      width: 60%;
-    }
-  }
-
   @media ${device.desktop4k} {
-    & {
-      font-size: ${({ theme }) => theme.fontSizes.huge};
-      &::before {
-        width: 20px;
-      }
-      &:active {
-        &::before {
-          left: calc(100% - 20px);
-          top: 50%;
-          height: 10px;
-        }
-      }
-    }
+    font-size: 4rem;
   }
 `;

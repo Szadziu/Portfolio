@@ -36,12 +36,12 @@ export const SKILL_BUNDLE = [
   {
     id: 3,
     name: 'React',
-    advancement: 4,
+    advancement: 5,
   },
   {
     id: 4,
     name: 'TypeScript',
-    advancement: 1,
+    advancement: 3,
   },
 ];
 

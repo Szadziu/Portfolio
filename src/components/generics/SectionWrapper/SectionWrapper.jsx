@@ -1,7 +1,11 @@
 import * as P from './parts';
 
-const SectionWrapper = ({ children, bgColor }) => {
-  return <P.Wrapper bgColor={bgColor}>{children}</P.Wrapper>;
+const SectionWrapper = ({ children, bgColor, ...restProps }) => {
+  return (
+    <P.Wrapper bgColor={bgColor} {...restProps}>
+      {children}
+    </P.Wrapper>
+  );
 };
 
 export default SectionWrapper;

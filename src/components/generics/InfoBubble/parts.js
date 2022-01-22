@@ -2,15 +2,14 @@ import styled from 'styled-components';
 
 export const InfoModal = styled.div`
   position: absolute;
-  top: 0;
-  right: -30%;
+  top: -10%;
+  right: 110%;
   z-index: 1;
-  height: 20vh;
-  width: 20vh;
+  height: 30vh;
+  width: 60vw;
   background-color: rgb(230, 230, 230);
   border-radius: 20px;
   padding: 10px;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   box-shadow: 5px 5px 10px 0 black;
-  text-align: center;
 `;
