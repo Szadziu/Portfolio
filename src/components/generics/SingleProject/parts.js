@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../constants/devices';
 
 export const Project = styled.div`
   display: flex;
@@ -26,10 +27,10 @@ export const Project = styled.div`
     cursor: pointer;
     box-shadow: 0 0 0 10px ${({ theme }) => theme.mint}, 0 0 0 14px black,
       0 0 10rem 100px black;
-    transform: scale(1.5) rotate(1turn);
+    transform: scale(1.1);
     z-index: 10;
     filter: grayscale(0);
-    font-size: 1rem;
+    font-size: 0.5rem;
     &::before {
       position: absolute;
       z-index: -1;
@@ -38,6 +39,23 @@ export const Project = styled.div`
       height: 30%;
       background-color: rgba(0, 0, 0, 0.8);
       border-radius: 30px;
+    }
+  }
+
+  @media${device.desktop13} {
+    &:hover {
+      transform: scale(1.5) rotate(1turn);
+      font-size: 0.8rem;
+    }
+  }
+  @media${device.desktopHD} {
+    &:hover {
+      font-size: 1.1rem;
+    }
+  }
+  @media${device.desktop4k} {
+    &:hover {
+      font-size: 2rem;
     }
   }
 `;

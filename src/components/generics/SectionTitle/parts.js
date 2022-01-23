@@ -15,8 +15,11 @@ export const Title = styled.h1`
   font-weight: 900;
   font-size: 1.3rem;
   letter-spacing: -2px;
-  grid-area: 1/12/2/1;
-
+  grid-area: 1/13/2/1;
+  align-self: center;
+  @media ${device.mobileM} {
+    font-size: 1.6rem;
+  }
   @media ${device.tabletM} {
     font-size: 2.2rem;
   }
@@ -26,12 +29,12 @@ export const Title = styled.h1`
   @media ${device.desktop13} {
     font-size: 2.2rem;
   }
-  @media ${device.desktop13} {
-    font-size: 3.24rem;
+  @media ${device.desktop15} {
+    font-size: 2.8rem;
   }
   @media ${device.desktop4k} {
     font-size: 6.8rem;
-    background-size: 100rem 100%;
+    background-size: 105rem 100%;
   }
 
   @keyframes shimmer {

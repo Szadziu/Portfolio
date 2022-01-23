@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../constants/devices';
 
 export const ProjectsWrapper = styled.div`
   display: flex;
@@ -11,10 +12,18 @@ export const ProjectsWrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @media (orientation: landscape) {
-    margin: 5vh 0;
-    width: 40vw;
-    height: 40vw;
+  @media${device.tabletM} {
+    width: 65vh;
+    height: 65vh;
+  }
+  @media${device.desktop13} {
+    width: 75vh;
+    height: 75vh;
+  }
+  @media${device.desktopHD} {
+    width: 80vh;
+    height: 80vh;
+    margin-top: 70px;
   }
 `;
 
