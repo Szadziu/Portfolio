@@ -7,17 +7,15 @@ const TextArea = ({ name, id, placeholder, label }) => {
   const { errors, touched } = useFormikContext();
   return (
     <P.TextAreaWrapper>
+      <Label htmlFor={id}>{label}</Label>
+      <Field
+        error={errors[name] && touched[name]}
+        as={P.TextAreaField}
+        name={name}
+        id={id}
+        placeholder={placeholder}
+      />
       <Comment error>{touched[name] ? errors[name] : ''}</Comment>
-      <Label htmlFor={name}>
-        {label}
-        <Field
-          error={errors[name] && touched[name]}
-          as={P.TextAreaField}
-          name={name}
-          id={id}
-          placeholder={placeholder}
-        />
-      </Label>
     </P.TextAreaWrapper>
   );
 };

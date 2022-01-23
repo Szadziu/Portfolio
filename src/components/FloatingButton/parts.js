@@ -4,14 +4,15 @@ import { device } from '../../constants/devices';
 
 export const Button = styled.button`
   position: fixed;
+  z-index: 2;
   opacity: ${({ visible }) => visible || 0};
   bottom: 10px;
   right: 10px;
   background-image: url(${floatingIcon});
   background-size: contain;
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   cursor: ${({ visible }) => visible && 'pointer'};
   transition: 0.3s;

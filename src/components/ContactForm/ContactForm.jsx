@@ -60,9 +60,9 @@ const ContactForm = () => {
             <FormButton ref={buttonRef} isSubmitted={isSendForm} type='submit'>
               Wyślij
             </FormButton>
-            {/* <P.CooperateInfo>
+            <P.CooperateInfo>
               W celu nawiązania współpracy proszę o kontakt
-            </P.CooperateInfo> */}
+            </P.CooperateInfo>
           </P.FormWrapper>
         )}
       </Formik>

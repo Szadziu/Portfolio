@@ -7,16 +7,14 @@ const Input = ({ label, name, id, placeholder }) => {
   const { errors, touched } = useFormikContext();
   return (
     <P.InputWrapper>
+      <Label htmlFor={id}>{label}</Label>
+      <P.Input
+        error={touched[name] && errors[name]}
+        name={name}
+        id={id}
+        placeholder={placeholder}
+      />
       <Comment error>{touched[name] ? errors[name] : ''}</Comment>
-      <Label>
-        {label}
-        <P.Input
-          error={touched[name] && errors[name]}
-          name={name}
-          id={id}
-          placeholder={placeholder}
-        />
-      </Label>
     </P.InputWrapper>
   );
 };

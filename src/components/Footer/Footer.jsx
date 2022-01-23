@@ -12,7 +12,7 @@ const Footer = () => {
     <SectionWrapper bgColor={theme.gray}>
       <ContactForm />
       <SocialsBanner icons={SOCIALS} />
-      <Badges />
+      {/* <Badges /> */}
     </SectionWrapper>
   );
 };
