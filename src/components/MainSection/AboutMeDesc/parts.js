@@ -2,17 +2,35 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
-  /* font-weight: 400; */
   font-size: 0.78rem;
-  /* text-align: justify; */
-  /* text-justify: inter-word; */
-  margin-left: 20px;
+  margin: 0 10px 0 20px;
   grid-area: 2/9/11/1;
   /* background-color: coral; */
+
+  @media ${device.mobileM} {
+    font-size: 0.95rem;
+  }
+  @media${device.tabletM} {
+    font-size: 1.55rem;
+  }
+  @media${device.tabletL} {
+    font-size: 2.05rem;
+  }
+  @media${device.desktop13} {
+    font-size: 1.45rem;
+    margin-top: 40px;
+  }
+  @media${device.desktopHD} {
+    font-size: 2.3rem;
+    margin-top: 60px;
+  }
+  @media${device.desktop4k} {
+    font-size: 3.8rem;
+    margin-top: 80px;
+  }
 `;
 
 export const Line = styled.span`
-  /* background-color: cadetblue; */
   position: relative;
   overflow: hidden;
   display: none;

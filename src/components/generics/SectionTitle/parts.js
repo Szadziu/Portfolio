@@ -17,6 +17,23 @@ export const Title = styled.h1`
   letter-spacing: -2px;
   grid-area: 1/12/2/1;
 
+  @media ${device.tabletM} {
+    font-size: 2.2rem;
+  }
+  @media ${device.tabletL} {
+    font-size: 3.24rem;
+  }
+  @media ${device.desktop13} {
+    font-size: 2.2rem;
+  }
+  @media ${device.desktop13} {
+    font-size: 3.24rem;
+  }
+  @media ${device.desktop4k} {
+    font-size: 6.8rem;
+    background-size: 100rem 100%;
+  }
+
   @keyframes shimmer {
     0% {
       background-position: top left;

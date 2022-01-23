@@ -23,7 +23,7 @@ const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
 
   const generateAdvancementLevel = () => {
     const advancementLevel = [];
-    let boxHeight = 10;
+    let boxHeight = 6;
 
     const addBoxOfSkill = (color, height) => {
       advancementLevel.push(<P.BoxOfSkill color={color} height={height} />);
@@ -34,13 +34,13 @@ const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
       boxHeight += 2;
       if (advancementLevel.length <= 2) {
         color = theme.darkOrange;
-        addBoxOfSkill(color, `${boxHeight}px`);
+        addBoxOfSkill(color, boxHeight);
       } else if (advancementLevel.length <= 5) {
         color = theme.yellow;
-        addBoxOfSkill(color, `${boxHeight}px`);
+        addBoxOfSkill(color, boxHeight);
       } else if (advancementLevel.length <= 9) {
         color = theme.green;
-        addBoxOfSkill(color, `${boxHeight}px`);
+        addBoxOfSkill(color, boxHeight);
       }
     }
     return advancementLevel;
@@ -52,16 +52,7 @@ const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
 
   return (
     <P.Bar>
-      <P.TitleOfSkill>
-        {children}
-        {/* <P.InfoIcon
-          icon={faInfo}
-          data={skill}
-          onClick={(e) => showInfoBubble(e, skill)}
-          color='blue'
-        /> */}
-        {/* {isVisible && <InfoBubble id={skill.id} description={skill.desc} />} */}
-      </P.TitleOfSkill>
+      <P.TitleOfSkill>{children}</P.TitleOfSkill>
       <P.Boxes ref={ref}>{generateAdvancementLevel()}</P.Boxes>
     </P.Bar>
   );

@@ -7,7 +7,27 @@ export const QuoteParam = styled.p`
   font-style: italic;
   font-size: 0.8rem;
   opacity: 0;
+  margin-top: 20px;
   /* background-color: coral; */
-  grid-area: 11/9/12/2;
+  grid-area: 11/9/13/2;
   color: ${({ theme }) => theme.pink};
+
+  @media ${device.mobileM} {
+    font-size: 1.1rem;
+  }
+  @media ${device.tabletM} {
+    font-size: 1.9rem;
+  }
+  @media ${device.tabletL} {
+    font-size: 2.5rem;
+  }
+  @media ${device.desktop13} {
+    font-size: 1.7rem;
+  }
+  @media ${device.desktopHD} {
+    font-size: 2.8rem;
+  }
+  @media ${device.desktop4k} {
+    font-size: 3.7rem;
+  }
 `;
