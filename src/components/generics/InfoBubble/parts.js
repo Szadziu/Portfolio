@@ -21,14 +21,14 @@ export const InfoModal = styled.div`
     font-size: 1.6rem;
   }
   @media${device.desktop13} {
+    width: 40vw;
     font-size: 1.2rem;
   }
   @media${device.desktopHD} {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   @media${device.desktop4k} {
-    height: 30vh;
-    width: 40vw;
+    width: 30vw;
     font-size: 2.7rem;
     padding: 30px 40px;
   }

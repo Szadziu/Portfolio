@@ -34,21 +34,6 @@ export const Button = styled(Link)`
     box-shadow: 0 0 15px 4px black;
   }
 
-  &:active {
-    &::before {
-      left: calc(100% - 10px);
-      top: 50%;
-    }
-  }
-
-  &:hover {
-    &::before {
-      left: calc(100% - 10px);
-      top: 50%;
-      height: 5px;
-    }
-  }
-
   @media ${device.mobileS} {
     font-size: 0.8rem;
   }
@@ -62,6 +47,20 @@ export const Button = styled(Link)`
     font-size: 1.8rem;
   }
   @media ${device.desktop13} {
+    &:active {
+      &::before {
+        left: calc(100% - 10px);
+        top: 50%;
+      }
+    }
+
+    &:hover {
+      &::before {
+        left: calc(100% - 10px);
+        top: 50%;
+        height: 5px;
+      }
+    }
     font-size: 1.8rem;
     width: 50%;
     height: 15%;
@@ -71,5 +70,16 @@ export const Button = styled(Link)`
   }
   @media ${device.desktop4k} {
     font-size: 4rem;
+    &:before {
+      width: 30px;
+    }
+
+    &:hover {
+      &::before {
+        left: calc(100% - 30px);
+        top: 50%;
+        height: 15px;
+      }
+    }
   }
 `;

@@ -17,11 +17,11 @@ export const Img = styled.img`
     height: 50px;
     &:hover {
       cursor: pointer;
-      transform: scale(1.7);
+      transform: scale(1.4);
     }
   }
   @media${device.desktopHD} {
-    height: 80px;
+    height: 60px;
   }
   @media${device.desktop4k} {
     height: 150px;
@@ -34,7 +34,6 @@ export const Banner = styled.div`
   left: -80vw;
   width: 80vw;
   height: 10vh;
-  /* background-color: skyblue; */
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -17,10 +17,6 @@ export const Button = styled.button`
   cursor: ${({ visible }) => visible && 'pointer'};
   transition: 0.3s;
 
-  &:hover {
-    transform: scale(1.2);
-  }
-
   @media ${device.tabletM} {
     width: 90px;
     height: 90px;
@@ -34,6 +30,9 @@ export const Button = styled.button`
     right: 40px;
   }
   @media ${device.desktop13} {
+    &:hover {
+      transform: scale(1.2);
+    }
     width: 80px;
     height: 80px;
     bottom: 20px;

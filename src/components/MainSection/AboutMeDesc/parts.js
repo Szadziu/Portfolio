@@ -11,18 +11,19 @@ export const Container = styled.div`
     font-size: 0.95rem;
   }
   @media${device.tabletM} {
-    font-size: 1.55rem;
+    font-size: 1.45rem;
   }
   @media${device.tabletL} {
-    font-size: 2.05rem;
+    font-size: 1.9rem;
   }
   @media${device.desktop13} {
     font-size: 1.45rem;
     margin-top: 40px;
   }
   @media${device.desktopHD} {
-    font-size: 2.3rem;
+    font-size: 2rem;
     margin-top: 60px;
+    margin-right: 20px;
   }
   @media${device.desktop4k} {
     font-size: 3.8rem;

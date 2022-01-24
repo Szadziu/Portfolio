@@ -77,10 +77,11 @@ export const PhotoOfProject = styled.img`
   transition: 0.5s;
   padding-bottom: 10px;
   cursor: pointer;
-  &:hover {
-    border-color: gold;
-  }
+
   @media${device.desktop13} {
+    &:hover {
+      border-color: gold;
+    }
     height: 100%;
   }
   @media${device.desktop4k} {
@@ -102,10 +103,7 @@ export const CloseButton = styled.button`
   right: 10px;
   font-size: 1.2rem;
   transition: 0.5s;
-  &:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-  }
+
   @media${device.mobileM} {
     font-size: 1.4rem;
   }
@@ -118,6 +116,10 @@ export const CloseButton = styled.button`
     font-size: 3.1rem;
   }
   @media${device.desktop13} {
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
     font-size: 2rem;
     top: 10px;
     right: 10px;

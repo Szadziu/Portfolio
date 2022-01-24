@@ -69,10 +69,12 @@ export const FormTitle = styled.span`
     font-size: 2.5rem;
   }
   @media${device.desktop4k} {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
+    left: 30px;
+    margin-bottom: 50px;
     &:after {
       height: 10px;
-      width: 90px;
+      width: 70px;
     }
   }
 `;
@@ -110,7 +112,7 @@ export const CooperateInfo = styled.p`
     font-size: 1.2rem;
   }
   @media${device.desktopHD} {
-    padding-top: 0;
+    padding-top: 40px;
     font-size: 1.3rem;
   }
   @media${device.desktop4k} {

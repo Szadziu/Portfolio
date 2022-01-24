@@ -41,7 +41,8 @@ export const Button = styled.button`
     padding: 10px;
   }
   @media${device.desktopHD} {
-    padding: 20px;
+    top: 15px;
+    padding: 10px;
     font-size: 1.5rem;
   }
   @media${device.desktop4k} {

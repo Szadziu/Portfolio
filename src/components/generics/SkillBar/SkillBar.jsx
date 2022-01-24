@@ -23,7 +23,7 @@ const SkillBar = ({ children, skill, isVisible, setIsVisible, key }) => {
 
   const generateAdvancementLevel = () => {
     const advancementLevel = [];
-    let boxHeight = 6;
+    let boxHeight = 2;
 
     const addBoxOfSkill = (color, height) => {
       advancementLevel.push(<P.BoxOfSkill color={color} height={height} />);

@@ -31,6 +31,7 @@ export const Title = styled.h1`
   }
   @media ${device.desktop15} {
     font-size: 2.8rem;
+    background-size: 70rem 100%;
   }
   @media ${device.desktop4k} {
     font-size: 6.8rem;

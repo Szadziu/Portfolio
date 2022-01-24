@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const SkillContainer = styled.div`
+  background-color: white;
+  /* background-color: beige; */
   grid-area: 2/13/11/9;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
   border-radius: 20px 0 0 20px;
   box-shadow: 0 0 10px 3px ${({ theme }) => theme.mint};
   @media${device.desktop13} {
@@ -18,17 +19,22 @@ export const SkillContainer = styled.div`
 `;
 
 export const InfoIconLink = styled.button`
+  /* background-color: yellow; */
+  font-size: 0.7rem;
   cursor: pointer;
   color: ${({ theme }) => theme.blue};
-  margin-right: 5px;
+  /* margin-right: 5px; */
   align-self: flex-start;
   @media ${device.tabletM} {
     font-size: 1.1rem;
   }
   @media ${device.tabletL} {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   @media ${device.desktop13} {
+    &:hover {
+      color: ${({ theme }) => theme.brighterBlue};
+    }
     font-size: 1rem;
   }
   @media ${device.desktopHD} {
@@ -40,14 +46,19 @@ export const InfoIconLink = styled.button`
 `;
 
 export const SkillTitle = styled.p`
+  /* background-color: red; */
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+
+  @media ${device.mobileM} {
+    font-size: 0.6rem;
+  }
   @media ${device.tabletM} {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
   }
   @media ${device.tabletL} {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
   @media ${device.desktop13} {
     font-size: 0.9rem;
@@ -61,17 +72,22 @@ export const SkillTitle = styled.p`
 `;
 
 export const SkillAdvancementInfo = styled.p`
+  /* background-color: coral; */
   width: 100%;
   /* text-align: center; */
   display: flex;
   justify-content: space-around;
-  font-size: 0.8rem;
-  @media ${device.tabletM} {
-    font-size: 1.2rem;
-    font-weight: 700;
+  font-size: 0.5rem;
+
+  @media ${device.mobileM} {
+    font-size: 0.6rem;
   }
-  @media ${device.tabletL} or ${device.desktopHD} {
-    font-size: 1.5rem;
+  @media ${device.tabletM} {
+    font-size: 0.8rem;
+    /* font-weight: 700; */
+  }
+  @media ${device.tabletL} {
+    font-size: 0.9rem;
   }
   @media ${device.desktop13} {
     font-size: 1rem;

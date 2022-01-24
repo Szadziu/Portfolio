@@ -16,6 +16,7 @@ export const QuoteParam = styled.p`
     font-size: 1.1rem;
   }
   @media ${device.tabletM} {
+    margin-top: 0;
     font-size: 1.9rem;
   }
   @media ${device.tabletL} {
@@ -24,8 +25,11 @@ export const QuoteParam = styled.p`
   @media ${device.desktop13} {
     font-size: 1.7rem;
   }
+  @media ${device.desktop15} {
+    font-size: 1.8rem;
+  }
   @media ${device.desktopHD} {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
   @media ${device.desktop4k} {
     font-size: 3.7rem;
