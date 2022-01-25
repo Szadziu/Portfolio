@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+
 import floatingButtonImage from '../../assets/upArrow.png';
+
 import * as P from './parts';
 
 const FloatingButton = () => {

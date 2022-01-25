@@ -2,29 +2,33 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const SkillContainer = styled.div`
-  background-color: white;
-  /* background-color: beige; */
-  grid-area: 2/13/11/9;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  grid-area: 2/13/11/9;
   border-radius: 20px 0 0 20px;
   box-shadow: 0 0 10px 3px ${({ theme }) => theme.mint};
+
+  background-color: ${({ theme }) => theme.white};
+
   @media${device.desktop13} {
     flex-direction: row;
     flex-wrap: wrap;
+
     padding-bottom: 20px;
   }
 `;
 
 export const InfoIconLink = styled.button`
-  /* background-color: yellow; */
-  font-size: 0.7rem;
-  cursor: pointer;
-  color: ${({ theme }) => theme.blue};
-  /* margin-right: 5px; */
   align-self: flex-start;
+
+  color: ${({ theme }) => theme.blue};
+
+  font-size: 0.7rem;
+
+  cursor: pointer;
+
   @media ${device.tabletM} {
     font-size: 1.1rem;
   }
@@ -46,8 +50,8 @@ export const InfoIconLink = styled.button`
 `;
 
 export const SkillTitle = styled.p`
-  /* background-color: red; */
   width: 100%;
+
   font-size: 0.5rem;
 
   @media ${device.mobileM} {
@@ -72,11 +76,10 @@ export const SkillTitle = styled.p`
 `;
 
 export const SkillAdvancementInfo = styled.p`
-  /* background-color: coral; */
-  width: 100%;
-  /* text-align: center; */
   display: flex;
   justify-content: space-around;
+  width: 100%;
+
   font-size: 0.5rem;
 
   @media ${device.mobileM} {
@@ -84,7 +87,6 @@ export const SkillAdvancementInfo = styled.p`
   }
   @media ${device.tabletM} {
     font-size: 0.8rem;
-    /* font-weight: 700; */
   }
   @media ${device.tabletL} {
     font-size: 0.9rem;

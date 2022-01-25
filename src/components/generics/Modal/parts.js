@@ -2,15 +2,17 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const ProjectDesc = styled.p`
-  color: ${({ theme }) => theme.white};
   width: 90%;
   height: 50%;
-  font-size: 0.8rem;
-  line-height: 1rem;
+  padding-right: 15px;
   overflow: scroll;
   overflow-x: hidden;
+
+  color: ${({ theme }) => theme.white};
+
+  font-size: 0.8rem;
+  line-height: 1rem;
   text-align: justify;
-  padding-right: 15px;
 
   &::-webkit-scrollbar {
     width: 0.5em;
@@ -29,60 +31,65 @@ export const ProjectDesc = styled.p`
   }
 
   &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
+    box-shadow: inset 0 0 6px ${({ theme }) => theme.dimBackground};
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
+    background-color: ${({ theme }) => theme.brighterGray};
+    outline: 1px solid ${({ theme }) => theme.gray};
   }
 
   @media${device.mobileM} {
     font-size: 1rem;
   }
   @media${device.tabletM} {
-    line-height: 2rem;
     font-size: 1.6rem;
+    line-height: 2rem;
   }
   @media${device.tabletL} {
     font-size: 2rem;
     line-height: 2.4rem;
   }
   @media${device.desktop13} {
+    width: 65%;
+
     font-size: 1.2rem;
     line-height: 1.6rem;
-    width: 65%;
   }
   @media${device.desktopHD} {
+    width: 65%;
+
     font-size: 1.6rem;
     line-height: 2.1rem;
-    width: 65%;
   }
   @media${device.desktop4k} {
+    width: 50%;
+
     font-size: 2.8rem;
     line-height: 4.1rem;
-    width: 50%;
   }
 `;
 
 export const PhotoOfProject = styled.img`
-  height: 80%;
   position: relative;
-  /* background-color: coral; */
   top: 50%;
   left: 50%;
+
+  height: 80%;
   transform: translate(-50%, -50%);
   border-bottom: 3px solid transparent;
-  transition: 0.5s;
   padding-bottom: 10px;
+
+  transition: 0.5s;
   cursor: pointer;
 
   @media${device.desktop13} {
+    height: 100%;
+
     &:hover {
       border-color: gold;
     }
-    height: 100%;
   }
   @media${device.desktop4k} {
     height: 90%;
@@ -91,6 +98,7 @@ export const PhotoOfProject = styled.img`
 
 export const ProjectLink = styled.a`
   height: 40%;
+
   @media${device.desktop13} {
     width: 30%;
     height: 50%;
@@ -101,52 +109,62 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
+
   font-size: 1.2rem;
+
   transition: 0.5s;
 
   @media${device.mobileM} {
     font-size: 1.4rem;
   }
   @media${device.tabletM} {
-    font-size: 2.1rem;
     top: 15px;
     right: 15px;
+
+    font-size: 2.1rem;
   }
   @media${device.tabletL} {
     font-size: 3.1rem;
   }
   @media${device.desktop13} {
-    &:hover {
-      transform: scale(1.2);
-      cursor: pointer;
-    }
-    font-size: 2rem;
     top: 10px;
     right: 10px;
+
+    font-size: 2rem;
+
+    &:hover {
+      transform: scale(1.2);
+
+      cursor: pointer;
+    }
   }
   @media${device.desktopHD} {
-    font-size: 3rem;
     top: 10px;
     right: 20px;
+
+    font-size: 3rem;
   }
   @media${device.desktop4k} {
-    font-size: 5rem;
     top: 20px;
     right: 30px;
+
+    font-size: 5rem;
   }
 `;
 
 export const Title = styled.p`
-  text-transform: uppercase;
-  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   height: 10%;
-  color: white;
-  font-size: 1rem;
   border-bottom: ${({ theme }) => theme.white} solid 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  color: ${({ theme }) => theme.white};
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
 
   @media${device.mobileM} {
     font-size: 1.2rem;
@@ -169,34 +187,38 @@ export const Title = styled.p`
 `;
 
 export const ProjectModal = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.darkGray};
-  border: 5px solid white;
-  border-radius: 20px;
-  width: 90%;
-  height: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 70%;
   transform: translate(-50%, -50%);
+  border: 5px solid ${({ theme }) => theme.white};
+  border-radius: 20px;
+
+  background-color: ${({ theme }) => theme.darkGray};
 
   @media${device.desktop13} {
     width: 60%;
     height: 50%;
   }
   @media${device.desktop4k} {
+    justify-content: space-around;
     width: 70%;
     height: 60%;
-    justify-content: space-around;
   }
 `;
 
 export const OverlayWrapper = styled.div`
   position: absolute;
-  background-color: black;
+
   width: 100vw;
   height: 100vh;
   opacity: 0.8;
+
+  background-color: ${({ theme }) => theme.black};
 `;

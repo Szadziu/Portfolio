@@ -1,10 +1,13 @@
 import { useRef, useState } from 'react';
+import { Formik } from 'formik';
+
 import Input from './Input';
 import FormButton from './FormButton';
-import VALIDATION_SCHEMA from '../../utils/validationSchema';
 import TextArea from './TextArea';
-import { Formik } from 'formik';
+
+import VALIDATION_SCHEMA from '../../utils/validationSchema';
 import { submitAnimation } from './submitAnimation';
+
 import * as P from './parts';
 
 const ContactForm = () => {

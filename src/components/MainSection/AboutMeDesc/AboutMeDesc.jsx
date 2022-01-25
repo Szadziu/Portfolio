@@ -1,7 +1,8 @@
-import * as P from './parts';
-import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import gsap from 'gsap';
+import * as P from './parts';
 
 const AboutMeDesc = () => {
   const { ref, inView, entry } = useInView({ threshold: 0.4 });

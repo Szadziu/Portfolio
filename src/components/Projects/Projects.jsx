@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { PROJECTS } from '../../constants';
+import { useTheme } from 'styled-components';
+
 import Modal from '../generics/Modal/Modal';
+import SectionTitle from '../generics/SectionTitle';
 import SectionWrapper from '../generics/SectionWrapper';
 import SingleProject from '../generics/SingleProject/SingleProject';
-import SectionTitle from '../generics/SectionTitle';
+
+import { PROJECTS } from '../../constants';
+
 import * as P from './parts';
-import { useTheme } from 'styled-components';
 
 const Projects = () => {
   const theme = useTheme();
@@ -29,6 +32,7 @@ const Projects = () => {
         link={project.link}
         onClick={() => openModal(project)}
         thumbnail={project.img}
+        done={project.done}
       >
         {project.name}
       </SingleProject>

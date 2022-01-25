@@ -1,10 +1,11 @@
-import { SOCIALS } from '../../constants';
 import { useTheme } from 'styled-components';
-import ContactForm from '../ContactForm';
+
 import SectionWrapper from '../generics/SectionWrapper';
-import SocialsBanner from '../SocialsBanner/SocialsBanner';
-import Badges from '../Badges';
-import { Badge } from '../Badges/parts';
+
+import ContactForm from '../ContactForm';
+import SocialsBanner from '../SocialsBanner';
+
+import { SOCIALS } from '../../constants';
 
 const Footer = () => {
   const theme = useTheme();
@@ -12,7 +13,6 @@ const Footer = () => {
     <SectionWrapper bgColor={theme.gray}>
       <ContactForm />
       <SocialsBanner icons={SOCIALS} />
-      {/* <Badges /> */}
     </SectionWrapper>
   );
 };

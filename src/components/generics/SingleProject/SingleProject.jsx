@@ -1,8 +1,13 @@
-import * as P from "./parts";
+import * as P from './parts';
 
-const SingleProject = ({ children, onClick, thumbnail }) => {
+const SingleProject = ({ children, onClick, thumbnail, done }) => {
   return (
-    <P.Project thumbnail={thumbnail} onClick={onClick}>
+    <P.Project
+      disabled={!done}
+      thumbnail={thumbnail}
+      onClick={onClick}
+      done={done}
+    >
       {children}
     </P.Project>
   );

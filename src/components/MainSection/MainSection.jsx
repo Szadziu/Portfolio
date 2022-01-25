@@ -1,11 +1,16 @@
-import * as P from './parts';
-import AboutMeDesc from './AboutMeDesc';
-import SectionWrapper from '../generics/SectionWrapper';
-import SkillsWrapper from './SkillsWrapper';
-import Quote from '../generics/Quote';
-import { QUOTE } from '../../constants';
-import SectionTitle from '../generics/SectionTitle';
 import { useTheme } from 'styled-components';
+
+import SectionTitle from '../generics/SectionTitle';
+import SectionWrapper from '../generics/SectionWrapper';
+import Quote from '../generics/Quote';
+
+import AboutMeDesc from './AboutMeDesc';
+import Badges from '../Badges';
+import SkillsWrapper from './SkillsWrapper';
+
+import { QUOTE } from '../../constants';
+
+import * as P from './parts';
 
 const MainSection = () => {
   const theme = useTheme();
@@ -17,6 +22,7 @@ const MainSection = () => {
         <AboutMeDesc />
         <Quote>{QUOTE}</Quote>
         <SkillsWrapper />
+        <Badges />
       </SectionWrapper>
     </P.MainSectionWrapper>
   );

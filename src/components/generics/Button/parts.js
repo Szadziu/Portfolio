@@ -4,34 +4,40 @@ import { device } from '../../../constants/devices';
 
 export const Button = styled(Link)`
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  grid-area: 3/11/4/6;
   width: 90%;
   max-width: 1000px;
   height: 10%;
   border-radius: 10px;
-  color: ${({ theme }) => theme.black};
-  box-shadow: 0 0 13px 0 black;
-  user-select: none;
-  cursor: pointer;
+  box-shadow: 0 0 13px 0 ${({ theme }) => theme.black};
 
-  grid-area: 3/11/4/6;
-  font-size: ${({ theme }) => theme.fontSizes.small};
+  background-color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
+
+  font-size: 1rem;
+
+  cursor: pointer;
+  user-select: none;
 
   &::before {
     position: absolute;
     top: 0;
     left: 0;
+
+    width: 10px;
+    height: 100%;
     border-radius: 10px;
+    margin-right: 15px;
+    box-shadow: 0 0 15px 4px ${({ theme }) => theme.black};
+
+    background-color: ${({ theme }) => theme.mint};
+
     transition: 0.5s;
     content: '';
-    background-color: ${({ theme }) => theme.mint};
-    width: 10px;
-    margin-right: 15px;
-    height: 100%;
-    box-shadow: 0 0 15px 4px black;
   }
 
   @media ${device.mobileS} {
@@ -47,23 +53,26 @@ export const Button = styled(Link)`
     font-size: 1.8rem;
   }
   @media ${device.desktop13} {
+    width: 50%;
+    height: 15%;
+
+    font-size: 1.8rem;
+
     &:active {
       &::before {
-        left: calc(100% - 10px);
         top: 50%;
+        left: calc(100% - 10px);
       }
     }
 
     &:hover {
       &::before {
-        left: calc(100% - 10px);
         top: 50%;
+        left: calc(100% - 10px);
+
         height: 5px;
       }
     }
-    font-size: 1.8rem;
-    width: 50%;
-    height: 15%;
   }
   @media ${device.desktopHD} {
     font-size: 2.5rem;
@@ -76,8 +85,9 @@ export const Button = styled(Link)`
 
     &:hover {
       &::before {
-        left: calc(100% - 30px);
         top: 50%;
+        left: calc(100% - 30px);
+
         height: 15px;
       }
     }

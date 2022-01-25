@@ -4,17 +4,18 @@ import { device } from '../../constants/devices';
 export const Menu = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  grid-area: 2/13/12/6;
+  align-items: center;
   gap: 10%;
+  grid-area: 2/13/12/6;
 `;
 
 export const BackgroundPhoto = styled.img`
-  height: 140vh;
   position: absolute;
   top: 0;
   left: -25vw;
+
+  height: 140vh;
 
   @media ${device.mobileS} {
     left: -120vw;

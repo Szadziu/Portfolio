@@ -4,23 +4,26 @@ import { device } from '../../../constants/devices';
 
 export const Input = styled(Field)`
   width: 90%;
-  background: none;
   border: none;
   border-bottom: ${({ error, theme }) =>
-    error ? `1px solid ${theme.pink}` : '1px solid #666'};
-  color: #ddd;
+    error ? `1px solid ${theme.pink}` : `1px solid ${theme.darkerGray}`};
+  margin: 5px 0 0 10px;
+
+  background: none;
+  color: ${({ theme }) => theme.brighterGray};
+
   font-size: 0.8rem;
   outline: none;
-  transition: border-color 0.4s;
-  margin: 5px 0 0 10px;
   text-align: right;
 
+  transition: 0.4s;
+
   &::placeholder {
-    color: #666;
+    color: ${({ theme }) => theme.darkerGray};
   }
 
   &:focus {
-    border-bottom-color: #ddd;
+    border-bottom-color: ${({ theme }) => theme.brighterGray};
   }
 
   @media${device.mobileM} {
@@ -33,22 +36,24 @@ export const Input = styled(Field)`
     font-size: 1.7rem;
   }
   @media${device.desktop13} {
-    font-size: 1.2rem;
     width: 100%;
+
+    font-size: 1.2rem;
   }
   @media${device.desktopHD} {
     font-size: 1.6rem;
   }
   @media${device.desktop4k} {
-    font-size: 3rem;
     margin-left: 5%;
+
+    font-size: 3rem;
   }
 `;
 
 export const InputWrapper = styled.div`
-  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 90%;
 `;

@@ -1,4 +1,4 @@
-import { THEME } from "../constants";
+import { THEME } from '../constants';
 
 // obecnie nie używany util, który zostawiłem w celu potencjalnego refactora obecnego systemu, który dobiera kolory boxów od poziomu umiejętności.
 
@@ -18,6 +18,6 @@ export const colorOfSkillAdvancement = (level) => {
     case 10:
       return THEME.green;
     default:
-      console.log("Value is not valid");
+      console.log('Value is not valid');
   }
 };

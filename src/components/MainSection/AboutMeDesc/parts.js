@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
-  font-size: 0.78rem;
-  margin: 0 10px 0 20px;
   grid-area: 2/9/11/1;
-  /* background-color: coral; */
+
+  margin: 0 10px 0 20px;
+
+  font-size: 0.78rem;
 
   @media ${device.mobileM} {
     font-size: 0.95rem;
@@ -17,48 +18,58 @@ export const Container = styled.div`
     font-size: 1.9rem;
   }
   @media${device.desktop13} {
-    font-size: 1.45rem;
     margin-top: 40px;
+
+    font-size: 1.45rem;
   }
   @media${device.desktopHD} {
+    margin: 60px 20px 0 0;
     font-size: 2rem;
-    margin-top: 60px;
-    margin-right: 20px;
   }
   @media${device.desktop4k} {
-    font-size: 3.8rem;
     margin-top: 80px;
+
+    font-size: 3.8rem;
   }
 `;
 
 export const Line = styled.span`
   position: relative;
-  overflow: hidden;
+
   display: none;
-  line-height: 1.2;
+  overflow: hidden;
+
   color: ${({ theme }) => theme.white};
+
+  line-height: 1.2;
+
   &::after {
-    content: '';
     position: absolute;
     top: 0;
     right: 0;
+
     width: 100%;
     height: 100%;
+    transform: translateX(-101%);
+
     background: ${({ theme }) => theme.white};
 
     animation: a-ltr-after 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-    transform: translateX(-101%);
+    content: '';
   }
   &::before {
-    content: '';
     position: absolute;
     top: 0;
     right: 0;
+
     width: 100%;
     height: 100%;
-    background: ${({ theme }) => theme.gray};
-    animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
     transform: translateX(0);
+
+    background: ${({ theme }) => theme.gray};
+
+    animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+    content: '';
   }
   &:nth-of-type(1)::before,
   &:nth-of-type(1)::after {
@@ -105,5 +116,8 @@ export const Line = styled.span`
     100% {
       transform: translateX(200%);
     }
+  }
+  @media ${device.desktopHD} {
+    margin-left: 20px;
   }
 `;

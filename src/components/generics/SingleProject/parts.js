@@ -1,58 +1,81 @@
 import styled from 'styled-components';
+
 import { device } from '../../../constants/devices';
 
-export const Project = styled.div`
+import underConstruction from '../../../assets/projectsIcons/underConstruction.png';
+
+export const Project = styled.button`
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 0;
+  align-items: center;
   width: 26%;
   height: 26%;
-  border-radius: 50%;
   border: 4px solid black;
-  text-align: center;
+  border-radius: 50%;
+
+  background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
+
+  font-size: 0;
+  text-align: center;
   letter-spacing: 2px;
-  -webkit-text-stroke: 2px ${({ theme }) => theme.white};
+  -webkit-text-stroke: 1px ${({ theme }) => theme.white};
   text-decoration: none;
   text-transform: uppercase;
-  background-image: url(${({ thumbnail }) => thumbnail});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+
   transition: 0.5s;
   filter: grayscale(100%);
 
   &:hover {
-    cursor: pointer;
-    box-shadow: 0 0 0 10px ${({ theme }) => theme.mint}, 0 0 0 14px black,
-      0 0 10rem 100px black;
-    transform: scale(1.1);
     z-index: 10;
-    filter: grayscale(0);
+
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px ${({ theme }) => theme.mint},
+      0 0 0 14px ${({ theme }) => theme.black},
+      0 0 10rem 100px ${({ theme }) => theme.black};
+
     font-size: 0.5rem;
+
+    cursor: pointer;
+    filter: grayscale(0);
+
+    &::after {
+      position: absolute;
+      top: 20%;
+      left: 25%;
+
+      width: 80%;
+      height: 80%;
+      transform: rotate(15deg);
+
+      background: ${({ done }) =>
+        done || `center / contain no-repeat url(${underConstruction})`};
+
+      content: '';
+    }
+
     &::before {
       position: absolute;
       z-index: -1;
-      content: '';
+
       width: 95%;
       height: 30%;
-      background-color: rgba(0, 0, 0, 0.8);
       border-radius: 30px;
+
+      background-color: ${({ theme }) => theme.darkenedBackground};
+
+      content: '';
     }
   }
 
   @media${device.desktop13} {
     &:hover {
       transform: scale(1.5) rotate(1turn);
-      font-size: 0.8rem;
+
+      font-size: 0.7rem;
     }
   }
-  @media${device.desktopHD} {
-    &:hover {
-      font-size: 1.1rem;
-    }
-  }
+
   @media${device.desktop4k} {
     &:hover {
       font-size: 2rem;

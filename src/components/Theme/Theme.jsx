@@ -1,32 +1,35 @@
 import { ThemeProvider } from 'styled-components';
-import personalPhotoIcon from '../../assets/personalPhoto.png';
+import personalPhotoImage from '../../assets/personalPhoto.png';
 
 const THEME = {
-  landingSectionBackground: personalPhotoIcon,
-  redBlueGradient: 'linear-gradient(#780206, #061161)',
-  darkGreenGradient: 'linear-gradient(to bottom, #000, #0f9b0f)',
-  darkOrange: '#D12917',
-  yellow: '#D4D20B',
-  green: '#00BD3C',
-  fontColor: 'rgb(26, 26, 26)',
+  personalPhoto: personalPhotoImage,
+
+  darkOrange: 'rgb(209, 41, 23)',
+
+  yellow: 'rgb(212, 210, 11)',
+
+  green: 'rgb(0, 189, 60)',
+
   black: 'rgb(26, 26, 26)',
   white: 'rgb(255, 253, 250)',
-  gray: '#777',
+
+  brighterGray: 'rgb(221, 221, 221)',
+  gray: 'rgb(119, 119, 119)',
+  darkerGray: 'rgb(102, 102, 102)',
+  darkGray: 'rgb(62, 62, 62)',
+
   blue: 'rgb(59, 89, 152)',
   brighterBlue: 'rgb(99, 129, 192)',
-  darkGray: '#3E3E3E',
+
   green: 'rgb(26, 244, 143)',
+
   pink: 'rgb(255, 147, 147)',
   brighterPink: 'rgb(255, 187, 187)',
-  mint: '#62D9C7',
+
+  mint: 'rgb(98, 217, 199)',
+
   darkenedBackground: 'rgba(0,0,0,0.9)',
-  fontSizes: {
-    default: '1.5rem',
-    small: '1rem',
-    medium: '2rem',
-    large: '3rem',
-    huge: '4rem',
-  },
+  dimBackground: 'rgba(0,0,0,0.2)',
 };
 
 const Theme = ({ children }) => {

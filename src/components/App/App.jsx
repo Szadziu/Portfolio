@@ -1,10 +1,10 @@
+import FloatingButton from '../FloatingButton';
 import Footer from '../Footer';
+import GlobalStyle from '../../styles/GlobalStyle';
 import LandingPage from '../LandingPage';
 import MainSection from '../MainSection';
 import Projects from '../Projects';
-import GlobalStyle from '../../styles/GlobalStyle';
 import Theme from '../Theme';
-import FloatingButton from '../FloatingButton';
 
 const App = () => {
   return (
@@ -20,7 +20,3 @@ const App = () => {
 };
 
 export default App;
-
-{
-  /* <div style={{ backgroundColor: 'blue', height: '100px' }} ref={ref}></div> */
-}

@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { device } from '../../constants/devices';
 
 export const Img = styled.img`
-  margin-left: 10px;
   width: auto;
   height: 40px;
+  margin-left: 10px;
+
   transition: 0.4s;
 
   @media${device.tabletM} {
@@ -16,8 +17,9 @@ export const Img = styled.img`
   @media${device.desktop13} {
     height: 50px;
     &:hover {
-      cursor: pointer;
       transform: scale(1.4);
+
+      cursor: pointer;
     }
   }
   @media${device.desktopHD} {
@@ -30,21 +32,23 @@ export const Img = styled.img`
 
 export const Banner = styled.div`
   position: absolute;
-  bottom: 10px;
   left: -80vw;
-  width: 80vw;
-  height: 10vh;
+  bottom: 10px;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 80vw;
+  height: 10vh;
 
   @media${device.desktopHD} {
     left: -75vw;
   }
   @media${device.desktop4k} {
+    left: -70vw;
+
     justify-content: flex-start;
     gap: 10%;
-    left: -70vw;
   }
 `;
 

@@ -2,14 +2,15 @@ import styled from 'styled-components';
 import { device } from '../../constants/devices';
 
 export const ProjectsWrapper = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 50vh;
   height: 50vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
 
   @media${device.tabletM} {

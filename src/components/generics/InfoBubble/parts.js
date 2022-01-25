@@ -6,14 +6,20 @@ export const InfoModal = styled.div`
   top: -10%;
   right: 125%;
   z-index: 1;
-  height: 30vh;
+
   width: 60vw;
-  background-color: rgb(230, 230, 230);
+  height: 30vh;
   border-radius: 20px;
   padding: 10px 15px;
+  box-shadow: 5px 5px 10px 0 ${({ theme }) => theme.black};
+
+  background-color: ${({ theme }) => theme.darkGray};
+  color: ${({ theme }) => theme.mint};
+
   font-size: 0.65rem;
-  box-shadow: 5px 5px 10px 0 black;
+  font-family: 'Changa', sans-serif;
   text-align: left;
+
   @media${device.tabletM} {
     font-size: 1.1rem;
   }
@@ -22,14 +28,16 @@ export const InfoModal = styled.div`
   }
   @media${device.desktop13} {
     width: 40vw;
-    font-size: 1.2rem;
+
+    font-size: 1rem;
   }
   @media${device.desktopHD} {
     font-size: 1.5rem;
   }
   @media${device.desktop4k} {
     width: 30vw;
-    font-size: 2.7rem;
     padding: 30px 40px;
+
+    font-size: 2.7rem;
   }
 `;

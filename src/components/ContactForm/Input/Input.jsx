@@ -1,6 +1,6 @@
+import { useFormikContext } from 'formik';
 import Comment from '../../generics/Comment';
 import Label from '../../generics/Label';
-import { useFormikContext } from 'formik';
 import * as P from './parts';
 
 const Input = ({ label, name, id, placeholder }) => {
