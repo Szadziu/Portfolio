@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Formik } from 'formik';
 
 import Input from './Input';
@@ -13,17 +14,30 @@ import * as P from './parts';
 const ContactForm = () => {
   const [isSendForm, setIsSendForm] = useState(false);
   const buttonRef = useRef(null);
+  const formRef = useRef(null);
 
   const handleSubmit = (values) => {
-    submitAnimation(buttonRef);
-    values.username = '';
-    values.body = '';
-    values.email = '';
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(() => {
+        submitAnimation(buttonRef);
+        values.username = '';
+        values.body = '';
+        values.email = '';
 
-    setTimeout(() => {
-      setIsSendForm(true);
-      setTimeout(() => setIsSendForm(false), 5000);
-    }, 200);
+        setTimeout(() => {
+          setIsSendForm(true);
+          setTimeout(() => setIsSendForm(false), 5000);
+        }, 200);
+      })
+      .catch((error) => {
+        console.log('błąd');
+      });
   };
 
   return (
@@ -34,7 +48,7 @@ const ContactForm = () => {
         validationSchema={VALIDATION_SCHEMA}
       >
         {({ errors }) => (
-          <P.FormWrapper>
+          <P.FormWrapper ref={formRef}>
             <P.FormTitle>kontakt do mnie</P.FormTitle>
             <Input
               errors={errors.username}
