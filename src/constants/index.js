@@ -71,7 +71,7 @@ export const PROJECTS = [
     id: 0,
     name: 'Credit Calculator',
     img: creditCalculatorIcon,
-    link: 'https://szadziu.github.io/BankAppTask/',
+    link: 'https://szadziu.github.io/CreditCalculator/',
     desc: 'Aplikacja przedstawia kalkulator do obliczeń rat kredytowych uwzględniając przy tym wybrane przez użytkownika oprocentowanie. Projekt przystosowany do urządzeń desktopowych. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty klasowe), styled-components, font-awesome.',
     done: true,
   },
