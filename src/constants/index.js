@@ -3,7 +3,7 @@ import githubIcon from '../assets/socialIcons/github.png';
 import linkedinIcon from '../assets/socialIcons/linkedin.png';
 import whatsappIcon from '../assets/socialIcons/whatsapp.png';
 
-import cafeLayoutIcon from '../assets/projectsIcons/cafeLayout.png';
+import sportsStoreIcon from '../assets/projectsIcons/sportsStore.png';
 import calendarIcon from '../assets/projectsIcons/calendar.png';
 import clickerGameIcon from '../assets/projectsIcons/clickerGame.png';
 import cssGeneratorIcon from '../assets/projectsIcons/cssGenerator.png';
@@ -109,10 +109,10 @@ export const PROJECTS = [
   },
   {
     id: 5,
-    name: 'Cafe Layout',
-    img: cafeLayoutIcon,
-    link: 'https://szadziu.github.io/cafeLayout/',
-    desc: 'Ten projekt przedstawia stronę internetową, a właściwie aplikację progresywną (PWA), która prezentuje przykładową firmę usługową w tym wypadku kawiarnię, jej produkty, możliwość zamówień oraz intuicyjne menu. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), styled-components, react-hooks',
+    name: 'Sports Store',
+    img: sportsStoreIcon,
+    link: '#  ',
+    desc: 'Projekt w budowie',
     done: false,
   },
   {
@@ -121,7 +121,7 @@ export const PROJECTS = [
     img: calendarIcon,
     link: 'https://szadziu.github.io/calendarApp/',
     desc: 'Kalendarz jest aplikacją umożliwiającą zapisywanie wydarzeń/zadań na poszczególne dni. Kalendarz jest rzeczywisty, wykorzystano również możliwość zapisu aktualnego stanu na serwerze z użyciem zapytań. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), react-hooks, zapytania async/await, pre-processor Sass',
-    done: false,
+    done: true,
   },
   {
     id: 7,

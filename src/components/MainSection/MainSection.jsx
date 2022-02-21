@@ -5,7 +5,6 @@ import SectionWrapper from '../generics/SectionWrapper';
 import Quote from '../generics/Quote';
 
 import AboutMeDesc from './AboutMeDesc';
-import Badges from '../Badges';
 import SkillsWrapper from './SkillsWrapper';
 
 import { QUOTE } from '../../constants';
@@ -22,7 +21,6 @@ const MainSection = () => {
         <AboutMeDesc />
         <Quote>{QUOTE}</Quote>
         <SkillsWrapper />
-        <Badges />
       </SectionWrapper>
     </P.MainSectionWrapper>
   );
