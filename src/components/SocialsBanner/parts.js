@@ -41,12 +41,14 @@ export const Banner = styled.div`
   width: 80vw;
   height: 10vh;
 
-  @media${device.desktopHD} {
-    left: -75vw;
+  @media${device.desktop15} {
+    width: 60vw;
+    left: -60vw;
   }
-  @media${device.desktop4k} {
-    left: -70vw;
 
+  @media${device.desktop4k} {
+    width: 65vw;
+    left: -65vw;
     justify-content: flex-start;
     gap: 10%;
   }

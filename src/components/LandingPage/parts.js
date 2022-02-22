@@ -18,7 +18,7 @@ export const BackgroundPhoto = styled.img`
   height: 140vh;
 
   @media ${device.mobileS} {
-    left: -120vw;
+    left: -110vw;
   }
   @media ${device.mobileL} {
     left: -100vw;

@@ -2,14 +2,18 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Button = styled.button`
-  position: relative;
-  left: 60%;
-
-  align-self: flex-start;
+  /* position: relative;
+  top: 1rem;
+  left: 80%; */
+  /* height: 10%; */
+  align-self: flex-end;
   border-radius: 10px;
   padding: 10px;
+  margin-right: 1rem;
 
   background-color: ${({ theme }) => theme.dimBackground};
+  //!development
+  /* background-color: coral; */
   color: ${({ theme }) => theme.pink};
 
   font-weight: 700;
@@ -21,22 +25,22 @@ export const Button = styled.button`
     font-size: 1rem;
   }
   @media${device.tabletM} {
-    left: 70%;
+    /* left: 70%; */
 
     font-size: 1.4rem;
   }
   @media${device.tabletL} {
-    left: 75%;
+    /* left: 75%;
 
-    padding: 20px;
+    padding: 20px; */
 
     font-size: 1.9rem;
   }
   @media${device.desktop13} {
-    top: 5px;
+    /* top: 5px;
     left: 85%;
 
-    padding: 7px;
+    padding: 7px; */
 
     font-size: 1.2rem;
 
@@ -46,21 +50,18 @@ export const Button = styled.button`
     }
   }
   @media${device.desktop15} {
-    padding: 10px;
+    /* padding: 10px; */
   }
   @media${device.desktopHD} {
-    top: 15px;
+    /* top: 15px; */
 
-    padding: 10px;
+    /* padding: 10px; */
 
     font-size: 1.5rem;
+    margin-right: 2.5rem;
   }
   @media${device.desktop4k} {
-    top: 120px;
-    left: 80%;
-
-    padding: 40px;
-
-    font-size: 3.5rem;
+    padding: 20px;
+    font-size: 3rem;
   }
 `;

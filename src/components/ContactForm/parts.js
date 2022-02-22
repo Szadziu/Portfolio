@@ -5,8 +5,12 @@ import { device } from '../../constants/devices';
 
 export const Wrapper = styled.div`
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 
+  display: flex;
   grid-area: 2/12/11/2;
   border-radius: 15px;
 
@@ -26,13 +30,19 @@ export const Wrapper = styled.div`
 
     content: '';
   }
+
+  @media${device.desktop13} {
+    grid-area: 2/10/11/4;
+  }
 `;
 
 export const FormWrapper = styled(Form)`
-  position: relative;
+  /* position: relative; */
 
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 100%;
   margin-left: 15px;
@@ -42,18 +52,21 @@ export const FormTitle = styled.span`
   position: relative;
 
   align-self: flex-start;
-  margin: 10px 0;
-
+  margin: 1rem 0 2rem 0.5rem;
+  height: 5%;
+  /* padding: 10px 0; */
   color: ${({ theme }) => theme.pink};
 
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
+  //! development
+  /* background-color: yellow; */
 
   &:after {
     position: absolute;
     left: 0;
-    bottom: -10px;
+    /* bottom: -10px; */
 
     display: block;
     width: 25px;
@@ -80,13 +93,10 @@ export const FormTitle = styled.span`
     font-size: 1.5rem;
   }
   @media${device.desktopHD} {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 2rem 0 2rem 1rem;
   }
   @media${device.desktop4k} {
-    left: 30px;
-
-    margin-bottom: 50px;
-
     font-size: 3.5rem;
     &:after {
       width: 70px;
@@ -97,16 +107,23 @@ export const FormTitle = styled.span`
 
 export const CooperateInfo = styled.p`
   display: flex;
+  align-items: center;
   width: 80%;
-  height: 5%;
-  margin: 0 10px;
+  height: 10%;
+  align-self: flex-start;
+  margin-left: 5%;
+  /* padding-bottom: 1rem; */
+  /* margin: 0 10px; */
 
   color: ${({ theme }) => theme.gray};
 
   font-size: 0.43rem;
-  align-items: center;
+  /* align-items: center; */
 
   user-select: none;
+
+  //!development
+  /* background-color: rgba(200, 80, 80, 0.5); */
 
   @media${device.mobileM} {
     font-size: 0.8rem;
@@ -117,26 +134,19 @@ export const CooperateInfo = styled.p`
   @media${device.tabletM} {
     font-size: 1.05rem;
   }
-  @media${device.tabletL} {
-    font-size: 1.4rem;
-  }
   @media${device.desktop13} {
-    padding-top: 10px;
+    /* padding-top: 10px; */
 
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
-  @media${device.desktop15} {
-    padding-top: 40px;
 
-    font-size: 1.2rem;
-  }
   @media${device.desktopHD} {
-    padding-top: 40px;
+    /* padding-top: 40px; */
 
     font-size: 1.3rem;
   }
   @media${device.desktop4k} {
-    padding-top: 130px;
+    /* padding-top: 130px; */
 
     font-size: 2rem;
   }
