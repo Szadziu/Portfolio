@@ -10,6 +10,7 @@ const size = {
   desktop13: '1280px', // 1280x720
   desktop15: '1366px', // 1366x768
   desktopHD: '1920px', // 1920x1080
+  desktop2k: '2048px', // 2048x1080
   desktop4k: '3840px', // 3840x2160
 };
 
@@ -23,5 +24,6 @@ export const device = {
   desktop13: `(min-width: ${size.desktop13})`,
   desktop15: `(min-width: ${size.desktop15})`,
   desktopHD: `(min-width: ${size.desktopHD})`,
+  desktop2k: `(min-width: ${size.desktop2k})`,
   desktop4k: `(min-width: ${size.desktop4k})`,
 };

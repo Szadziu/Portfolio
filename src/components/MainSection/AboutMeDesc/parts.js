@@ -11,22 +11,25 @@ export const Container = styled.div`
   @media ${device.mobileM} {
     font-size: 0.95rem;
   }
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     font-size: 1.45rem;
   }
-  @media${device.tabletL} {
+  @media ${device.tabletL} {
     font-size: 1.9rem;
   }
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     margin-top: 40px;
 
     font-size: 1.45rem;
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     margin: 60px 20px 0 0;
     font-size: 2rem;
   }
-  @media${device.desktop4k} {
+  @media ${device.desktop2k} {
+    font-size: 2.8rem;
+  }
+  @media ${device.desktop4k} {
     margin-top: 80px;
 
     font-size: 3.8rem;
