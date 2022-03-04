@@ -20,21 +20,21 @@ export const InfoModal = styled.div`
   font-family: 'Changa', sans-serif;
   text-align: left;
 
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     font-size: 1.1rem;
   }
-  @media${device.tabletL} {
+  @media ${device.tabletL} {
     font-size: 1.6rem;
   }
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     width: 40vw;
 
     font-size: 1rem;
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     font-size: 1.5rem;
   }
-  @media${device.desktop4k} {
+  @media ${device.desktop4k} {
     width: 30vw;
     padding: 30px 40px;
 

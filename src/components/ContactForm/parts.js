@@ -26,19 +26,17 @@ export const Wrapper = styled.div`
 
     display: block;
     border-radius: 15px;
-    box-shadow: 0 20px 40px ${({ theme }) => theme.darkenedBackground};
+    box-shadow: 0 5px 10px ${({ theme }) => theme.darkenedBackground};
 
     content: '';
   }
 
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     grid-area: 2/10/11/4;
   }
 `;
 
 export const FormWrapper = styled(Form)`
-  /* position: relative; */
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -54,19 +52,16 @@ export const FormTitle = styled.span`
   align-self: flex-start;
   margin: 1rem 0 2rem 0.5rem;
   height: 5%;
-  /* padding: 10px 0; */
+
   color: ${({ theme }) => theme.pink};
 
   font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
-  //! development
-  /* background-color: yellow; */
 
   &:after {
     position: absolute;
     left: 0;
-    /* bottom: -10px; */
 
     display: block;
     width: 25px;
@@ -76,27 +71,27 @@ export const FormTitle = styled.span`
 
     content: '';
   }
-  @media${device.mobileM} {
+  @media ${device.mobileM} {
     font-size: 1.2rem;
   }
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     left: 10px;
 
     font-size: 2.2rem;
   }
-  @media${device.tabletL} {
+  @media ${device.tabletL} {
     margin: 30px 0;
 
     font-size: 2.6rem;
   }
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     font-size: 1.5rem;
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     font-size: 2rem;
     margin: 2rem 0 2rem 1rem;
   }
-  @media${device.desktop4k} {
+  @media ${device.desktop4k} {
     font-size: 3.5rem;
     &:after {
       width: 70px;
@@ -112,42 +107,29 @@ export const CooperateInfo = styled.p`
   height: 10%;
   align-self: flex-start;
   margin-left: 5%;
-  /* padding-bottom: 1rem; */
-  /* margin: 0 10px; */
 
   color: ${({ theme }) => theme.gray};
 
   font-size: 0.43rem;
-  /* align-items: center; */
 
   user-select: none;
-
-  //!development
-  /* background-color: rgba(200, 80, 80, 0.5); */
-
-  @media${device.mobileM} {
+  @media ${device.mobileM} {
     font-size: 0.8rem;
   }
-  @media${device.mobileL} {
+  @media ${device.mobileL} {
     font-size: 0.56rem;
   }
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     font-size: 1.05rem;
   }
-  @media${device.desktop13} {
-    /* padding-top: 10px; */
-
+  @media ${device.desktop13} {
     font-size: 0.7rem;
   }
 
-  @media${device.desktopHD} {
-    /* padding-top: 40px; */
-
+  @media ${device.desktopHD} {
     font-size: 1.3rem;
   }
-  @media${device.desktop4k} {
-    /* padding-top: 130px; */
-
+  @media ${device.desktop4k} {
     font-size: 2rem;
   }
 `;

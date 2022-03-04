@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-import gsap from 'gsap';
-import * as P from './parts';
+import gsap from "gsap";
+import * as P from "./parts";
 
 const AboutMeDesc = () => {
   const { ref, inView, entry } = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (inView) {
-      gsap.to(entry.target.children, { display: 'block' });
+      gsap.to(entry.target.children, { display: "block" });
     }
   }, [inView]);
 
@@ -17,27 +17,21 @@ const AboutMeDesc = () => {
     <P.Container ref={ref}>
       <P.Line>
         Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku,
-        w tym czasie
+        w tym czasie przyswoiłem fundamentalną wiedzę z zakresu html, css oraz
+        javascript.
       </P.Line>
       <P.Line>
-        przyswoiłem fundamentalną wiedzę z zakresu html, css oraz javascript.
-        Obecnie umacniam{' '}
+        Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React
+        oraz języku Typescript.
       </P.Line>
       <P.Line>
-        swoje szeregi na froncie w wiedzę o bibliotece React oraz języku
-        Typescript. Chciałbym{' '}
+        Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia
+        konkretnych działań jakie należy podjąć, by móc wejść do świata IT i
+        zająć się tym zawodowo.
       </P.Line>
       <P.Line>
-        zweryfikować swoje umiejętności z zamiarem wyznaczenia konkretnych
-        działań jakie należy{' '}
-      </P.Line>
-      <P.Line>
-        podjąć, by móc wejść do świata IT i zająć się tym zawodowo. Jestem
-        również absolwentem
-      </P.Line>
-      <P.Line>
-        {' '}
-        studiów inżynierskich o kierunku edukacja techniczno-informatyczna.
+        Jestem również absolwentem studiów inżynierskich o kierunku edukacja
+        techniczno-informatyczna.
       </P.Line>
     </P.Container>
   );

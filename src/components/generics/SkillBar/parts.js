@@ -30,10 +30,10 @@ export const Boxes = styled.div`
   @media ${device.tabletL} {
     gap: 6px;
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     gap: 10px;
   }
-  @media${device.desktop4k} {
+  @media ${device.desktop4k} {
     gap: 20px;
   }
 `;

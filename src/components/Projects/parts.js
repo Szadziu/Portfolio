@@ -13,15 +13,15 @@ export const ProjectsWrapper = styled.div`
   height: 50vh;
   transform: translate(-50%, -50%);
 
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     width: 65vh;
     height: 65vh;
   }
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     width: 75vh;
     height: 75vh;
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     width: 80vh;
     height: 80vh;
     margin-top: 70px;

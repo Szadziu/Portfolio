@@ -44,7 +44,7 @@ export const Line = styled.span`
 
   color: ${({ theme }) => theme.white};
 
-  line-height: 1.2;
+  line-height: 1.8;
 
   &::after {
     position: absolute;

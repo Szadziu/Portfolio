@@ -8,13 +8,13 @@ export const Img = styled.img`
 
   transition: 0.4s;
 
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     height: 70px;
   }
-  @media${device.tabletL} {
+  @media ${device.tabletL} {
     height: 90px;
   }
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     height: 50px;
     &:hover {
       transform: scale(1.4);
@@ -22,10 +22,10 @@ export const Img = styled.img`
       cursor: pointer;
     }
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     height: 60px;
   }
-  @media${device.desktop4k} {
+  @media ${device.desktop4k} {
     height: 150px;
   }
 `;
@@ -41,12 +41,12 @@ export const Banner = styled.div`
   width: 80vw;
   height: 10vh;
 
-  @media${device.desktop15} {
+  @media ${device.desktop15} {
     width: 60vw;
     left: -60vw;
   }
-
-  @media${device.desktop4k} {
+  
+  @media ${device.desktop4k} {
     width: 65vw;
     left: -65vw;
     justify-content: flex-start;

@@ -31,8 +31,8 @@ export const Project = styled.button`
 
     transform: scale(1.1);
     box-shadow: 0 0 0 10px ${({ theme }) => theme.mint},
-      0 0 0 14px ${({ theme }) => theme.black},
-      0 0 10rem 100px ${({ theme }) => theme.black};
+      0 0 0 15px ${({ theme }) => theme.black},
+      0 0 10px 20px ${({ theme }) => theme.black};
 
     font-size: 0.5rem;
 
@@ -68,7 +68,7 @@ export const Project = styled.button`
     }
   }
 
-  @media${device.desktop13} {
+  @media ${device.desktop13} {
     &:hover {
       transform: scale(1.5) rotate(1turn);
 
@@ -76,7 +76,7 @@ export const Project = styled.button`
     }
   }
 
-  @media${device.desktop4k} {
+  @media ${device.desktop4k} {
     &:hover {
       font-size: 2rem;
     }

@@ -8,7 +8,7 @@ export const SkillContainer = styled.div`
   align-items: center;
   grid-area: 2/13/11/9;
   border-radius: 20px 0 0 20px;
-  box-shadow: 0 0 10px 3px ${({ theme }) => theme.mint};
+  box-shadow: 0 0 5px 2px ${({ theme }) => theme.mint};
 
   background-color: ${({ theme }) => theme.white};
 

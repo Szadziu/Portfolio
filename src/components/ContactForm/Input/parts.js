@@ -8,16 +8,14 @@ export const Input = styled(Field)`
   border: none;
   border-bottom: ${({ error, theme }) =>
     error ? `1px solid ${theme.pink}` : `1px solid ${theme.darkerGray}`};
+  padding-top: 0.4rem;
 
   background: none;
-  //! development
-  /* background-color: red; */
   color: ${({ theme }) => theme.brighterGray};
-  padding-top: 0.4rem;
+  
   font-size: 0.8rem;
   outline: none;
-  /* text-align: right; */
-
+  
   transition: 0.4s;
 
   &::placeholder {
@@ -28,20 +26,20 @@ export const Input = styled(Field)`
     border-bottom-color: ${({ theme }) => theme.brighterGray};
   }
 
-  @media${device.mobileM} {
+  @media ${device.mobileM} {
     font-size: 1rem;
   }
 
-  @media${device.tabletM} {
+  @media ${device.tabletM} {
     font-size: 1.4rem;
   }
-  @media${device.laptop15} {
+  @media ${device.laptop15} {
     font-size: 1rem;
   }
-  @media${device.desktopHD} {
+  @media ${device.desktopHD} {
     font-size: 1.2rem;
   }
-  @media${device.desktop4k} {
+  @media ${device.desktop4k} {
     font-size: 2.5rem;
   }
 `;
@@ -50,11 +48,7 @@ export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   width: 90%;
   height: 10%;
   margin: 0.5rem 0 1rem 0;
-
-  //!development
-  /* background-color: rgba(200, 200, 200, 0.5); */
 `;

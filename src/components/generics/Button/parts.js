@@ -13,7 +13,7 @@ export const Button = styled(Link)`
   max-width: 1000px;
   height: 10%;
   border-radius: 10px;
-  box-shadow: 0 0 13px 0 ${({ theme }) => theme.black};
+  box-shadow: 0 0 5px 1px ${({ theme }) => theme.black};
 
   background-color: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.black};
@@ -32,7 +32,7 @@ export const Button = styled(Link)`
     height: 100%;
     border-radius: 10px;
     margin-right: 15px;
-    box-shadow: 0 0 15px 4px ${({ theme }) => theme.black};
+    box-shadow: 0 0 3px 1px ${({ theme }) => theme.black};
 
     background-color: ${({ theme }) => theme.mint};
 

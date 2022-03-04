@@ -13,8 +13,6 @@ import recruitmentTaskIcon from '../assets/projectsIcons/recruitmentTask.png';
 import shoppingListIcon from '../assets/projectsIcons/shoppingList.png';
 import timerIcon from '../assets/projectsIcons/timer.png';
 
-import udemyBadge from '../assets/badges/udemyBadge.jpeg';
-
 export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją."
   Apolinary Despinoix`;
 
@@ -23,25 +21,25 @@ export const SKILL_BUNDLE = [
     id: 0,
     name: 'HTML 5',
     advancement: 8,
-    desc: 'Znajomość języka znaczników pozwalająca na tworzenie struktury drzewa html, jak również jego semantyczne zastosowanie oraz tworzenie i walidacja formularzy.',
+    desc: 'Znajomość języka znaczników pozwalająca na tworzenie struktury drzewa HTML, jak również jego semantyczne zastosowanie oraz tworzenie i walidacja formularzy. Miałem do czynienia również z konwencją BEM',
   },
   {
     id: 1,
     name: 'CSS',
     advancement: 7,
-    desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, css grid, flex box, media queries. Podstawowe doświadczenie z konwencją BEM oraz z preprocessorem Sass (korzystając ze składni scss).',
+    desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, css grid, flex box, media queries, responsive web design (RWD). Podstawowe doświadczenie z konwencją BEM oraz z preprocessorem Sass (korzystając ze składni scss). Używałem również w projekcie frameworka Tailwind CSS',
   },
   {
     id: 2,
     name: 'JavaScript',
     advancement: 6,
-    desc: 'Znajomość składni ES6+ i struktury Javascript, manipulacje DOM, zapytania przy użyciu fetch API, moduły javascript, ogólne rozumienie koncepcji hoistingu, zakresu, prototypów, klas.',
+    desc: 'Znajomość składni ES6+ i struktury Javascript, manipulacje DOM, zapytania przy użyciu fetch API, moduły javascript, localStorage, ogólne rozumienie koncepcji hoistingu, zakresu, prototypów, klas.',
   },
   {
     id: 3,
     name: 'React',
     advancement: 5,
-    desc: 'Znajomość biblioteki React wystarczająca na stworzenie prostej aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooks reacta, react-context, react-router (SPA), styled-components, npm, git, cra, podstawy react-redux.',
+    desc: 'Znajomość biblioteki React wystarczająca na stworzenie prostej aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooks reacta takie jak: useState, useEffect, useRef, useContext, usePortal, custom hooks, react-context, react-router (SPA), styled-components, npm, git, cra, podstawy react-redux, react query.',
   },
   {
     id: 4,
@@ -61,7 +59,7 @@ export const BUNCH_OF_BADGES = [
   {
     id: 1,
     name: 'courses',
-    image: udemyBadge,
+    image: '#',
     link: '',
   },
 ];

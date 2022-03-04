@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   grid-template-columns: repeat(12, 1fr);
   height: 100vh;
   max-width: 2500px;
-  box-shadow: 0 0 12px 0 ${({ theme }) => theme.black};
+  box-shadow: 0 0 3px 0 ${({ theme }) => theme.black};
   overflow: hidden;
   margin: 0 auto;
 
