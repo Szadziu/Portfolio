@@ -17,10 +17,10 @@ export const Project = styled.a`
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
   
-  font-size: 0;
+  /* font-size: 0; */
   text-align: center; 
-  letter-spacing: 2px;
-  -webkit-text-stroke: 1px ${({ theme }) => theme.white};
+  letter-spacing: 1px;
+  /* -webkit-text-stroke: 1px ${({ theme }) => theme.white}; */
   text-decoration: none;
   text-transform: uppercase;
   
@@ -78,7 +78,25 @@ export const Project = styled.a`
   }
 `;
 
+export const TitleOfProject = styled.h3`
+position: absolute;
+top: -30%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 40%;
+box-shadow: 0 0 0.5px 0.5px black;
+padding: 5px;
+
+background-color: white;
+color: black;
+
+font-size: 0.5rem;
+`
+
 export const UCBadge = styled.img`
-transform: rotate(-30deg);
 width: 75%;
+transform: translate(-50%, 20%) rotate(-30deg);
 `

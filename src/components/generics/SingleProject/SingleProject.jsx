@@ -4,7 +4,7 @@ import underConstruction from "../../../assets/projectsIcons/underConstruction.p
 const SingleProject = ({ id, children, img, done, link }) => {
   return (
     <P.Project key={id} thumbnail={img} done={done} href={link} target="_blank">
-      {children}
+      <P.TitleOfProject>{children}</P.TitleOfProject>
       {done || (
         <P.UCBadge
           src={underConstruction}

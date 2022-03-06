@@ -9,6 +9,7 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  /* gap:1rem; */
   width: 50vh;
   height: 50vh;
   transform: translate(-50%, -50%);
