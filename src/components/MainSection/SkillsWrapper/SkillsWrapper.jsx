@@ -1,13 +1,24 @@
-import { useState, useEffect, useCallback } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect, useCallback } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowCircleLeft,
+  faArrowLeft,
+  faBezierCurve,
+  faCog,
+  faCommentDots,
+  faDotCircle,
+  faEllipsisH,
+  faEllipsisV,
+  faInfo,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
-import InfoBubble from '../../generics/InfoBubble';
-import SkillBar from '../../generics/SkillBar';
+import InfoBubble from "../../generics/InfoBubble";
+import SkillBar from "../../generics/SkillBar";
 
-import { SKILL_BUNDLE } from '../../../constants';
+import { SKILL_BUNDLE } from "../../../constants";
 
-import * as P from './parts';
+import * as P from "./parts";
 
 const SkillsWrapper = () => {
   const [visibleModalIndex, setVisibleModalIndex] = useState(null);
@@ -18,35 +29,34 @@ const SkillsWrapper = () => {
 
   useEffect(() => {
     if (visibleModalIndex !== null) {
-      document.addEventListener('click', closeModal);
+      document.addEventListener("click", closeModal);
     } else {
-      document.removeEventListener('click', closeModal);
+      document.removeEventListener("click", closeModal);
     }
   }, [visibleModalIndex]);
 
   const cogwheelIcon = <FontAwesomeIcon icon={faCog} spin />;
-  const infoIcon = <FontAwesomeIcon icon={faInfo} />;
+  const infoIcon = <FontAwesomeIcon icon={faEllipsisH} />;
 
   const renderListOfSkills = () => {
     return SKILL_BUNDLE.map((skill, index) => (
       <SkillBar skill={skill} key={skill.id}>
         <P.SkillTitle>{skill.name}</P.SkillTitle>
         <P.SkillAdvancementInfo>
+          <div onClick={(e) => e.stopPropagation()}>
+            <P.InfoIconLink
+              data-iconid={skill.id}
+              onClick={() =>
+                setVisibleModalIndex(index === visibleModalIndex ? null : index)
+              }
+            >
+              {infoIcon}
+            </P.InfoIconLink>
+          </div>
           {cogwheelIcon}
           {`${skill.advancement * 10}%`}
           {cogwheelIcon}
         </P.SkillAdvancementInfo>
-
-        <div onClick={(e) => e.stopPropagation()}>
-          <P.InfoIconLink
-            data-iconid={skill.id}
-            onClick={() =>
-              setVisibleModalIndex(index === visibleModalIndex ? null : index)
-            }
-          >
-            {infoIcon}
-          </P.InfoIconLink>
-        </div>
         {index === visibleModalIndex && (
           <div onClick={(e) => e.stopPropagation()}>
             <InfoBubble description={skill.desc} id={skill.id} />

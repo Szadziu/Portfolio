@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { useTheme } from 'styled-components';
+import { useState } from "react";
+import { useTheme } from "styled-components";
 
-import Modal from '../generics/Modal/Modal';
-import SectionTitle from '../generics/SectionTitle';
-import SectionWrapper from '../generics/SectionWrapper';
-import SingleProject from '../generics/SingleProject/SingleProject';
+import Modal from "../generics/Modal/Modal";
+import SectionTitle from "../generics/SectionTitle";
+import SectionWrapper from "../generics/SectionWrapper";
+import SingleProject from "../generics/SingleProject/SingleProject";
 
-import { PROJECTS } from '../../constants';
+import { PROJECTS } from "../../constants";
 
-import * as P from './parts';
+import * as P from "./parts";
 
 const Projects = () => {
   const theme = useTheme();
 
   const [isDisplayProject, setIsDisplayProject] = useState(false);
-  const [currentProject, setCurrentProject] = useState('');
+  const [currentProject, setCurrentProject] = useState("");
 
   const openModal = (project) => {
     setCurrentProject(project);
@@ -27,20 +27,12 @@ const Projects = () => {
 
   const generateProjects = () => {
     return PROJECTS.map((project) => (
-      <SingleProject
-        key={project.id}
-        link={project.link}
-        onClick={() => openModal(project)}
-        thumbnail={project.img}
-        done={project.done}
-      >
-        {project.name}
-      </SingleProject>
+      <SingleProject {...project}>{project.name}</SingleProject>
     ));
   };
   return (
-    <P.Wrapper id='projects'>
-      <SectionWrapper bgColor='white'>
+    <P.Wrapper id="projects">
+      <SectionWrapper bgColor="white">
         <SectionTitle color={theme.mint}>Moje projekty</SectionTitle>
         <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
         {isDisplayProject && (

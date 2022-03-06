@@ -3,22 +3,24 @@ import { device } from '../../../constants/devices';
 
 export const InfoModal = styled.div`
   position: absolute;
-  top: -10%;
-  right: 125%;
+  top: -200%;
+  right: -10%;
   z-index: 1;
 
   width: 60vw;
   height: 30vh;
   border-radius: 20px;
-  padding: 10px 15px;
-  box-shadow: 5px 5px 10px 0 ${({ theme }) => theme.black};
+  padding: 20px 15px;
+  box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
 
   background-color: ${({ theme }) => theme.darkGray};
-  color: ${({ theme }) => theme.mint};
+  color: ${({ theme }) => theme.white};
 
   font-size: 0.65rem;
   font-family: 'Changa', sans-serif;
   text-align: left;
+
+  overflow:scroll;
 
   @media ${device.tabletM} {
     font-size: 1.1rem;

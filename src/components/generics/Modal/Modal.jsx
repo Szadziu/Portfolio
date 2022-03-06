@@ -1,10 +1,10 @@
-import { useEffect, useRef, forwardRef } from 'react';
+import { useEffect, useRef, forwardRef } from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import gsap from 'gsap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import gsap from "gsap";
 
-import * as P from './parts';
+import * as P from "./parts";
 
 const Modal = forwardRef(({ closeModal, currentProject }) => {
   const ref = useRef();
@@ -17,8 +17,8 @@ const Modal = forwardRef(({ closeModal, currentProject }) => {
 
   const photoAnimation = () => {
     const tl = gsap.timeline();
-    tl.to(ref.current, { x: '+=20', rotation: 5 }).to(ref.current, {
-      x: '-=20',
+    tl.to(ref.current, { x: "+=20", rotation: 5 }).to(ref.current, {
+      x: "-=20",
       rotation: -5,
     });
   };
@@ -33,12 +33,13 @@ const Modal = forwardRef(({ closeModal, currentProject }) => {
         <P.CloseButton onClick={closeModal}>
           <FontAwesomeIcon icon={faTimes} />
         </P.CloseButton>
-
-        <P.ProjectLink href={currentProject.link} target='_blank' ref={ref}>
-          <P.PhotoOfProject src={currentProject.img} />
-        </P.ProjectLink>
-
-        <P.ProjectDesc>{currentProject.desc}</P.ProjectDesc>
+        <P.PhotoOfProject src={currentProject.img} />
+        <P.ProjectDesc>
+          <P.ProjectLink href={currentProject.link} target="_blank" ref={ref}>
+            Link do projektu
+          </P.ProjectLink>
+          {currentProject.desc}
+        </P.ProjectDesc>
       </P.ProjectModal>
     </>
   );

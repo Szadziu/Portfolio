@@ -4,7 +4,8 @@ import { device } from '../../../constants/devices';
 
 import underConstruction from '../../../assets/projectsIcons/underConstruction.png';
 
-export const Project = styled.button`
+export const Project = styled.a`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,29 +13,30 @@ export const Project = styled.button`
   height: 26%;
   border: 4px solid black;
   border-radius: 50%;
-
+  
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
-
+  
   font-size: 0;
-  text-align: center;
+  text-align: center; 
   letter-spacing: 2px;
   -webkit-text-stroke: 1px ${({ theme }) => theme.white};
   text-decoration: none;
   text-transform: uppercase;
-
+  
   transition: 0.5s;
-  filter: grayscale(100%);
+  pointer-events: ${({done})=>done || 'none'};
+  /* filter: grayscale(100%); */
+  @media ${device.desktop13} {
+    &:hover {
+      z-index: 10;
+      
+      transform: scale(1.5) rotate(1turn);
+    box-shadow: 0 0 0 1px ${({ theme }) => theme.mint},
+      0 0 0 2px ${({ theme }) => theme.black},
+      0 0 1px 2px ${({ theme }) => theme.black};
 
-  &:hover {
-    z-index: 10;
-
-    transform: scale(1.1);
-    box-shadow: 0 0 0 10px ${({ theme }) => theme.mint},
-      0 0 0 15px ${({ theme }) => theme.black},
-      0 0 10px 20px ${({ theme }) => theme.black};
-
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 
     cursor: pointer;
     filter: grayscale(0);
@@ -67,13 +69,6 @@ export const Project = styled.button`
       content: '';
     }
   }
-
-  @media ${device.desktop13} {
-    &:hover {
-      transform: scale(1.5) rotate(1turn);
-
-      font-size: 0.7rem;
-    }
   }
 
   @media ${device.desktop4k} {
@@ -82,3 +77,8 @@ export const Project = styled.button`
     }
   }
 `;
+
+export const UCBadge = styled.img`
+transform: rotate(-30deg);
+width: 75%;
+`

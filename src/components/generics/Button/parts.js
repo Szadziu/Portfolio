@@ -52,6 +52,9 @@ export const Button = styled(Link)`
   @media ${device.tabletM} {
     font-size: 1.8rem;
   }
+  @media ${device.tabletL} {
+    font-size: 2.8rem;
+  }
   @media ${device.desktop13} {
     width: 50%;
     height: 15%;

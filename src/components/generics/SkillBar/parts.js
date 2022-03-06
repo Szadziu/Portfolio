@@ -11,7 +11,7 @@ export const Bar = styled.div`
   width: 80%;
   height: 18%;
   border-bottom: 2px solid ${({ theme }) => theme.black};
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
   @media ${device.desktop13} {
     height: 20%;
@@ -22,10 +22,9 @@ export const Boxes = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 5px;
+  gap: 3px;
   width: 60%;
   height: 100%;
-  margin-bottom: 5px;
 
   @media ${device.tabletL} {
     gap: 6px;
@@ -39,11 +38,10 @@ export const Boxes = styled.div`
 `;
 
 export const BoxOfSkill = styled.div`
-  width: 2px;
+  width: 10px;
   height: ${({ height }) => height + 'px'};
   transform: scale(0);
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px ${({ theme }) => theme.black};
+  box-shadow: 0 0 0 0.5px ${({ theme }) => theme.black};
 
   background-color: ${({ color }) => color};
 

@@ -29,6 +29,9 @@ export const BackgroundPhoto = styled.img`
   @media ${device.tabletM} {
     left: -70vw;
   }
+  @media ${device.tabletL} {
+    left: -120vw;
+  }
   @media ${device.desktop13} {
     left: -20vw;
   }

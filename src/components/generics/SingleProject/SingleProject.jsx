@@ -1,14 +1,16 @@
-import * as P from './parts';
+import * as P from "./parts";
+import underConstruction from "../../../assets/projectsIcons/underConstruction.png";
 
-const SingleProject = ({ children, onClick, thumbnail, done }) => {
+const SingleProject = ({ id, children, img, done, link }) => {
   return (
-    <P.Project
-      disabled={!done}
-      thumbnail={thumbnail}
-      onClick={onClick}
-      done={done}
-    >
+    <P.Project key={id} thumbnail={img} done={done} href={link} target="_blank">
       {children}
+      {done || (
+        <P.UCBadge
+          src={underConstruction}
+          alt="project is under construction"
+        />
+      )}
     </P.Project>
   );
 };

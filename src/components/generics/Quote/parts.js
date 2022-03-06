@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const QuoteParam = styled.p`
-  grid-area: 11/9/13/2;
+  grid-area: 12/2/13/12;
   opacity: 0;
   margin-top: 20px;
 

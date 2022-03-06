@@ -6,14 +6,15 @@ export const SkillContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  grid-area: 2/13/11/9;
+  grid-area: 7/2/12/13;
   border-radius: 20px 0 0 20px;
   box-shadow: 0 0 5px 2px ${({ theme }) => theme.mint};
+  padding-bottom: 10px;
 
   background-color: ${({ theme }) => theme.white};
 
-  @media${device.desktop13} {
-    flex-direction: row;
+  @media ${device.desktop13} {
+    flex-direction: row; 
     flex-wrap: wrap;
 
     padding-bottom: 20px;
@@ -22,6 +23,7 @@ export const SkillContainer = styled.div`
 
 export const InfoIconLink = styled.button`
   align-self: flex-start;
+  margin-right: 1rem;
 
   color: ${({ theme }) => theme.blue};
 
@@ -33,7 +35,7 @@ export const InfoIconLink = styled.button`
     font-size: 1.1rem;
   }
   @media ${device.tabletL} {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
   }
   @media ${device.desktop13} {
     &:hover {
@@ -51,8 +53,10 @@ export const InfoIconLink = styled.button`
 
 export const SkillTitle = styled.p`
   width: 100%;
-
-  font-size: 0.5rem;
+  
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
 
   @media ${device.mobileM} {
     font-size: 0.6rem;
@@ -78,9 +82,10 @@ export const SkillTitle = styled.p`
 export const SkillAdvancementInfo = styled.p`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 
   @media ${device.mobileM} {
     font-size: 0.6rem;

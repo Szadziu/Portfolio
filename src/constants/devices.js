@@ -1,8 +1,9 @@
 const size = {
   // mobile devices
   mobileS: '320px', // 320x658 Galaxy S9+
-  mobileM: '390px', // iPhone 12 Pro
+  mobileM: '390px', // 390x844 iPhone 12 Pro
   mobileL: '414px', // 414x736 iPhone 6/7/8 Plus
+  mobileXL: '1242px', // 1242x2688 XS Max
   tabletS: '640px', // 640x480 small tablet
   tabletM: '768px', // 768x1024 iPad
   tabletL: '1024px', //1024x1366 iPad Pro
@@ -18,6 +19,7 @@ export const device = {
   mobileS: `(min-width: ${size.mobileS})`,
   mobileM: `(min-width: ${size.mobileM})`,
   mobileL: `(min-width: ${size.mobileL})`,
+  mobileXL: `(min-width: ${size.mobileXL})`,
   tabletS: `(min-width: ${size.tabletS})`,
   tabletM: `(min-width: ${size.tabletM})`,
   tabletL: `(min-width: ${size.tabletL})`,

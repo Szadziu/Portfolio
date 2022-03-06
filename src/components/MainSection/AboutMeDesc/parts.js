@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
-  grid-area: 2/9/11/1;
-
+  grid-area: 2/2/7/12;
+ 
   margin: 0 10px 0 20px;
 
-  font-size: 0.78rem;
+  font-size: 0.6rem;
 
   @media ${device.mobileM} {
     font-size: 0.95rem;
@@ -15,7 +15,7 @@ export const Container = styled.div`
     font-size: 1.45rem;
   }
   @media ${device.tabletL} {
-    font-size: 1.9rem;
+    font-size: 2.4rem;
   }
   @media ${device.desktop13} {
     margin-top: 40px;

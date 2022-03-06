@@ -76,16 +76,16 @@ export const PhotoOfProject = styled.img`
   top: 50%;
   left: 50%;
 
-  height: 80%;
+  height: 40%;
   transform: translate(-50%, -50%);
   border-bottom: 3px solid transparent;
-  padding-bottom: 10px;
 
   transition: 0.5s;
   cursor: pointer;
 
   @media ${device.desktop13} {
-    height: 100%;
+    width: 30%;
+    height: 50%;
 
     &:hover {
       border-color: gold;
@@ -97,12 +97,7 @@ export const PhotoOfProject = styled.img`
 `;
 
 export const ProjectLink = styled.a`
-  height: 40%;
-
-  @media ${device.desktop13} {
-    width: 30%;
-    height: 50%;
-  }
+display: block;
 `;
 
 export const CloseButton = styled.button`

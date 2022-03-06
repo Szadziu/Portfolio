@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Title = styled.h1`
-  grid-area: 1/13/2/1;
+  grid-area: 1/2/2/12;
   align-self: center;
 
   background-size: 65rem 100%;
