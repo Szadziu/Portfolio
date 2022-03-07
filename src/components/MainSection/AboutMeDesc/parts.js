@@ -9,7 +9,10 @@ export const Container = styled.div`
   font-size: 0.6rem;
 
   @media ${device.mobileM} {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
+  }
+  @media ${device.tablet} {
+    font-size: 0.65rem;
   }
   @media ${device.tabletM} {
     font-size: 1.45rem;

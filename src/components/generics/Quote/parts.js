@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const QuoteParam = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: 12/2/13/12;
   opacity: 0;
-  margin-top: 20px;
+  padding: 20px 0;
 
   color: ${({ theme }) => theme.pink};
 
@@ -13,6 +16,9 @@ export const QuoteParam = styled.p`
   font-size: 0.8rem;
 
   @media ${device.mobileM} {
+    font-size: 1rem;
+  }
+  @media ${device.tabletS} {
     font-size: 1.1rem;
   }
   @media ${device.tabletM} {

@@ -13,6 +13,9 @@ export const SkillContainer = styled.div`
 
   background-color: ${({ theme }) => theme.white};
 
+  @media ${device.tabletS} {
+    grid-area: 6/5/12/13;
+  }
   @media ${device.desktop13} {
     flex-direction: row; 
     flex-wrap: wrap;
@@ -31,6 +34,9 @@ export const InfoIconLink = styled.button`
 
   cursor: pointer;
 
+  @media ${device.mobileM} {
+    font-size: 1rem;
+  }
   @media ${device.tabletM} {
     font-size: 1.1rem;
   }
@@ -87,12 +93,6 @@ export const SkillAdvancementInfo = styled.p`
 
   font-size: 0.8rem;
 
-  @media ${device.mobileM} {
-    font-size: 0.6rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 0.8rem;
-  }
   @media ${device.tabletL} {
     font-size: 0.9rem;
   }
