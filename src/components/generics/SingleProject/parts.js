@@ -94,9 +94,29 @@ background-color: white;
 color: black;
 
 font-size: 0.5rem;
+
+@media ${device.mobileM} {
+  font-size: 0.6rem;
+}
+@media ${device.tabletS} {
+  height: 50%;
+  width: 120%;
+  font-size: 0.7rem;
+}
+@media ${device.tabletM} {
+  font-size: 1.2rem;
+}
+@media ${device.tabletL} {
+  font-size: 1.4rem;
+  height: 40%;
+  box-shadow: 0 0 1px 1px black;
+}
 `
 
 export const UCBadge = styled.img`
 width: 75%;
 transform: translate(-50%, 20%) rotate(-30deg);
+@media ${device.tabletS} {
+  width: 80%;
+}
 `

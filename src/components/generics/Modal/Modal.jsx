@@ -10,9 +10,11 @@ const Modal = forwardRef(({ closeModal, currentProject }) => {
   const ref = useRef();
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       photoAnimation();
     }, 1000);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   const photoAnimation = () => {

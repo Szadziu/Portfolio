@@ -30,17 +30,15 @@ export const Input = styled(Field)`
     font-size: 1rem;
   }
 
+  @media ${device.tabletS} {
+   padding-bottom: 0.4rem;
+   font-size: 0.7rem;
+  }
   @media ${device.tabletM} {
-    font-size: 1.4rem;
-  }
-  @media ${device.laptop15} {
-    font-size: 1rem;
-  }
-  @media ${device.desktopHD} {
     font-size: 1.2rem;
   }
-  @media ${device.desktop4k} {
-    font-size: 2.5rem;
+  @media ${device.tabletL} {
+    font-size: 1.4rem;
   }
 `;
 

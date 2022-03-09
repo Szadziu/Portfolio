@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { device } from '../../constants/devices';
-import floatingIcon from '../../assets/upArrow.png';
+import { device } from '../../../constants/devices';
+import floatingIcon from '../../../assets/upArrow.png';
 
 export const Button = styled.button`
   position: fixed;

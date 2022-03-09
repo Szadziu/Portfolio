@@ -28,11 +28,14 @@ export const TextAreaField = styled.textarea`
   @media ${device.mobileM} {
     font-size: 1rem;
   }
+  @media ${device.tabletS} {
+    font-size: 0.7rem;
+  }
   @media ${device.tabletM} {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   @media ${device.tabletL} {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
   @media ${device.desktop13} {
     font-size: 1rem;

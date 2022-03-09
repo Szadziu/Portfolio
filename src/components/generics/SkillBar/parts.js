@@ -26,8 +26,11 @@ export const Boxes = styled.div`
   width: 60%;
   height: 100%;
 
+  @media ${device.tabletM} {
+    gap: 5px;
+  }
   @media ${device.tabletL} {
-    gap: 6px;
+    gap: 8px;
   }
   @media ${device.desktopHD} {
     gap: 10px;
@@ -49,7 +52,6 @@ export const BoxOfSkill = styled.div`
     height: ${({ height }) => height + 10 + 'px'};
   }
   @media ${device.tabletM} {
-    width: 10px;
     height: ${({ height }) => height + 20 + 'px'};
   }
   @media ${device.tabletL} {

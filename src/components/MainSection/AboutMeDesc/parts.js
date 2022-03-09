@@ -8,35 +8,38 @@ export const Container = styled.div`
 
   font-size: 0.6rem;
 
-  @media ${device.mobileM} {
-    font-size: 0.75rem;
-  }
-  @media ${device.tablet} {
-    font-size: 0.65rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 1.45rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 2.4rem;
-  }
-  @media ${device.desktop13} {
-    margin-top: 40px;
+@media ${device.mobileM} {
+  font-size: 0.75rem;
+}
+@media ${device.mobileL} {
+  font-size: 0.7rem;
+}
+@media ${device.tabletS} {
+  font-size: 0.65rem;
+}
+@media ${device.tabletM} {
+  font-size: 1.1rem;
+}
+@media ${device.tabletL} {
+  font-size: 1.5rem;
+}
+@media ${device.desktop13} {
+  margin-top: 40px;
 
-    font-size: 1.45rem;
-  }
-  @media ${device.desktopHD} {
-    margin: 60px 20px 0 0;
-    font-size: 2rem;
-  }
-  @media ${device.desktop2k} {
-    font-size: 2.8rem;
-  }
-  @media ${device.desktop4k} {
-    margin-top: 80px;
+  font-size: 1.45rem;
+}
+@media ${device.desktopHD} {
+  margin: 60px 20px 0 0;
+  font-size: 2rem;
+}
+@media ${device.desktop2k} {
+  font-size: 2.8rem;
+}
+@media ${device.desktop4k} {
+  margin-top: 80px;
 
-    font-size: 3.8rem;
-  }
+  font-size: 3.8rem;
+}
 `;
 
 export const Line = styled.span`

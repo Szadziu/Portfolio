@@ -9,7 +9,7 @@ export const InfoModal = styled.div`
 
   width: 60vw;
   height: 30vh;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 20px 15px;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
 
@@ -22,11 +22,22 @@ export const InfoModal = styled.div`
 
   overflow:scroll;
 
+  @media ${device.mobileM} {
+    font-size: 0.9rem;
+  }
+  @media ${device.tabletS} {
+    font-size: 0.8rem;
+    top: -25%;
+    right: 120%;
+    width: 35vw;
+    height: 25vh;
+  }
   @media ${device.tabletM} {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    height: 20vh;
   }
   @media ${device.tabletL} {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   @media ${device.desktop13} {
     width: 40vw;

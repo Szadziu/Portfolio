@@ -14,7 +14,7 @@ export const SkillContainer = styled.div`
   background-color: ${({ theme }) => theme.white};
 
   @media ${device.tabletS} {
-    grid-area: 6/5/12/13;
+    grid-area: 6/6/12/13;
   }
   @media ${device.desktop13} {
     flex-direction: row; 
@@ -38,7 +38,7 @@ export const InfoIconLink = styled.button`
     font-size: 1rem;
   }
   @media ${device.tabletM} {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   @media ${device.tabletL} {
     font-size: 2.4rem;
@@ -72,7 +72,7 @@ export const SkillTitle = styled.p`
     font-weight: 700;
   }
   @media ${device.tabletL} {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   @media ${device.desktop13} {
     font-size: 0.9rem;
@@ -93,8 +93,11 @@ export const SkillAdvancementInfo = styled.p`
 
   font-size: 0.8rem;
 
+  @media ${device.tabletM} {
+    font-size: 1.1rem;
+  }
   @media ${device.tabletL} {
-    font-size: 0.9rem;
+    font-size: 1.6rem;
   }
   @media ${device.desktop13} {
     font-size: 1rem;

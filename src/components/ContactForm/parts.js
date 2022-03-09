@@ -117,19 +117,17 @@ export const CooperateInfo = styled.p`
     font-size: 0.8rem;
   }
   @media ${device.mobileL} {
-    font-size: 0.56rem;
+    font-size: 0.55rem;
+  }
+  @media ${device.tabletS} {
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
   }
   @media ${device.tabletM} {
-    font-size: 1.05rem;
-  }
-  @media ${device.desktop13} {
-    font-size: 0.7rem;
-  }
+    font-size: 1rem;
+    }
+  @media ${device.tabletL} {
+    font-size: 1.4rem;
+    }
 
-  @media ${device.desktopHD} {
-    font-size: 1.3rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 2rem;
-  }
 `;

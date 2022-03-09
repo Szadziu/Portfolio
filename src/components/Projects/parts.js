@@ -8,15 +8,23 @@ export const ProjectsWrapper = styled.div`
 
   display: flex;
   justify-content: space-around;
+
   flex-wrap: wrap;
-  /* gap:1rem; */
   width: 50vh;
   height: 50vh;
   transform: translate(-50%, -50%);
 
-  @media ${device.tabletM} {
-    width: 65vh;
-    height: 65vh;
+  @media ${device.mobileM} {
+    width:45vh;
+    height: 45vh;
+  }
+  @media ${device.mobileL} {
+    width:55vh;
+    height: 55vh;
+  }
+  @media ${device.tabletS} {
+    width: 70vh;
+    height: 70vh;
   }
   @media ${device.desktop13} {
     width: 75vh;
