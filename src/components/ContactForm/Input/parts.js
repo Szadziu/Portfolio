@@ -40,6 +40,15 @@ export const Input = styled(Field)`
   @media ${device.tabletL} {
     font-size: 1.4rem;
   }
+  @media ${device.desktop13} {
+    font-size: 1rem;
+  }
+  @media ${device.desktopHD} {
+    font-size: 1.4rem;
+  }
+  @media ${device.desktop4k} {
+    font-size: 2.2rem;
+  }
 `;
 
 export const InputWrapper = styled.div`

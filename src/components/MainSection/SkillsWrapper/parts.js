@@ -17,9 +17,7 @@ export const SkillContainer = styled.div`
     grid-area: 6/6/12/13;
   }
   @media ${device.desktop13} {
-    flex-direction: row; 
-    flex-wrap: wrap;
-
+    grid-area: 2/8/12/13;
     padding-bottom: 20px;
   }
 `;
@@ -44,10 +42,12 @@ export const InfoIconLink = styled.button`
     font-size: 2.4rem;
   }
   @media ${device.desktop13} {
+    transition: 0.2s;
     &:hover {
       color: ${({ theme }) => theme.brighterBlue};
+      transform: rotate(90deg);
     }
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   @media ${device.desktopHD} {
     font-size: 1.4rem;
@@ -75,7 +75,7 @@ export const SkillTitle = styled.p`
     font-size: 1.4rem;
   }
   @media ${device.desktop13} {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
   @media ${device.desktopHD} {
     font-size: 1.6rem;
@@ -100,7 +100,7 @@ export const SkillAdvancementInfo = styled.p`
     font-size: 1.6rem;
   }
   @media ${device.desktop13} {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   @media ${device.desktopHD} {
     font-size: 1.5rem;

@@ -43,13 +43,17 @@ export const Button = styled.button`
   @media ${device.desktopHD} {
     width: 110px;
     height: 110px;
-    right: 30px;
+    right: 170px;
     bottom: 30px;
   }
+  @media ${device.desktop2k} {
+    right: 250px;
+    bottom: 100px;
+  }
   @media ${device.desktop4k} {
-    width: 210px;
-    height: 210px;
-    right: 750px;
+    width: 150px;
+    height: 150px;
+    right: 1150px;
     bottom: 50px;
   }
 `;

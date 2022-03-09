@@ -41,11 +41,11 @@ export const TextAreaField = styled.textarea`
     font-size: 1rem;
   }
   @media ${device.desktopHD} {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   @media ${device.desktop4k} {
     padding-top: 20px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 `;
 

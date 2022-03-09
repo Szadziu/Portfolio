@@ -59,7 +59,6 @@ export const BoxOfSkill = styled.div`
     height: ${({ height }) => height + 30 + 'px'};
   }
   @media ${device.desktop13} {
-    width: 15px;
     height: ${({ height }) => height + 15 + 'px'};
   }
   @media ${device.desktop15} {

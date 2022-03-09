@@ -129,5 +129,14 @@ export const CooperateInfo = styled.p`
   @media ${device.tabletL} {
     font-size: 1.4rem;
     }
+  @media ${device.desktop13} {
+    font-size: 1rem;
+  }
+  @media ${device.desktopHD} {
+    font-size: 1.2rem;
+  }
+  @media ${device.desktop4k} {
+    font-size: 1.4rem;
+  }
 
 `;

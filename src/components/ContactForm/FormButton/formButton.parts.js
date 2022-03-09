@@ -3,8 +3,8 @@ import { device } from '../../../constants/devices';
 
 export const Button = styled.button`
   align-self: flex-end;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
   margin-right: 1rem;
 
   background-color: ${({ theme }) => theme.dimBackground};
@@ -12,7 +12,7 @@ export const Button = styled.button`
 
   font-weight: 700;
   font-size: 0.7rem;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 
   @media ${device.mobileM} {
@@ -37,7 +37,7 @@ export const Button = styled.button`
     margin-right: 2.5rem;
   }
   @media ${device.desktop4k} {
-    padding: 20px;
+    padding: 1.2rem;
     font-size: 3rem;
   }
 `;

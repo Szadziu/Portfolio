@@ -45,12 +45,22 @@ export const Banner = styled.div`
     width: 60vw;
     left: -60vw;
   }
+
+  @media ${device.desktopHD} {
+    width: 75vw;
+    left: -75vw;
+  }
+
+  @media ${device.desktop2k} {
+    width: 75vw;
+    left: -75vw;
+  }
   
   @media ${device.desktop4k} {
-    width: 65vw;
-    left: -65vw;
+    width: 75vw;
+    left: -75vw;
+    gap: 5%;
     justify-content: flex-start;
-    gap: 10%;
   }
 `;
 

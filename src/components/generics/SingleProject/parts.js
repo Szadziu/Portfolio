@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 import { device } from '../../../constants/devices';
 
-import underConstruction from '../../../assets/projectsIcons/underConstruction.png';
-
 export const Project = styled.a`
   position: relative;
   display: flex;
@@ -17,43 +15,31 @@ export const Project = styled.a`
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
   
-  /* font-size: 0; */
   text-align: center; 
   letter-spacing: 1px;
-  /* -webkit-text-stroke: 1px ${({ theme }) => theme.white}; */
   text-decoration: none;
   text-transform: uppercase;
   
   transition: 0.5s;
   pointer-events: ${({done})=>done || 'none'};
-  /* filter: grayscale(100%); */
+
   @media ${device.desktop13} {
+    cursor: pointer;
+    filter: grayscale(100%);
+    -webkit-text-stroke: 1px ${({ theme }) => theme.white};
+
     &:hover {
       z-index: 10;
       
       transform: scale(1.5) rotate(1turn);
-    box-shadow: 0 0 0 1px ${({ theme }) => theme.mint},
-      0 0 0 2px ${({ theme }) => theme.black},
-      0 0 1px 2px ${({ theme }) => theme.black};
+      box-shadow: 0 0 0 1px ${({ theme }) => theme.mint},
+        0 0 0 2px ${({ theme }) => theme.black},
+        0 0 1px 2px ${({ theme }) => theme.black};
 
-    font-size: 0.7rem;
-
-    cursor: pointer;
     filter: grayscale(0);
 
-    &::after {
-      position: absolute;
-      top: 20%;
-      left: 25%;
-
-      width: 80%;
-      height: 80%;
-      transform: rotate(15deg);
-
-      background: ${({ done }) =>
-        done || `center / contain no-repeat url(${underConstruction})`};
-
-      content: '';
+    &:hover h3 {
+      font-size: 0.7rem;
     }
 
     &::before {
@@ -70,10 +56,14 @@ export const Project = styled.a`
     }
   }
   }
-
-  @media ${device.desktop4k} {
+  @media ${device.desktopHD} {
     &:hover {
-      font-size: 2rem;
+      box-shadow: 0 0 0 3px ${({ theme }) => theme.mint},
+        0 0 0 5px ${({ theme }) => theme.black},
+        0 0 2px 3px ${({ theme }) => theme.black};
+    }
+    &:hover h3 {
+      font-size: 1.7rem;
     }
   }
 `;
@@ -111,6 +101,14 @@ font-size: 0.5rem;
   height: 40%;
   box-shadow: 0 0 1px 1px black;
 }
+@media ${device.desktop13} {
+  font-size: 0;
+  background-color: transparent;
+  box-shadow: none;
+  top: 30%;
+  width: 80%;
+  color: white;
+}
 `
 
 export const UCBadge = styled.img`
@@ -118,5 +116,9 @@ width: 75%;
 transform: translate(-50%, 20%) rotate(-30deg);
 @media ${device.tabletS} {
   width: 80%;
+}
+@media ${device.desktop13} {
+  transform: translate(-50%,-50%) rotate(-30deg);
+  width: 60%;
 }
 `

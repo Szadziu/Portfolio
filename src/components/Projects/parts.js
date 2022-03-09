@@ -35,6 +35,10 @@ export const ProjectsWrapper = styled.div`
     height: 80vh;
     margin-top: 70px;
   }
+  @media ${device.desktop4k} {
+    width: 60vh;
+    height: 60vh;
+  }
 `;
 
 export const Wrapper = styled.div``;

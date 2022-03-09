@@ -6,9 +6,9 @@ export const Title = styled.h1`
   align-self: center;
 
   background-size: 65rem 100%;
-  background: #acacac -webkit-gradient(linear, left top, right top, from(${({ theme }) => theme.brighterPink}), to(${({ theme }) => theme.mint}), color-stop(0.5, ${({ color }) => color}));
+  background: #acacac -webkit-gradient(linear, left top, right top, from(${({ theme }) => theme.darkGray}), to(${({ theme }) => theme.mint}), color-stop(0.5, ${({ color }) => color}));
   background-position: -65rem top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -19,7 +19,7 @@ export const Title = styled.h1`
   font-family: 'Lato', sans-serif;
   letter-spacing: -2px;
 
-  animation: shimmer 2s infinite alternate;
+  animation: shimmer 0.8s infinite alternate;
 
   @media ${device.mobileM} {
     font-size: 1.6rem;

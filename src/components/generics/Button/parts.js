@@ -32,7 +32,7 @@ export const Button = styled(Link)`
     height: 100%;
     border-radius: 10px;
     margin-right: 15px;
-    box-shadow: 0 0 3px 1px ${({ theme }) => theme.black};
+    box-shadow: 0 0 1px 1px ${({ theme }) => theme.black};
 
     background-color: ${({ theme }) => theme.mint};
 
@@ -58,7 +58,6 @@ export const Button = styled(Link)`
   @media ${device.desktop13} {
     width: 50%;
     height: 15%;
-
     font-size: 1.8rem;
 
     &:active {
@@ -81,7 +80,7 @@ export const Button = styled(Link)`
     font-size: 2.5rem;
   }
   @media ${device.desktop4k} {
-    font-size: 4rem;
+    height: 10%;
     &:before {
       width: 30px;
     }

@@ -24,21 +24,17 @@ export const Container = styled.div`
   font-size: 1.5rem;
 }
 @media ${device.desktop13} {
-  margin-top: 40px;
-
-  font-size: 1.45rem;
+  grid-area:2/2/12/8;
+font-size: 1.3rem;
 }
 @media ${device.desktopHD} {
   margin: 60px 20px 0 0;
-  font-size: 2rem;
-}
-@media ${device.desktop2k} {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 @media ${device.desktop4k} {
   margin-top: 80px;
 
-  font-size: 3.8rem;
+  font-size: 2.8rem;
 }
 `;
 

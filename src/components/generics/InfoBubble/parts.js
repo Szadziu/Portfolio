@@ -20,7 +20,7 @@ export const InfoModal = styled.div`
   font-family: 'Changa', sans-serif;
   text-align: left;
 
-  overflow:scroll;
+  overflow-y:scroll;
 
   @media ${device.mobileM} {
     font-size: 0.9rem;
@@ -40,15 +40,33 @@ export const InfoModal = styled.div`
     font-size: 1.4rem;
   }
   @media ${device.desktop13} {
-    width: 40vw;
+    width: 50vw;
+    height: 30vh;
+    font-size: 1.2rem;
 
-    font-size: 1rem;
+&::-webkit-scrollbar {
+  width: 10px;
+}
+
+&::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+&::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+&::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
   }
   @media ${device.desktopHD} {
     font-size: 1.5rem;
+    width: 40vw;
+    height: 25vh;
   }
   @media ${device.desktop4k} {
-    width: 30vw;
+    width: 20vw;
     padding: 30px 40px;
 
     font-size: 2.7rem;

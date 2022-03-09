@@ -8,6 +8,9 @@ export const Menu = styled.div`
   align-items: center;
   gap: 10%;
   grid-area: 2/13/12/6;
+  @media ${device.desktop13} {
+    font-size: 1rem;
+  }
 `;
 
 export const BackgroundPhoto = styled.img`
