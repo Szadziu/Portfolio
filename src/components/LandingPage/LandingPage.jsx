@@ -3,7 +3,7 @@ import { useTheme } from "styled-components";
 import Button from "../generics/Button";
 import SectionWrapper from "../generics/SectionWrapper";
 
-import * as P from "./parts.js";
+import * as P from "./landingPage.parts.js";
 
 const LandingPage = () => {
   const theme = useTheme();

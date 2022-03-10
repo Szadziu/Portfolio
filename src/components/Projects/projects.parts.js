@@ -26,6 +26,10 @@ export const ProjectsWrapper = styled.div`
     width: 70vh;
     height: 70vh;
   }
+  @media ${device.mobileXL} {
+    width:45vh;
+    height: 45vh;
+  }
   @media ${device.desktop13} {
     width: 75vh;
     height: 75vh;

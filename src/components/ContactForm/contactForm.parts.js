@@ -12,20 +12,20 @@ export const Wrapper = styled.div`
 
   display: flex;
   grid-area: 2/12/11/2;
-  border-radius: 15px;
+  border-radius: 1rem;
 
   background-color: ${({ theme }) => theme.darkGray};
 
   &:after {
     position: absolute;
     top: 0;
-    left: 10px;
-    right: 10px;
+    left: 0.8rem;
+    right: 0.8rem;
     bottom: 0;
     z-index: -1;
 
     display: block;
-    border-radius: 15px;
+    border-radius: 1rem;
     box-shadow: 0 5px 10px ${({ theme }) => theme.darkenedBackground};
 
     content: '';
@@ -43,7 +43,7 @@ export const FormWrapper = styled(Form)`
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-left: 15px;
+  margin-left: 1rem;
 `;
 
 export const FormTitle = styled.span`
@@ -64,8 +64,8 @@ export const FormTitle = styled.span`
     left: 0;
 
     display: block;
-    width: 25px;
-    height: 4px;
+    width: 1.8rem;
+    height: 0.25rem;
 
     background: ${({ theme }) => theme.pink};
 
@@ -75,14 +75,18 @@ export const FormTitle = styled.span`
     font-size: 1.2rem;
   }
   @media ${device.tabletM} {
-    left: 10px;
+    left: 0.8rem;
 
     font-size: 2.2rem;
   }
   @media ${device.tabletL} {
-    margin: 30px 0;
+    margin: 2rem 0;
 
     font-size: 2.6rem;
+  }
+  @media ${device.mobileXL} {
+    margin-left: 2rem;
+    font-size: 4rem;
   }
   @media ${device.desktop13} {
     font-size: 1.5rem;
@@ -94,8 +98,8 @@ export const FormTitle = styled.span`
   @media ${device.desktop4k} {
     font-size: 3.5rem;
     &:after {
-      width: 70px;
-      height: 10px;
+      width: 4.3rem;
+      height: 0.6rem;
     }
   }
 `;
@@ -129,6 +133,9 @@ export const CooperateInfo = styled.p`
   @media ${device.tabletL} {
     font-size: 1.4rem;
     }
+  @media ${device.mobileXL} {
+    font-size: 1.8rem;
+  }
   @media ${device.desktop13} {
     font-size: 1rem;
   }

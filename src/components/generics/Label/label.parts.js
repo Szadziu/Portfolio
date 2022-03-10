@@ -17,6 +17,9 @@ export const Label = styled.label`
   @media ${device.tabletL} {
     font-size: 1.5rem;
   }
+  @media ${device.mobileXL} {
+    font-size: 3.2rem;
+  }
   @media ${device.desktop13} {
     font-size: 1rem;
   }

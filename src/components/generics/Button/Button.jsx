@@ -1,4 +1,4 @@
-import * as P from './parts';
+import * as P from "./button.parts";
 
 const Button = ({ text, link }) => {
   return (

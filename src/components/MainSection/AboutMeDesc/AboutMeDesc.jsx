@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import gsap from "gsap";
-import * as P from "./parts";
+import * as P from "./aboutMeDesc.parts";
 
 const AboutMeDesc = () => {
   const { ref, inView, entry } = useInView({ threshold: 0.4 });
@@ -16,22 +16,18 @@ const AboutMeDesc = () => {
   return (
     <P.Container ref={ref}>
       <P.Line>
-        Mam na imię Maciej, jestem samoukiem w świecie frontendu od ponad roku,
-        w tym czasie przyswoiłem fundamentalną wiedzę z zakresu html, css oraz
-        javascript.
+        Cześć na imię mam Maciej, jako ścieżkę rozwoju wybrałem front-end
+        development, którego aktywnie uczę się każdego dnia co pozwala mi na
+        ciągły rozwój i doskonalenie samego siebie przez co, jak najlepiej mogę
+        oddawać coraz to lepsze doznania i wrażenia na ręce użytkowników
+        aplikacji, do których tworzenia mogłem się przyczynić.
       </P.Line>
       <P.Line>
-        Obecnie umacniam swoje szeregi na froncie w wiedzę o bibliotece React
-        oraz języku Typescript.
-      </P.Line>
-      <P.Line>
-        Chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia
+        Ukończyłem studia inżynierskie o kierunku edukacji
+        techniczno-informatycznej, lecz front-endu uczę się na własną rękę, a
+        dziś chciałbym zweryfikować swoje umiejętności z zamiarem wyznaczenia
         konkretnych działań jakie należy podjąć, by móc wejść do świata IT i
-        zająć się tym zawodowo.
-      </P.Line>
-      <P.Line>
-        Jestem również absolwentem studiów inżynierskich o kierunku edukacja
-        techniczno-informatyczna.
+        czerpać oraz dzielić wiedzę z tej dziedziny.
       </P.Line>
     </P.Container>
   );

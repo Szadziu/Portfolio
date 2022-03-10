@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-import { socialsAnimation } from './socialAnimation';
+import { socialsAnimation } from "./socialAnimation";
 
-import * as P from './parts';
+import * as P from "./socialsBanner.parts";
 
 const SocialsBanner = ({ icons }) => {
   const [ref, inView, entry] = useInView();
@@ -16,7 +16,7 @@ const SocialsBanner = ({ icons }) => {
 
   const generateIcons = () => {
     return icons.map((social) => (
-      <P.SocialLink href={social.link} target='_blank' rel='noreferrer'>
+      <P.SocialLink href={social.link} target="_blank" rel="noreferrer">
         <P.Img alt={social.name} src={social.icon}></P.Img>
       </P.SocialLink>
     ));

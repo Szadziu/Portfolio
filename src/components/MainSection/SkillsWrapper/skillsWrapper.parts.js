@@ -7,9 +7,9 @@ export const SkillContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   grid-area: 7/2/12/13;
-  border-radius: 20px 0 0 20px;
-  box-shadow: 0 0 5px 2px ${({ theme }) => theme.mint};
-  padding-bottom: 10px;
+  border-radius: 1.2rem 0 0 1.2rem;
+  box-shadow: 0 0 0.3rem 2px ${({ theme }) => theme.mint};
+  padding-bottom: 0.6rem;
 
   background-color: ${({ theme }) => theme.white};
 
@@ -18,7 +18,7 @@ export const SkillContainer = styled.div`
   }
   @media ${device.desktop13} {
     grid-area: 2/8/12/13;
-    padding-bottom: 20px;
+    padding-bottom: 1.2rem;
   }
 `;
 
@@ -74,6 +74,9 @@ export const SkillTitle = styled.p`
   @media ${device.tabletL} {
     font-size: 1.4rem;
   }
+  @media ${device.mobileXL} {
+    font-size: 2.4rem;
+  }
   @media ${device.desktop13} {
     font-size: 1.2rem;
   }
@@ -98,6 +101,9 @@ export const SkillAdvancementInfo = styled.p`
   }
   @media ${device.tabletL} {
     font-size: 1.6rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 2.4rem;
   }
   @media ${device.desktop13} {
     font-size: 1.2rem;

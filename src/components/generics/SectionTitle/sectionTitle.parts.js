@@ -5,9 +5,9 @@ export const Title = styled.h1`
   grid-area: 1/2/2/12;
   align-self: center;
 
-  background-size: 65rem 100%;
-  background: #acacac -webkit-gradient(linear, left top, right top, from(${({ theme }) => theme.darkGray}), to(${({ theme }) => theme.mint}), color-stop(0.5, ${({ color }) => color}));
-  background-position: -65rem top;
+  background-size: 95rem 100%;
+  background: #acacac -webkit-gradient(linear, left top, right top, from(${({ theme }) => theme.mint}), to(${({ theme }) => theme.mint}), color-stop(0.5, ${({ color }) => color}));
+  background-position: -95rem top;
   background-repeat: no-repeat; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -19,7 +19,7 @@ export const Title = styled.h1`
   font-family: 'Lato', sans-serif;
   letter-spacing: -2px;
 
-  animation: shimmer 0.8s infinite alternate;
+  animation: shimmer 0.2s infinite alternate;
 
   @media ${device.mobileM} {
     font-size: 1.6rem;
@@ -29,6 +29,9 @@ export const Title = styled.h1`
   }
   @media ${device.tabletL} {
     font-size: 3.24rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 4.5rem;
   }
   @media ${device.desktop13} {
     font-size: 2.2rem;

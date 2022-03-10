@@ -24,6 +24,11 @@ export const Button = styled.button`
   @media ${device.tabletL} {
     font-size: 1.9rem;
   }
+  @media ${device.mobileXL} {
+    margin-right: 5rem;
+    padding: 1.5rem;
+    font-size: 2.8rem;
+  }
   @media ${device.desktop13} {
     font-size: 1.2rem;
 

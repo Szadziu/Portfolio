@@ -11,17 +11,16 @@ export const Project = styled.a`
   height: 26%;
   border: 4px solid black;
   border-radius: 50%;
-  
+
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
-  
-  text-align: center; 
+
+  text-align: center;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
-  
+
   transition: 0.5s;
-  pointer-events: ${({done})=>done || 'none'};
 
   @media ${device.desktop13} {
     cursor: pointer;
@@ -30,7 +29,7 @@ export const Project = styled.a`
 
     &:hover {
       z-index: 10;
-      
+
       transform: scale(1.5) rotate(1turn);
       box-shadow: 0 0 0 1px ${({ theme }) => theme.mint},
         0 0 0 2px ${({ theme }) => theme.black},
@@ -38,7 +37,7 @@ export const Project = styled.a`
 
     filter: grayscale(0);
 
-    &:hover h3 {
+    h3 {
       font-size: 0.7rem;
     }
 
@@ -48,7 +47,7 @@ export const Project = styled.a`
 
       width: 95%;
       height: 30%;
-      border-radius: 30px;
+      border-radius: 2rem;
 
       background-color: ${({ theme }) => theme.darkenedBackground};
 
@@ -61,9 +60,10 @@ export const Project = styled.a`
       box-shadow: 0 0 0 3px ${({ theme }) => theme.mint},
         0 0 0 5px ${({ theme }) => theme.black},
         0 0 2px 3px ${({ theme }) => theme.black};
-    }
-    &:hover h3 {
-      font-size: 1.7rem;
+
+        h3 {
+          font-size: 1.2rem;
+        }
     }
   }
 `;
@@ -78,7 +78,7 @@ align-items: center;
 width: 100%;
 height: 40%;
 box-shadow: 0 0 0.5px 0.5px black;
-padding: 5px;
+padding: 0.3rem;
 
 background-color: white;
 color: black;
@@ -100,6 +100,9 @@ font-size: 0.5rem;
   font-size: 1.4rem;
   height: 40%;
   box-shadow: 0 0 1px 1px black;
+}
+@media ${device.mobileXL} {
+  font-size: 2.5rem;
 }
 @media ${device.desktop13} {
   font-size: 0;

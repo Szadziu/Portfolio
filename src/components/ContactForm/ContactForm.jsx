@@ -9,7 +9,7 @@ import TextArea from "./TextArea";
 import VALIDATION_SCHEMA from "./validationSchema";
 import { submitAnimation } from "./submitAnimation";
 
-import * as P from "./parts";
+import * as P from "./contactForm.parts";
 
 const ContactForm = () => {
   const [isSendForm, setIsSendForm] = useState(false);

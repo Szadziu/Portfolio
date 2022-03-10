@@ -27,6 +27,9 @@ export const Comment = styled.p`
   @media ${device.tabletL} {
     font-size: 1.4rem;
   }
+  @media ${device.mobileXL} {
+    font-size: 2rem;
+  }
   @media ${device.desktop13} {
     font-size: 0.7rem;
   }

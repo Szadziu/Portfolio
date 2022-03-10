@@ -9,8 +9,8 @@ export const InfoModal = styled.div`
 
   width: 60vw;
   height: 30vh;
-  border-radius: 5px;
-  padding: 20px 15px;
+  border-radius: 0.3rem;
+  padding: 1.25rem 1rem;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
 
   background-color: ${({ theme }) => theme.darkGray};
@@ -45,19 +45,19 @@ export const InfoModal = styled.div`
     font-size: 1.2rem;
 
 &::-webkit-scrollbar {
-  width: 10px;
+  width: 0.6rem;
 }
 
 &::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: ${({theme})=> theme.brighterGray};
 }
 
 &::-webkit-scrollbar-thumb {
-  background: #888;
+  background: ${({theme})=> theme.gray};
 }
 
 &::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: ${({theme})=> theme.darkGray};
 }
   }
   @media ${device.desktopHD} {
@@ -67,7 +67,7 @@ export const InfoModal = styled.div`
   }
   @media ${device.desktop4k} {
     width: 20vw;
-    padding: 30px 40px;
+    padding: 1.8rem 2.5rem;
 
     font-size: 2.7rem;
   }

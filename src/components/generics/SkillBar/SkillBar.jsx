@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-import { useInView } from 'react-intersection-observer';
-import { useTheme } from 'styled-components';
-import gsap from 'gsap';
+import { useInView } from "react-intersection-observer";
+import { useTheme } from "styled-components";
+import gsap from "gsap";
 
-import * as P from './parts';
+import * as P from "./skillBar.parts";
 
 const SkillBar = ({ children, skill }) => {
   const [ref, inView, entry] = useInView();

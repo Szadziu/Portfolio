@@ -1,24 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowCircleLeft,
-  faArrowLeft,
-  faBezierCurve,
-  faCog,
-  faCommentDots,
-  faDotCircle,
-  faEllipsisH,
-  faEllipsisV,
-  faInfo,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCog, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 
 import InfoBubble from "../../generics/InfoBubble";
 import SkillBar from "../../generics/SkillBar";
 
 import { SKILL_BUNDLE } from "../../../constants";
 
-import * as P from "./parts";
+import * as P from "./skillsWrapper.parts";
 
 const SkillsWrapper = () => {
   const [visibleModalIndex, setVisibleModalIndex] = useState(null);

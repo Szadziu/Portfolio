@@ -1,4 +1,4 @@
-import * as P from './parts';
+import * as P from "./sectionWrapper.parts";
 
 const SectionWrapper = ({ children, bgColor, ...restProps }) => {
   return (

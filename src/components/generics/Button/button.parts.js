@@ -12,7 +12,7 @@ export const Button = styled(Link)`
   width: 90%;
   max-width: 1000px;
   height: 10%;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   box-shadow: 0 0 5px 1px ${({ theme }) => theme.black};
 
   background-color: ${({ theme }) => theme.white};
@@ -28,10 +28,10 @@ export const Button = styled(Link)`
     top: 0;
     left: 0;
 
-    width: 10px;
+    width: 0.6rem;
     height: 100%;
-    border-radius: 10px;
-    margin-right: 15px;
+    border-radius: 0.6rem;
+    margin-right: 1rem;
     box-shadow: 0 0 1px 1px ${({ theme }) => theme.black};
 
     background-color: ${({ theme }) => theme.mint};
@@ -55,6 +55,9 @@ export const Button = styled(Link)`
   @media ${device.tabletL} {
     font-size: 2.8rem;
   }
+  @media ${device.mobileXL} {
+    font-size: 3.4rem;
+  }
   @media ${device.desktop13} {
     width: 50%;
     height: 15%;
@@ -63,16 +66,16 @@ export const Button = styled(Link)`
     &:active {
       &::before {
         top: 50%;
-        left: calc(100% - 10px);
+        left: calc(100% - 0.6rem);
       }
     }
 
     &:hover {
       &::before {
         top: 50%;
-        left: calc(100% - 10px);
+        left: calc(100% - 0.6rem);
 
-        height: 5px;
+        height: 0.3rem;
       }
     }
   }
@@ -82,7 +85,7 @@ export const Button = styled(Link)`
   @media ${device.desktop4k} {
     height: 10%;
     &:before {
-      width: 30px;
+      width: 2rem;
     }
 
     &:hover {
@@ -90,7 +93,7 @@ export const Button = styled(Link)`
         top: 50%;
         left: calc(100% - 30px);
 
-        height: 15px;
+        height: 1rem;
       }
     }
   }

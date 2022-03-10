@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 
 import floatingButtonImage from "../../../assets/upArrow.png";
 
-import * as P from "./parts";
+import * as P from "./floatingButton.parts";
 
 const FloatingButton = () => {
   const [visible, setVisible] = useState(false);

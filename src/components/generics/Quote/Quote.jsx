@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-import gsap from 'gsap';
+import gsap from "gsap";
 
-import * as P from './parts';
+import * as P from "./quote.parts";
 
 const Quote = ({ children }) => {
   const { ref, inView, entry } = useInView({ threshold: 1 });

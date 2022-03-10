@@ -1,4 +1,4 @@
-import * as P from './parts';
+import * as P from "./comment.parts";
 
 const Comment = ({ error, info, children }) => {
   return (

@@ -7,7 +7,7 @@ export const QuoteParam = styled.p`
   align-items: center;
   grid-area: 12/2/13/12;
   opacity: 0;
-  padding: 20px 0;
+  padding: 1.25rem 0;
 
   color: ${({ theme }) => theme.pink};
 
@@ -28,6 +28,9 @@ export const QuoteParam = styled.p`
   }
   @media ${device.tabletL} {
     font-size: 2.5rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 3.2rem;
   }
   @media ${device.desktop13} {
     font-size: 1.7rem;

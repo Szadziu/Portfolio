@@ -3,19 +3,22 @@ import { device } from '../../constants/devices';
 
 export const Img = styled.img`
   width: auto;
-  height: 40px;
-  margin-left: 10px;
+  height: 2.5rem;
+  margin-left: 0.6rem;
 
   transition: 0.4s;
 
   @media ${device.tabletM} {
-    height: 70px;
+    height: 4.3rem;
   }
   @media ${device.tabletL} {
-    height: 90px;
+    height: 5.6rem;
+  }
+  @media ${device.mobileXL} {
+    height: 7.5rem;
   }
   @media ${device.desktop13} {
-    height: 50px;
+    height: 3rem;
     &:hover {
       transform: scale(1.4);
 
@@ -23,17 +26,17 @@ export const Img = styled.img`
     }
   }
   @media ${device.desktopHD} {
-    height: 60px;
+    height: 3.6rem;
   }
   @media ${device.desktop4k} {
-    height: 150px;
+    height: 9rem;
   }
 `;
 
 export const Banner = styled.div`
   position: absolute;
   left: -80vw;
-  bottom: 10px;
+  bottom: 0.6rem;
 
   display: flex;
   justify-content: space-around;
@@ -64,4 +67,6 @@ export const Banner = styled.div`
   }
 `;
 
-export const SocialLink = styled.a``;
+export const SocialLink = styled.a`
+cursor: pointer;
+`;

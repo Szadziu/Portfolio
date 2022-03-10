@@ -1,4 +1,4 @@
-import * as P from './parts';
+import * as P from "./infoBubble.parts";
 
 const InfoBubble = ({ description, id }) => {
   return <P.InfoModal id={id}>{description}</P.InfoModal>;
