@@ -35,25 +35,25 @@ export const Project = styled.a`
         0 0 0 2px ${({ theme }) => theme.black},
         0 0 1px 2px ${({ theme }) => theme.black};
 
-    filter: grayscale(0);
+      filter: grayscale(0);
 
-    h3 {
-      font-size: 0.7rem;
+      h3 {
+        font-size: 0.7rem;
+      }
+
+      &::before {
+        position: absolute;
+        z-index: -1;
+
+        width: 95%;
+        height: 30%;
+        border-radius: 2rem;
+
+        background-color: ${({ theme }) => theme.darkenedBackground};
+
+        content: '';
+      }
     }
-
-    &::before {
-      position: absolute;
-      z-index: -1;
-
-      width: 95%;
-      height: 30%;
-      border-radius: 2rem;
-
-      background-color: ${({ theme }) => theme.darkenedBackground};
-
-      content: '';
-    }
-  }
   }
   @media ${device.desktopHD} {
     &:hover {
@@ -61,67 +61,67 @@ export const Project = styled.a`
         0 0 0 5px ${({ theme }) => theme.black},
         0 0 2px 3px ${({ theme }) => theme.black};
 
-        h3 {
-          font-size: 1.2rem;
-        }
+      h3 {
+        font-size: 1rem;
+      }
     }
   }
 `;
 
 export const TitleOfProject = styled.h3`
-position: absolute;
-top: -30%;
+  position: absolute;
+  top: -30%;
 
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 40%;
-box-shadow: 0 0 0.5px 0.5px black;
-padding: 0.3rem;
-
-background-color: white;
-color: black;
-
-font-size: 0.5rem;
-
-@media ${device.mobileM} {
-  font-size: 0.6rem;
-}
-@media ${device.tabletS} {
-  height: 50%;
-  width: 120%;
-  font-size: 0.7rem;
-}
-@media ${device.tabletM} {
-  font-size: 1.2rem;
-}
-@media ${device.tabletL} {
-  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 40%;
-  box-shadow: 0 0 1px 1px black;
-}
-@media ${device.mobileXL} {
-  font-size: 2.5rem;
-}
-@media ${device.desktop13} {
-  font-size: 0;
-  background-color: transparent;
-  box-shadow: none;
-  top: 30%;
-  width: 80%;
-  color: white;
-}
-`
+  box-shadow: 0 0 0.5px 0.5px black;
+  padding: 0.3rem;
+
+  background-color: white;
+  color: black;
+
+  font-size: 0.5rem;
+
+  @media ${device.mobileM} {
+    font-size: 0.6rem;
+  }
+  @media ${device.tabletS} {
+    height: 50%;
+    width: 120%;
+    font-size: 0.7rem;
+  }
+  @media ${device.tabletM} {
+    font-size: 1.2rem;
+  }
+  @media ${device.tabletL} {
+    font-size: 1.4rem;
+    height: 40%;
+    box-shadow: 0 0 1px 1px black;
+  }
+  @media ${device.mobileXL} {
+    font-size: 2.5rem;
+  }
+  @media ${device.desktop13} {
+    font-size: 0;
+    background-color: transparent;
+    box-shadow: none;
+    top: 30%;
+    width: 80%;
+    color: white;
+  }
+`;
 
 export const UCBadge = styled.img`
-width: 75%;
-transform: translate(-50%, 20%) rotate(-30deg);
-@media ${device.tabletS} {
-  width: 80%;
-}
-@media ${device.desktop13} {
-  transform: translate(-50%,-50%) rotate(-30deg);
-  width: 60%;
-}
-`
+  width: 75%;
+  transform: translate(-50%, 20%) rotate(-30deg);
+  @media ${device.tabletS} {
+    width: 80%;
+  }
+  @media ${device.desktop13} {
+    transform: translate(-50%, -50%) rotate(-30deg);
+    width: 60%;
+  }
+`;

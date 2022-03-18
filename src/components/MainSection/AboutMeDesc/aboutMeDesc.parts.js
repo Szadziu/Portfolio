@@ -3,39 +3,39 @@ import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
   grid-area: 2/2/7/12;
- 
+
   margin: 0 0.6rem 0 1.2rem;
 
   font-size: 0.55rem;
 
-@media ${device.mobileM} {
-  font-size: 0.7rem;
-}
-@media ${device.tabletS} {
-  font-size: 0.6rem;
-}
-@media ${device.tabletM} {
-  font-size: 1rem;
-}
-@media ${device.tabletL} {
-  font-size: 1.3rem;
-}
-@media ${device.mobileXL} {
-  font-size: 2.1rem;
-}
-@media ${device.desktop13} {
-  grid-area:2/2/12/8;
-  font-size: 1.3rem;
-}
-@media ${device.desktopHD} {
-  margin: 3.6rem 1.2rem 0 0;
-  font-size: 1.8rem;
-}
-@media ${device.desktop4k} {
-  margin-top: 4.8rem;
+  @media ${device.mobileM} {
+    font-size: 0.7rem;
+  }
+  @media ${device.tabletS} {
+    font-size: 0.6rem;
+  }
+  @media ${device.tabletM} {
+    font-size: 1rem;
+  }
+  @media ${device.tabletL} {
+    font-size: 1.3rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 2.1rem;
+  }
+  @media ${device.desktop13} {
+    grid-area: 2/2/12/8;
+    font-size: 1.3rem;
+  }
+  @media ${device.desktopHD} {
+    margin: 3.6rem 1.2rem 0 0;
+    font-size: 1.6rem;
+  }
+  @media ${device.desktop4k} {
+    margin-top: 4.8rem;
 
-  font-size: 2.5rem;
-}
+    font-size: 2.5rem;
+  }
 `;
 
 export const Line = styled.span`
