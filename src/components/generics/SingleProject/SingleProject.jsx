@@ -1,9 +1,20 @@
-import * as P from "./singleProject.parts";
-import underConstruction from "../../../assets/projectsIcons/underConstruction.png";
+import { useContext } from 'react';
+import * as P from './singleProject.parts';
+import underConstruction from '../../../assets/projectsIcons/underConstruction.png';
+import { ProjectsContext } from '../../../contexts/ProjectsContext';
 
-const SingleProject = ({ id, children, img, done, link }) => {
+const SingleProject = ({ id, img, done, link, children }) => {
+  const { setIsModalOpen } = useContext(ProjectsContext);
+
   return (
-    <P.Project key={id} thumbnail={img} done={done} href={link} target="_blank">
+    <P.Project
+      key={id}
+      thumbnail={img}
+      done={done}
+      href={link}
+      target="_blank"
+      onClick={() => setIsModalOpen(true)}
+    >
       <P.TitleOfProject>{children}</P.TitleOfProject>
       {!!link || (
         <P.UCBadge

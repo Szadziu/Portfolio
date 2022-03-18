@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { device } from '../../../constants/devices';
 
-export const Project = styled.a`
+export const Project = styled.button`
   position: relative;
   display: flex;
   justify-content: center;

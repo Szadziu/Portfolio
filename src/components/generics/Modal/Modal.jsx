@@ -1,49 +1,22 @@
-import { useEffect, useRef, forwardRef } from "react";
+import React, { useContext } from 'react';
+import * as P from './modal.parts';
+import { ProjectsContext } from '../../../contexts/ProjectsContext';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import gsap from "gsap";
+const Modal = () => {
+  const { setIsModalOpen } = useContext(ProjectsContext);
 
-import * as P from "./parts";
-
-const Modal = forwardRef(({ closeModal, currentProject }) => {
-  const ref = useRef();
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      photoAnimation();
-    }, 1000);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
-
-  const photoAnimation = () => {
-    const tl = gsap.timeline();
-    tl.to(ref.current, { x: "+=20", rotation: 5 }).to(ref.current, {
-      x: "-=20",
-      rotation: -5,
-    });
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
-    <>
-      <P.OverlayWrapper onClick={closeModal}></P.OverlayWrapper>
-
-      <P.ProjectModal>
-        <P.Title>{currentProject.name}</P.Title>
-
-        <P.CloseButton onClick={closeModal}>
-          <FontAwesomeIcon icon={faTimes} />
-        </P.CloseButton>
-        <P.PhotoOfProject src={currentProject.img} />
-        <P.ProjectDesc>
-          <P.ProjectLink href={currentProject.link} target="_blank" ref={ref}>
-            Link do projektu
-          </P.ProjectLink>
-          {currentProject.desc}
-        </P.ProjectDesc>
-      </P.ProjectModal>
-    </>
+    <P.Overlay>
+      <P.Modal>
+        <P.CloseButton onClick={closeModal} />
+        Modal
+      </P.Modal>
+    </P.Overlay>
   );
-});
+};
+
 export default Modal;
