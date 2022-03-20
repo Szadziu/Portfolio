@@ -10,12 +10,13 @@ const Modal = () => {
   };
 
   return (
-    <P.Overlay>
+    <>
+      <P.Overlay onClick={closeModal}></P.Overlay>
       <P.Modal>
         <P.CloseButton onClick={closeModal} />
         Modal
       </P.Modal>
-    </P.Overlay>
+    </>
   );
 };
 
