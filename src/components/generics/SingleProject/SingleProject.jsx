@@ -6,6 +6,10 @@ import { ProjectsContext } from '../../../contexts/ProjectsContext';
 const SingleProject = ({ id, img, done, link, children }) => {
   const { setIsModalOpen } = useContext(ProjectsContext);
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <P.Project
       key={id}
@@ -13,7 +17,7 @@ const SingleProject = ({ id, img, done, link, children }) => {
       done={done}
       href={link}
       target="_blank"
-      onClick={() => setIsModalOpen(true)}
+      onClick={openModal}
     >
       <P.TitleOfProject>{children}</P.TitleOfProject>
       {!!link || (

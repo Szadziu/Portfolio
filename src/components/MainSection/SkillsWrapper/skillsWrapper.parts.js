@@ -7,8 +7,8 @@ export const SkillContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   grid-area: 7/2/12/13;
-  border-radius: 1.2rem 0 0 1.2rem;
-  box-shadow: 0 0 0.3rem 2px ${({ theme }) => theme.mint};
+  border-radius: 0.6rem 0 0 0.6rem;
+  box-shadow: 0 0 5px 3px ${({ theme }) => theme.dimMint};
   padding-bottom: 0.6rem;
 
   background-color: ${({ theme }) => theme.white};
@@ -59,7 +59,7 @@ export const InfoIconLink = styled.button`
 
 export const SkillTitle = styled.p`
   width: 100%;
-  
+
   text-align: left;
   font-size: 0.7rem;
   font-weight: 700;

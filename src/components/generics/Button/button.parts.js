@@ -13,7 +13,7 @@ export const Button = styled(Link)`
   max-width: 1000px;
   height: 10%;
   border-radius: 0.6rem;
-  box-shadow: 0 0 5px 1px ${({ theme }) => theme.black};
+  box-shadow: 0 0 1px 1px ${({ theme }) => theme.dimBackground};
 
   background-color: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.black};

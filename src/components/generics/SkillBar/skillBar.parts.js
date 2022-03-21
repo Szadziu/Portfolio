@@ -94,6 +94,6 @@ export const TitleOfSkill = styled.p`
 
   color: ${({ theme }) => theme.black};
 
-  font-size: 0.6rem; 
+  font-size: 0.6rem;
   text-align: center;
 `;

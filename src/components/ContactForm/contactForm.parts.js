@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
   display: flex;
   grid-area: 2/12/11/2;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
 
   background-color: ${({ theme }) => theme.darkGray};
 
@@ -25,8 +25,8 @@ export const Wrapper = styled.div`
     z-index: -1;
 
     display: block;
-    border-radius: 1rem;
-    box-shadow: 0 5px 10px ${({ theme }) => theme.darkenedBackground};
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 10px ${({ theme }) => theme.dimBackground};
 
     content: '';
   }
@@ -129,10 +129,10 @@ export const CooperateInfo = styled.p`
   }
   @media ${device.tabletM} {
     font-size: 1rem;
-    }
+  }
   @media ${device.tabletL} {
     font-size: 1.4rem;
-    }
+  }
   @media ${device.mobileXL} {
     font-size: 1.8rem;
   }
@@ -145,5 +145,4 @@ export const CooperateInfo = styled.p`
   @media ${device.desktop4k} {
     font-size: 1.4rem;
   }
-
 `;
