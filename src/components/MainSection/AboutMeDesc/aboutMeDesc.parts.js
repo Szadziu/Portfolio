@@ -4,9 +4,11 @@ import { device } from '../../../constants/devices';
 export const Container = styled.div`
   grid-area: 2/2/7/12;
 
-  margin: 0 0.6rem 0 1.2rem;
+  margin: 0 0.6rem;
 
   font-size: 0.55rem;
+  font-weight: 400;
+  text-align: justify;
 
   @media ${device.mobileM} {
     font-size: 0.7rem;
@@ -24,7 +26,8 @@ export const Container = styled.div`
     font-size: 2.1rem;
   }
   @media ${device.desktop13} {
-    grid-area: 2/2/12/8;
+    grid-area: 2/1/12/8;
+    margin: 0 2rem;
     font-size: 1.3rem;
   }
   @media ${device.desktopHD} {

@@ -1,12 +1,15 @@
 import gsap from 'gsap';
 
-export const socialsAnimation = (elements) => {
-  const tl = gsap.timeline();
-  tl.to(elements.target.children, {
-    x: '80vw',
-    duration: 3,
-    stagger: 0.7,
-    ease: 'expo',
-    rotation: 720,
-  });
+export const socialsAnimation = ({ target: { children: icons } }) => {
+  gsap.fromTo(
+    icons,
+    { x: '-100vw' },
+    {
+      x: 0,
+      duration: 3.2,
+      stagger: 0.7,
+      ease: 'expo',
+      rotation: 720,
+    }
+  );
 };

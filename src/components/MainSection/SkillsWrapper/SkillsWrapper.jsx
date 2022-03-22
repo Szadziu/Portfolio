@@ -1,13 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect, useCallback } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 
-import InfoBubble from "../../generics/InfoBubble";
-import SkillBar from "../../generics/SkillBar";
+import InfoBubble from '../../generics/InfoBubble';
+import SkillBar from '../../generics/SkillBar';
 
-import { SKILL_BUNDLE } from "../../../constants";
+import { SKILL_BUNDLE } from '../../../constants';
 
-import * as P from "./skillsWrapper.parts";
+import * as P from './skillsWrapper.parts';
 
 const SkillsWrapper = () => {
   const [visibleModalIndex, setVisibleModalIndex] = useState(null);
@@ -18,9 +18,9 @@ const SkillsWrapper = () => {
 
   useEffect(() => {
     if (visibleModalIndex !== null) {
-      document.addEventListener("click", closeModal);
+      document.addEventListener('click', closeModal);
     } else {
-      document.removeEventListener("click", closeModal);
+      document.removeEventListener('click', closeModal);
     }
   }, [visibleModalIndex]);
 
@@ -42,9 +42,7 @@ const SkillsWrapper = () => {
               {infoIcon}
             </P.InfoIconLink>
           </div>
-          {cogwheelIcon}
           {`${skill.advancement * 10}%`}
-          {cogwheelIcon}
         </P.SkillAdvancementInfo>
         {index === visibleModalIndex && (
           <div onClick={(e) => e.stopPropagation()}>

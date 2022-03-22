@@ -11,8 +11,8 @@ export const QuoteParam = styled.p`
 
   color: ${({ theme }) => theme.pink};
 
-  font-family: 'Amatic SC', cursive;
-  font-weight: 700;
+  font-style: italic;
+  font-weight: 300;
   font-size: 0.8rem;
 
   @media ${device.mobileM} {

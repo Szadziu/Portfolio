@@ -35,38 +35,17 @@ export const Img = styled.img`
 
 export const Banner = styled.div`
   position: absolute;
-  left: -80vw;
+  left: 50%;
   bottom: 0.6rem;
+  transform: translateX(-50%);
 
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80vw;
   height: 10vh;
-
-  @media ${device.desktop15} {
-    width: 60vw;
-    left: -60vw;
-  }
-
-  @media ${device.desktopHD} {
-    width: 75vw;
-    left: -75vw;
-  }
-
-  @media ${device.desktop2k} {
-    width: 75vw;
-    left: -75vw;
-  }
-  
-  @media ${device.desktop4k} {
-    width: 75vw;
-    left: -75vw;
-    gap: 5%;
-    justify-content: flex-start;
-  }
 `;
 
 export const SocialLink = styled.a`
-cursor: pointer;
+  cursor: pointer;
 `;

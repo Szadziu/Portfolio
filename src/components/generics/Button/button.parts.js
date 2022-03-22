@@ -19,7 +19,9 @@ export const Button = styled(Link)`
   color: ${({ theme }) => theme.black};
 
   font-size: 1rem;
+  font-weight: 300;
 
+  transition: 0.5s;
   cursor: pointer;
   user-select: none;
 
@@ -71,6 +73,7 @@ export const Button = styled(Link)`
     }
 
     &:hover {
+      background-color: rgba(234, 218, 168, 0.2);
       &::before {
         top: 50%;
         left: calc(100% - 0.6rem);

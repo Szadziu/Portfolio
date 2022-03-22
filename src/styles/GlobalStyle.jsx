@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'Source Code Pro', monospace;
+        font-family: 'Lato', sans-serif;
     }
 
     ul, ol {
