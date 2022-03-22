@@ -12,10 +12,11 @@ export const Input = styled(Field)`
 
   background: none;
   color: ${({ theme }) => theme.brighterGray};
-  
+
   font-size: 0.8rem;
+  letter-spacing: 1px;
   outline: none;
-  
+
   transition: 0.4s;
 
   &::placeholder {
@@ -30,8 +31,8 @@ export const Input = styled(Field)`
     font-size: 1rem;
   }
   @media ${device.tabletS} {
-   padding-bottom: 0.4rem;
-   font-size: 0.7rem;
+    padding-bottom: 0.4rem;
+    font-size: 0.7rem;
   }
   @media ${device.tabletM} {
     font-size: 1.2rem;

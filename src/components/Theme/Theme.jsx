@@ -18,8 +18,9 @@ const THEME = {
   darkerGray: 'rgb(102, 102, 102)',
   darkGray: 'rgb(62, 62, 62)',
 
-  blue: 'rgb(59, 89, 152)',
+  lightBlue: 'rgb(139, 169, 232)',
   brighterBlue: 'rgb(99, 129, 192)',
+  blue: 'rgb(59, 89, 152)',
 
   pink: 'rgb(255, 147, 147)',
   brighterPink: 'rgb(255, 187, 187)',

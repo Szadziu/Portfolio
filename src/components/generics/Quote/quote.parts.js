@@ -38,9 +38,6 @@ export const QuoteParam = styled.p`
   @media ${device.desktop15} {
     font-size: 1.8rem;
   }
-  @media ${device.desktopHD} {
-    font-size: 2.4rem;
-  }
   @media ${device.desktop4k} {
     font-size: 3.7rem;
   }

@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin: 0 0.6rem;
 
   font-size: 0.55rem;
-  font-weight: 400;
+  font-weight: 300;
   text-align: justify;
 
   @media ${device.mobileM} {

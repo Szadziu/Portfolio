@@ -12,6 +12,7 @@ export const TextAreaField = styled.textarea`
   color: ${({ theme }) => theme.brighterGray};
 
   font-size: 0.8rem;
+  letter-spacing: 1px;
   outline: none;
 
   transition: 0.4s;

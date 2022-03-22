@@ -39,6 +39,7 @@ export const Project = styled.button`
 
       h3 {
         font-size: 0.7rem;
+        font-weight: 300;
       }
 
       &::before {

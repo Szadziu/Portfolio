@@ -56,7 +56,6 @@ export const FormTitle = styled.span`
   color: ${({ theme }) => theme.pink};
 
   font-size: 0.9rem;
-  font-weight: 700;
   text-transform: uppercase;
 
   &:after {

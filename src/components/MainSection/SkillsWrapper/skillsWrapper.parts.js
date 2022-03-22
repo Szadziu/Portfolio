@@ -62,14 +62,12 @@ export const SkillTitle = styled.p`
 
   text-align: left;
   font-size: 0.7rem;
-  font-weight: 700;
 
   @media ${device.mobileM} {
     font-size: 0.6rem;
   }
   @media ${device.tabletM} {
     font-size: 1rem;
-    font-weight: 700;
   }
   @media ${device.tabletL} {
     font-size: 1.4rem;
