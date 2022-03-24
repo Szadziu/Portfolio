@@ -4,7 +4,7 @@ import { ProjectsContext } from '../../../contexts/ProjectsContext';
 import gsap from 'gsap';
 
 const Modal = () => {
-  const { setIsModalOpen } = useContext(ProjectsContext);
+  const { isModalOpen, setIsModalOpen } = useContext(ProjectsContext);
   const modalRef = useRef();
 
   const closeModal = async () => {
@@ -15,15 +15,18 @@ const Modal = () => {
       y: '50vh',
     });
     setIsModalOpen(false);
+    document.querySelector('body').style.overflow = 'auto';
   };
 
   return (
     <>
       <P.Overlay onClick={closeModal}></P.Overlay>
-      <P.Modal ref={modalRef}>
-        <P.CloseButton onClick={closeModal} />
-        Modal
-      </P.Modal>
+      {isModalOpen && (
+        <P.Modal ref={modalRef}>
+          <P.CloseButton onClick={closeModal} />
+          Modal
+        </P.Modal>
+      )}
     </>
   );
 };

@@ -16,7 +16,7 @@ const LandingPage = () => {
         <Button text="Moje projekty" link="projects" />
         <Button text="Kontakt" link="contact" />
       </P.Menu>
-      <P.Workplace>frontend developer</P.Workplace>
+      <P.Workplace>junior frontend developer</P.Workplace>
     </SectionWrapper>
   );
 };

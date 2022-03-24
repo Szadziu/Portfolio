@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 export const ProjectsContext = createContext({});
 
 const ProjectsContextProvider = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
 
   const value = {

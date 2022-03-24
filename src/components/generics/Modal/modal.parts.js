@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import closeBtn from '../../../assets/closeBtn.png';
 
 export const Modal = styled.div`
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  max-width: 500px;
+  height: 50%;
+  max-height: 500px;
   background-color: red;
   position: absolute;
   z-index: 1;

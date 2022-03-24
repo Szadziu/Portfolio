@@ -5,9 +5,9 @@ import { ProjectsContext } from '../../../contexts/ProjectsContext';
 
 const SingleProject = ({ id, img, done, link, children }) => {
   const { setIsModalOpen } = useContext(ProjectsContext);
-
   const openModal = () => {
     setIsModalOpen(true);
+    document.querySelector('body').style.overflow = 'hidden';
   };
 
   return (

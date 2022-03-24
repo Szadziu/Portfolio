@@ -45,23 +45,60 @@ export const BackgroundPhoto = styled.img`
 
 export const Workplace = styled.span`
   position: relative;
+  top: 50%;
   z-index: 1;
 
-  grid-area: 2/8/3/12;
+  grid-area: 1/8/2/12;
 
   color: ${({ theme }) => theme.black};
+  /* background-color: violet; */
 
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
 
+  @media ${device.mobileM} {
+    font-size: 1.2rem;
+  }
+  @media ${device.mobileXL} {
+    font-size: 3rem;
+  }
+  @media ${device.tablet} {
+    font-size: 1.2rem;
+  }
+  @media ${device.tabletM} {
+    font-size: 1.8rem;
+  }
+  @media ${device.tabletL} {
+    font-size: 2.3rem;
+  }
+  @media ${device.desktop13} {
+    font-size: 1.5rem;
+  }
+  @media ${device.desktop2k} {
+    font-size: 2rem;
+  }
+  @media ${device.desktop4k} {
+    font-size: 3rem;
+  }
+
   &::after {
-    content: '';
     position: absolute;
-    margin-top: 5px;
+    bottom: -10px;
     left: -10%;
+
     width: 120%;
     height: 2px;
+
     background-color: ${({ theme }) => theme.black};
+    content: '';
+
+    @media ${device.tablet} {
+      width: 110%;
+      left: -5%;
+    }
+    @media ${device.desktop13} {
+      bottom: 30%;
+    }
   }
 `;
