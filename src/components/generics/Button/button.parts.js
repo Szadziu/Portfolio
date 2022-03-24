@@ -43,7 +43,7 @@ export const Button = styled(Link)`
   }
 
   @media ${device.mobileS} {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   @media ${device.mobileM} {
     font-size: 1rem;

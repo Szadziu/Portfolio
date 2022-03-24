@@ -42,3 +42,26 @@ export const BackgroundPhoto = styled.img`
     left: -30vw;
   }
 `;
+
+export const Workplace = styled.span`
+  position: relative;
+  z-index: 1;
+
+  grid-area: 2/8/3/12;
+
+  color: ${({ theme }) => theme.black};
+
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    position: absolute;
+    margin-top: 5px;
+    left: -10%;
+    width: 120%;
+    height: 2px;
+    background-color: ${({ theme }) => theme.black};
+  }
+`;

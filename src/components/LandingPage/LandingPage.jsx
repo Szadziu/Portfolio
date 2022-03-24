@@ -1,9 +1,9 @@
-import { useTheme } from "styled-components";
+import { useTheme } from 'styled-components';
 
-import Button from "../generics/Button";
-import SectionWrapper from "../generics/SectionWrapper";
+import Button from '../generics/Button';
+import SectionWrapper from '../generics/SectionWrapper';
 
-import * as P from "./landingPage.parts.js";
+import * as P from './landingPage.parts.js';
 
 const LandingPage = () => {
   const theme = useTheme();
@@ -16,6 +16,7 @@ const LandingPage = () => {
         <Button text="Moje projekty" link="projects" />
         <Button text="Kontakt" link="contact" />
       </P.Menu>
+      <P.Workplace>frontend developer</P.Workplace>
     </SectionWrapper>
   );
 };
