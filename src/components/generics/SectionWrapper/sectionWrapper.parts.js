@@ -12,7 +12,10 @@ export const Wrapper = styled.div`
   overflow: hidden;
   margin: 0 auto;
 
-  background-color: ${({ bgColor }) => bgColor};
-
   transition: 0.8s;
+
+  background-image: url(${({ image }) => image});
+  background-repeat: no-repeat;
+  background-size: 112.5vh 150vh;
+  background-position: -56.25vh 0;
 `;

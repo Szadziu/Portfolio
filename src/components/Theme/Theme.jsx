@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import personalPhotoImage from '../../assets/personalPhoto.jpg';
+import personalPhotoImage from '../../assets/personalPng.png';
 
 const THEME = {
   personalPhoto: personalPhotoImage,

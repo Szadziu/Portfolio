@@ -8,9 +8,9 @@ import * as P from './landingPage.parts.js';
 const LandingPage = () => {
   const theme = useTheme();
   return (
-    <SectionWrapper>
+    <SectionWrapper image={theme.personalPhoto}>
+      {/* <P.BackgroundPhoto image={theme.personalPhoto} /> */}
       <P.Menu id="home">
-        <P.BackgroundPhoto src={theme.personalPhoto} />
         <Button text="Strona Główna" link="home" />
         <Button text="Umiejętności" link="skills" />
         <Button text="Moje projekty" link="projects" />

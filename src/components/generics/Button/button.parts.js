@@ -10,7 +10,7 @@ export const Button = styled(Link)`
   justify-content: center;
   grid-area: 3/11/4/6;
   width: 90%;
-  max-width: 1000px;
+  max-width: 350px;
   height: 10%;
   border-radius: 0.6rem;
   box-shadow: 0 0 1px 1px ${({ theme }) => theme.dimBackground};
@@ -18,7 +18,7 @@ export const Button = styled(Link)`
   background-color: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.black};
 
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
 
   transition: 0.5s;
@@ -42,28 +42,13 @@ export const Button = styled(Link)`
     content: '';
   }
 
-  @media ${device.mobileS} {
-    font-size: 1rem;
-  }
   @media ${device.mobileM} {
-    font-size: 1rem;
-  }
-  @media ${device.tabletS} {
-    width: 70%;
-  }
-  @media ${device.tabletM} {
     font-size: 1.8rem;
   }
-  @media ${device.tabletL} {
-    font-size: 2.8rem;
-  }
-  @media ${device.mobileXL} {
-    font-size: 3.4rem;
-  }
-  @media ${device.desktop13} {
+
+  @media ${device.desktop} {
     width: 50%;
     height: 15%;
-    font-size: 1.8rem;
 
     &:active {
       &::before {
@@ -79,24 +64,6 @@ export const Button = styled(Link)`
         left: calc(100% - 0.6rem);
 
         height: 0.3rem;
-      }
-    }
-  }
-  @media ${device.desktopHD} {
-    font-size: 2.5rem;
-  }
-  @media ${device.desktop4k} {
-    height: 10%;
-    &:before {
-      width: 2rem;
-    }
-
-    &:hover {
-      &::before {
-        top: 50%;
-        left: calc(100% - 30px);
-
-        height: 1rem;
       }
     }
   }
