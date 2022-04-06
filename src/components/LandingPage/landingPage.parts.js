@@ -22,10 +22,15 @@ export const BackgroundPhoto = styled.div`
 
 export const Workplace = styled.span`
   position: relative;
-  top: 10%;
+  top: 20px;
   z-index: 1;
-
   grid-area: 1/8/2/12;
+
+  display: inline-block;
+  width: 100px;
+  height: 65px;
+  padding-bottom: 5px;
+  border-bottom: ${({ theme }) => theme.black} 2px solid;
 
   color: ${({ theme }) => theme.black};
 
@@ -33,34 +38,14 @@ export const Workplace = styled.span`
   font-weight: 300;
   text-transform: uppercase;
 
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 110%;
-    height: 2px;
-
-    background-color: ${({ theme }) => theme.black};
-    content: '';
-  }
-
   @media ${device.mobileM} {
-    font-size: 1.3rem;
-    &::after {
-      bottom: -10px;
-    }
+    font-size: 1.2rem;
+    width: 120px;
+    height: 80px;
+    grid-area: 1/10/2/13;
   }
-  @media ${device.mobileL} {
-    &::after {
-      width: 100%;
-    }
-  }
+
   @media ${device.desktop} {
-    top: 30%;
-    &::after {
-      bottom: 20px;
-      width: 100%;
-    }
+    top: 10px;
   }
 `;
