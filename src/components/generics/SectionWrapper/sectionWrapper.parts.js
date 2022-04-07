@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 
   transition: 0.8s;
 
+  background-color: ${({ bgColor }) => bgColor};
   background-image: url(${({ image }) => image});
   background-repeat: no-repeat;
   background-size: 112.5vh 150vh;

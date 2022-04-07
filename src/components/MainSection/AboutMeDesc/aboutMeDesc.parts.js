@@ -4,33 +4,21 @@ import { device } from '../../../constants/devices';
 export const Container = styled.div`
   grid-area: 2/2/7/12;
 
-  margin: 0 0.6rem;
+  margin: 0 10px;
 
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 300;
   text-align: justify;
 
-  @media ${device.mobileM} {
-    font-size: 0.7rem;
-  }
-  @media ${device.tabletS} {
-    font-size: 0.6rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 1rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.3rem;
-  }
-  @media ${device.mobileXL} {
+  @media ${device.mobileL} {
     font-size: 2.1rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     grid-area: 2/1/12/8;
     margin: 0 2rem;
     font-size: 1.3rem;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     margin: 3.6rem 1.2rem 0 0;
     font-size: 1.6rem;
   }
@@ -125,7 +113,7 @@ export const Line = styled.span`
       transform: translateX(200%);
     }
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     margin-left: 1.2rem;
   }
 `;

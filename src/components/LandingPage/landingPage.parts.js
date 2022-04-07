@@ -30,7 +30,7 @@ export const Workplace = styled.span`
   width: 100px;
   height: 65px;
   padding-bottom: 5px;
-  border-bottom: ${({ theme }) => theme.black} 2px solid;
+  border-bottom: ${({ theme }) => theme.black} 1.5px solid;
 
   color: ${({ theme }) => theme.black};
 

@@ -22,7 +22,7 @@ export const Project = styled.button`
 
   transition: 0.5s;
 
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     cursor: pointer;
     filter: grayscale(100%);
     -webkit-text-stroke: 1px ${({ theme }) => theme.white};
@@ -56,7 +56,7 @@ export const Project = styled.button`
       }
     }
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     &:hover {
       box-shadow: 0 0 0 3px ${({ theme }) => theme.mint},
         0 0 0 5px ${({ theme }) => theme.black},
@@ -89,23 +89,11 @@ export const TitleOfProject = styled.h3`
   @media ${device.mobileM} {
     font-size: 0.6rem;
   }
-  @media ${device.tabletS} {
-    height: 50%;
-    width: 120%;
-    font-size: 0.7rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 1.2rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.4rem;
-    height: 40%;
-    box-shadow: 0 0 1px 1px black;
-  }
-  @media ${device.mobileXL} {
+
+  @media ${device.mobileL} {
     font-size: 2.5rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 0;
     background-color: transparent;
     box-shadow: none;
@@ -118,10 +106,8 @@ export const TitleOfProject = styled.h3`
 export const UCBadge = styled.img`
   width: 75%;
   transform: translate(-50%, 20%) rotate(-30deg);
-  @media ${device.tabletS} {
-    width: 80%;
-  }
-  @media ${device.desktop13} {
+
+  @media ${device.desktop} {
     transform: translate(-50%, -50%) rotate(-30deg);
     width: 60%;
   }

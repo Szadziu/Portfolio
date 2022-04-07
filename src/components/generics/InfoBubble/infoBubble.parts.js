@@ -15,30 +15,16 @@ export const InfoModal = styled.div`
   background-color: ${({ theme }) => theme.darkGray};
   color: ${({ theme }) => theme.white};
 
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: 300;
-  text-align: left;
+  text-align: justify;
 
   overflow-y: scroll;
 
   @media ${device.mobileM} {
     font-size: 0.9rem;
   }
-  @media ${device.tabletS} {
-    font-size: 0.8rem;
-    top: -25%;
-    right: 120%;
-    width: 35vw;
-    height: 25vh;
-  }
-  @media ${device.tabletM} {
-    font-size: 1rem;
-    height: 20vh;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.4rem;
-  }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     width: 40vw;
     height: 30vh;
     font-size: 1.2rem;
@@ -59,7 +45,7 @@ export const InfoModal = styled.div`
       background: ${({ theme }) => theme.darkGray};
     }
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     font-size: 1.5rem;
     height: 25vh;
   }

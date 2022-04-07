@@ -37,15 +37,22 @@ export const SKILL_BUNDLE = [
   },
   {
     id: 3,
+    name: 'TypeScript',
+    advancement: 3,
+    desc: 'Podstawowa znajomość typowania poprzez zastosowanie type, alias, interface, enum, typów generycznych.',
+  },
+  {
+    id: 4,
     name: 'React',
     advancement: 5,
     desc: 'Znajomość biblioteki React wystarczająca na stworzenie prostej aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooks reacta takie jak: useState, useEffect, useRef, useContext, usePortal, custom hooks, react-context, react-router (SPA), styled-components, npm, git, cra, podstawy react-redux, react query.',
   },
+
   {
-    id: 4,
-    name: 'TypeScript',
-    advancement: 3,
-    desc: 'Podstawowa znajomość typowania poprzez zastosowanie type, alias, interface, enum, typów generycznych.',
+    id: 5,
+    name: 'Vue',
+    advancement: 2,
+    desc: 'Zapoznanie się z podstawami Vue w wersji 2 oraz 3',
   },
 ];
 

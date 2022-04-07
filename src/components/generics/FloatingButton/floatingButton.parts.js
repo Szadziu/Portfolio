@@ -18,25 +18,13 @@ export const Button = styled.button`
   transition: 0.3s;
   cursor: ${({ visible }) => visible && 'pointer'};
 
-  @media ${device.tabletM} {
-    width: 5.5rem;
-    height: 5.5rem;
-    right: 1.25rem;
-    bottom: 1.25rem;
-  }
-  @media ${device.tabletL} {
-    width: 7.5rem;
-    height: 7.5rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
-  }
-  @media ${device.mobileXL} {
+  @media ${device.mobileL} {
     width: 8rem;
     height: 8rem;
     right: 2.5rem;
     bottom: 2.5rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     width: 5rem;
     height: 5rem;
     right: 1.25rem;
@@ -46,7 +34,7 @@ export const Button = styled.button`
       transform: scale(1.2);
     }
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     width: 6.8rem;
     height: 6.8rem;
     right: 10.5rem;

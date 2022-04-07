@@ -9,11 +9,11 @@ export const Bar = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 80%;
-  height: 18%;
+  height: 15%;
   border-bottom: 2px solid ${({ theme }) => theme.black};
   padding-bottom: 0.3rem;
 
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     height: 20%;
   }
 `;
@@ -22,21 +22,15 @@ export const Boxes = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 3px;
+  gap: 5px;
   width: 60%;
   height: 100%;
 
-  @media ${device.tabletM} {
-    gap: 0.3rem;
-  }
-  @media ${device.tabletL} {
-    gap: 0.5rem;
-  }
-  @media ${device.mobileXL} {
+  @media ${device.mobileL} {
     gap: 0.8rem;
     padding-bottom: 0.5rem;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     gap: 0.6rem;
   }
   @media ${device.desktop4k} {
@@ -55,26 +49,16 @@ export const BoxOfSkill = styled.div`
   @media ${device.mobileM} {
     height: ${({ height }) => height + 10 + 'px'};
   }
-  @media ${device.tabletM} {
-    height: ${({ height }) => height + 20 + 'px'};
-  }
-  @media ${device.tabletL} {
-    width: 1rem;
-    height: ${({ height }) => height + 30 + 'px'};
-  }
-  @media ${device.mobileXL} {
+  @media ${device.mobileL} {
     width: 1.4rem;
 
     height: ${({ height }) => height + 40 + 'px'};
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     height: ${({ height }) => height + 15 + 'px'};
   }
-  @media ${device.desktop15} {
-    width: 1.25rem;
-    height: ${({ height }) => height + 20 + 'px'};
-  }
-  @media ${device.desktopHD} {
+
+  @media ${device.desktopFHD} {
     width: 1.5rem;
     height: ${({ height }) => height + 30 + 'px'};
   }

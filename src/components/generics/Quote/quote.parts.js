@@ -13,30 +13,16 @@ export const QuoteParam = styled.p`
 
   font-style: italic;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
 
   @media ${device.mobileM} {
     font-size: 1rem;
   }
-  @media ${device.tabletS} {
-    font-size: 1.1rem;
-  }
-  @media ${device.tabletM} {
-    margin-top: 0;
-
-    font-size: 1.9rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 2.5rem;
-  }
-  @media ${device.mobileXL} {
+  @media ${device.mobileL} {
     font-size: 3.2rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 1.7rem;
-  }
-  @media ${device.desktop15} {
-    font-size: 1.8rem;
   }
   @media ${device.desktop4k} {
     font-size: 3.7rem;
