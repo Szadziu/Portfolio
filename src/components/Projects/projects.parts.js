@@ -7,15 +7,14 @@ export const ProjectsWrapper = styled.div`
   left: 50%;
 
   display: flex;
+  gap: 40px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   flex-wrap: wrap;
 
-  background-color: rgba(0, 0, 0, 0.2);
-
   width: 100%;
-  height: 100%;
+  height: 60%;
   transform: translate(-50%, -50%);
 
   @media ${device.mobileM} {

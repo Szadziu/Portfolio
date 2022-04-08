@@ -3,27 +3,21 @@ import { device } from '../../../constants/devices';
 
 export const Label = styled.label`
   height: 2rem;
+  width: 100%;
 
   color: ${({ theme }) => theme.mint};
-  
-  font-size: 0.7rem;
 
-  @media ${device.mobileM} {
-    font-size: 1rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 1.2rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.5rem;
-  }
-  @media ${device.mobileXL} {
+  font-size: 1rem;
+
+  border: 1px solid gray;
+
+  @media ${device.mobileL} {
     font-size: 3.2rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 1rem;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     font-size: 1.2rem;
   }
   @media ${device.desktop4k} {

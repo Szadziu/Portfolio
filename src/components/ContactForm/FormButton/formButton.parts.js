@@ -3,7 +3,6 @@ import { device } from '../../../constants/devices';
 
 export const Button = styled.button`
   align-self: flex-end;
-  border-radius: 0.6rem;
   padding: 0.6rem;
   margin-right: 1rem;
 
@@ -12,24 +11,22 @@ export const Button = styled.button`
 
   font-weight: 700;
   font-size: 0.7rem;
+  font-family: 'Lato', 'sans-serif';
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+
+  border: 1px solid blue;
 
   @media ${device.mobileM} {
     font-size: 1rem;
   }
-  @media ${device.tabletM} {
-    font-size: 1.4rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.9rem;
-  }
-  @media ${device.mobileXL} {
+
+  @media ${device.mobileL} {
     margin-right: 5rem;
     padding: 1.5rem;
     font-size: 2.8rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 1.2rem;
 
     &:hover {
@@ -37,7 +34,7 @@ export const Button = styled.button`
       cursor: pointer;
     }
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     font-size: 1.5rem;
     margin-right: 2.5rem;
   }

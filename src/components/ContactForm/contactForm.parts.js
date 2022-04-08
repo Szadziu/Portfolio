@@ -11,10 +11,13 @@ export const Wrapper = styled.div`
   z-index: 1;
 
   display: flex;
+  justify-content: center;
   grid-area: 2/12/11/2;
   border-radius: 0.6rem;
 
   background-color: ${({ theme }) => theme.darkGray};
+
+  border: 1px solid white;
 
   &:after {
     position: absolute;
@@ -31,7 +34,7 @@ export const Wrapper = styled.div`
     content: '';
   }
 
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     grid-area: 2/10/11/4;
   }
 `;
@@ -41,30 +44,34 @@ export const FormWrapper = styled(Form)`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  margin-left: 1rem;
+
+  font-family: 'Lato', 'sans-serif';
+
+  border: 1px solid orange;
+
+  /* background-color: #fff; */
 `;
 
 export const FormTitle = styled.span`
   position: relative;
 
   align-self: flex-start;
-  margin: 1rem 0 2rem 0.5rem;
+  margin: 1rem 0;
   height: 5%;
 
   color: ${({ theme }) => theme.pink};
 
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
 
+  border: 1px solid teal;
   &:after {
-    position: absolute;
-    left: 0;
-
     display: block;
-    width: 1.8rem;
-    height: 0.25rem;
+    width: 1rem;
+    height: 0.15rem;
+    margin-top: 5px;
 
     background: ${({ theme }) => theme.pink};
 
@@ -73,24 +80,14 @@ export const FormTitle = styled.span`
   @media ${device.mobileM} {
     font-size: 1.2rem;
   }
-  @media ${device.tabletM} {
-    left: 0.8rem;
-
-    font-size: 2.2rem;
-  }
-  @media ${device.tabletL} {
-    margin: 2rem 0;
-
-    font-size: 2.6rem;
-  }
-  @media ${device.mobileXL} {
+  @media ${device.mobileL} {
     margin-left: 2rem;
     font-size: 4rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 1.5rem;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     font-size: 2rem;
     margin: 2rem 0 2rem 1rem;
   }
@@ -115,6 +112,8 @@ export const CooperateInfo = styled.p`
 
   font-size: 0.43rem;
 
+  border: 1px solid coral;
+
   user-select: none;
   @media ${device.mobileM} {
     font-size: 0.8rem;
@@ -122,23 +121,14 @@ export const CooperateInfo = styled.p`
   @media ${device.mobileL} {
     font-size: 0.55rem;
   }
-  @media ${device.tabletS} {
-    font-size: 0.8rem;
-    padding-bottom: 0.5rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 1rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.4rem;
-  }
-  @media ${device.mobileXL} {
+
+  @media ${device.mobileL} {
     font-size: 1.8rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 1rem;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     font-size: 1.2rem;
   }
   @media ${device.desktop4k} {

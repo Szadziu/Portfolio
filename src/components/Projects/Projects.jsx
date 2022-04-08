@@ -25,7 +25,7 @@ const Projects = () => {
     <P.Wrapper id="projects">
       <SectionWrapper bgColor="white">
         {isModalOpen && <Modal />}
-        <SectionTitle color={theme.mint}>Moje projekty</SectionTitle>
+        <SectionTitle color={theme.black}>Moje projekty</SectionTitle>
         <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
       </SectionWrapper>
     </P.Wrapper>

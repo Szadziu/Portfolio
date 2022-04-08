@@ -4,7 +4,7 @@ import { device } from '../../../constants/devices';
 
 export const Input = styled(Field)`
   width: 100%;
-  height: 50%;
+  height: 60%;
   border: none;
   border-bottom: ${({ error, theme }) =>
     error ? `1px solid ${theme.pink}` : `1px solid ${theme.darkerGray}`};
@@ -13,11 +13,14 @@ export const Input = styled(Field)`
   background: none;
   color: ${({ theme }) => theme.brighterGray};
 
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  font-family: 'Lato', 'sans-serif';
   letter-spacing: 1px;
   outline: none;
 
   transition: 0.4s;
+
+  border: 1px solid yellow;
 
   &::placeholder {
     color: ${({ theme }) => theme.darkerGray};
@@ -30,23 +33,14 @@ export const Input = styled(Field)`
   @media ${device.mobileM} {
     font-size: 1rem;
   }
-  @media ${device.tabletS} {
-    padding-bottom: 0.4rem;
-    font-size: 0.7rem;
-  }
-  @media ${device.tabletM} {
-    font-size: 1.2rem;
-  }
-  @media ${device.tabletL} {
-    font-size: 1.4rem;
-  }
-  @media ${device.mobileXL} {
+
+  @media ${device.mobileL} {
     font-size: 2.8rem;
   }
-  @media ${device.desktop13} {
+  @media ${device.desktop} {
     font-size: 1rem;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     font-size: 1.4rem;
   }
   @media ${device.desktop4k} {
@@ -60,5 +54,7 @@ export const InputWrapper = styled.div`
   justify-content: space-between;
   width: 90%;
   height: 10%;
-  margin: 0.5rem 0 1rem 0;
+  margin-bottom: 1rem;
+
+  border: 1px solid pink;
 `;

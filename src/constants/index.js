@@ -62,6 +62,7 @@ export const PROJECTS = [
     name: 'Credit Calculator',
     img: creditCalculatorIcon,
     link: 'https://szadziu.github.io/CreditCalculator/',
+    ghLink: 'https://github.com/Szadziu/CreditCalculator',
     desc: 'Aplikacja przedstawia kalkulator do obliczeń rat kredytowych uwzględniając przy tym wybrane przez użytkownika oprocentowanie. Projekt przystosowany do urządzeń desktopowych. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty klasowe), styled-components, font-awesome.',
   },
   {
@@ -69,6 +70,7 @@ export const PROJECTS = [
     name: 'Mapty App',
     img: maptyIcon,
     link: 'https://szadziu.github.io/MaptyApp/',
+    ghLink: 'https://github.com/Szadziu/MaptyApp',
     desc: 'Aplikacja służy do wyznaczania miejsc z użyciem rzeczywistej mapy, w których określamy typ treningu jaki odbyliśmy, przebyty dystans, czas jaki zajęło ćwiczenie oraz w zależności od typu treningu jedną z dodatkowych opcji. Aplikacja zapisuje lokalnie nasze treningi. Projekt przystosowany do urządzeń desktopowych. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: Javascript (z użyciem klas), leaflet (mapa), operacje z obiektem Date oraz localStorage',
   },
   {
@@ -76,6 +78,7 @@ export const PROJECTS = [
     name: 'Box-shadow generator',
     img: cssGeneratorIcon,
     link: 'https://szadziu.github.io/boxShadowCSSGenerator/',
+    ghLink: 'https://github.com/Szadziu/boxShadowCSSGenerator',
     desc: 'Aplikacja służy do wygenerowania właściwości box-shadow (CSS), nadania jej własnych ustawień i zaprezentowania finalnego rezultatu. Istnieje również możliwość wybrania koloru przez użytkownika. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), styled-components, react hooks',
   },
   {
@@ -83,6 +86,7 @@ export const PROJECTS = [
     name: 'Calendar',
     img: calendarIcon,
     link: 'https://szadziu.github.io/calendarApp/',
+    ghLink: 'https://github.com/Szadziu/calendarApp',
     desc: 'Kalendarz jest aplikacją umożliwiającą zapisywanie wydarzeń/zadań na poszczególne dni. Kalendarz jest rzeczywisty, wykorzystano również możliwość zapisu aktualnego stanu na serwerze z użyciem zapytań. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), react-hooks, zapytania async/await, pre-processor Sass',
   },
   {
@@ -90,6 +94,7 @@ export const PROJECTS = [
     name: 'Clicker Browser Game',
     img: clickerGameIcon,
     link: 'https://centmsn.github.io/clicker-game',
+    ghLink: 'https://github.com/centmsn/clicker-game',
     desc: 'Aplikacja przedstawiająca grę polegającą na klikaniu w skarb znajdujący się w głownym panelu użytkownika pozwala generować zasoby w postaci tzw. złota, monet. Z ich użyciem gracz ma za zadanie odblokowywać kolejnych bohaterów, którzy wspomogą go poprzez dostarczenie dodatkowych zasobów i umiejętności. Przyrost złota gracza rośnie wtedy w znaczącym tempie co pozwala na wykup coraz to potężniejszych bohaterów. Obecnie gra jest rozwijana, posiada już takie funkcje jak zapisywanie i resetowanie gry, przewidywana jest sekcja osiągnięć. Aplikacja ta od początku powstaje w zespole dwuosobowym. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), styled-components, local Storage, react-hooks, react-redux',
   },
   {
@@ -97,29 +102,33 @@ export const PROJECTS = [
     name: 'Timer',
     img: timerIcon,
     link: 'https://szadziu.github.io/stoper',
+    ghLink: 'https://github.com/Szadziu/stoper',
     desc: 'Aplikacja imitująca stoper, umożliwia odmierzanie, zatrzymywanie oraz resetowanie czasu. Technologie, które zostały zastosowane w projekcie to: React (functional components), styled-components, operacje z obiektem Math',
   },
-  {
-    id: 6,
-    name: 'Shoping App',
-    img: shoppingListIcon,
-    link: null,
-    desc: 'Możliwości tej aplikacji, której zadaniem jest tworzenie list zakupowych są bardzo praktyczne. Użytkownik A może bowiem stworzyć listę, wysłać ją do innego użytkownika B, który obecnie robi zakupy. Wszyscy korzystający z danej listy mogą odznaczać lub dodawać nowe produkty, które od razu się zaaktualizują. Aplikacja pozwala również na oznaczanie już kupionuych produktów, lecz także przydzielenia statusu "obecnie brak" dzięki czemu użytkownik A może dany produkt zastąpić. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), tailwind, react-query',
-  },
-  {
-    id: 7,
-    name: 'Sports Store',
-    img: sportsStoreIcon,
-    link: null,
-    desc: 'Projekt w budowie',
-  },
-  {
-    id: 8,
-    name: 'Zadanie rekrutacyjne',
-    img: recruitmentTaskIcon,
-    link: null,
-    desc: 'Tutaj pozostawiam miejsce na pierwsze zadanie rekrutacyjne :) Technologie, które będą zastosowane w projekcie: te najbardziej odpowiednie',
-  },
+  // {
+  //   id: 6,
+  //   name: 'Shoping App',
+  //   img: shoppingListIcon,
+  //   link: null,
+  //   ghLink: null,
+  //   desc: 'Możliwości tej aplikacji, której zadaniem jest tworzenie list zakupowych są bardzo praktyczne. Użytkownik A może bowiem stworzyć listę, wysłać ją do innego użytkownika B, który obecnie robi zakupy. Wszyscy korzystający z danej listy mogą odznaczać lub dodawać nowe produkty, które od razu się zaaktualizują. Aplikacja pozwala również na oznaczanie już kupionuych produktów, lecz także przydzielenia statusu "obecnie brak" dzięki czemu użytkownik A może dany produkt zastąpić. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), tailwind, react-query',
+  // },
+  // {
+  //   id: 7,
+  //   name: 'Sports Store',
+  //   img: sportsStoreIcon,
+  //   link: null,
+  //   ghLink: null,
+  //   desc: 'Projekt w budowie',
+  // },
+  // {
+  //   id: 8,
+  //   name: 'Zadanie rekrutacyjne',
+  //   img: recruitmentTaskIcon,
+  //   link: null,
+  //   ghLink: null,
+  //   desc: 'Tutaj pozostawiam miejsce na pierwsze zadanie rekrutacyjne :) Technologie, które będą zastosowane w projekcie: te najbardziej odpowiednie',
+  // },
 ];
 
 export const SOCIALS = [

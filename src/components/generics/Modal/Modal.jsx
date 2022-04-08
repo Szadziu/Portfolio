@@ -3,6 +3,8 @@ import * as P from './modal.parts';
 import { ProjectsContext } from '../../../contexts/ProjectsContext';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
+import githubIcon from '../../../assets/github.png';
+import liveIcon from '../../../assets/live.png';
 
 const Modal = () => {
   const { isModalOpen, setIsModalOpen, currentProject } =
@@ -33,8 +35,23 @@ const Modal = () => {
           animate={{ opacity: 1, left: '50%' }}
           exit={{ opacity: 0 }}
         >
-          {currentProject.name}
+          <P.ProjectTitle className="title">
+            {currentProject.name}
+          </P.ProjectTitle>
           <P.CloseButton onClick={closeModal} />
+          <P.Icon
+            icon={liveIcon}
+            alt="live project link"
+            target="_blank"
+            href={currentProject.link}
+          />
+          <P.Icon
+            icon={githubIcon}
+            alt="github link"
+            target="_blank"
+            href={currentProject.ghLink}
+          />
+          <P.ProjectDescription>{currentProject.desc}</P.ProjectDescription>
         </P.Modal>
       )}
     </AnimatePresence>

@@ -11,7 +11,7 @@ const SingleProject = ({ currentProject, children }) => {
   const openModal = () => {
     setIsModalOpen(true);
     setCurrentProject(currentProject);
-    document.querySelector('body').style.overflow = 'hidden';
+    // document.querySelector('body').style.overflow = 'hidden';
   };
 
   return (

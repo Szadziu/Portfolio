@@ -5,19 +5,17 @@ import { device } from '../../../constants/devices';
 export const Project = styled.button`
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: 4px solid ${({ theme }) => theme.black};
   border-radius: 50%;
 
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
 
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 1px;
-  text-decoration: none;
+  /* text-decoration: none; */
   text-transform: uppercase;
 
   transition: 0.5s;
@@ -78,18 +76,14 @@ export const TitleOfProject = styled.h3`
   align-items: center;
   width: 100%;
   height: 40%;
-  box-shadow: 0 0 0.5px 0.5px black;
+  box-shadow: 0 0 0.5px 0.5px ${({ theme }) => theme.black};
   padding: 0.3rem;
 
-  background-color: white;
+  background-color: ${({ theme }) => theme.white};
   color: black;
 
-  font-size: 0.45rem;
+  font-size: 0.6rem;
   font-weight: 300;
-
-  @media ${device.mobileM} {
-    font-size: 0.6rem;
-  }
 
   @media ${device.mobileL} {
     font-size: 2.5rem;
@@ -106,7 +100,7 @@ export const TitleOfProject = styled.h3`
 
 export const UCBadge = styled.img`
   width: 75%;
-  transform: translate(-50%, 20%) rotate(-30deg);
+  transform: translate(-10%, 50%) rotate(-30deg);
 
   @media ${device.desktop} {
     transform: translate(-50%, -50%) rotate(-30deg);
