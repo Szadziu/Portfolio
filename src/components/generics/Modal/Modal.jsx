@@ -1,16 +1,19 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, forwardRef } from 'react';
 import * as P from './modal.parts';
 import { ProjectsContext } from '../../../contexts/ProjectsContext';
 import gsap from 'gsap';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Modal = () => {
-  const { isModalOpen, setIsModalOpen } = useContext(ProjectsContext);
+  const { isModalOpen, setIsModalOpen, currentProject } =
+    useContext(ProjectsContext);
   const modalRef = useRef();
 
   const closeModal = async () => {
     await gsap.to(modalRef.current, {
-      duration: 0.8,
+      duration: 0.5,
       scale: 0,
+      opacity: 0.5,
       x: '50vw',
       y: '50vh',
     });
@@ -19,15 +22,22 @@ const Modal = () => {
   };
 
   return (
-    <>
+    <AnimatePresence>
       <P.Overlay onClick={closeModal}></P.Overlay>
       {isModalOpen && (
-        <P.Modal ref={modalRef}>
+        <P.Modal
+          as={motion.div}
+          ref={modalRef}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          animate={{ opacity: 1, left: '50%' }}
+          exit={{ opacity: 0 }}
+        >
+          {currentProject.name}
           <P.CloseButton onClick={closeModal} />
-          Modal
         </P.Modal>
       )}
-    </>
+    </AnimatePresence>
   );
 };
 

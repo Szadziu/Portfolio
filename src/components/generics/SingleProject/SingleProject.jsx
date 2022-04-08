@@ -4,31 +4,28 @@ import underConstruction from '../../../assets/projectsIcons/underConstruction.p
 import { ProjectsContext } from '../../../contexts/ProjectsContext';
 import gsap from 'gsap';
 
-const SingleProject = ({ id, img, done, link, children }) => {
-  const { setIsModalOpen } = useContext(ProjectsContext);
+const SingleProject = ({ currentProject, children }) => {
+  const { setIsModalOpen, setCurrentProject } = useContext(ProjectsContext);
   const projectRef = useRef();
 
-  const openModal = async () => {
-    await gsap.to(projectRef.current, {
-      duration: 0.4,
-      translateY: '100%',
-    });
+  const openModal = () => {
     setIsModalOpen(true);
+    setCurrentProject(currentProject);
     document.querySelector('body').style.overflow = 'hidden';
   };
 
   return (
     <P.Project
-      key={id}
-      thumbnail={img}
-      done={done}
-      href={link}
+      key={currentProject.id}
+      thumbnail={currentProject.img}
+      done={currentProject.done}
+      href={currentProject.link}
       target="_blank"
       onClick={openModal}
       ref={projectRef}
     >
       <P.TitleOfProject>{children}</P.TitleOfProject>
-      {!!link || (
+      {!!currentProject.link || (
         <P.UCBadge
           src={underConstruction}
           alt="project is under construction"

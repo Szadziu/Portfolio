@@ -8,7 +8,8 @@ export const Title = styled.h1`
 
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 300;
+  padding: 5px 0;
   color: ${({ theme }) => theme.white};
 `;

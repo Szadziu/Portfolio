@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import closeBtn from '../../../assets/closeBtn.png';
+import { motion } from 'framer-motion';
 
-export const Modal = styled.div`
+export const Modal = styled(motion.div)`
   width: 80%;
   max-width: 500px;
   height: 50%;
@@ -10,10 +11,10 @@ export const Modal = styled.div`
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: 50%;
+  left: -50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 3rem;
+  font-size: 1rem;
   text-align: center;
 `;
 
@@ -25,14 +26,15 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
 `;
 
-export const CloseButton = styled.img`
+export const CloseButton = styled.button`
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 30px;
-  height: 30px;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
   background-image: url(${closeBtn});
   background-size: contain;
+  background-repeat: no-repeat;
   &:hover {
     cursor: pointer;
   }

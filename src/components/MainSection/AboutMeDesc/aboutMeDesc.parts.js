@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   margin: 0 10px;
 
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 300;
   text-align: justify;
 

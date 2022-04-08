@@ -46,7 +46,7 @@ const SkillsWrapper = () => {
         </P.SkillAdvancementInfo>
         {index === visibleModalIndex && (
           <div onClick={(e) => e.stopPropagation()}>
-            <InfoBubble description={skill.desc} id={skill.id} />
+            <InfoBubble skill={skill} />
           </div>
         )}
       </SkillBar>

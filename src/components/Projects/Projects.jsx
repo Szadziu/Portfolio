@@ -18,7 +18,7 @@ const Projects = () => {
 
   const generateProjects = () => {
     return PROJECTS.map((project) => (
-      <SingleProject {...project}>{project.name}</SingleProject>
+      <SingleProject currentProject={project}>{project.name}</SingleProject>
     ));
   };
   return (

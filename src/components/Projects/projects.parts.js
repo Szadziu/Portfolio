@@ -7,34 +7,27 @@ export const ProjectsWrapper = styled.div`
   left: 50%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 
   flex-wrap: wrap;
-  width: 50vh;
-  height: 50vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
 
   @media ${device.mobileM} {
-    width:45vh;
+    width: 45vh;
     height: 45vh;
   }
-  @media ${device.mobileL} {
-    width:55vh;
-    height: 55vh;
-  }
-  @media ${device.tabletS} {
-    width: 70vh;
-    height: 70vh;
-  }
-  @media ${device.mobileXL} {
-    width:45vh;
-    height: 45vh;
-  }
-  @media ${device.desktop13} {
+
+  @media ${device.desktop} {
     width: 75vh;
     height: 75vh;
   }
-  @media ${device.desktopHD} {
+  @media ${device.desktopFHD} {
     width: 80vh;
     height: 80vh;
     margin-top: 70px;
@@ -45,4 +38,6 @@ export const ProjectsWrapper = styled.div`
   }
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  background-color: pink;
+`;

@@ -7,9 +7,9 @@ export const Project = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 26%;
-  height: 26%;
-  border: 4px solid black;
+  width: 100px;
+  height: 100px;
+  border: 4px solid ${({ theme }) => theme.black};
   border-radius: 50%;
 
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
@@ -84,7 +84,8 @@ export const TitleOfProject = styled.h3`
   background-color: white;
   color: black;
 
-  font-size: 0.5rem;
+  font-size: 0.45rem;
+  font-weight: 300;
 
   @media ${device.mobileM} {
     font-size: 0.6rem;

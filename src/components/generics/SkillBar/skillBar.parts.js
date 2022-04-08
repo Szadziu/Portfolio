@@ -5,7 +5,7 @@ export const Bar = styled.div`
   position: relative;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   width: 80%;

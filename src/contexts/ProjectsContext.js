@@ -4,11 +4,13 @@ export const ProjectsContext = createContext({});
 
 const ProjectsContextProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentProject, setCurrentProject] = useState(null);
+  const [currentProject, setCurrentProject] = useState({});
 
   const value = {
     isModalOpen,
     setIsModalOpen,
+    currentProject,
+    setCurrentProject,
   };
 
   return (
