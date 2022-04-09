@@ -21,12 +21,10 @@ export const SkillContainer = styled.div`
 
 export const InfoIconLink = styled.button`
   align-self: flex-start;
-  margin-right: 1rem;
-  /* border: 1px solid red; */
 
   color: ${({ theme }) => theme.blue};
 
-  font-size: 1rem;
+  font-size: 0.8rem;
 
   cursor: pointer;
 
@@ -54,21 +52,9 @@ export const SkillTitle = styled.p`
   width: 100%;
 
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 300;
 
-  /* border: 1px solid blue; */
-
-  @media ${device.mobileM} {
-    /* font-size: 0.6rem; */
-  }
-
-  @media ${device.mobileL} {
-    font-size: 2.4rem;
-  }
-  @media ${device.desktop} {
-    font-size: 1.2rem;
-  }
   @media ${device.desktopFHD} {
     font-size: 1.6rem;
   }
@@ -83,12 +69,10 @@ export const SkillAdvancementInfo = styled.p`
   align-items: center;
   width: 100%;
 
-  /* border: 1px dashed red; */
-
   font-size: 0.8rem;
 
   @media ${device.mobileL} {
-    font-size: 2.4rem;
+    font-size: 1rem;
   }
   @media ${device.desktop} {
     font-size: 1.2rem;

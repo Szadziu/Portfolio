@@ -17,7 +17,9 @@ const LandingPage = () => {
 
   const generateMenuButtons = () => {
     return navigationConfigObject.map((btn, index) => (
-      <Button link={btn.link}>{btn.label}</Button>
+      <Button link={btn.link} key={index}>
+        {btn.label}
+      </Button>
     ));
   };
 

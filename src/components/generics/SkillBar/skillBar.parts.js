@@ -5,13 +5,10 @@ export const Bar = styled.div`
   position: relative;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   width: 80%;
-  height: 15%;
+  height: 40px;
   border-bottom: 2px solid ${({ theme }) => theme.black};
-  padding-bottom: 0.3rem;
 
   @media ${device.desktop} {
     height: 20%;
@@ -25,10 +22,10 @@ export const Boxes = styled.div`
   gap: 5px;
   width: 60%;
   height: 100%;
+  padding-bottom: 5px;
 
   @media ${device.mobileL} {
-    gap: 0.8rem;
-    padding-bottom: 0.5rem;
+    gap: 10px;
   }
   @media ${device.desktopFHD} {
     gap: 0.6rem;
@@ -49,12 +46,9 @@ export const BoxOfSkill = styled.div`
   @media ${device.mobileM} {
     height: ${({ height }) => height + 10 + 'px'};
   }
-  @media ${device.mobileL} {
-    width: 1.4rem;
 
-    height: ${({ height }) => height + 40 + 'px'};
-  }
-  @media ${device.desktop} {
+  @media ${device.mobileL} {
+    width: 1rem;
     height: ${({ height }) => height + 15 + 'px'};
   }
 
@@ -68,7 +62,7 @@ export const BoxOfSkill = styled.div`
   }
 `;
 
-export const TitleOfSkill = styled.p`
+export const InfoOfSkill = styled.p`
   display: flex;
   justify-content: flex-start;
   align-items: center;

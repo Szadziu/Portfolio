@@ -10,8 +10,9 @@ export const Button = styled(Link)`
   justify-content: center;
   grid-area: 3/11/4/6;
   width: 90%;
-  max-width: 350px;
+  max-width: 320px;
   height: 10%;
+  max-height: 70px;
   border-radius: 0.6rem;
   box-shadow: 0 0 1px 1px ${({ theme }) => theme.dimBackground};
 
@@ -44,6 +45,10 @@ export const Button = styled(Link)`
 
   @media ${device.mobileM} {
     font-size: 1.8rem;
+  }
+
+  @media ${device.mobileL} {
+    height: 20%;
   }
 
   @media ${device.desktop} {

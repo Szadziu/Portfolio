@@ -9,17 +9,16 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   gap: 40px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   flex-wrap: wrap;
 
   width: 100%;
-  height: 60%;
+  height: 75%;
   transform: translate(-50%, -50%);
 
   @media ${device.mobileM} {
-    width: 45vh;
-    height: 45vh;
+    justify-content: space-around;
   }
 
   @media ${device.desktop} {

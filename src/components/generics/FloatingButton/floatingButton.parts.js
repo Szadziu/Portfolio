@@ -18,11 +18,9 @@ export const Button = styled.button`
   transition: 0.3s;
   cursor: ${({ visible }) => visible && 'pointer'};
 
-  @media ${device.mobileL} {
-    width: 8rem;
-    height: 8rem;
-    right: 2.5rem;
-    bottom: 2.5rem;
+  @media ${device.mobileM} {
+    width: 4rem;
+    height: 4rem;
   }
   @media ${device.desktop} {
     width: 5rem;

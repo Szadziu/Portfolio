@@ -5,20 +5,25 @@ import { device } from '../../../constants/devices';
 export const Project = styled.button`
   position: relative;
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 30vw;
+  max-width: 130px;
+  height: 30vw;
+  max-height: 130px;
   border: 4px solid ${({ theme }) => theme.black};
   border-radius: 50%;
 
   background: center / contain no-repeat url(${({ thumbnail }) => thumbnail});
   color: ${({ theme }) => theme.white};
 
-  /* text-align: center; */
   letter-spacing: 1px;
-  /* text-decoration: none; */
   text-transform: uppercase;
 
   transition: 0.5s;
+
+  @media ${device.mobileM} {
+    max-width: 130px;
+    max-height: 130px;
+  }
 
   @media ${device.desktop} {
     cursor: pointer;
@@ -84,9 +89,10 @@ export const TitleOfProject = styled.h3`
 
   font-size: 0.6rem;
   font-weight: 300;
+  font-family: 'Lato', 'sans-serif';
 
-  @media ${device.mobileL} {
-    font-size: 2.5rem;
+  @media ${device.mobileM} {
+    font-size: 0.7rem;
   }
   @media ${device.desktop} {
     font-size: 0;

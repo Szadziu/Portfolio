@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../constants/devices';
 
 export const Title = styled.h1`
   grid-area: 1/3/2/11;
@@ -12,4 +13,12 @@ export const Title = styled.h1`
   font-weight: 300;
   padding: 5px 0;
   color: ${({ color }) => color};
+
+  @media ${device.mobileM} {
+    font-size: 1.5rem;
+  }
+
+  @media ${device.mobileL} {
+    margin-top: 15px;
+  }
 `;

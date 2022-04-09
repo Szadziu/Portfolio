@@ -24,7 +24,6 @@ const SkillsWrapper = () => {
     }
   }, [visibleModalIndex]);
 
-  const cogwheelIcon = <FontAwesomeIcon icon={faCog} spin />;
   const infoIcon = <FontAwesomeIcon icon={faEllipsisH} />;
 
   const renderListOfSkills = () => {

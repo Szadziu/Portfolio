@@ -42,7 +42,11 @@ export const Workplace = styled.span`
     font-size: 1.2rem;
     width: 120px;
     height: 80px;
-    grid-area: 1/10/2/13;
+    grid-area: 1/9/2/12;
+  }
+
+  @media ${device.mobileL} {
+    grid-area: 1/10/2/12;
   }
 
   @media ${device.desktop} {

@@ -30,10 +30,6 @@ export const Input = styled(Field)`
     border-bottom-color: ${({ theme }) => theme.brighterGray};
   }
 
-  @media ${device.mobileM} {
-    font-size: 1rem;
-  }
-
   @media ${device.mobileL} {
     font-size: 2.8rem;
   }

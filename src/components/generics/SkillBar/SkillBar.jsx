@@ -47,7 +47,7 @@ const SkillBar = ({ children, skill }) => {
 
   return (
     <P.Bar>
-      <P.TitleOfSkill>{children}</P.TitleOfSkill>
+      <P.InfoOfSkill>{children}</P.InfoOfSkill>
       <P.Boxes ref={ref}>{generateAdvancementLevel()}</P.Boxes>
     </P.Bar>
   );
