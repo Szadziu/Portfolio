@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Label = styled.label`
-  height: 2rem;
+  height: 1.5rem;
   width: 100%;
 
   color: ${({ theme }) => theme.mint};

@@ -4,7 +4,7 @@ import { device } from '../../../constants/devices';
 export const Button = styled.button`
   align-self: flex-end;
   padding: 0.6rem;
-  margin-right: 1rem;
+  margin-right: 5%;
 
   background-color: ${({ theme }) => theme.dimBackground};
   color: ${({ theme }) => theme.pink};

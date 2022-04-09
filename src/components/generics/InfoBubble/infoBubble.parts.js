@@ -7,7 +7,7 @@ export const InfoModal = styled.div`
   right: -10%;
   z-index: 1;
 
-  width: 60vw;
+  width: 65vw;
   height: 30vh;
   padding: 1.25rem 1rem;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
@@ -15,9 +15,10 @@ export const InfoModal = styled.div`
   background-color: ${({ theme }) => theme.darkGray};
   color: ${({ theme }) => theme.white};
 
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 300;
   text-align: justify;
+  hyphens: auto;
 
   overflow-y: scroll;
 

@@ -3,8 +3,7 @@ import { device } from '../../../constants/devices';
 
 export const TextAreaField = styled.textarea`
   width: 100%;
-  height: auto;
-  min-height: 150px;
+  flex-grow: 1;
   border: none;
   border-bottom: ${({ error, theme }) =>
     error ? `1px solid ${theme.pink}` : `1px solid ${theme.darkerGray}`};
@@ -12,7 +11,7 @@ export const TextAreaField = styled.textarea`
   background: none;
   color: ${({ theme }) => theme.brighterGray};
 
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-family: 'Lato', 'sans-serif';
   letter-spacing: 1px;
   outline: none;
@@ -28,10 +27,6 @@ export const TextAreaField = styled.textarea`
 
   &:focus {
     border-bottom-color: ${({ theme }) => theme.brighterGray};
-  }
-
-  @media ${device.mobileM} {
-    font-size: 1rem;
   }
 
   @media ${device.mobileL} {
@@ -54,5 +49,7 @@ export const TextAreaWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 55%;
+  height: 40%;
+
+  border: 1px solid violet;
 `;

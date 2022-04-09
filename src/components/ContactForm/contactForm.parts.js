@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
 export const FormWrapper = styled(Form)`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   width: 90%;
   height: 100%;
@@ -103,14 +103,14 @@ export const FormTitle = styled.span`
 export const CooperateInfo = styled.p`
   display: flex;
   align-items: center;
-  width: 80%;
-  height: 10%;
+  width: 90%;
+  padding: 10px 0;
   align-self: flex-start;
   margin-left: 5%;
 
   color: ${({ theme }) => theme.gray};
 
-  font-size: 0.43rem;
+  font-size: 0.6rem;
 
   border: 1px solid coral;
 

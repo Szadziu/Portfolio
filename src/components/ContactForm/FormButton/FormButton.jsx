@@ -1,14 +1,12 @@
-import { forwardRef } from "react";
-import Comment from "../../generics/Comment";
-import * as P from "./formButton.parts";
+import { forwardRef } from 'react';
+import * as P from './formButton.parts';
 
-const FormButton = forwardRef(({ children, isSubmitted, type }, ref) => {
+const FormButton = forwardRef(({ children, type }, ref) => {
   return (
     <>
       <P.Button type={type} ref={ref}>
         {children}
       </P.Button>
-      {isSubmitted && <Comment info>Wysłano</Comment>}
     </>
   );
 });

@@ -2,30 +2,25 @@ import styled, { css } from 'styled-components';
 import { device } from '../../../constants/devices';
 
 const infoComment = css`
-  margin-left: 3rem;
-
+  width: 90%;
   font-size: 2rem;
+  font-weight: 300;
   text-transform: uppercase;
-
-  @media ${device.tabletM} {
-    font-size: 3rem;
-  }
 `;
 
 export const Comment = styled.p`
   width: 100%;
-  height: 2rem;
+  height: 1.5rem;
+  line-height: 1.2rem;
 
   color: ${({ error, theme }) => (error ? theme.pink : theme.green)};
   ${({ info }) => (info ? infoComment : null)};
 
   border: 1px solid powderblue;
 
-  font-size: 0.6rem;
+  font-size: 1rem;
+  font-weight: 300;
 
-  @media ${device.mobileM} {
-    font-size: 0.8rem;
-  }
   @media ${device.mobileL} {
     font-size: 2rem;
   }
