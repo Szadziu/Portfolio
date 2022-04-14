@@ -9,11 +9,13 @@ export const Button = styled(Link)`
   align-items: center;
   justify-content: center;
   grid-area: 3/11/4/6;
+
   width: 90%;
-  max-width: 320px;
-  height: 10%;
+  max-width: 300px;
+  height: 12%;
   max-height: 70px;
-  border-radius: 0.6rem;
+
+  border-radius: 2px;
   box-shadow: 0 0 1px 1px ${({ theme }) => theme.dimBackground};
 
   background-color: ${({ theme }) => theme.white};
@@ -22,7 +24,6 @@ export const Button = styled(Link)`
   font-size: 1.2rem;
   font-weight: 300;
 
-  transition: 0.5s;
   cursor: pointer;
   user-select: none;
 
@@ -31,10 +32,10 @@ export const Button = styled(Link)`
     top: 0;
     left: 0;
 
-    width: 0.6rem;
+    width: 10px;
     height: 100%;
-    border-radius: 0.6rem;
-    margin-right: 1rem;
+
+    border-radius: 1px;
     box-shadow: 0 0 1px 1px ${({ theme }) => theme.black};
 
     background-color: ${({ theme }) => theme.mint};
@@ -44,7 +45,7 @@ export const Button = styled(Link)`
   }
 
   @media ${device.mobileM} {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   @media ${device.mobileL} {
@@ -52,23 +53,13 @@ export const Button = styled(Link)`
   }
 
   @media ${device.desktop} {
-    width: 50%;
-    height: 15%;
-
-    &:active {
-      &::before {
-        top: 50%;
-        left: calc(100% - 0.6rem);
-      }
-    }
-
     &:hover {
-      background-color: rgba(234, 218, 168, 0.2);
+      background-color: ${({ theme }) => theme.beige};
       &::before {
         top: 50%;
-        left: calc(100% - 0.6rem);
+        left: calc(100% - 10px);
 
-        height: 0.3rem;
+        height: 5px;
       }
     }
   }
