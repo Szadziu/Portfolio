@@ -8,7 +8,7 @@ export const Modal = styled(motion.div)`
   justify-content: center;
   align-items: flex-start;
   width: 80%;
-  max-width: 500px;
+  max-width: 380px;
   height: 50%;
   max-height: 500px;
   background-color: ${({ theme }) => theme.white};
@@ -21,11 +21,13 @@ export const Modal = styled(motion.div)`
   font-size: 1.5rem;
   font-weight: 300;
   text-align: center;
+  overflow: hidden;
 `;
 
 export const ProjectTitle = styled.p`
   width: 80%;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-bottom: 1px solid ${({ theme }) => theme.black};
   padding-bottom: 10px;
 `;
@@ -59,14 +61,15 @@ export const Icon = styled.a`
   background-size: contain;
   width: 80px;
   height: 80px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 `;
 
 export const ProjectDescription = styled.section`
   font-size: 1rem;
   hyphens: auto;
   text-align: justify;
-  padding: 10px 20px;
+  padding: 20px;
+  padding-bottom: 40px;
   width: 100%;
   height: 50%;
   overflow: scroll;

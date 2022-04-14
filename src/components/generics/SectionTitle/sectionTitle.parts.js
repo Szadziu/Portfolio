@@ -6,6 +6,7 @@ export const Title = styled.h1`
   align-self: center;
   border-top: 1.5px ${({ color }) => color} solid;
   border-bottom: 1.5px ${({ color }) => color} solid;
+  margin: 20px 0 15px;
 
   text-align: center;
   text-transform: uppercase;

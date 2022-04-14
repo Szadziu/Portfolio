@@ -24,7 +24,7 @@ export const SKILL_BUNDLE = [
     desc: 'Znajomość języka znaczników pozwalająca na tworzenie struktury drzewa HTML, jak również jego semantyczne zastosowanie oraz tworzenie i walidacja formularzy. Miałem do czynienia również z konwencją BEM',
   },
   {
-    id: 1,
+    id: 1, 
     name: 'CSS',
     advancement: 7,
     desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, css grid, flex box, media queries, responsive web design (RWD). Podstawowe doświadczenie z konwencją BEM oraz z preprocessorem Sass (korzystając ze składni scss). Używałem również w projekcie frameworka Tailwind CSS',

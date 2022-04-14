@@ -8,6 +8,7 @@ export const InfoModal = styled.div`
   z-index: 1;
 
   width: 65vw;
+  max-width: 250px;
   height: 30vh;
   padding: 1.25rem 1rem;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
@@ -25,6 +26,12 @@ export const InfoModal = styled.div`
   @media ${device.mobileM} {
     font-size: 0.9rem;
   }
+
+  @media ${device.mobileL} {
+    top: -200%;
+    left: -70%;
+  }
+
   @media ${device.desktop} {
     width: 40vw;
     height: 30vh;

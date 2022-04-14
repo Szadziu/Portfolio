@@ -11,6 +11,7 @@ export const Container = styled.div`
   text-align: justify;
   hyphens: auto;
   padding: 10px;
+  padding-bottom: 30px;
 
   @media ${device.desktop} {
     grid-area: 2/1/12/8;
@@ -23,7 +24,6 @@ export const Container = styled.div`
   }
   @media ${device.desktop4k} {
     margin-top: 4.8rem;
-
     font-size: 2.5rem;
   }
 `;
@@ -36,7 +36,7 @@ export const Line = styled.span`
 
   color: ${({ theme }) => theme.white};
 
-  line-height: 1.8;
+  line-height: 1.5;
 
   &::after {
     position: absolute;

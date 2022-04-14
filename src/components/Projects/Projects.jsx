@@ -22,13 +22,13 @@ const Projects = () => {
     ));
   };
   return (
-    <P.Wrapper id="projects">
-      <SectionWrapper bgColor="white">
+    <SectionWrapper bgColor="white">
+      <SectionTitle color={theme.black}>Moje projekty</SectionTitle>
+      <P.ProjectsWrapper id="projects">
+        {generateProjects()}
         {isModalOpen && <Modal />}
-        <SectionTitle color={theme.black}>Moje projekty</SectionTitle>
-        <P.ProjectsWrapper>{generateProjects()}</P.ProjectsWrapper>
-      </SectionWrapper>
-    </P.Wrapper>
+      </P.ProjectsWrapper>
+    </SectionWrapper>
   );
 };
 

@@ -2,28 +2,42 @@ import styled from 'styled-components';
 import { device } from '../../constants/devices';
 
 export const ProjectsWrapper = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%; */
 
-  display: flex;
-  gap: 40px;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
+  /* gap: 10px; */
+
+  justify-items: center;
   align-items: center;
 
-  flex-wrap: wrap;
+  border: 1px solid black;
 
-  width: 100%;
-  height: 75%;
-  transform: translate(-50%, -50%);
+  grid-area: 2/2/12/12;
+
+  /* display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center; */
+
+  /* flex-wrap: wrap; */
+
+  /* width: 100%; */
+  /* height: 75%; */
+  /* transform: translate(-50%, -50%); */
 
   @media ${device.mobileM} {
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media ${device.desktop} {
-    width: 75vh;
-    height: 75vh;
+    grid-area: 2/3/11/11;
   }
   @media ${device.desktopFHD} {
     width: 80vh;
@@ -34,8 +48,4 @@ export const ProjectsWrapper = styled.div`
     width: 60vh;
     height: 60vh;
   }
-`;
-
-export const Wrapper = styled.div`
-  background-color: pink;
 `;

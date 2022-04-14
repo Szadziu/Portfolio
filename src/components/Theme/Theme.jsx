@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import personalPhotoImage from '../../assets/personalPng.png';
 
-const THEME = {
+const THEME = { 
   personalPhoto: personalPhotoImage,
 
   darkOrange: 'rgb(209, 41, 23)',

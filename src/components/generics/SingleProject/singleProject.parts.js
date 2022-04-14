@@ -6,9 +6,9 @@ export const Project = styled.button`
   position: relative;
   display: flex;
   width: 30vw;
-  max-width: 130px;
+  max-width: 120px;
   height: 30vw;
-  max-height: 130px;
+  max-height: 120px;
   border: 4px solid ${({ theme }) => theme.black};
   border-radius: 50%;
 
@@ -21,8 +21,13 @@ export const Project = styled.button`
   transition: 0.5s;
 
   @media ${device.mobileM} {
-    max-width: 130px;
-    max-height: 130px;
+    /* max-width: 200px;
+    max-height: 200px; */
+  }
+
+  @media ${device.mobileL} {
+    max-width: 150px;
+    max-height: 150px;
   }
 
   @media ${device.desktop} {

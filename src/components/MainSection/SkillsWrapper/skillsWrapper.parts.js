@@ -13,6 +13,13 @@ export const SkillContainer = styled.div`
 
   background-color: ${({ theme }) => theme.white};
 
+  /* @media ${device.mobileM} {
+    grid-area: 7/3/12/13;
+  } */
+  @media ${device.mobileL} {
+    grid-area: 6/5/12/13;
+  }
+
   @media ${device.desktop} {
     grid-area: 2/8/12/13;
     padding-bottom: 1.2rem;
@@ -55,6 +62,10 @@ export const SkillTitle = styled.p`
   font-size: 0.8rem;
   font-weight: 300;
 
+  @media ${device.mobileM} {
+    font-size: 1rem;
+  }
+
   @media ${device.desktopFHD} {
     font-size: 1.6rem;
   }
@@ -71,7 +82,7 @@ export const SkillAdvancementInfo = styled.p`
 
   font-size: 0.8rem;
 
-  @media ${device.mobileL} {
+  @media ${device.mobileM} {
     font-size: 1rem;
   }
   @media ${device.desktop} {

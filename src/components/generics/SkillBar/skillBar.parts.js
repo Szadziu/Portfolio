@@ -44,6 +44,7 @@ export const BoxOfSkill = styled.div`
   background-color: ${({ color }) => color};
 
   @media ${device.mobileM} {
+    width: 0.8rem;
     height: ${({ height }) => height + 10 + 'px'};
   }
 
@@ -56,6 +57,7 @@ export const BoxOfSkill = styled.div`
     width: 1.5rem;
     height: ${({ height }) => height + 30 + 'px'};
   }
+
   @media ${device.desktop4k} {
     width: 1.8rem;
     height: ${({ height }) => height + 50 + 'px'};
@@ -71,7 +73,4 @@ export const InfoOfSkill = styled.p`
   height: 100%;
 
   color: ${({ theme }) => theme.black};
-
-  font-size: 0.6rem;
-  text-align: center;
 `;
