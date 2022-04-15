@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 import InfoBubble from '../../generics/InfoBubble';
 import SkillBar from '../../generics/SkillBar';
@@ -11,6 +12,7 @@ import * as P from './skillsWrapper.parts';
 
 const SkillsWrapper = () => {
   const [visibleModalIndex, setVisibleModalIndex] = useState(null);
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
 
   const closeModal = useCallback(() => {
     setVisibleModalIndex(null);
@@ -24,34 +26,53 @@ const SkillsWrapper = () => {
     }
   }, [visibleModalIndex]);
 
+  const toggleDisplaySideMenu = () => {
+    setIsSideMenuOpen(!isSideMenuOpen);
+  };
+
   const infoIcon = <FontAwesomeIcon icon={faEllipsisH} />;
 
   const renderListOfSkills = () => {
-    return SKILL_BUNDLE.map((skill, index) => (
-      <SkillBar skill={skill} key={skill.id}>
-        <P.SkillTitle>{skill.name}</P.SkillTitle>
-        <P.SkillAdvancementInfo>
-          <div onClick={(e) => e.stopPropagation()}>
-            <P.InfoIconLink
-              data-iconid={skill.id}
-              onClick={() =>
-                setVisibleModalIndex(index === visibleModalIndex ? null : index)
-              }
-            >
-              {infoIcon}
-            </P.InfoIconLink>
-          </div>
-          {`${skill.advancement * 10}%`}
-        </P.SkillAdvancementInfo>
-        {index === visibleModalIndex && (
-          <div onClick={(e) => e.stopPropagation()}>
-            <InfoBubble skill={skill} />
-          </div>
-        )}
-      </SkillBar>
-    ));
+    return SKILL_BUNDLE.map((skill, index) => {
+      const isModalVisible = index === visibleModalIndex;
+
+      return (
+        <SkillBar skill={skill} key={skill.id}>
+          <P.SkillTitle>{skill.name}</P.SkillTitle>
+          <P.SkillAdvancementInfo>
+            <div onClick={(e) => e.stopPropagation()}>
+              <P.InfoIconLink
+                data-iconid={skill.id}
+                onClick={() =>
+                  setVisibleModalIndex(isModalVisible ? null : index)
+                }
+              >
+                {infoIcon}
+              </P.InfoIconLink>
+            </div>
+            {`${skill.advancement * 10}%`}
+          </P.SkillAdvancementInfo>
+          {isModalVisible && (
+            <div onClick={(e) => e.stopPropagation()}>
+              <InfoBubble skill={skill} />
+            </div>
+          )}
+        </SkillBar>
+      );
+    });
   };
-  return <P.SkillContainer>{renderListOfSkills()}</P.SkillContainer>;
+
+  return (
+    <P.SkillContainer
+      as={motion.div}
+      transition={{ duration: 1 }}
+      layout="position"
+      isSideMenuOpen={isSideMenuOpen}
+      onClick={toggleDisplaySideMenu}
+    >
+      {renderListOfSkills()}
+    </P.SkillContainer>
+  );
 };
 
 export default SkillsWrapper;

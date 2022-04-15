@@ -1,28 +1,60 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { device } from '../../../constants/devices';
 
-export const SkillContainer = styled.div`
+export const SkillContainer = styled(motion.div)`
+  position: absolute;
+  right: 0;
+  top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  grid-area: 7/2/12/13;
-  border-radius: 0.6rem 0 0 0.6rem;
+  /* grid-area: 7/2/12/13; */
+  width: 80vw;
+  max-width: 500px;
+  height: 80vh;
+  max-height: 800px;
+  border-radius: 5px 0 0 5px;
   box-shadow: 0 0 5px 3px ${({ theme }) => theme.dimMint};
   padding: 10px 0;
+  transition: 1s;
+  transform: translateX(
+    ${({ isSideMenuOpen }) => (isSideMenuOpen ? 0 : '85%')}
+  );
 
   background-color: ${({ theme }) => theme.white};
 
-  /* @media ${device.mobileM} {
-    grid-area: 7/3/12/13;
-  } */
+  &::before {
+    position: absolute;
+    left: 10px;
+    top: 70%;
+    content: 'UMIEJĘTNOŚCI';
+    writing-mode: vertical-lr;
+    font-weight: 300;
+    border: 1px solid black;
+    padding: 10px 0;
+    border-radius: 10px 0 0 10px;
+    /* width: 10px; */
+    /* height: 30px; */
+    /* background-color: black; */
+  }
+
+  @media ${device.mobileM} {
+    margin-top: 20px;
+    /* padding: 20px 0; */
+    grid-area: 7/2/12/13;
+  }
   @media ${device.mobileL} {
-    grid-area: 6/5/12/13;
+    margin-top: 0;
+    grid-area: 2/6/11/13;
   }
 
   @media ${device.desktop} {
-    grid-area: 2/8/12/13;
-    padding-bottom: 1.2rem;
+    width: 75%;
+    justify-self: end;
+    /* grid-area: 2/8/12/13; */
+    /* padding-bottom: 1.2rem; */
   }
 `;
 

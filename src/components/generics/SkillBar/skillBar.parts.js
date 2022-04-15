@@ -4,6 +4,9 @@ import { device } from '../../../constants/devices';
 export const Bar = styled.div`
   position: relative;
 
+  align-self: flex-end;
+
+  margin-right: 10px;
   display: flex;
   flex-wrap: wrap;
   width: 80%;

@@ -1,15 +1,16 @@
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { checkOfDimensions } from '../../DefenderOfDimensions/DefenderOfDimensions';
 
-import gsap from "gsap";
-import * as P from "./aboutMeDesc.parts";
+import gsap from 'gsap';
+import * as P from './aboutMeDesc.parts';
 
 const AboutMeDesc = () => {
   const { ref, inView, entry } = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (inView) {
-      gsap.to(entry.target.children, { display: "block" });
+      gsap.to(entry.target.children, { display: 'block' });
     }
   }, [inView]);
 
@@ -22,6 +23,7 @@ const AboutMeDesc = () => {
         oddawać coraz to lepsze doznania i wrażenia na ręce użytkowników
         aplikacji, do których tworzenia mogłem się przyczynić.
       </P.Line>
+
       <P.Line>
         Ukończyłem studia inżynierskie o kierunku edukacji
         techniczno-informatycznej, lecz front-endu uczę się na własną rękę, a

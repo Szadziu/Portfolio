@@ -21,7 +21,7 @@ export const InfoModal = styled.div`
   text-align: justify;
   hyphens: auto;
 
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 
   @media ${device.mobileM} {
     font-size: 0.9rem;
