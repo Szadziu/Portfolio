@@ -3,13 +3,13 @@ import { device } from '../../../constants/devices';
 
 export const InfoModal = styled.div`
   position: absolute;
-  top: -200%;
-  right: -10%;
+  top: 100%;
+  right: 0;
   z-index: 1;
 
-  width: 65vw;
-  max-width: 250px;
-  height: 30vh;
+  width: 120%;
+  /* max-width: 250px; */
+  height: 500%;
   padding: 1.25rem 1rem;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
 

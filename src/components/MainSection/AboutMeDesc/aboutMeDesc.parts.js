@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
-  grid-area: 2/2/7/12;
+  grid-area: 2/2/12/11;
 
   /* border: 1px solid pink; */
 
   overflow: scroll;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 300;
   text-align: justify;
   hyphens: auto;

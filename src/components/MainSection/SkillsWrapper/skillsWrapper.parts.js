@@ -2,6 +2,27 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { device } from '../../../constants/devices';
 
+export const SkillLabel = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  writing-mode: vertical-lr;
+  font-weight: 300;
+  font-size: 1.6rem;
+  /* border: 1px solid black; */
+  /* opacity: 0.5; */
+  background-color: ${({ theme }) => theme.mint};
+  color: ${({ theme }) => theme.white};
+  padding: 10px 0;
+  /* border-radius: 0 10px 0 10px; */
+  height: 100%;
+  width: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+  line-height: 45px;
+`;
+
 export const SkillContainer = styled(motion.div)`
   position: absolute;
   right: 0;
@@ -11,9 +32,9 @@ export const SkillContainer = styled(motion.div)`
   justify-content: space-around;
   align-items: center;
   /* grid-area: 7/2/12/13; */
-  width: 80vw;
+  width: 90vw;
   max-width: 500px;
-  height: 80vh;
+  height: 60vh;
   max-height: 800px;
   border-radius: 5px 0 0 5px;
   box-shadow: 0 0 5px 3px ${({ theme }) => theme.dimMint};
@@ -24,21 +45,6 @@ export const SkillContainer = styled(motion.div)`
   );
 
   background-color: ${({ theme }) => theme.white};
-
-  &::before {
-    position: absolute;
-    left: 10px;
-    top: 70%;
-    content: 'UMIEJĘTNOŚCI';
-    writing-mode: vertical-lr;
-    font-weight: 300;
-    border: 1px solid black;
-    padding: 10px 0;
-    border-radius: 10px 0 0 10px;
-    /* width: 10px; */
-    /* height: 30px; */
-    /* background-color: black; */
-  }
 
   @media ${device.mobileM} {
     margin-top: 20px;
