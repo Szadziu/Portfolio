@@ -7,10 +7,10 @@ export const InfoModal = styled.div`
   right: 0;
   z-index: 1;
 
-  width: 120%;
+  width: 95vw;
   /* max-width: 250px; */
   height: 500%;
-  padding: 1.25rem 1rem;
+  padding: 20px 10px;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
 
   background-color: ${({ theme }) => theme.darkGray};

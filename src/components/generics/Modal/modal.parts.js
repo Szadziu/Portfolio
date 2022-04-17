@@ -9,7 +9,7 @@ export const Modal = styled(motion.div)`
   align-items: flex-start;
   width: 80%;
   max-width: 380px;
-  height: 50%;
+  height: 70%;
   max-height: 500px;
   background-color: ${({ theme }) => theme.white};
   position: absolute;

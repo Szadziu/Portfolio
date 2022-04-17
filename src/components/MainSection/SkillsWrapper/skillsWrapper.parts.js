@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { device } from '../../../constants/devices';
+import slideArrow from '../../../assets/fast-forward.png';
 
 export const SkillLabel = styled.div`
   position: absolute;
@@ -21,6 +22,10 @@ export const SkillLabel = styled.div`
   text-align: center;
   letter-spacing: 4px;
   line-height: 45px;
+
+  @media ${device.mobileL} {
+    display: none;
+  }
 `;
 
 export const SkillContainer = styled(motion.div)`
@@ -32,8 +37,8 @@ export const SkillContainer = styled(motion.div)`
   justify-content: space-around;
   align-items: center;
   /* grid-area: 7/2/12/13; */
-  width: 90vw;
-  max-width: 500px;
+  /* width: 90vw; */
+  width: 300px;
   height: 60vh;
   max-height: 800px;
   border-radius: 5px 0 0 5px;
@@ -44,16 +49,35 @@ export const SkillContainer = styled(motion.div)`
     ${({ isSideMenuOpen }) => (isSideMenuOpen ? 0 : '85%')}
   );
 
+  &::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-image: url(${slideArrow});
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 5%;
+    left: 20px;
+    z-index: 1;
+    transition: 1s;
+    transform: translateX(-50%)
+      rotateY(${({ isSideMenuOpen }) => (isSideMenuOpen ? '0' : '180deg')});
+    @media ${device.mobileL} {
+      display: none;
+    }
+  }
+
   background-color: ${({ theme }) => theme.white};
 
-  @media ${device.mobileM} {
-    margin-top: 20px;
-    /* padding: 20px 0; */
-    grid-area: 7/2/12/13;
-  }
   @media ${device.mobileL} {
-    margin-top: 0;
-    grid-area: 2/6/11/13;
+    /* margin-top: 0; */
+    position: static;
+    grid-area: 2/7/11/13;
+    transform: translateX(0);
+    width: 100%;
+    height: 100%;
   }
 
   @media ${device.desktop} {

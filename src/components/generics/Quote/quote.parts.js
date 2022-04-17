@@ -16,7 +16,7 @@ export const QuoteParam = styled.p`
   font-size: 1rem;
 
   @media ${device.mobileM} {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   @media ${device.desktop} {

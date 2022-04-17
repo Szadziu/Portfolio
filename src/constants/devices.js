@@ -2,7 +2,7 @@ const size = {
   // mobile devices
   mobileS: '320px', // 320x658 Galaxy S9+
   mobileM: '480px',
-  mobileL: '640px',
+  mobileL: '768px',
   // desktop devices
   desktop: '1024px', // 1280x720
   desktopFHD: '1920px', // 1366x768

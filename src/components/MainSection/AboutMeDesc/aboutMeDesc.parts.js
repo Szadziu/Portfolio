@@ -15,13 +15,14 @@ export const Container = styled.div`
   padding: 0 10px;
 
   @media ${device.mobileM} {
-    margin: 0 10px;
-    font-size: 1.1rem;
+    /* margin: 0 10px; */
+    font-size: 1.2rem;
   }
 
   @media ${device.mobileL} {
-    font-size: 1.3rem;
-    grid-area: 2/1/12/6;
+    /* font-size: 1rem; */
+    grid-area: 2/1/12/7;
+    /* border: 1px solid red; */
     margin: 0 20px;
   }
 

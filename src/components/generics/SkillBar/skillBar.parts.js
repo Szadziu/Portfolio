@@ -13,6 +13,9 @@ export const Bar = styled.div`
   height: 40px;
   border-bottom: 2px solid ${({ theme }) => theme.black};
 
+  @media ${device.mobileL} {
+    width: 90%;
+  }
   @media ${device.desktop} {
     height: 20%;
   }

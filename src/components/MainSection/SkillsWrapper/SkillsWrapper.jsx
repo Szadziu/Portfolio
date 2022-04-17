@@ -12,7 +12,7 @@ import * as P from './skillsWrapper.parts';
 
 const SkillsWrapper = () => {
   const [visibleModalIndex, setVisibleModalIndex] = useState(null);
-  const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
   const closeModal = useCallback(() => {
     setVisibleModalIndex(null);
