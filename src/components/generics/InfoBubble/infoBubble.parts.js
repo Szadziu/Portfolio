@@ -8,7 +8,7 @@ export const InfoModal = styled.div`
   z-index: 1;
 
   width: 95vw;
-  /* max-width: 250px; */
+  max-width: 250px;
   height: 500%;
   padding: 20px 10px;
   box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
@@ -21,24 +21,19 @@ export const InfoModal = styled.div`
   text-align: justify;
   hyphens: auto;
 
-  /* overflow-y: scroll; */
-
-  @media ${device.mobileM} {
-    font-size: 0.9rem;
-  }
-
   @media ${device.mobileL} {
-    top: -200%;
-    left: -70%;
+    top: -25px;
+    left: -380px;
+    max-width: 320px;
   }
 
   @media ${device.desktop} {
-    width: 40vw;
-    height: 30vh;
+    /* width: 40vw; */
+    height: 250px;
     font-size: 1.2rem;
 
     &::-webkit-scrollbar {
-      width: 0.6rem;
+      width: 0.8rem;
     }
 
     &::-webkit-scrollbar-track {
@@ -54,13 +49,9 @@ export const InfoModal = styled.div`
     }
   }
   @media ${device.desktopFHD} {
-    font-size: 1.5rem;
-    height: 25vh;
-  }
-  @media ${device.desktop4k} {
-    width: 20vw;
-    padding: 1.8rem 2.5rem;
-
-    font-size: 2.7rem;
+    font-size: 1.7rem;
+    max-width: 650px;
+    height: 250px;
+    left: -130%;
   }
 `;

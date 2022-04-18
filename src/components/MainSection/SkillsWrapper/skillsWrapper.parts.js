@@ -81,7 +81,7 @@ export const SkillContainer = styled(motion.div)`
   }
 
   @media ${device.desktop} {
-    width: 75%;
+    width: 80%;
     justify-self: end;
     /* grid-area: 2/8/12/13; */
     /* padding-bottom: 1.2rem; */

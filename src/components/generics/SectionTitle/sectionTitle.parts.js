@@ -5,6 +5,7 @@ export const Title = styled.h1`
   grid-area: 1/3/2/11;
 
   justify-self: center;
+  align-self: center;
   width: 100%;
 
   border-width: 1.5px 0;

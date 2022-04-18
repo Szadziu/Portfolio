@@ -27,11 +27,11 @@ export const Container = styled.div`
   }
 
   @media ${device.desktop} {
-    grid-area: 2/1/12/7;
-    font-size: 1.5rem;
+    grid-area: 2/1/12/8;
+    font-size: 1.55rem;
   }
   @media ${device.desktopFHD} {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   @media ${device.desktop4k} {
     margin-top: 4.8rem;
