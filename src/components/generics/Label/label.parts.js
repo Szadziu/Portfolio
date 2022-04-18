@@ -9,11 +9,6 @@ export const Label = styled.label`
 
   font-size: 1rem;
 
-  border: 1px solid gray;
-
-  @media ${device.mobileL} {
-    font-size: 3.2rem;
-  }
   @media ${device.desktop} {
     font-size: 1rem;
   }

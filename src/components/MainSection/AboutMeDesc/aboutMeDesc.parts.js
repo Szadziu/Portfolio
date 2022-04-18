@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   /* border: 1px solid pink; */
 
-  overflow: scroll;
+  overflow: auto;
 
   font-size: 0.95rem;
   font-weight: 300;

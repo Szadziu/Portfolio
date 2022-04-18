@@ -15,20 +15,15 @@ export const Button = styled.button`
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 
-  border: 1px solid blue;
-
   @media ${device.mobileM} {
     font-size: 1rem;
   }
 
   @media ${device.mobileL} {
-    margin-right: 5rem;
-    padding: 1.5rem;
-    font-size: 2.8rem;
+    padding: 15px;
+    font-size: 1.2rem;
   }
   @media ${device.desktop} {
-    font-size: 1.2rem;
-
     &:hover {
       color: ${({ theme }) => theme.brighterPink};
       cursor: pointer;

@@ -8,17 +8,18 @@ export const Img = styled.img`
 
   transition: 0.4s;
 
-  @media ${device.mobileL} {
-    height: 7.5rem;
-  }
-  @media ${device.desktop} {
+  @media ${device.mobileM} {
     height: 3rem;
+  }
+
+  @media ${device.desktop} {
     &:hover {
       transform: scale(1.4);
 
       cursor: pointer;
     }
   }
+
   @media ${device.desktopFHD} {
     height: 3.6rem;
   }
@@ -28,16 +29,14 @@ export const Img = styled.img`
 `;
 
 export const Banner = styled.div`
-  position: absolute;
-  left: 40%;
-  bottom: 0;
-  transform: translateX(-50%);
-
+  grid-area: 11/2/-1/-2;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 70vw;
-  height: 10vh;
+
+  @media ${device.desktop} {
+    grid-area: 11/3/-1/-3;
+  }
 `;
 
 export const SocialLink = styled.a`

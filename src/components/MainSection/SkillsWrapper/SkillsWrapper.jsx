@@ -69,7 +69,12 @@ const SkillsWrapper = () => {
       layout="position"
       isSideMenuOpen={isSideMenuOpen}
     >
-      <P.SkillLabel onClick={toggleDisplaySideMenu}>umiejętności</P.SkillLabel>
+      <P.SkillLabel
+        isSideMenuOpen={isSideMenuOpen}
+        onClick={toggleDisplaySideMenu}
+      >
+        umiejętności
+      </P.SkillLabel>
       {renderListOfSkills()}
     </P.SkillContainer>
   );

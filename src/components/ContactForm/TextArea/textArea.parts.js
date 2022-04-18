@@ -15,11 +15,10 @@ export const TextAreaField = styled.textarea`
   font-family: 'Lato', 'sans-serif';
   letter-spacing: 1px;
   outline: none;
+  padding-top: 5px;
 
   transition: 0.4s;
   resize: none;
-
-  border: 1px solid red;
 
   &::placeholder {
     color: ${({ theme }) => theme.darkerGray};
@@ -29,19 +28,8 @@ export const TextAreaField = styled.textarea`
     border-bottom-color: ${({ theme }) => theme.brighterGray};
   }
 
-  @media ${device.mobileL} {
-    padding-top: 4rem;
-    font-size: 2.8rem;
-  }
-  @media ${device.desktop} {
-    font-size: 1rem;
-  }
   @media ${device.desktopFHD} {
     font-size: 1.4rem;
-  }
-  @media ${device.desktop4k} {
-    padding-top: 2rem;
-    font-size: 2.2rem;
   }
 `;
 
@@ -50,6 +38,4 @@ export const TextAreaWrapper = styled.div`
   flex-direction: column;
   width: 90%;
   height: 40%;
-
-  border: 1px solid violet;
 `;

@@ -16,21 +16,10 @@ export const Comment = styled.p`
   color: ${({ error, theme }) => (error ? theme.pink : theme.green)};
   ${({ info }) => (info ? infoComment : null)};
 
-  border: 1px solid powderblue;
-
   font-size: 1rem;
   font-weight: 300;
 
   @media ${device.mobileL} {
-    font-size: 2rem;
-  }
-  @media ${device.desktop} {
-    font-size: 0.7rem;
-  }
-  @media ${device.desktopFHD} {
     font-size: 1rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 2rem;
   }
 `;

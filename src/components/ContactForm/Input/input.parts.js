@@ -8,7 +8,7 @@ export const Input = styled(Field)`
   border: none;
   border-bottom: ${({ error, theme }) =>
     error ? `1px solid ${theme.pink}` : `1px solid ${theme.darkerGray}`};
-  padding-top: 0.4rem;
+  padding-top: 5px;
 
   background: none;
   color: ${({ theme }) => theme.brighterGray};
@@ -20,8 +20,6 @@ export const Input = styled(Field)`
 
   transition: 0.4s;
 
-  border: 1px solid yellow;
-
   &::placeholder {
     color: ${({ theme }) => theme.darkerGray};
   }
@@ -30,15 +28,10 @@ export const Input = styled(Field)`
     border-bottom-color: ${({ theme }) => theme.brighterGray};
   }
 
-  @media ${device.mobileL} {
-    font-size: 2.8rem;
-  }
-  @media ${device.desktop} {
-    font-size: 1rem;
-  }
   @media ${device.desktopFHD} {
     font-size: 1.4rem;
   }
+
   @media ${device.desktop4k} {
     font-size: 2.2rem;
   }
@@ -51,6 +44,4 @@ export const InputWrapper = styled.div`
   width: 90%;
   height: 15%;
   margin-bottom: 1rem;
-
-  border: 1px solid pink;
 `;
