@@ -38,14 +38,4 @@ export const Button = styled.button`
     right: 10.5rem;
     bottom: 2rem;
   }
-  @media ${device.desktop2k} {
-    right: 15.5rem;
-    bottom: 6.25rem;
-  }
-  @media ${device.desktop4k} {
-    width: 9.3rem;
-    height: 9.3rem;
-    right: 72rem;
-    bottom: 3.1rem;
-  }
 `;

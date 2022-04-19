@@ -1,11 +1,31 @@
 import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
+export const ModalWrapper = styled.div`
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.brighterGray};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.gray};
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.darkerGray};
+  }
+`;
+
 export const InfoModal = styled.div`
   position: absolute;
   top: 100%;
   right: 0;
   z-index: 1;
+
+  overflow: auto;
 
   width: 95vw;
   max-width: 250px;
@@ -31,27 +51,10 @@ export const InfoModal = styled.div`
     /* width: 40vw; */
     height: 250px;
     font-size: 1.2rem;
-
-    &::-webkit-scrollbar {
-      width: 0.8rem;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: ${({ theme }) => theme.brighterGray};
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.gray};
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: ${({ theme }) => theme.darkGray};
-    }
   }
   @media ${device.desktopFHD} {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     max-width: 650px;
-    height: 250px;
-    left: -130%;
+    left: -125%;
   }
 `;

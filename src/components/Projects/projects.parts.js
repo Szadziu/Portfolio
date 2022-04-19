@@ -39,13 +39,4 @@ export const ProjectsWrapper = styled.div`
   @media ${device.desktop} {
     grid-area: 2/3/11/11;
   }
-  @media ${device.desktopFHD} {
-    width: 80vh;
-    height: 80vh;
-    margin-top: 70px;
-  }
-  @media ${device.desktop4k} {
-    width: 60vh;
-    height: 60vh;
-  }
 `;

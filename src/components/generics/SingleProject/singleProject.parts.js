@@ -36,9 +36,9 @@ export const Project = styled.button`
     -webkit-text-stroke: 1px ${({ theme }) => theme.white};
 
     &:hover {
-      z-index: 10;
+      z-index: 1;
 
-      transform: scale(1.5) rotate(1turn);
+      transform: scale(1.4) rotate(1turn);
       box-shadow: 0 0 0 1px ${({ theme }) => theme.mint},
         0 0 0 2px ${({ theme }) => theme.black},
         0 0 1px 2px ${({ theme }) => theme.black};
@@ -54,9 +54,13 @@ export const Project = styled.button`
         position: absolute;
         z-index: -1;
 
-        width: 95%;
-        height: 30%;
+        text-align: center;
+
+        width: 100%;
+        height: 40%;
         border-radius: 2rem;
+
+        /* border: 1px pink solid; */
 
         background-color: ${({ theme }) => theme.darkenedBackground};
 
@@ -65,6 +69,8 @@ export const Project = styled.button`
     }
   }
   @media ${device.desktopFHD} {
+    max-width: 200px;
+    max-height: 200px;
     &:hover {
       box-shadow: 0 0 0 3px ${({ theme }) => theme.mint},
         0 0 0 5px ${({ theme }) => theme.black},
@@ -78,8 +84,8 @@ export const Project = styled.button`
 `;
 
 export const TitleOfProject = styled.h3`
-  position: absolute;
-  top: -30%;
+  /* position: absolute;
+  top: -30%; */
 
   display: flex;
   justify-content: center;
@@ -100,11 +106,11 @@ export const TitleOfProject = styled.h3`
     font-size: 0.7rem;
   }
   @media ${device.desktop} {
+    position: static;
     font-size: 0;
     background-color: transparent;
     box-shadow: none;
-    top: 30%;
-    width: 80%;
+    /* width: 80%; */
     color: white;
   }
 `;

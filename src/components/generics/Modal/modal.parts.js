@@ -68,9 +68,24 @@ export const ProjectDescription = styled.section`
   font-size: 1rem;
   hyphens: auto;
   text-align: justify;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 0 20px;
   width: 100%;
   height: 50%;
-  overflow: scroll;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.brighterGray};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.darkerGray};
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.darkGray};
+  }
 `;

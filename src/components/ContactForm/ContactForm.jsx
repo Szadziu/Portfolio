@@ -76,7 +76,7 @@ const ContactForm = () => {
               as="textarea"
             />
 
-            {!isSendForm && <Comment info>Wysłano</Comment>}
+            {isSendForm && <Comment info>Wysłano</Comment>}
             <FormButton ref={buttonRef} type="submit">
               Wyślij
             </FormButton>

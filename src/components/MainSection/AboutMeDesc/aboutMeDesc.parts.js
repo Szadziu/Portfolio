@@ -8,6 +8,22 @@ export const Container = styled.div`
 
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.brighterGray};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.darkerGray};
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.darkGray};
+  }
+
   font-size: 0.95rem;
   font-weight: 300;
   text-align: justify;
