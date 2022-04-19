@@ -10,12 +10,9 @@ export const SkillLabel = styled.div`
   writing-mode: vertical-lr;
   font-weight: 300;
   font-size: 1.6rem;
-  /* border: 1px solid black; */
-  /* opacity: 0.5; */
   background-color: ${({ theme }) => theme.mint};
   color: ${({ theme }) => theme.white};
   padding: 10px 0;
-  /* border-radius: 0 10px 0 10px; */
   height: 100%;
   width: 45px;
   text-transform: uppercase;
@@ -56,8 +53,6 @@ export const SkillContainer = styled(motion.div)`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* grid-area: 7/2/12/13; */
-  /* width: 90vw; */
   width: 300px;
   height: 60vh;
   max-height: 800px;
@@ -72,7 +67,6 @@ export const SkillContainer = styled(motion.div)`
   background-color: ${({ theme }) => theme.white};
 
   @media ${device.mobileL} {
-    /* margin-top: 0; */
     position: static;
     grid-area: 2/7/11/13;
     transform: translateX(0);
@@ -83,8 +77,6 @@ export const SkillContainer = styled(motion.div)`
   @media ${device.desktop} {
     width: 80%;
     justify-self: end;
-    /* grid-area: 2/8/12/13; */
-    /* padding-bottom: 1.2rem; */
   }
 `;
 
@@ -109,11 +101,9 @@ export const InfoIconLink = styled.button`
     }
     font-size: 1.5rem;
   }
+
   @media ${device.desktopFHD} {
     font-size: 1.4rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 2.8rem;
   }
 `;
 
@@ -131,9 +121,6 @@ export const SkillTitle = styled.p`
   @media ${device.desktopFHD} {
     font-size: 1.6rem;
   }
-  @media ${device.desktop4k} {
-    font-size: 2.5rem;
-  }
 `;
 
 export const SkillAdvancementInfo = styled.p`
@@ -147,13 +134,12 @@ export const SkillAdvancementInfo = styled.p`
   @media ${device.mobileM} {
     font-size: 1rem;
   }
+
   @media ${device.desktop} {
     font-size: 1.2rem;
   }
+
   @media ${device.desktopFHD} {
     font-size: 1.5rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 2.5rem;
   }
 `;

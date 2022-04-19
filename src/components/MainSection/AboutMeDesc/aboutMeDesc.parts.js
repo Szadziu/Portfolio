@@ -4,8 +4,6 @@ import { device } from '../../../constants/devices';
 export const Container = styled.div`
   grid-area: 2/2/12/11;
 
-  /* border: 1px solid pink; */
-
   overflow: auto;
 
   &::-webkit-scrollbar {
@@ -31,14 +29,11 @@ export const Container = styled.div`
   padding: 0 10px;
 
   @media ${device.mobileM} {
-    /* margin: 0 10px; */
     font-size: 1.2rem;
   }
 
   @media ${device.mobileL} {
-    /* font-size: 1rem; */
     grid-area: 2/1/12/7;
-    /* border: 1px solid red; */
     margin: 0 20px;
   }
 
@@ -48,10 +43,6 @@ export const Container = styled.div`
   }
   @media ${device.desktopFHD} {
     font-size: 2rem;
-  }
-  @media ${device.desktop4k} {
-    margin-top: 4.8rem;
-    font-size: 2.5rem;
   }
 `;
 

@@ -16,6 +16,7 @@ export const Bar = styled.div`
   @media ${device.mobileL} {
     width: 90%;
   }
+
   @media ${device.desktop} {
     height: 20%;
   }
@@ -33,11 +34,9 @@ export const Boxes = styled.div`
   @media ${device.mobileL} {
     gap: 10px;
   }
+
   @media ${device.desktopFHD} {
     gap: 0.6rem;
-  }
-  @media ${device.desktop4k} {
-    gap: 1.2rem;
   }
 `;
 
@@ -62,11 +61,6 @@ export const BoxOfSkill = styled.div`
   @media ${device.desktopFHD} {
     width: 1.5rem;
     height: ${({ height }) => height + 30 + 'px'};
-  }
-
-  @media ${device.desktop4k} {
-    width: 1.8rem;
-    height: ${({ height }) => height + 50 + 'px'};
   }
 `;
 

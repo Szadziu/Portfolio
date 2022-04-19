@@ -12,10 +12,8 @@ export const Label = styled.label`
   @media ${device.desktop} {
     font-size: 1rem;
   }
+
   @media ${device.desktopFHD} {
     font-size: 1.2rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 2.2rem;
   }
 `;

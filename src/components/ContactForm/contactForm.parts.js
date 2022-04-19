@@ -40,14 +40,11 @@ export const Wrapper = styled.div`
 export const FormWrapper = styled(Form)`
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   align-items: center;
   width: 90%;
   height: 100%;
 
   font-family: 'Lato', 'sans-serif';
-
-  /* background-color: #fff; */
 `;
 
 export const FormTitle = styled.span`
@@ -75,23 +72,18 @@ export const FormTitle = styled.span`
   @media ${device.mobileM} {
     font-size: 1.2rem;
   }
+
   @media ${device.mobileL} {
     margin-left: 2rem;
-    /* font-size: 4rem; */
   }
+
   @media ${device.desktop} {
     font-size: 1.5rem;
   }
+
   @media ${device.desktopFHD} {
     font-size: 2rem;
     margin: 2rem 0 2rem 1rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 3.5rem;
-    &:after {
-      width: 4.3rem;
-      height: 0.6rem;
-    }
   }
 `;
 
@@ -108,9 +100,11 @@ export const CooperateInfo = styled.p`
   font-size: 0.6rem;
 
   user-select: none;
+
   @media ${device.mobileM} {
     font-size: 0.8rem;
   }
+
   @media ${device.mobileL} {
     font-size: 0.55rem;
   }
@@ -120,8 +114,5 @@ export const CooperateInfo = styled.p`
   }
   @media ${device.desktopFHD} {
     font-size: 1.2rem;
-  }
-  @media ${device.desktop4k} {
-    font-size: 1.4rem;
   }
 `;

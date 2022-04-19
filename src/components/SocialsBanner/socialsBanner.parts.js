@@ -23,9 +23,6 @@ export const Img = styled.img`
   @media ${device.desktopFHD} {
     height: 3.6rem;
   }
-  @media ${device.desktop4k} {
-    height: 9rem;
-  }
 `;
 
 export const Banner = styled.div`

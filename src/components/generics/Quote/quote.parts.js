@@ -22,7 +22,4 @@ export const QuoteParam = styled.p`
   @media ${device.desktop} {
     font-size: 1.7rem;
   }
-  @media ${device.desktop4k} {
-    font-size: 3.7rem;
-  }
 `;

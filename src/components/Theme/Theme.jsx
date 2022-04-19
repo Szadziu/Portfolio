@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import personalPhotoImage from '../../assets/personalPng.png';
 
 const THEME = {
+  //TODO changed names of colours for schema like gray-100, gray-300
   personalPhoto: personalPhotoImage,
 
   darkOrange: 'rgb(209, 41, 23)',

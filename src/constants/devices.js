@@ -1,13 +1,13 @@
 const size = {
   // mobile devices
-  mobileS: '320px', // 320x658 Galaxy S9+
+  mobileS: '320px',
   mobileM: '480px',
   mobileL: '768px',
   // desktop devices
-  desktop: '1024px', // 1280x720
-  desktopFHD: '1920px', // 1366x768
-  desktop2k: '2048px', // 2048x1080
-  desktop4k: '3840px', // 3840x2160
+  desktop: '1024px',
+  desktopFHD: '1920px',
+  desktop2k: '2048px',
+  desktop4k: '3840px',
 };
 
 export const device = {

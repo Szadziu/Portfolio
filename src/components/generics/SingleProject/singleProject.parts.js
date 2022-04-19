@@ -20,11 +20,6 @@ export const Project = styled.button`
 
   transition: 0.5s;
 
-  @media ${device.mobileM} {
-    /* max-width: 200px;
-    max-height: 200px; */
-  }
-
   @media ${device.mobileL} {
     max-width: 150px;
     max-height: 150px;
@@ -60,8 +55,6 @@ export const Project = styled.button`
         height: 40%;
         border-radius: 2rem;
 
-        /* border: 1px pink solid; */
-
         background-color: ${({ theme }) => theme.darkenedBackground};
 
         content: '';
@@ -84,9 +77,6 @@ export const Project = styled.button`
 `;
 
 export const TitleOfProject = styled.h3`
-  /* position: absolute;
-  top: -30%; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +100,6 @@ export const TitleOfProject = styled.h3`
     font-size: 0;
     background-color: transparent;
     box-shadow: none;
-    /* width: 80%; */
     color: white;
   }
 `;

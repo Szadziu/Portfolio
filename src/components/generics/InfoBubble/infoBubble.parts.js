@@ -48,7 +48,6 @@ export const InfoModal = styled.div`
   }
 
   @media ${device.desktop} {
-    /* width: 40vw; */
     height: 250px;
     font-size: 1.2rem;
   }

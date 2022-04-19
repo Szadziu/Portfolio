@@ -3,7 +3,7 @@ import { device } from '../../../constants/devices';
 
 export const Button = styled.button`
   align-self: flex-end;
-  padding: 0.6rem;
+  padding: 10px;
   margin-right: 5%;
 
   background-color: ${({ theme }) => theme.dimBackground};
@@ -32,9 +32,5 @@ export const Button = styled.button`
   @media ${device.desktopFHD} {
     font-size: 1.5rem;
     margin-right: 2.5rem;
-  }
-  @media ${device.desktop4k} {
-    padding: 1.2rem;
-    font-size: 3rem;
   }
 `;
