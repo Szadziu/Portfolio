@@ -22,14 +22,14 @@ export const Container = styled.div`
     background: ${({ theme }) => theme.darkGray};
   }
 
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 300;
   text-align: justify;
   hyphens: auto;
   padding: 0 10px;
 
   @media ${device.mobileM} {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   @media ${device.mobileL} {
@@ -39,10 +39,10 @@ export const Container = styled.div`
 
   @media ${device.desktop} {
     grid-area: 2/1/12/8;
-    font-size: 1.55rem;
+    font-size: 1.3rem;
   }
   @media ${device.desktopFHD} {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 `;
 

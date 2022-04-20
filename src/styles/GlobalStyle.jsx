@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Lato', sans-serif;
     }
+        
+
 
     ul, ol {
         list-style: none;

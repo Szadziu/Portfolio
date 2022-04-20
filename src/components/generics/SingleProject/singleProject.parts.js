@@ -21,12 +21,12 @@ export const Project = styled.button`
   transition: 0.5s;
 
   @media ${device.mobileL} {
+    cursor: pointer;
     max-width: 150px;
     max-height: 150px;
   }
 
   @media ${device.desktop} {
-    cursor: pointer;
     filter: grayscale(100%);
     -webkit-text-stroke: 1px ${({ theme }) => theme.white};
 

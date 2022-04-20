@@ -24,10 +24,10 @@ export const SKILL_BUNDLE = [
     desc: 'Znajomość języka znaczników pozwalająca na tworzenie struktury drzewa HTML, jak również jego semantyczne zastosowanie oraz tworzenie i walidacja formularzy. Miałem do czynienia również z konwencją BEM',
   },
   {
-    id: 1, 
+    id: 1,
     name: 'CSS',
     advancement: 7,
-    desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, css grid, flex box, media queries, responsive web design (RWD). Podstawowe doświadczenie z konwencją BEM oraz z preprocessorem Sass (korzystając ze składni scss). Używałem również w projekcie frameworka Tailwind CSS',
+    desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, grid, flex, media queries. Podstawowe doświadczenie z konwencją BEM oraz z preprocessorem sass. Używałem również w projekcie frameworka tailwind CSS',
   },
   {
     id: 2,
@@ -38,21 +38,21 @@ export const SKILL_BUNDLE = [
   {
     id: 3,
     name: 'TypeScript',
-    advancement: 3,
+    advancement: 2,
     desc: 'Podstawowa znajomość typowania poprzez zastosowanie type, alias, interface, enum, typów generycznych.',
   },
   {
     id: 4,
     name: 'React',
-    advancement: 5,
-    desc: 'Znajomość biblioteki React wystarczająca na stworzenie prostej aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooks reacta takie jak: useState, useEffect, useRef, useContext, usePortal, custom hooks, react-context, react-router (SPA), styled-components, npm, git, cra, podstawy react-redux, react query.',
+    advancement: 4,
+    desc: 'Znajomość biblioteki React wystarczająca na stworzenie aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooki reacta takie jak: useState, useEffect, useRef, useContext, usePortal, custom hooks, react-context, react-router (SPA), styled-components, npm, git, cra, react query.',
   },
 
   {
     id: 5,
     name: 'Vue',
-    advancement: 2,
-    desc: 'Zapoznanie się z podstawami Vue w wersji 2 oraz 3',
+    advancement: 3,
+    desc: 'Zapoznanie się z podstawami Vue w wersji 2 oraz 3. Znajomość podstawowych dyrektyw oraz używanie vue-router',
   },
 ];
 

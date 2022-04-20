@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import closeBtn from '../../../assets/closeBtn.png';
 import { motion } from 'framer-motion';
+import { device } from '../../../constants/devices';
 
 export const Modal = styled(motion.div)`
   display: flex;
@@ -22,6 +23,10 @@ export const Modal = styled(motion.div)`
   font-weight: 300;
   text-align: center;
   overflow: hidden;
+
+  @media ${device.desktopFHD} {
+    max-width: 550px;
+  }
 `;
 
 export const ProjectTitle = styled.p`
@@ -30,6 +35,10 @@ export const ProjectTitle = styled.p`
   margin-bottom: 20px;
   border-bottom: 1px solid ${({ theme }) => theme.black};
   padding-bottom: 10px;
+
+  @media ${device.desktopFHD} {
+    width: 90%;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -62,6 +71,12 @@ export const Icon = styled.a`
   width: 80px;
   height: 80px;
   margin: 0 auto 10px;
+  transition: 0.3s;
+  @media ${device.desktop} {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 `;
 
 export const ProjectDescription = styled.section`
@@ -72,6 +87,10 @@ export const ProjectDescription = styled.section`
   width: 100%;
   height: 50%;
   overflow: auto;
+
+  @media ${device.desktopFHD} {
+    font-size: 1.3rem;
+  }
 
   &::-webkit-scrollbar {
     width: 0.8rem;

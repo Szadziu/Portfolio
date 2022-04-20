@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-export const checkInitialDimensions = (min, max) => {
+export const checkInitialDimensions = (min, max = 658) => {
   if (window.innerWidth >= min && window.innerHeight >= max) return true;
   return false;
 };
 const DefenderOfDimensions = () => {
   const [isDimensionsCorrect, setIsDimensionsCorrect] = useState(
-    checkInitialDimensions(320, 658)
+    checkInitialDimensions(320)
   );
 
   window.addEventListener('resize', function () {
-    setIsDimensionsCorrect(checkInitialDimensions(320, 658));
+    setIsDimensionsCorrect(checkInitialDimensions(320));
   });
 
   return (
