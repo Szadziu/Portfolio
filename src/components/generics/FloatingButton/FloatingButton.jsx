@@ -1,17 +1,22 @@
-import { useState, useEffect } from "react";
-import { createPortal } from "react-dom";
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
-import floatingButtonImage from "../../../assets/upArrow.png";
+import floatingButtonImage from '../../../assets/upArrow.png';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 
-import * as P from "./floatingButton.parts";
+import * as P from './floatingButton.parts';
 
 const FloatingButton = () => {
   const [visible, setVisible] = useState(false);
 
+  const { width } = useWindowSize();
+  const floatingButtonXOffset = Math.max((width - 1600) / 2, 20);
+  console.log({ floatingButtonXOffset });
+
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
+    window.addEventListener('scroll', toggleVisible);
     return () => {
-      window.removeEventListener("scroll", toggleVisible);
+      window.removeEventListener('scroll', toggleVisible);
     };
   }, []);
 
@@ -23,7 +28,7 @@ const FloatingButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -33,8 +38,9 @@ const FloatingButton = () => {
       onClick={scrollToTop}
       image={floatingButtonImage}
       disabled={!visible}
+      xOffset={floatingButtonXOffset}
     />,
-    document.getElementById("floating-button")
+    document.getElementById('floating-button')
   );
 };
 

@@ -10,8 +10,11 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Lato', sans-serif;
     }
-        
 
+    #floating-button {
+        position: relative;
+        max-width:1600px;
+    }
 
     ul, ol {
         list-style: none;

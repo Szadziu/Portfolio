@@ -5,7 +5,7 @@ import floatingIcon from '../../../assets/upArrow.png';
 export const Button = styled.button`
   position: fixed;
   z-index: 2;
-  right: 0.6rem;
+  right: ${({ xOffset }) => xOffset}px;
   bottom: 0.6rem;
 
   width: 3rem;
@@ -15,7 +15,7 @@ export const Button = styled.button`
 
   background: center / contain no-repeat url(${floatingIcon});
 
-  transition: 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
   cursor: ${({ visible }) => visible && 'pointer'};
 
   @media ${device.mobileM} {
@@ -25,7 +25,6 @@ export const Button = styled.button`
   @media ${device.desktop} {
     width: 5rem;
     height: 5rem;
-    right: 1.25rem;
     bottom: 1.25rem;
 
     &:hover {
@@ -35,7 +34,6 @@ export const Button = styled.button`
   @media ${device.desktopFHD} {
     width: 6.8rem;
     height: 6.8rem;
-    right: 10.5rem;
     bottom: 2rem;
   }
 `;
