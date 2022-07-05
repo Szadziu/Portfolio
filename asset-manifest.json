@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.fea5a0a7.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.fea5a0a7.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.de63ce0f.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.de63ce0f.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.37da8305.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.37da8305.js.map",
     "static/js/2.b1f1d075.chunk.js": "/portfolio/static/js/2.b1f1d075.chunk.js",
@@ -15,9 +15,6 @@
     "static/media/linkedin.ebc59059.png": "/portfolio/static/media/linkedin.ebc59059.png",
     "static/media/mapty.00ed15c3.png": "/portfolio/static/media/mapty.00ed15c3.png",
     "static/media/personalPng.2d64fd62.png": "/portfolio/static/media/personalPng.2d64fd62.png",
-    "static/media/recruitmentTask.ad27d6f7.png": "/portfolio/static/media/recruitmentTask.ad27d6f7.png",
-    "static/media/shoppingList.7a519dd8.png": "/portfolio/static/media/shoppingList.7a519dd8.png",
-    "static/media/sportsStore.3e1a8951.png": "/portfolio/static/media/sportsStore.3e1a8951.png",
     "static/media/timer.78bd7c98.png": "/portfolio/static/media/timer.78bd7c98.png",
     "static/media/underConstruction.a814c84d.png": "/portfolio/static/media/underConstruction.a814c84d.png",
     "static/media/whatsapp.93fcbe0b.png": "/portfolio/static/media/whatsapp.93fcbe0b.png"
@@ -25,6 +22,6 @@
   "entrypoints": [
     "static/js/runtime-main.37da8305.js",
     "static/js/2.b1f1d075.chunk.js",
-    "static/js/main.fea5a0a7.chunk.js"
+    "static/js/main.de63ce0f.chunk.js"
   ]
 }
