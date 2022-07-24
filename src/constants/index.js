@@ -9,6 +9,7 @@ import cssGeneratorIcon from '../assets/projectsIcons/cssGenerator.png';
 import creditCalculatorIcon from '../assets/projectsIcons/creditCalculator.png';
 import maptyIcon from '../assets/projectsIcons/mapty.png';
 import timerIcon from '../assets/projectsIcons/timer.png';
+import dungeonIcon from '../assets/projectsIcons/dungeon.png';
 
 export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją."
   Apolinary Despinoix`;
@@ -18,38 +19,42 @@ export const SKILL_BUNDLE = [
         id: 0,
         name: 'HTML 5',
         advancement: 8,
-        desc: 'Znajomość języka znaczników pozwalająca na tworzenie struktury drzewa HTML, jak również jego semantyczne zastosowanie oraz tworzenie i walidacja formularzy. Miałem do czynienia również z konwencją BEM',
+        desc: 'Znajomość języka znaczników pozwalająca na tworzenie struktury drzewa HTML, zgodnie z semantycznym zastosowaniem tagów ES6 oraz tworzenie i walidacja formularzy.',
     },
+
     {
         id: 1,
         name: 'CSS',
         advancement: 7,
-        desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, grid, flex, media queries. Podstawowe doświadczenie z konwencją BEM oraz z preprocessorem sass. Używałem również w projekcie frameworka tailwind CSS',
+        desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, grid, flex, media queries. Doświadczenie z konwencją BEM oraz z preprocessorem sass. Używałem również w projekcie frameworka tailwind CSS',
     },
+
     {
         id: 2,
         name: 'JavaScript',
         advancement: 6,
         desc: 'Znajomość składni ES6+ i struktury Javascript, manipulacje DOM, zapytania przy użyciu fetch API, moduły javascript, localStorage, ogólne rozumienie koncepcji hoistingu, zakresu, prototypów, klas.',
     },
+
     {
         id: 3,
-        name: 'TypeScript',
-        advancement: 2,
-        desc: 'Podstawowa znajomość typowania poprzez zastosowanie type, alias, interface, enum, typów generycznych.',
+        name: 'Vue',
+        advancement: 6,
+        desc: 'Aktualny framework, którego używam codziennie podczas tworzenia projektów komercyjnych. Używanie znanych dyrektyw, stosowanie vue-router czy też vuex w praktyce to moje codzienne zajęcie, gdzie z dnia na dzień uczę się coraz to więcej',
     },
+
     {
         id: 4,
         name: 'React',
-        advancement: 4,
-        desc: 'Znajomość biblioteki React wystarczająca na stworzenie aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooki reacta takie jak: useState, useEffect, useRef, useContext, usePortal, custom hooks, react-context, react-router (SPA), styled-components, npm, git, cra, react query.',
+        advancement: 2,
+        desc: 'Podstawowa znajomość biblioteki React wystarczająca do budowania prostych aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooki reacta takie jak: useState, useEffect, useRef, useContext, usePortal, styled-components',
     },
 
     {
         id: 5,
-        name: 'Vue',
+        name: 'Inne',
         advancement: 3,
-        desc: 'Zapoznanie się z podstawami Vue w wersji 2 oraz 3. Znajomość podstawowych dyrektyw oraz używanie vue-router',
+        desc: 'Znajomość takich narzędzi jak npm, git, figma, canva',
     },
 ];
 
@@ -86,13 +91,21 @@ export const PROJECTS = [
         ghLink: 'https://github.com/Szadziu/calendarApp',
         desc: 'Kalendarz jest aplikacją umożliwiającą zapisywanie wydarzeń/zadań na poszczególne dni. Kalendarz jest rzeczywisty, wykorzystano również możliwość zapisu aktualnego stanu na serwerze z użyciem zapytań. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), react-hooks, zapytania async/await, pre-processor Sass',
     },
+    // {
+    //     id: 4,
+    //     name: 'Clicker Browser Game',
+    //     img: clickerGameIcon,
+    //     link: 'https://centmsn.github.io/clicker-game',
+    //     ghLink: 'https://github.com/centmsn/clicker-game',
+    //     desc: 'Aplikacja przedstawiająca grę polegającą na klikaniu w skarb znajdujący się w głownym panelu użytkownika pozwala generować zasoby w postaci tzw. złota, monet. Z ich użyciem gracz ma za zadanie odblokowywać kolejnych bohaterów, którzy wspomogą go poprzez dostarczenie dodatkowych zasobów i umiejętności. Przyrost złota gracza rośnie wtedy w znaczącym tempie co pozwala na wykup coraz to potężniejszych bohaterów. Obecnie gra jest rozwijana, posiada już takie funkcje jak zapisywanie i resetowanie gry, przewidywana jest sekcja osiągnięć. Aplikacja ta od początku powstaje w zespole dwuosobowym. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), styled-components, local Storage, react-hooks, react-redux',
+    // },
     {
         id: 4,
-        name: 'Clicker Browser Game',
-        img: clickerGameIcon,
-        link: 'https://centmsn.github.io/clicker-game',
-        ghLink: 'https://github.com/centmsn/clicker-game',
-        desc: 'Aplikacja przedstawiająca grę polegającą na klikaniu w skarb znajdujący się w głownym panelu użytkownika pozwala generować zasoby w postaci tzw. złota, monet. Z ich użyciem gracz ma za zadanie odblokowywać kolejnych bohaterów, którzy wspomogą go poprzez dostarczenie dodatkowych zasobów i umiejętności. Przyrost złota gracza rośnie wtedy w znaczącym tempie co pozwala na wykup coraz to potężniejszych bohaterów. Obecnie gra jest rozwijana, posiada już takie funkcje jak zapisywanie i resetowanie gry, przewidywana jest sekcja osiągnięć. Aplikacja ta od początku powstaje w zespole dwuosobowym. Technologie i biblioteki, które zostały użyte podczas tworzenia aplikacji: React (komponenty funkcyjne), styled-components, local Storage, react-hooks, react-redux',
+        name: 'Dungeon Game',
+        img: dungeonIcon,
+        link: 'https://szadziu.github.io/turnbasedgame/',
+        ghLink: 'https://github.com/Szadziu/turnbasedgame',
+        desc: 'Aplikacja przedstawiająca grę turową polegającą na toczeniu walk z coraz to potężniejszymi potworami. Do dyspozycji mamy równiez punkty umiejętności do rozdzielenia, aby polepszyć Naszego bohatera. Aplikacja została stworzona z użyciem klas przy wykorzystaniu frameworka Vue',
     },
     {
         id: 5,

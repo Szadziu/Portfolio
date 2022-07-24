@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '../../constants/devices';
 
-export const ProjectsSectionTitle = styled.h1`
+export const FooterSectionTitle = styled.h1`
     grid-area: 1/1/2/13;
     width: 60%;
 
@@ -27,27 +27,5 @@ export const ProjectsSectionTitle = styled.h1`
     }
     @media ${device.desktop} {
         font-size: 22px;
-    }
-`;
-
-export const ProjectsWrapper = styled.div`
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-
-    justify-items: center;
-    align-items: center;
-
-    border: 1px solid black;
-
-    grid-area: 3/2/12/12;
-
-    @media ${device.mobileM} {
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media ${device.desktop} {
-        grid-area: 3/3/11/11;
     }
 `;

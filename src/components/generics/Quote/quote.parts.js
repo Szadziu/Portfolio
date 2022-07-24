@@ -2,24 +2,23 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const QuoteParam = styled.p`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-area: 12/2/13/12;
-  opacity: 0;
-  padding: 1.25rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 12/2/13/12;
+    opacity: 0;
+    padding: 20px 0;
 
-  color: ${({ theme }) => theme.pink};
+    color: ${({ theme }) => theme.pink};
 
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1rem;
+    font-style: italic;
+    font-size: 16px;
 
-  @media ${device.mobileM} {
-    font-size: 1.2rem;
-  }
+    @media ${device.mobileM} {
+        font-size: 18px;
+    }
 
-  @media ${device.desktop} {
-    font-size: 1.7rem;
-  }
+    @media ${device.desktop} {
+        font-size: 20px;
+    }
 `;

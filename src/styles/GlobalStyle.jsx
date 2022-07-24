@@ -8,7 +8,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
     }
 
     #floating-button {

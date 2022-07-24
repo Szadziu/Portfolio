@@ -1,23 +1,23 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-export const checkInitialDimensions = (min, max = 650) => {
+export const checkInitialDimensions = (min, max = 520) => {
     if (window.innerWidth >= min && window.innerHeight >= max) return true;
     return false;
 };
 const DefenderOfDimensions = () => {
     const [isDimensionsCorrect, setIsDimensionsCorrect] = useState(
-        checkInitialDimensions(300)
+        checkInitialDimensions(320)
     );
 
     window.addEventListener('resize', function () {
-        setIsDimensionsCorrect(checkInitialDimensions(300));
+        setIsDimensionsCorrect(checkInitialDimensions(320));
     });
 
     return (
         !isDimensionsCorrect && (
             <Defender>
-                Dostosowano dla rozdzielczości minimum : 320 x 658
+                Dostosowano dla rozdzielczości minimum : 320 x 520
             </Defender>
         )
     );
