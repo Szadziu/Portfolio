@@ -1,17 +1,16 @@
 import { useContext, useRef } from 'react';
 import * as P from './singleProject.parts';
-import underConstruction from '../../../assets/projectsIcons/underConstruction.png';
 import { ProjectsContext } from '../../../contexts/ProjectsContext';
-import gsap from 'gsap';
 
-const SingleProject = ({ currentProject, children }) => {
+const SingleProject = ({ currentProject, parentRef, children }) => {
     const { setIsModalOpen, setCurrentProject } = useContext(ProjectsContext);
     const projectRef = useRef();
 
     const openModal = () => {
         setIsModalOpen(true);
         setCurrentProject(currentProject);
-        // document.querySelector('body').style.overflow = 'hidden';
+        document.querySelector('body').style.overflow = 'hidden';
+        parentRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -35,13 +34,6 @@ const SingleProject = ({ currentProject, children }) => {
                 </div>
             </div>
             <P.TitleOfProject>{children}</P.TitleOfProject>
-            {/*
-            {!!currentProject.link || (
-                <P.UCBadge
-                    src={underConstruction}
-                    alt="project is under construction"
-                />
-            )} */}
         </P.Project>
     );
 };

@@ -34,13 +34,16 @@ const FloatingButton = () => {
         });
     };
 
+    if (!visible) {
+        return null;
+    }
+
     return createPortal(
         <P.Button
-            visible={visible}
             onClick={scrollToTop}
             image={floatingButtonImage}
-            disabled={!visible}
             xOffset={floatingButtonXOffset}
+            visible
         />,
         document.getElementById('floating-button')
     );

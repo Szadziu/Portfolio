@@ -85,19 +85,33 @@ export const NavButtonsWrapper = styled.div`
 `;
 
 export const PositionTitle = styled.span`
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
 
-    width: 120px;
+    width: 220px;
     height: 90px;
     padding: 20px 5px;
-    border-left: 1px solid ${({ theme }) => theme.black};
-    border-bottom: 2px solid ${({ theme }) => theme.black};
+    border-left: 1px solid ${({ theme }) => theme.mint};
+    border-bottom: 2px solid ${({ theme }) => theme.mint};
 
     line-height: 18px;
     text-align: right;
     text-transform: uppercase;
 
     color: ${({ theme }) => theme.black};
+
+    & :first-child {
+        font-weight: 400;
+        border-bottom: 1px solid ${({ theme }) => theme.mint};
+        padding-bottom: 5px;
+    }
+
+    & :last-child {
+        font-size: 12px;
+    }
 `;
 export const BackgroundPhoto = styled.div`
     position: absolute;

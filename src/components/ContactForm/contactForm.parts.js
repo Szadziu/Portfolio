@@ -109,10 +109,6 @@ export const CooperateInfo = styled.p`
         font-size: 0.8rem;
     }
 
-    /* @media ${device.mobileL} {
-        font-size: 0.55rem;
-    } */
-
     @media ${device.mobileL} {
         font-size: 1rem;
     }

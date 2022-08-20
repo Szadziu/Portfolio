@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { useTheme } from 'styled-components';
 import SectionWrapper from '../generics/SectionWrapper/SectionWrapper';
 import SingleProject from '../generics/SingleProject/SingleProject';
@@ -10,17 +10,22 @@ import * as P from './projects.parts';
 const Projects = () => {
     const theme = useTheme();
     const { isModalOpen } = useContext(ProjectsContext);
+    const parentRef = useRef();
 
     const generateProjects = () => {
         return PROJECTS.map((project) => (
-            <SingleProject key={project.id} currentProject={project}>
+            <SingleProject
+                key={project.id}
+                currentProject={project}
+                parentRef={parentRef}
+            >
                 {project.name}
             </SingleProject>
         ));
     };
     return (
         <SectionWrapper id="projects" bgColor="white">
-            <P.ProjectsSectionTitle color={theme.black}>
+            <P.ProjectsSectionTitle ref={parentRef} color={theme.black}>
                 Moje projekty
             </P.ProjectsSectionTitle>
             <P.ProjectsWrapper>

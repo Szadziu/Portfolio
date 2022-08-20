@@ -14,7 +14,10 @@ const LandingPage = () => {
             </div>
             <P.BackgroundPhoto image={theme.personalPhoto} />
             <P.NavWrapper id="home">
-                <P.PositionTitle>junior frontend developer</P.PositionTitle>
+                <P.PositionTitle>
+                    <p>Maciej Mikołajczak</p>
+                    <p>junior frontend developer</p>
+                </P.PositionTitle>
                 <P.NavButtonsWrapper>
                     <Button text="Strona Główna" link="home" />
                     <Button text="Umiejętności" link="skills" />

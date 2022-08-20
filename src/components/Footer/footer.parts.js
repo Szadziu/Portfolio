@@ -8,7 +8,7 @@ export const FooterSectionTitle = styled.h1`
     border-width: 1.5px 0;
     border-style: solid;
     border-color: ${({ color }) => color};
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 5px 0;
 
     font-size: 16px;
@@ -27,5 +27,19 @@ export const FooterSectionTitle = styled.h1`
     }
     @media ${device.desktop} {
         font-size: 22px;
+    }
+`;
+
+export const IconsLink = styled.a`
+    all: unset;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 8px;
+
+    @media ${device.mobileM} {
+        font-size: 10px;
     }
 `;

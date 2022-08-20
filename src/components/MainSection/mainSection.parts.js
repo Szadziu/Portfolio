@@ -8,7 +8,7 @@ export const MainSectionTitle = styled.h1`
     border-width: 1.5px 0;
     border-style: solid;
     border-color: ${({ color }) => color};
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 5px 0;
 
     font-size: 16px;

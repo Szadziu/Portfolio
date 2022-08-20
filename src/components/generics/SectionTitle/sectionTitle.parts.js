@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { device } from '../../../constants/devices';
 
 export const Title = styled.h1`
     justify-self: center;

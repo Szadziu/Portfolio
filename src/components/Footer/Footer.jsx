@@ -16,6 +16,9 @@ const Footer = () => {
             </P.FooterSectionTitle>
             <ContactForm />
             <SocialsBanner icons={SOCIALS} />
+            <P.IconsLink href="https://www.flaticon.com" title="icons">
+                All icons created by Freepik or Authors from Flaticon
+            </P.IconsLink>
         </SectionWrapper>
     );
 };

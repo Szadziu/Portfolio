@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { checkOfDimensions } from '../../DefenderOfDimensions/DefenderOfDimensions';
 import gsap from 'gsap';
 import * as P from './aboutMeDesc.parts';
 
@@ -16,22 +15,24 @@ const AboutMeDesc = () => {
     return (
         <P.Container ref={ref}>
             <P.Line>
-                Cześć na imię mam Maciej, a zamiłowanie do technologii jest moją
-                pasją i hobby, więc postawiłem sobie za cel, rozwijać się w tym
-                zawodowo. Jako ścieżkę wybrałem front-end development, którego
-                aktywnie uczę się każdego dnia. Pozwala mi to na ciągły rozwój i
-                doskonalenie samego siebie przez co, jak najlepiej mogę oddawać
-                coraz to lepsze doznania i wrażenia na ręce użytkowników
-                aplikacji, do których tworzenia mogłem się przyczynić.
+                Obecnie umacniam szeregi na froncie w wiedzę o praktyczne
+                zastosowania frameworka Vue na stanowisku Junior Frontend
+                Developera, a w czasie wolnym uczę się Reacta i Typescriptu
+                tworząc nowe projekty. Posiadam fundamentalną wiedzę z zakresu
+                HTML5, CSS3, Javascript, React, Vue. Zamiłowanie do technologii
+                jest moją pasją i hobby, więc postawiłem sobie za cel, rozwijać
+                się w tym zawodowo. Jako ścieżkę wybrałem front-end development.
             </P.Line>
 
             <P.Line>
-                Posiadam fundamentalną wiedzę z zakresu HTML, CSS, Javascript
-                oraz React czy Vue. Jestem absolwentem studiów inżynierskich o
-                kierunku edukacja techniczno-informatyczna, a dziś chciałbym
-                zweryfikować swoje umiejętności z zamiarem wyznaczenia
-                konkretnych działań jakie należy podjąć, by móc wejść do świata
-                IT i czerpać oraz dzielić się wiedzą z tej dziedziny.
+                Pozwala mi ona na ciągły rozwój i doskonalenie samego siebie
+                przez co, jak najlepiej mogę oddawać coraz to lepsze doznania i
+                wrażenia na ręce użytkowników aplikacji, do których tworzenia
+                mogłem się przyczynić. Dodatkowo ukończyłem studia inżynierskie
+                o kierunku edukacja techniczno-informatyczna, a dziś chciałbym
+                poszerzać swoje umiejętności z zamiarem tworzenia coraz to
+                lepszych rozwiązań i produktów oraz czerpać satysfakcję i
+                dzielić się wiedzą z tej dziedziny.
             </P.Line>
         </P.Container>
     );
