@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
     overflow: hidden;
 
     height: 100vh;
+    min-height: ${({ minHeight }) => minHeight}px;
     max-width: 1600px;
 
     box-shadow: 0 0 3px 1px ${({ theme }) => theme.black_20};
