@@ -15,7 +15,6 @@ const SingleProject = ({ currentProject, parentRef, children }) => {
 
     return (
         <P.Project
-            key={currentProject.id}
             thumbnail={currentProject.img}
             done={currentProject.done}
             href={currentProject.link}

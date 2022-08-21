@@ -26,9 +26,10 @@ const Modal = () => {
 
     return (
         <AnimatePresence>
-            <P.Overlay onClick={closeModal}></P.Overlay>
+            <P.Overlay key={0} onClick={closeModal}></P.Overlay>
             {isModalOpen && (
                 <P.Modal
+                    key={1}
                     as={motion.div}
                     ref={modalRef}
                     initial={{ opacity: 0 }}

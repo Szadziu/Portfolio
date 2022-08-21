@@ -3,7 +3,7 @@ import Comment from '../../generics/Comment';
 import Label from '../../generics/Label';
 import * as P from './input.parts';
 
-const Input = ({ label, name, id, placeholder, ...props }) => {
+const Input = ({ label, name, id, placeholder }) => {
     const { errors, touched } = useFormikContext();
 
     return (
@@ -15,7 +15,6 @@ const Input = ({ label, name, id, placeholder, ...props }) => {
                 id={id}
                 placeholder={placeholder}
                 autoComplete="off"
-                {...props}
             />
             <Comment error>{touched[name] ? errors[name] : ''}</Comment>
         </P.InputWrapper>

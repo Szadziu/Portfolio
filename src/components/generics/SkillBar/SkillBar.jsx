@@ -20,9 +20,9 @@ const SkillBar = ({ children, skill }) => {
         const advancementLevel = [];
         let boxHeight = 2;
 
-        const addBoxOfSkill = (color, height) => {
+        const addBoxOfSkill = (color, height, i) => {
             advancementLevel.push(
-                <P.BoxOfSkill color={color} height={height} />
+                <P.BoxOfSkill key={i} color={color} height={height} />
             );
         };
 
@@ -31,13 +31,13 @@ const SkillBar = ({ children, skill }) => {
             boxHeight += 2;
             if (advancementLevel.length <= 2) {
                 color = theme.blue_200;
-                addBoxOfSkill(color, boxHeight);
+                addBoxOfSkill(color, boxHeight, i);
             } else if (advancementLevel.length <= 5) {
                 color = theme.blue_300;
-                addBoxOfSkill(color, boxHeight);
+                addBoxOfSkill(color, boxHeight, i);
             } else if (advancementLevel.length <= 9) {
                 color = theme.blue_400;
-                addBoxOfSkill(color, boxHeight);
+                addBoxOfSkill(color, boxHeight, i);
             }
         }
         return advancementLevel;

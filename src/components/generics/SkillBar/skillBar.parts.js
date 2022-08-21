@@ -58,7 +58,7 @@ export const BoxOfSkill = styled.div`
     }
 `;
 
-export const InfoOfSkill = styled.p`
+export const InfoOfSkill = styled.div`
     ${Flex('flex-start')};
     flex-wrap: wrap;
     width: 40%;
