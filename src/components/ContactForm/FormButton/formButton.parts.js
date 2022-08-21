@@ -3,30 +3,29 @@ import { device } from '../../../constants/devices';
 
 export const Button = styled.button`
     align-self: flex-end;
-    padding: 5px 10px;
+    padding: ${({ theme }) => `${theme.padding.s} ${theme.padding.m}`};
     margin-right: 5%;
 
-    background-color: ${({ theme }) => theme.dimBackground};
-    color: ${({ theme }) => theme.pink};
+    background-color: ${({ theme }) => theme.black_20};
+    color: ${({ theme }) => theme.pink_300};
 
     font-weight: 300;
-    font-size: 0.7rem;
-    font-family: 'Lato', 'sans-serif';
-    letter-spacing: 0.1rem;
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    font-family: 'Montserrat', 'sans-serif';
+    letter-spacing: ${({ theme }) => theme.letterSpacing.s};
     text-transform: uppercase;
 
     @media ${device.mobileM} {
-        font-size: 1rem;
+        font-size: ${({ theme }) => theme.fontSize.m};
     }
 
     @media ${device.desktop} {
         &:hover {
-            color: ${({ theme }) => theme.brighterPink};
+            color: ${({ theme }) => theme.pink_200};
             cursor: pointer;
         }
     }
     @media ${device.desktopFHD} {
-        font-size: 1.5rem;
-        margin-right: 2.5rem;
+        font-size: ${({ theme }) => theme.fontSize.xl};
     }
 `;

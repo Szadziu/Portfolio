@@ -23,11 +23,11 @@ const SingleProject = ({ currentProject, parentRef, children }) => {
             onClick={openModal}
             ref={projectRef}
         >
-            <div class="ch-item ch-img-1">
-                <div class="ch-info-wrap">
-                    <div class="ch-info">
-                        <div class="ch-info-front ch-img-1"></div>
-                        <div class="ch-info-back">
+            <div className="ch-item ch-img-1">
+                <div className="ch-info-wrap">
+                    <div className="ch-info">
+                        <div className="ch-info-front ch-img-1"></div>
+                        <div className="ch-info-back">
                             <h3>{currentProject.name}</h3>
                         </div>
                     </div>

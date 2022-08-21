@@ -1,10 +1,8 @@
-import { useTheme } from 'styled-components';
 import Button from '../generics/Button';
 import * as P from './landingPage.parts.js';
+import personalPhotoImage from '../../assets/personalPhoto.jpg';
 
 const LandingPage = () => {
-    const theme = useTheme();
-
     return (
         <P.LandingPageView>
             <div className="lines">
@@ -12,7 +10,7 @@ const LandingPage = () => {
                 <div className="line"></div>
                 <div className="line"></div>
             </div>
-            <P.BackgroundPhoto image={theme.personalPhoto} />
+            <P.BackgroundPhoto image={personalPhotoImage} />
             <P.NavWrapper id="home">
                 <P.PositionTitle>
                     <p>Maciej Mikołajczak</p>

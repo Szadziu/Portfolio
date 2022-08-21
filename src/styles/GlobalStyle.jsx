@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
     #floating-button {
         position: relative;
-        max-width:1600px;
+        max-width: 1600px;
     }
 
     ul, ol {

@@ -8,17 +8,17 @@ import Theme from './Theme';
 import DefenderOfDimensions from './DefenderOfDimensions';
 
 const App = () => {
-  return (
-    <Theme>
-      <DefenderOfDimensions />
-      <GlobalStyle />
-      <FloatingButton />
-      <LandingPage />
-      <MainSection />
-      <Projects />
-      <Footer />
-    </Theme>
-  );
+    return (
+        <Theme>
+            <DefenderOfDimensions x={320} y={520} />
+            <GlobalStyle />
+            <FloatingButton />
+            <LandingPage />
+            <MainSection />
+            <Projects />
+            <Footer />
+        </Theme>
+    );
 };
 
 export default App;

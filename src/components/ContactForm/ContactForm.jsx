@@ -37,7 +37,7 @@ const ContactForm = () => {
                 }, 200);
             })
             .catch((error) => {
-                console.log('błąd');
+                console.error(error);
             });
     };
 
@@ -50,7 +50,6 @@ const ContactForm = () => {
             >
                 {({ errors }) => (
                     <P.FormWrapper ref={formRef}>
-                        {/* <P.FormTitle>kontakt do mnie</P.FormTitle> */}
                         <Input
                             errors={errors.username}
                             type="text"
@@ -73,7 +72,6 @@ const ContactForm = () => {
                             id="body"
                             label="Wiadomość"
                             placeholder="wpisz swoją wiadomość tutaj..."
-                            as="textarea"
                         />
 
                         {isSendForm && <Comment info>Wysłano</Comment>}

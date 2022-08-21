@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import SectionWrapper from '../generics/SectionWrapper';
+import { Flex } from '../../styles/Mixins';
 
 export const LandingPageView = styled(SectionWrapper)`
     & .lines {
@@ -7,35 +8,41 @@ export const LandingPageView = styled(SectionWrapper)`
         top: 0;
         left: 0;
         right: 0;
+
+        width: 90vw;
         height: 100%;
         margin: auto;
-        width: 90vw;
     }
 
     & .line {
         position: absolute;
+        top: 0;
+        left: 60%;
+
         width: 1px;
         height: 100%;
-        top: 0;
-        left: 50%;
-        background: rgba(255, 255, 255, 0.1);
+
+        background-color: ${({ theme }) => theme.white_10};
         overflow: hidden;
         filter: blur(2px);
 
         &::after {
             content: '';
-            display: block;
             position: absolute;
-            height: 15vh;
-            width: 100%;
             top: -50%;
             left: 0;
+
+            display: block;
+            height: 15vh;
+            width: 100%;
+
             background: linear-gradient(
                 to bottom,
                 rgba(0, 0, 0, 0) 0%,
                 #000 75%,
                 #000 100%
             );
+
             animation: drop 7s 0s infinite;
             animation-fill-mode: forwards;
             animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
@@ -67,35 +74,33 @@ export const LandingPageView = styled(SectionWrapper)`
 `;
 
 export const NavWrapper = styled.div`
-    display: flex;
+    ${Flex('flex-end', 'flex-start')};
     flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-end;
     grid-area: 1/13/13/6;
 `;
 
 export const NavButtonsWrapper = styled.div`
-    display: flex;
+    ${Flex()};
     flex-direction: column;
-    align-items: center;
     gap: 20px;
 
     width: 100%;
     height: 310px;
 `;
 
-export const PositionTitle = styled.span`
-    display: flex;
+export const PositionTitle = styled.div`
+    position: relative;
+    z-index: 1;
+
+    ${Flex()}
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     row-gap: 10px;
 
     width: 220px;
     height: 90px;
-    padding: 20px 5px;
-    border-left: 1px solid ${({ theme }) => theme.mint};
-    border-bottom: 2px solid ${({ theme }) => theme.mint};
+    padding: ${({ theme }) => `${theme.padding.xl} ${theme.padding.s}`};
+    border-left: 1px solid ${({ theme }) => theme.mint_300};
+    border-bottom: 2px solid ${({ theme }) => theme.mint_300};
 
     line-height: 18px;
     text-align: right;
@@ -105,14 +110,15 @@ export const PositionTitle = styled.span`
 
     & :first-child {
         font-weight: 400;
-        border-bottom: 1px solid ${({ theme }) => theme.mint};
+        border-bottom: 1px solid ${({ theme }) => theme.mint_300};
         padding-bottom: 5px;
     }
 
     & :last-child {
-        font-size: 12px;
+        font-size: ${({ theme }) => theme.fontSize.xs};
     }
 `;
+
 export const BackgroundPhoto = styled.div`
     position: absolute;
 

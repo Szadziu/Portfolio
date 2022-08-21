@@ -2,20 +2,30 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const ModalWrapper = styled.div`
+    height: 95%;
+    padding-right: ${({ theme }) => theme.padding.m};
+    overflow-y: auto;
+
+    & :first-child {
+        padding-bottom: ${({ theme }) => theme.padding.m};
+
+        font-weight: 400;
+    }
+
     &::-webkit-scrollbar {
-        width: 0.8rem;
+        width: 10px;
     }
 
     &::-webkit-scrollbar-track {
-        background: ${({ theme }) => theme.brighterGray};
+        background: ${({ theme }) => theme.gray_200};
     }
 
     &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.gray};
+        background: ${({ theme }) => theme.gray_300};
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: ${({ theme }) => theme.darkerGray};
+        background: ${({ theme }) => theme.gray_400};
     }
 `;
 
@@ -30,14 +40,13 @@ export const InfoModal = styled.div`
     width: 95vw;
     max-width: 250px;
     height: 500%;
-    padding: 20px 10px;
+    padding: ${({ theme }) => `${theme.padding.xl} ${theme.padding.m}`};
     box-shadow: 2px 2px 5px 0 ${({ theme }) => theme.black};
 
-    background-color: ${({ theme }) => theme.darkGray};
+    background-color: ${({ theme }) => theme.gray_500};
     color: ${({ theme }) => theme.white};
 
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: ${({ theme }) => theme.fontSize.m};
     hyphens: auto;
 
     @media ${device.mobileL} {
@@ -48,10 +57,10 @@ export const InfoModal = styled.div`
 
     @media ${device.desktop} {
         height: 250px;
-        font-size: 18px;
     }
+
     @media ${device.desktopFHD} {
-        font-size: 1.5rem;
+        font-size: ${({ theme }) => theme.padding.xl};
         max-width: 650px;
         left: -125%;
     }

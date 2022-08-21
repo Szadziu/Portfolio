@@ -15,51 +15,51 @@ export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją."
 
 export const SKILL_BUNDLE = [
     {
-        id: 0,
+        id: 'skill_1',
         name: 'HTML 5',
         advancement: 8,
         desc: 'Znajomość języka znaczników w stopniu pozwalającym na tworzenie struktury drzewa HTML, zgodnie z semantycznym zastosowaniem tagów ES6 oraz tworzenia i walidacji formularzy.',
     },
 
     {
-        id: 1,
+        id: 'skill_2',
         name: 'CSS',
         advancement: 7,
         desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, grid, flex, media queries. Doświadczenie z konwencją BEM oraz z preprocessorem sass. Używałem również w projektach tailwind CSS.',
     },
 
     {
-        id: 2,
+        id: 'skill_3',
         name: 'JavaScript',
         advancement: 6,
         desc: 'Znajomość składni ES6+ i struktury Javascript, manipulacje DOM, zapytania przy użyciu fetch API, moduły javascript, localStorage, ogólne rozumienie koncepcji hoistingu, zakresu, prototypów, klas.',
     },
 
     {
-        id: 3,
+        id: 'skill_4',
         name: 'Vue',
         advancement: 4,
         desc: 'Framework, którego używam codziennie podczas tworzenia projektów komercyjnych. Używanie znanych dyrektyw, stosowanie vue-router czy też vuex w praktyce to moje codzienne zajęcie, gdzie z dnia na dzień uczę się więcej',
     },
 
     {
-        id: 4,
+        id: 'skill_5',
         name: 'React',
         advancement: 4,
         desc: 'Znajomość biblioteki React wystarczająca do budowania prostych aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooki reacta takie jak: useState, useEffect, useRef, useContext, usePortal. Korzystałem też z styled-components, material UI.',
     },
 
     {
-        id: 5,
-        name: 'Typescript',
-        advancement: 2,
-        desc: 'Aktualnie chciałbym rozwijać swoje umiejętności z wiedzy o Typescripcie. W tej chwili znam podstawy typowania.',
+        id: 'skill_6',
+        name: 'Inne',
+        advancement: 3,
+        desc: 'Ukończone kursy online: "Web developer od podstaw", "Front-end zaawansowany", "Programowanie w Javascript", "The Complete JavaScript Course 2022: From Zero to Expert!", "Kurs React w praktyce", "Kurs Vue". Znajomość narzędzi: npm, git, figma, canva, postman. Aktualnie chciałbym rozwijać swoje umiejętności z wiedzy o Typescripcie. W tej chwili znam podstawy typowania.',
     },
 ];
 
 export const PROJECTS = [
     {
-        id: 0,
+        id: 'prj_1',
         name: 'Dungeon Game',
         img: dungeonIcon,
         link: 'https://szadziu.github.io/turnbasedgame/',
@@ -68,7 +68,7 @@ export const PROJECTS = [
         done: true,
     },
     {
-        id: 1,
+        id: 'prj_2',
         name: 'Box-shadow generator',
         img: cssGeneratorIcon,
         link: 'https://szadziu.github.io/boxShadowCSSGenerator/',
@@ -77,7 +77,7 @@ export const PROJECTS = [
         done: true,
     },
     {
-        id: 2,
+        id: 'prj_3',
         name: 'Credit Calculator',
         img: creditCalculatorIcon,
         link: 'https://szadziu.github.io/CreditCalculator/',
@@ -87,7 +87,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 3,
+        id: 'prj_4',
         name: 'Timer',
         img: timerIcon,
         link: 'https://szadziu.github.io/stoper',
@@ -97,7 +97,7 @@ export const PROJECTS = [
     },
 
     {
-        id: 4,
+        id: 'prj_5',
         name: 'Paleta kolorów',
         img: themePaletteIcon,
         link: '#',
@@ -106,7 +106,7 @@ export const PROJECTS = [
         done: false,
     },
     {
-        id: 5,
+        id: 'prj_6',
         name: 'Zadanie rekrutacyjne',
         img: recruitmentTaskIcon,
         link: '#',
@@ -118,25 +118,25 @@ export const PROJECTS = [
 
 export const SOCIALS = [
     {
-        id: 0,
+        id: 'scl_1',
         name: 'github',
         icon: githubIcon,
         link: 'https://www.github.com/szadziu',
     },
     {
-        id: 1,
+        id: 'scl_2',
         name: 'facebook',
         icon: facebookIcon,
         link: 'https://www.facebook.com/McjMikolajczak',
     },
     {
-        id: 2,
+        id: 'scl_3',
         name: 'whatsapp',
         icon: whatsappIcon,
         link: 'https://wa.me/48664095522',
     },
     {
-        id: 3,
+        id: 'scl_4',
         name: 'linkedin',
         icon: linkedinIcon,
         link: 'https://www.linkedin.com/in/maciej-miko%C5%82ajczak-717ba8197/',

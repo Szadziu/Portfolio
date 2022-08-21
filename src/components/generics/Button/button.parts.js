@@ -1,25 +1,24 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 import { device } from '../../../constants/devices';
+import { Flex } from '../../../styles/Mixins';
 
 export const Button = styled(Link)`
     position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${Flex()};
 
     width: 100%;
     max-width: 300px;
     height: 70px;
 
-    border-radius: 2px;
-    box-shadow: 0 0 1px 1px ${({ theme }) => theme.dimBackground};
+    border-radius: ${({ theme }) => theme.borderRadius.s};
+    box-shadow: 0 0 1px 1px ${({ theme }) => theme.black_20};
 
     background-color: ${({ theme }) => theme.white};
     color: ${({ theme }) => theme.black};
 
-    font-size: 1.2rem;
+    font-size: ${({ theme }) => theme.fontSize.l};
     font-weight: 300;
 
     cursor: pointer;
@@ -36,14 +35,14 @@ export const Button = styled(Link)`
         border-radius: 1px;
         box-shadow: 0 0 1px 1px ${({ theme }) => theme.black};
 
-        background-color: ${({ theme }) => theme.mint};
+        background-color: ${({ theme }) => theme.mint_300};
 
         transition: 0.5s;
         content: '';
     }
 
     @media ${device.mobileM} {
-        font-size: 1.5rem;
+        font-size: ${({ theme }) => theme.fontSize.xl};
     }
 
     @media ${device.mobileL} {
@@ -52,7 +51,7 @@ export const Button = styled(Link)`
 
     @media ${device.desktop} {
         &:hover {
-            background-color: ${({ theme }) => theme.beige};
+            background-color: ${({ theme }) => theme.beige_20};
             &::before {
                 top: calc(50% - 5px);
                 left: calc(100% - 30px);
@@ -60,12 +59,6 @@ export const Button = styled(Link)`
                 width: 10px;
                 height: 10px;
                 transform: rotate(1.125turn);
-
-                /* 
-                left: calc(100% - 40px);
-                border-radius: 50%;
-                width: 20px;
-                height: 20px; */
             }
         }
     }

@@ -30,13 +30,13 @@ const SkillBar = ({ children, skill }) => {
             let color;
             boxHeight += 2;
             if (advancementLevel.length <= 2) {
-                color = theme.lightBlue;
+                color = theme.blue_200;
                 addBoxOfSkill(color, boxHeight);
             } else if (advancementLevel.length <= 5) {
-                color = theme.brighterBlue;
+                color = theme.blue_300;
                 addBoxOfSkill(color, boxHeight);
             } else if (advancementLevel.length <= 9) {
-                color = theme.blue;
+                color = theme.blue_400;
                 addBoxOfSkill(color, boxHeight);
             }
         }

@@ -1,11 +1,11 @@
-import React, { useContext, useRef, forwardRef } from 'react';
-import * as P from './modal.parts';
+import React, { useContext, useRef } from 'react';
 import { ProjectsContext } from '../../../contexts/ProjectsContext';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
 import githubIcon from '../../../assets/github.png';
 import liveIcon from '../../../assets/live.png';
 import underConstructionIcon from '../../../assets/projectsIcons/underConstruction.png';
+import * as P from './modal.parts';
 
 const Modal = () => {
     const { isModalOpen, setIsModalOpen, currentProject } =

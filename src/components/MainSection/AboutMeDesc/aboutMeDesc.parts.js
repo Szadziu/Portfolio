@@ -11,37 +11,34 @@ export const Container = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-        background: ${({ theme }) => theme.brighterGray};
+        background: ${({ theme }) => theme.gray_200};
     }
 
     &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.darkerGray};
+        background: ${({ theme }) => theme.gray_400};
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: ${({ theme }) => theme.darkGray};
+        background: ${({ theme }) => theme.gray_500};
     }
 
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.fontSize.m};
     text-align: justify;
     hyphens: auto;
-    padding: 0 10px;
+    padding: 0 ${({ theme }) => theme.padding.m};
 
     @media ${device.mobileM} {
-        font-size: 18px;
+        font-size: ${({ theme }) => theme.fontSize.l};
     }
 
     @media ${device.mobileL} {
         grid-area: 2/1/12/7;
-        margin: 0 20px;
+        margin: 0 ${({ theme }) => theme.margin.xl};
     }
 
     @media ${device.desktop} {
         grid-area: 2/1/12/8;
-        font-size: 20px;
-    }
-    @media ${device.desktopFHD} {
-        font-size: 22px;
+        font-size: ${({ theme }) => theme.fontSize.l};
     }
 `;
 
@@ -82,7 +79,7 @@ export const Line = styled.span`
         height: 100%;
         transform: translateX(0);
 
-        background: ${({ theme }) => theme.gray};
+        background: ${({ theme }) => theme.gray_300};
 
         animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
         content: '';

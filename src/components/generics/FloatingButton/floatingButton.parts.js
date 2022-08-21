@@ -3,37 +3,39 @@ import { device } from '../../../constants/devices';
 import floatingIcon from '../../../assets/upArrow.png';
 
 export const Button = styled.button`
-  position: fixed;
-  z-index: 2;
-  right: ${({ xOffset }) => xOffset}px;
-  bottom: 0.6rem;
+    position: fixed;
+    z-index: 2;
+    right: ${({ xOffset }) => xOffset}px;
+    bottom: 10px;
 
-  width: 3rem;
-  height: 3rem;
-  opacity: ${({ visible }) => visible || 0};
-  border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    opacity: ${({ visible }) => visible || 0};
+    border-radius: 50%;
 
-  background: center / contain no-repeat url(${floatingIcon});
+    background: center / contain no-repeat url(${floatingIcon});
 
-  transition: opacity 0.3s, transform 0.3s;
-  cursor: ${({ visible }) => visible && 'pointer'};
+    transition: opacity 0.3s, transform 0.3s;
+    cursor: ${({ visible }) => visible && 'pointer'};
 
-  @media ${device.mobileM} {
-    width: 4rem;
-    height: 4rem;
-  }
-  @media ${device.desktop} {
-    width: 5rem;
-    height: 5rem;
-    bottom: 1.25rem;
-
-    &:hover {
-      transform: scale(1.2);
+    @media ${device.mobileM} {
+        width: 64px;
+        height: 64px;
     }
-  }
-  @media ${device.desktopFHD} {
-    width: 6.8rem;
-    height: 6.8rem;
-    bottom: 2rem;
-  }
+    @media ${device.desktop} {
+        bottom: 20px;
+
+        width: 80px;
+        height: 80px;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    @media ${device.desktopFHD} {
+        bottom: 32px;
+
+        width: 100px;
+        height: 100px;
+    }
 `;

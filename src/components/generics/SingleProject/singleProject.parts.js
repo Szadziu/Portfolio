@@ -1,23 +1,29 @@
 import styled from 'styled-components';
-
+import { Flex } from '../../../styles/Mixins';
 import { device } from '../../../constants/devices';
 
 export const Project = styled.button`
-    display: flex;
+    ${Flex()};
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     & .ch-item {
-        width: 30vw;
-        max-width: 120px;
-        height: 30vw;
-        max-height: 120px;
-        border-radius: 50%;
         position: relative;
+
+        width: 20vw;
+        max-width: 65px;
+        height: 20vw;
+        max-height: 65px;
+        border-radius: 50%;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
         cursor: pointer;
 
+        @media ${device.mobileM} {
+            width: 30vw;
+            max-width: 120px;
+            height: 30vw;
+            max-height: 120px;
+        }
         @media ${device.desktop} {
             max-width: 180px;
             max-height: 180px;
@@ -26,21 +32,28 @@ export const Project = styled.button`
 
     & .ch-info-wrap {
         position: absolute;
-        width: 30vw;
-        max-width: 120px;
-        height: 30vw;
-        max-height: 120px;
-        border-radius: 50%;
-        perspective: 800px;
-        transition: all 0.4s ease-in-out;
         top: 0;
         left: 0;
-        /* background: #f9f9f9 center / contain no-repeat
-            url(${({ thumbnail }) => thumbnail}); */
-        background-color: white;
+
+        width: 20vw;
+        max-width: 65px;
+        height: 20vw;
+        max-height: 65px;
+        border-radius: 50%;
+        perspective: 800px;
         box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2),
             inset 0 0 3px rgba(115, 114, 23, 0.8);
 
+        background-color: ${({ theme }) => theme.white};
+
+        transition: all 0.4s ease-in-out;
+
+        @media ${device.mobileM} {
+            width: 30vw;
+            max-width: 120px;
+            height: 30vw;
+            max-height: 120px;
+        }
         @media ${device.desktop} {
             max-width: 180px;
             max-height: 180px;
@@ -49,13 +62,22 @@ export const Project = styled.button`
 
     & .ch-info {
         position: absolute;
-        width: 30vw;
-        max-width: 120px;
-        height: 30vw;
-        max-height: 120px;
-        border-radius: 50%;
-        transition: all 0.4s ease-in-out;
         transform-style: preserve-3d;
+
+        width: 20vw;
+        max-width: 65px;
+        height: 20vw;
+        max-height: 65px;
+        border-radius: 50%;
+
+        transition: all 0.4s ease-in-out;
+
+        @media ${device.mobileM} {
+            width: 30vw;
+            max-width: 120px;
+            height: 30vw;
+            max-height: 120px;
+        }
 
         @media ${device.desktop} {
             max-width: 180px;
@@ -64,21 +86,22 @@ export const Project = styled.button`
     }
 
     & .ch-info > div {
-        display: block;
         position: absolute;
+
+        display: block;
         width: 100%;
         height: 100%;
         border-radius: 50%;
+
         background-position: center center;
         backface-visibility: hidden;
     }
 
     & .ch-info .ch-info-back {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        ${Flex()};
         transform: rotate3d(0, 1, 0, 180deg);
-        background: #000;
+
+        background: ${({ theme }) => theme.black};
     }
 
     & .ch-img-1 {
@@ -87,20 +110,21 @@ export const Project = styled.button`
     }
 
     & .ch-info h3 {
-        color: #fff;
+        margin: 0 ${({ theme }) => theme.margin.l};
+        padding-bottom: ${({ theme }) => theme.padding.s};
+        border-bottom: 1px solid ${({ theme }) => theme.white};
+
+        color: ${({ theme }) => theme.white};
+
+        font-size: ${({ theme }) => theme.fontSize.xxs};
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 10px;
-        margin: 0 15px;
-        padding-bottom: 5px;
+        letter-spacing: ${({ theme }) => theme.letterSpacing.m};
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 300;
         text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
 
-        border-bottom: 1px solid white;
-
         @media ${device.desktop} {
-            font-size: 14px;
+            font-size: ${({ theme }) => theme.fontSize.s};
         }
     }
     @media ${device.desktop} {
@@ -116,25 +140,20 @@ export const Project = styled.button`
 `;
 
 export const TitleOfProject = styled.h3`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${Flex()};
     width: 100%;
     height: 40%;
     box-shadow: 0 0 0.5px 0.5px ${({ theme }) => theme.black};
-    padding: 0.3rem;
-    margin-top: 10px;
+    padding: ${({ theme }) => theme.padding.s};
+    margin-top: ${({ theme }) => theme.margin.m};
 
     background-color: ${({ theme }) => theme.white};
-    color: black;
+    color: ${({ theme }) => theme.black};
 
-    font-size: 0.6rem;
+    font-size: ${({ theme }) => theme.fontSize.xxs};
     font-weight: 300;
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Montserrat', Arial, sans-serif;
 
-    @media ${device.mobileM} {
-        font-size: 0.7rem;
-    }
     @media ${device.desktop} {
         display: none;
     }

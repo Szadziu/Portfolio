@@ -1,41 +1,41 @@
 import styled from 'styled-components';
 import { device } from '../../constants/devices';
+import { Flex } from '../../styles/Mixins';
 
 export const Img = styled.img`
-  width: auto;
-  height: 2.5rem;
-  margin-left: 0.6rem;
+    width: auto;
+    height: 40px;
+    margin-left: ${({ theme }) => theme.margin.m};
 
-  transition: 0.4s;
+    transition: 0.4s;
 
-  @media ${device.mobileM} {
-    height: 3rem;
-  }
-
-  @media ${device.desktop} {
-    &:hover {
-      transform: scale(1.4);
-
-      cursor: pointer;
+    @media ${device.mobileM} {
+        height: 48px;
     }
-  }
 
-  @media ${device.desktopFHD} {
-    height: 3.6rem;
-  }
+    @media ${device.desktop} {
+        &:hover {
+            transform: scale(1.4);
+
+            cursor: pointer;
+        }
+    }
+
+    @media ${device.desktopFHD} {
+        height: 55px;
+    }
 `;
 
 export const Banner = styled.div`
-  grid-area: 11/2/-1/-2;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    grid-area: 11/2/-1/-2;
+    ${Flex('space-around')};
+    padding-bottom: ${({ theme }) => theme.padding.m};
 
-  @media ${device.desktop} {
-    grid-area: 11/3/-1/-3;
-  }
+    @media ${device.desktop} {
+        grid-area: 11/3/-1/-3;
+    }
 `;
 
 export const SocialLink = styled.a`
-  cursor: pointer;
+    cursor: pointer;
 `;

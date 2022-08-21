@@ -1,26 +1,27 @@
 import styled from 'styled-components';
+import { Flex } from '../../../styles/Mixins';
 import closeBtn from '../../../assets/closeBtn.png';
 import { motion } from 'framer-motion';
 import { device } from '../../../constants/devices';
 
 export const Modal = styled(motion.div)`
-    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    ${Flex('center', 'flex-start')};
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
     width: 80%;
     max-width: 380px;
     height: 70%;
     max-height: 500px;
+
     background-color: ${({ theme }) => theme.white};
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: ${({ theme }) => theme.black};
-    font-size: 1.5rem;
-    font-weight: 300;
+
+    font-size: ${({ theme }) => theme.fontSize.xl};
     text-align: center;
     overflow: hidden;
 
@@ -31,10 +32,10 @@ export const Modal = styled(motion.div)`
 
 export const ProjectTitle = styled.p`
     width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: ${({ theme }) => theme.margin.l};
+    margin-bottom: ${({ theme }) => theme.margin.m};
     border-bottom: 1px solid ${({ theme }) => theme.black};
-    padding-bottom: 10px;
+    padding-bottom: ${({ theme }) => theme.padding.m};
 
     @media ${device.desktopFHD} {
         width: 90%;
@@ -43,24 +44,25 @@ export const ProjectTitle = styled.p`
 
 export const Overlay = styled.div`
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-
     top: 0;
     left: 0;
+    z-index: 1;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: ${({ theme }) => theme.black_50};
 `;
 
 export const CloseButton = styled.button`
     position: absolute;
     top: 10px;
     right: 10px;
+
     width: 15px;
     height: 15px;
-    background-image: url(${closeBtn});
-    background-size: contain;
-    background-repeat: no-repeat;
+
+    background: center / contain url(${closeBtn});
 
     &:hover {
         cursor: pointer;
@@ -69,12 +71,14 @@ export const CloseButton = styled.button`
 
 export const Icon = styled.a`
     display: inline-block;
-    background-image: url(${({ icon }) => icon});
-    background-size: contain;
     width: 80px;
     height: 80px;
-    margin: 0 auto 10px;
+    margin: 0 auto ${({ theme }) => theme.margin.m};
+
+    background: center / contain url(${({ icon }) => icon});
+
     transition: 0.3s;
+
     @media ${device.desktop} {
         &:hover {
             transform: scale(1.2);
@@ -83,37 +87,39 @@ export const Icon = styled.a`
 `;
 
 export const ProjectDescription = styled.section`
-    font-size: 1rem;
-    hyphens: auto;
-    text-align: justify;
-    padding: 0 20px;
     width: 100%;
     height: 50%;
+    padding: 0 ${({ theme }) => theme.padding.xl};
+
+    font-size: ${({ theme }) => theme.fontSize.m};
+    text-align: justify;
+    hyphens: auto;
     overflow: auto;
 
     @media ${device.desktopFHD} {
-        font-size: 1.3rem;
+        font-size: ${({ theme }) => theme.fontSize.l};
     }
 
     &::-webkit-scrollbar {
-        width: 0.8rem;
+        width: 10px;
     }
 
     &::-webkit-scrollbar-track {
-        background: ${({ theme }) => theme.brighterGray};
+        background: ${({ theme }) => theme.gray_200};
     }
 
     &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.darkerGray};
+        background: ${({ theme }) => theme.gray_400};
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: ${({ theme }) => theme.darkGray};
+        background: ${({ theme }) => theme.gray_500};
     }
 `;
 
 export const UCBadge = styled.img`
     position: absolute;
+
     width: 120px;
     bottom: 0px;
     right: 40px;

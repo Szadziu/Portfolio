@@ -2,39 +2,47 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { device } from '../../../constants/devices';
 import slideArrow from '../../../assets/fast-forward.png';
+import { Flex } from '../../../styles/Mixins';
 
 export const SkillLabel = styled.div`
     position: absolute;
-    left: 0;
     top: 0;
-    writing-mode: vertical-lr;
-    font-size: 24px;
-    background-color: ${({ theme }) => theme.mint};
-    color: ${({ theme }) => theme.white};
+    left: 0;
+
     height: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 4px;
+
+    background-color: ${({ theme }) => theme.mint_300};
+    color: ${({ theme }) => theme.white};
+
+    font-size: ${({ theme }) => theme.fontSize.xl};
     line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: ${({ theme }) => theme.letterSpacing.xl};
+    writing-mode: vertical-lr;
+
+    cursor: pointer;
+    user-select: none;
 
     &::before {
-        position: absolute;
         content: '';
-        width: 30px;
-        height: 30px;
-        background-image: url(${slideArrow});
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+        position: absolute;
         top: 10px;
         left: 50%;
-        z-index: 1;
-        transition: 1s;
         transform: translateX(-50%)
             rotateY(
                 ${({ isSideMenuOpen }) => (isSideMenuOpen ? '0' : '180deg')}
             );
+        z-index: 1;
+
+        width: 30px;
+        height: 30px;
+
+        background: center / contain no-repeat url(${slideArrow});
+
+        transition: 1s;
     }
+
     @media ${device.mobileL} {
         display: none;
     }
@@ -42,31 +50,33 @@ export const SkillLabel = styled.div`
 
 export const SkillContainer = styled(motion.div)`
     position: absolute;
-    right: 0;
     top: 10%;
+    right: 0;
 
-    display: flex;
+    ${Flex('space-around')};
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 
     width: 300px;
     height: 60vh;
     max-height: 800px;
-    border-radius: 5px 0 0 5px;
-    box-shadow: 0 0 5px 3px ${({ theme }) => theme.dimMint};
-    padding: 10px 0 20px;
+    border-radius: ${({ theme }) =>
+        `${theme.borderRadius.m} 0 0 ${theme.borderRadius.m}`};
+    box-shadow: 0 0 5px 3px ${({ theme }) => theme.mint_400};
+    padding: ${({ theme }) => `${theme.padding.m} 0 ${theme.padding.xl}`};
+
+    background-color: ${({ theme }) => theme.white};
+
     transition: 1s;
     transform: translateX(
         ${({ isSideMenuOpen }) => (isSideMenuOpen ? 0 : '85%')}
     );
-
-    background-color: ${({ theme }) => theme.white};
+    user-select: none;
 
     @media ${device.mobileL} {
         position: static;
-        grid-area: 2/7/11/13;
         transform: translateX(0);
+
+        grid-area: 2/7/11/13;
         width: 100%;
         height: 100%;
     }
@@ -80,62 +90,55 @@ export const SkillContainer = styled(motion.div)`
 export const InfoIconLink = styled.button`
     align-self: flex-start;
 
-    color: ${({ theme }) => theme.blue};
+    color: ${({ theme }) => theme.blue_400};
 
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.fontSize.m};
 
     cursor: pointer;
 
     @media ${device.mobileM} {
-        font-size: 18px;
-    }
-
-    @media ${device.mobileM} {
-        font-size: 20px;
+        font-size: ${({ theme }) => theme.fontSize.l};
     }
 
     @media ${device.desktop} {
-        transition: 0.2s;
-        &:hover {
-            color: ${({ theme }) => theme.brighterBlue};
-            transform: rotate(90deg);
-        }
-        font-size: 22px;
-    }
+        font-size: ${({ theme }) => theme.fontSize.xl};
 
-    @media ${device.desktopFHD} {
-        font-size: 24px;
+        transition: 0.2s;
+
+        &:hover {
+            transform: rotate(90deg);
+
+            color: ${({ theme }) => theme.blue_300};
+        }
     }
 `;
 
 export const SkillTitle = styled.p`
     width: 100%;
 
+    font-size: ${({ theme }) => theme.fontSize.m};
     text-align: left;
-    font-size: 16px;
 
     @media ${device.desktopFHD} {
-        font-size: 22px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
     }
 `;
 
-export const SkillAdvancementInfo = styled.p`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+export const SkillAdvancementInfo = styled.div`
+    ${Flex('space-between')};
     width: 100%;
 
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.fontSize.s};
 
     @media ${device.mobileM} {
-        font-size: 16px;
+        font-size: ${({ theme }) => theme.fontSize.m};
     }
 
     @media ${device.desktop} {
-        font-size: 18px;
+        font-size: ${({ theme }) => theme.fontSize.l};
     }
 
     @media ${device.desktopFHD} {
-        font-size: 24px;
+        font-size: ${({ theme }) => theme.fontSize.xl};
     }
 `;
