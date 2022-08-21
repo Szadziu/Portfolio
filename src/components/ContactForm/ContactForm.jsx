@@ -2,22 +2,39 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Formik } from 'formik';
 import Comment from '../generics/Comment';
+import { Spinner } from '../Spinner/spinner.parts';
 
 import Input from './Input';
 import FormButton from './FormButton';
 import TextArea from './TextArea';
 
 import VALIDATION_SCHEMA from './validationSchema';
-import { submitAnimation } from './submitAnimation';
 
 import * as P from './contactForm.parts';
 
+const FORM_STATE = {
+    IDLE: 'idle',
+    LOADING: 'loading',
+    SUCCESS: 'success',
+    ERROR: 'error',
+};
+
+const initialValues = {
+    body: '',
+    email: '',
+    username: '',
+};
+
 const ContactForm = () => {
-    const [isSendForm, setIsSendForm] = useState(false);
+    const [formState, setFormState] = useState(FORM_STATE.IDLE);
     const buttonRef = useRef(null);
     const formRef = useRef(null);
 
-    const handleSubmit = (values) => {
+    const handleSubmit = (_, { resetForm }) => {
+        if (formState === FORM_STATE.LOADING) return;
+
+        setFormState(FORM_STATE.LOADING);
+
         emailjs
             .sendForm(
                 process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -26,25 +43,25 @@ const ContactForm = () => {
                 process.env.REACT_APP_EMAILJS_USER_ID
             )
             .then(() => {
-                submitAnimation(buttonRef);
-                values.username = '';
-                values.body = '';
-                values.email = '';
-
-                setTimeout(() => {
-                    setIsSendForm(true);
-                    setTimeout(() => setIsSendForm(false), 5000);
-                }, 200);
+                resetForm();
+                setFormState(FORM_STATE.SUCCESS);
             })
             .catch((error) => {
+                // TODO: handle error
                 console.error(error);
+                setFormState(FORM_STATE.ERROR);
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    setFormState(FORM_STATE.IDLE);
+                }, 5000);
             });
     };
 
     return (
         <P.Wrapper id="contact">
             <Formik
-                initialValues={{ username: '', body: '', email: '' }}
+                initialValues={initialValues}
                 onSubmit={handleSubmit}
                 validationSchema={VALIDATION_SCHEMA}
             >
@@ -73,11 +90,18 @@ const ContactForm = () => {
                             label="Wiadomość"
                             placeholder="wpisz swoją wiadomość tutaj..."
                         />
-
-                        {isSendForm && <Comment info>Wysłano</Comment>}
-                        <FormButton ref={buttonRef} type="submit">
-                            Wyślij
-                        </FormButton>
+                        <P.ActionsWrapper>
+                            {formState === FORM_STATE.SUCCESS && (
+                                <Comment info>Wysłano</Comment>
+                            )}
+                            <FormButton ref={buttonRef} type="submit">
+                                {formState === FORM_STATE.LOADING ? (
+                                    <Spinner />
+                                ) : (
+                                    'Wyślij'
+                                )}
+                            </FormButton>
+                        </P.ActionsWrapper>
                         <P.CooperateInfo>
                             W celu nawiązania współpracy proszę o kontakt
                         </P.CooperateInfo>

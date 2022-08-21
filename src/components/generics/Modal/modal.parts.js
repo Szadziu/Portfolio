@@ -120,8 +120,12 @@ export const ProjectDescription = styled.section`
 export const UCBadge = styled.img`
     position: absolute;
 
-    width: 120px;
+    width: 80px;
     bottom: 0px;
     right: 40px;
     transform: translate(0, -40px) rotate(-30deg);
+
+    @media ${device.desktop} {
+        width: 120px;
+    }
 `;

@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
+        height: 100%;
     }
 
     #floating-button {

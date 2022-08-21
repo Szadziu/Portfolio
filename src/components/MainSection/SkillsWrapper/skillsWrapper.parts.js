@@ -11,6 +11,9 @@ export const SkillLabel = styled.div`
 
     height: 100%;
 
+    display: flex;
+    align-items: center;
+
     background-color: ${({ theme }) => theme.mint_300};
     color: ${({ theme }) => theme.white};
 
@@ -26,13 +29,12 @@ export const SkillLabel = styled.div`
 
     &::before {
         content: '';
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%)
-            rotateY(
-                ${({ isSideMenuOpen }) => (isSideMenuOpen ? '0' : '180deg')}
-            );
+
+        display: block;
+        margin: ${({ theme }) => theme.margin.m} 0;
+        transform: rotateY(
+            ${({ isSideMenuOpen }) => (isSideMenuOpen ? '0' : '180deg')}
+        );
         z-index: 1;
 
         width: 30px;
@@ -57,12 +59,11 @@ export const SkillContainer = styled(motion.div)`
     flex-direction: column;
 
     width: 300px;
-    height: 60vh;
     max-height: 800px;
     border-radius: ${({ theme }) =>
         `${theme.borderRadius.m} 0 0 ${theme.borderRadius.m}`};
     box-shadow: 0 0 5px 3px ${({ theme }) => theme.mint_400};
-    padding: ${({ theme }) => `${theme.padding.m} 0 ${theme.padding.xl}`};
+    /* padding: ${({ theme }) => `60px 0 ${theme.padding.xl}`}; */
 
     background-color: ${({ theme }) => theme.white};
 

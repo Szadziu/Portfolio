@@ -27,8 +27,6 @@ const SkillsWrapper = () => {
         setIsSideMenuOpen(!isSideMenuOpen);
     };
 
-    const infoIcon = <FontAwesomeIcon icon={faEllipsisH} />;
-
     const renderListOfSkills = () => {
         return SKILL_BUNDLE.map((skill, index) => {
             const isModalVisible = index === visibleModalIndex;
@@ -46,7 +44,7 @@ const SkillsWrapper = () => {
                                     )
                                 }
                             >
-                                {infoIcon}
+                                <FontAwesomeIcon icon={faEllipsisH} />
                             </P.InfoIconLink>
                         </div>
                         {`${skill.advancement * 10}%`}

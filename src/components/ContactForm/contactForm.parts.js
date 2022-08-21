@@ -63,3 +63,8 @@ export const CooperateInfo = styled.p`
         font-size: ${({ theme }) => theme.fontSize.m};
     }
 `;
+
+export const ActionsWrapper = styled.div`
+    ${Flex('flex-end')};
+    width: 90%;
+`;
