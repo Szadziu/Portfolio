@@ -130,3 +130,37 @@ export const BackgroundPhoto = styled.div`
     background-size: 112.5vh 150vh;
     background-position: -56.25vh 0;
 `;
+
+export const TLWrapper = styled.div`
+    margin-right: 20px;
+    position: relative;
+    /* position: absolute; */
+    /* height: 100vh; */
+    /* position: relative;
+    border: solid 1.5em rgba(#000, 0.03);
+    border: 1px solid black;
+    height: 50vmin;
+    max-width: 13em;
+    max-height: 7em;
+    font-size: 2em;
+    background-color: purple;
+*/
+    &:after {
+        content: '';
+        position: absolute;
+        /* bottom: 0;
+        right: -20px;
+        height: 4px;
+        width: calc(50% + 20px);
+        background-color: ${({ theme }) => theme.mint_300}; */
+        top: 0;
+        right: 0;
+        /* background-color: purple; */
+        width: 50%;
+        height: 150%;
+        border: solid 4px ${({ theme }) => theme.mint_300};
+        border-color: transparent transparent ${({ theme }) => theme.mint_300}
+            ${({ theme }) => theme.mint_300};
+        border-radius: 0 0 0 50%/100px;
+    }
+`;

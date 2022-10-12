@@ -76,7 +76,6 @@ export const SkillContainer = styled(motion.div)`
     @media ${device.mobileL} {
         position: static;
         transform: translateX(0);
-
         grid-area: 2/7/11/13;
         width: 100%;
         height: 100%;

@@ -1,29 +1,29 @@
 import { useState, useEffect, useCallback } from 'react';
 
 export const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    height: 0,
-  });
-
-  const getWindowSizes = useCallback(function () {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
+    const [windowSize, setWindowSize] = useState({
+        width: 0,
+        height: 0,
     });
-  }, []);
 
-  useEffect(() => {
-    getWindowSizes();
-  }, [getWindowSizes]);
+    const getWindowSizes = useCallback(function () {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+        });
+    }, []);
 
-  useEffect(() => {
-    window.addEventListener('resize', getWindowSizes);
+    useEffect(() => {
+        getWindowSizes();
+    }, [getWindowSizes]);
 
-    return () => {
-      window.removeEventListener('resize', getWindowSizes);
-    };
-  }, [getWindowSizes]);
+    useEffect(() => {
+        window.addEventListener('resize', getWindowSizes);
 
-  return windowSize;
+        return () => {
+            window.removeEventListener('resize', getWindowSizes);
+        };
+    }, [getWindowSizes]);
+
+    return windowSize;
 };

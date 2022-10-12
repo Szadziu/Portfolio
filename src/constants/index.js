@@ -18,42 +18,42 @@ export const SKILL_BUNDLE = [
         id: 'skill_1',
         name: 'HTML 5',
         advancement: 8,
-        desc: 'Znajomość języka znaczników w stopniu pozwalającym na tworzenie struktury drzewa HTML, zgodnie z semantycznym zastosowaniem tagów ES6 oraz tworzenia i walidacji formularzy.',
+        desc: 'Znajomość najważniejszych znaczników i ich atrybutów, zgodnie z semantycznym zastosowaniem, tworzenia struktury dokumentu.',
     },
 
     {
         id: 'skill_2',
-        name: 'CSS',
+        name: 'CSS / Sass',
         advancement: 7,
-        desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji. Positioning, display, box model, grid, flex, media queries. Doświadczenie z konwencją BEM oraz z preprocessorem sass. Używałem również w projektach tailwind CSS.',
+        desc: 'Znajomość kaskadowych arkuszy stylów pozwalająca na tworzenie layoutów stron i aplikacji, selektorów i ich wagi, pozycjonowanie, box model, grid, flex-box, media queries, RWD, konwencja BEM, preprocessor sass/scss, tailwind CSS.',
     },
 
     {
         id: 'skill_3',
         name: 'JavaScript',
         advancement: 6,
-        desc: 'Znajomość składni ES6+ i struktury Javascript, manipulacje DOM, zapytania przy użyciu fetch API, moduły javascript, localStorage, ogólne rozumienie koncepcji hoistingu, zakresu, prototypów, klas.',
+        desc: 'Znajomość składni języka Javascript, typów prymitywnych i złożonych, zapytania przy użyciu fetch API / axios, składna ES6+, moduły Javascript, API przeglądarek (localStorage, DOM, inne), ogólne rozumienie koncepcji hoistingu, zakresu, prototypów, klas.',
     },
 
     {
         id: 'skill_4',
-        name: 'Vue',
-        advancement: 4,
-        desc: 'Framework, którego używam codziennie podczas tworzenia projektów komercyjnych. Używanie znanych dyrektyw, stosowanie vue-router czy też vuex w praktyce to moje codzienne zajęcie, gdzie z dnia na dzień uczę się więcej',
+        name: 'Typescript',
+        advancement: 3,
+        desc: 'Znajomość podstaw typowania, utility types, generic types ',
     },
 
     {
         id: 'skill_5',
-        name: 'React',
-        advancement: 4,
-        desc: 'Znajomość biblioteki React wystarczająca do budowania prostych aplikacji w oparciu między innymi o: komponenty funkcyjne lub klasowe, hooki reacta takie jak: useState, useEffect, useRef, useContext, usePortal. Korzystałem też z styled-components, material UI.',
+        name: 'React / Next',
+        advancement: 5,
+        desc: 'Znajomość biblioteki React wystarczająca do budowania aplikacji w oparciu między innymi o: komponenty funkcyjne / klasowe, hooki reacta (useState, useEffect, useRef, useContext, usePortal), custom hooki. Umiejętność korzystania z styled-components, material UI.  Podstawowa znajomość frameworka Next.',
     },
 
     {
         id: 'skill_6',
-        name: 'Inne',
-        advancement: 3,
-        desc: 'Ukończone kursy online: "Web developer od podstaw", "Front-end zaawansowany", "Programowanie w Javascript", "The Complete JavaScript Course 2022: From Zero to Expert!", "Kurs React w praktyce", "Kurs Vue". Znajomość narzędzi: npm, git, figma, canva, postman. Aktualnie chciałbym rozwijać swoje umiejętności z wiedzy o Typescripcie. W tej chwili znam podstawy typowania.',
+        name: 'Vue',
+        advancement: 4,
+        desc: ' Znajomość biblioteki Vue wystarczająca do budowania aplikacji w oparciu między innymi o: znane dyrektywy, vue-router, vuex',
     },
 ];
 
@@ -140,5 +140,24 @@ export const SOCIALS = [
         name: 'linkedin',
         icon: linkedinIcon,
         link: 'https://www.linkedin.com/in/maciej-miko%C5%82ajczak-717ba8197/',
+    },
+];
+
+export const TIMELINE_ITEMS = [
+    {
+        text: 'Pravna Group - Junior Frontend Developer',
+        date: 'Maj 2022',
+        category: {
+            tag: 'DEV',
+            color: '#018f69',
+        },
+    },
+    {
+        text: 'Kursy, szkolenia, nauka, własne projekty',
+        date: 'Sty 2020',
+        category: {
+            tag: 'Learn',
+            color: '#018f69',
+        },
     },
 ];
