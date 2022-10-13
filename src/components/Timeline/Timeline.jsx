@@ -7,12 +7,12 @@ const HorizontalTimeline = () => {
         <P.Timeline as={motion.ul} transition={{ duration: 1 }}>
             <P.TimelineItem
                 value={15}
-                date="01 Styczeń 2020 - obecnie"
+                date="01 Styczeń 2020"
                 text="Kursy ● Nauka ● Projekty ● Portfolio"
             />
             <P.TimelineItem
                 value={60}
-                date="16 Maj 2022 - obecnie (6 msc)"
+                date="16 Maj 2022"
                 text="Pravna Group ● Junior Frontend Developer"
             />
         </P.Timeline>
