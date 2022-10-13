@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { device } from '../../constants/devices';
 import { Flex } from '../../styles/Mixins';
+import { motion } from 'framer-motion';
 
-export const Timeline = styled.ul`
+export const Timeline = styled(motion.ul)`
     display: none;
 
     @media (${device.desktop}) {
+        display: block;
         grid-area: 2/2/4/12;
         position: relative;
         width: 100%;
@@ -59,11 +61,9 @@ export const TimelineItem = styled.li`
         transform: translateX(-50%);
         height: 55px;
         width: 150px;
-        /* border: 1px solid white; */
         border-left: 1px solid white;
         border-right: 1px solid white;
         padding: 0 10px;
-        /* background-color: white; */
     }
 
     &:after {

@@ -1,14 +1,22 @@
-import { TIMELINE_ITEMS } from '../../constants';
-import TimelineItem from './TimelineItem/TimelineItem';
-import './timeline.css';
+import { motion } from 'framer-motion';
+import React from 'react';
+import * as P from './Timeline.parts';
 
-const Timeline = () =>
-    TIMELINE_ITEMS.length > 0 && (
-        <div className="timeline-container">
-            {TIMELINE_ITEMS.map((data, idx) => (
-                <TimelineItem data={data} key={idx} />
-            ))}
-        </div>
+const HorizontalTimeline = () => {
+    return (
+        <P.Timeline as={motion.ul} transition={{ duration: 1 }}>
+            <P.TimelineItem
+                value={15}
+                date="01 Styczeń 2020 - obecnie"
+                text="Kursy ● Nauka ● Projekty ● Portfolio"
+            />
+            <P.TimelineItem
+                value={60}
+                date="16 Maj 2022 - obecnie (6 msc)"
+                text="Pravna Group ● Junior Frontend Developer"
+            />
+        </P.Timeline>
     );
+};
 
-export default Timeline;
+export default HorizontalTimeline;

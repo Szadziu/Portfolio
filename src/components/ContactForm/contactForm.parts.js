@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
     justify-content: center;
     grid-area: 2/12/11/2;
     border-radius: ${({ theme }) => theme.borderRadius.xxl};
+    min-height: 450px;
     max-width: 800px;
 
     background-color: ${({ theme }) => theme.gray_500};

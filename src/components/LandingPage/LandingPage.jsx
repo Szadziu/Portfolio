@@ -1,7 +1,7 @@
 import Button from '../generics/Button';
 import * as P from './landingPage.parts.js';
 import personalPhotoImage from '../../assets/personalPhoto.jpg';
-import Timeline from '../Timeline/Timeline';
+import styled from 'styled-components';
 
 const LandingPage = () => {
     return (
@@ -13,13 +13,10 @@ const LandingPage = () => {
             </div>
             <P.BackgroundPhoto image={personalPhotoImage} />
             <P.NavWrapper id="home">
-                {/* <P.PositionTitle>
+                <P.PositionTitle>
                     <p>Maciej Mikołajczak</p>
                     <p>junior frontend developer</p>
-                </P.PositionTitle> */}
-                <P.TLWrapper>
-                    <Timeline />
-                </P.TLWrapper>
+                </P.PositionTitle>
                 <P.NavButtonsWrapper>
                     <Button text="Strona Główna" link="home" />
                     <Button text="Umiejętności" link="skills" />

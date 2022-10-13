@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
-    grid-area: 2/2/12/11;
-
     overflow: auto;
+    height: 100%;
 
     &::-webkit-scrollbar {
         width: 6px;
@@ -32,12 +31,11 @@ export const Container = styled.div`
     }
 
     @media ${device.mobileL} {
-        grid-area: 2/1/12/7;
         margin: 0 ${({ theme }) => theme.margin.xl};
     }
 
     @media ${device.desktop} {
-        grid-area: 2/1/12/8;
+        height: 70%;
         font-size: ${({ theme }) => theme.fontSize.l};
     }
 `;

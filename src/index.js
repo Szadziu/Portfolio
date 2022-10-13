@@ -5,12 +5,12 @@ import BackgroundContextProvider from './contexts/BackgroundContext';
 import ProjectsContextProvider from './contexts/ProjectsContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BackgroundContextProvider>
-      <ProjectsContextProvider>
-        <App />
-      </ProjectsContextProvider>
-    </BackgroundContextProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <BackgroundContextProvider>
+            <ProjectsContextProvider>
+                <App />
+            </ProjectsContextProvider>
+        </BackgroundContextProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );

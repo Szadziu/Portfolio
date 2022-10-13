@@ -29,7 +29,7 @@ export const Input = styled(Field)`
         border-bottom-color: ${({ theme }) => theme.gray_200};
     }
 
-    @media ${device.desktopFHD} {
+    @media ${device.desktop} {
         font-size: ${({ theme }) => theme.fontSize.l};
     }
 `;

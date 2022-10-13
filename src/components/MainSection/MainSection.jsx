@@ -6,7 +6,6 @@ import SectionWrapper from '../generics/SectionWrapper';
 import Timeline from '../Timeline/Timeline';
 import { QUOTE } from '../../constants';
 import * as P from './mainSection.parts';
-import HorizontalTimeline from '../HorizontalTimeline/HorizontalTimeline';
 
 const MainSection = () => {
     const theme = useTheme();
@@ -17,7 +16,7 @@ const MainSection = () => {
                 kilka słów o mnie ...
             </P.MainSectionTitle>
             <P.AboutMeDescWrapper>
-                <HorizontalTimeline />
+                <Timeline />
                 <AboutMeDesc />
             </P.AboutMeDescWrapper>
             <Quote>{QUOTE}</Quote>

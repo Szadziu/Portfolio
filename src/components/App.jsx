@@ -4,11 +4,14 @@ import GlobalStyle from '../styles/GlobalStyle';
 import LandingPage from './LandingPage';
 import MainSection from './MainSection';
 import Projects from './Projects';
+import DefenderOfDimensions from '../components/DefenderOfDimensions';
+
 import Theme from './Theme';
 
 const App = () => {
     return (
         <Theme>
+            <DefenderOfDimensions x={320} y={650} />
             <GlobalStyle />
             <FloatingButton />
             <LandingPage />

@@ -59,11 +59,10 @@ export const SkillContainer = styled(motion.div)`
     flex-direction: column;
 
     width: 300px;
-    max-height: 800px;
+    min-height: 500px;
     border-radius: ${({ theme }) =>
         `${theme.borderRadius.m} 0 0 ${theme.borderRadius.m}`};
     box-shadow: 0 0 5px 3px ${({ theme }) => theme.mint_400};
-    /* padding: ${({ theme }) => `60px 0 ${theme.padding.xl}`}; */
 
     background-color: ${({ theme }) => theme.white};
 

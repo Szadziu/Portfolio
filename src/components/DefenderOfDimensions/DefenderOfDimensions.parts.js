@@ -3,7 +3,7 @@ import { Flex } from '../../styles/Mixins';
 
 export const Defender = styled.div`
     position: fixed;
-    z-index: 3;
+    z-index: 1000;
 
     ${Flex()};
     height: 100vh;

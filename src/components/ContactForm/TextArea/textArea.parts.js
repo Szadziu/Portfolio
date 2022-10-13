@@ -28,8 +28,8 @@ export const TextAreaField = styled.textarea`
         border-bottom-color: ${({ theme }) => theme.gray_200};
     }
 
-    @media ${device.desktopFHD} {
-        font-size: ${({ theme }) => theme.fontSize.xl};
+    @media ${device.desktop} {
+        font-size: ${({ theme }) => theme.fontSize.l};
     }
 `;
 

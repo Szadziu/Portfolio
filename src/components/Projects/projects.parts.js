@@ -11,6 +11,7 @@ export const ProjectsWrapper = styled.div`
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-area: 3/2/12/12;
+    min-height: 450px;
 
     justify-items: center;
     align-items: center;
