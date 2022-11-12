@@ -14,11 +14,7 @@ const Projects = () => {
 
     const generateProjects = () => {
         return PROJECTS.map((project) => (
-            <SingleProject
-                key={project.id}
-                currentProject={project}
-                parentRef={parentRef}
-            >
+            <SingleProject key={project.id} currentProject={project} parentRef={parentRef}>
                 {project.name}
             </SingleProject>
         ));
