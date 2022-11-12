@@ -11,7 +11,7 @@ import Theme from './Theme';
 const App = () => {
     return (
         <Theme>
-            <DefenderOfDimensions x={310} y={650} />
+            <DefenderOfDimensions x={320} y={600} />
             <GlobalStyle />
             <FloatingButton />
             <LandingPage />
