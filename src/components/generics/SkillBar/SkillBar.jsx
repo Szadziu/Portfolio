@@ -21,9 +21,7 @@ const SkillBar = ({ children, skill }) => {
         let boxHeight = 2;
 
         const addBoxOfSkill = (color, height, i) => {
-            advancementLevel.push(
-                <P.BoxOfSkill key={i} color={color} height={height} />
-            );
+            advancementLevel.push(<P.BoxOfSkill key={i} color={color} height={height} />);
         };
 
         for (let i = 0; i < skill.advancement; i++) {

@@ -12,9 +12,7 @@ const MainSection = () => {
 
     return (
         <SectionWrapper bgColor={theme.gray_300} id="skills">
-            <P.MainSectionTitle color={theme.white}>
-                kilka słów o mnie ...
-            </P.MainSectionTitle>
+            <P.MainSectionTitle color={theme.white}>kilka słów o mnie</P.MainSectionTitle>
             <P.AboutMeDescWrapper>
                 <Timeline />
                 <AboutMeDesc />

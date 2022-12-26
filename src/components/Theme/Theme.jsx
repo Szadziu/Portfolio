@@ -46,11 +46,11 @@ const THEME = {
     },
 
     padding: {
-        s: '5px',
-        m: '10px',
-        l: '15px',
-        xl: '20px',
-        xxl: '30px',
+        s: '4px',
+        m: '8px',
+        l: '12px',
+        xl: '16px',
+        xxl: '24px',
     },
 
     margin: {

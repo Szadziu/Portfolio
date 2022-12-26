@@ -12,6 +12,10 @@ export const ModalWrapper = styled.div`
         font-weight: 400;
     }
 
+    & p:last-child {
+        line-height: 1.6;
+    }
+
     &::-webkit-scrollbar {
         width: 10px;
     }

@@ -32,9 +32,7 @@ export const SkillLabel = styled.div`
 
         display: block;
         margin: ${({ theme }) => theme.margin.m} 0;
-        transform: rotateY(
-            ${({ isSideMenuOpen }) => (isSideMenuOpen ? '0' : '180deg')}
-        );
+        transform: rotateY(${({ isSideMenuOpen }) => (isSideMenuOpen ? '0' : '180deg')});
         z-index: 1;
 
         width: 30px;
@@ -59,17 +57,14 @@ export const SkillContainer = styled(motion.div)`
     flex-direction: column;
 
     width: 300px;
-    min-height: 500px;
-    border-radius: ${({ theme }) =>
-        `${theme.borderRadius.m} 0 0 ${theme.borderRadius.m}`};
+    min-height: 450px;
+    border-radius: ${({ theme }) => `${theme.borderRadius.m} 0 0 ${theme.borderRadius.m}`};
     box-shadow: 0 0 5px 3px ${({ theme }) => theme.mint_400};
 
     background-color: ${({ theme }) => theme.white};
 
     transition: 1s;
-    transform: translateX(
-        ${({ isSideMenuOpen }) => (isSideMenuOpen ? 0 : '85%')}
-    );
+    transform: translateX(${({ isSideMenuOpen }) => (isSideMenuOpen ? 0 : '85%')});
     user-select: none;
 
     @media ${device.mobileL} {
@@ -115,17 +110,22 @@ export const InfoIconLink = styled.button`
 export const SkillTitle = styled.p`
     width: 100%;
 
-    font-size: ${({ theme }) => theme.fontSize.m};
+    font-size: ${({ theme }) => theme.fontSize.s};
+    text-transform: uppercase;
     text-align: left;
+    font-weight: 600;
+    color: ${({ theme }) => theme.gray_400};
 
     @media ${device.desktopFHD} {
-        font-size: ${({ theme }) => theme.fontSize.xl};
+        font-size: ${({ theme }) => theme.fontSize.m};
     }
 `;
 
 export const SkillAdvancementInfo = styled.div`
     ${Flex('space-between')};
     width: 100%;
+
+    color: ${({ theme }) => theme.gray_400};
 
     font-size: ${({ theme }) => theme.fontSize.s};
 

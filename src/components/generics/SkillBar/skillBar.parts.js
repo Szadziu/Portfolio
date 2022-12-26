@@ -3,7 +3,7 @@ import { Flex } from '../../../styles/Mixins';
 import { device } from '../../../constants/devices';
 
 export const Bar = styled.div`
-    position: relative;
+    /* position: relative; */
 
     display: flex;
     flex-wrap: wrap;
@@ -11,8 +11,7 @@ export const Bar = styled.div`
     width: 80%;
     height: 40px;
     margin-right: ${({ theme }) => theme.margin.m};
-    margin: ${({ theme }) =>
-        `${theme.margin.l} ${theme.margin.s} ${theme.margin.l} 0`};
+    margin: ${({ theme }) => `${theme.margin.l} ${theme.margin.s} ${theme.margin.l} 0`};
     border-bottom: 2px solid ${({ theme }) => theme.black};
 
     @media ${device.mobileL} {

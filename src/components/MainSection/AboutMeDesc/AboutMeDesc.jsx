@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import * as P from './aboutMeDesc.parts';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 
 const AboutMeDesc = () => {
     const { ref, inView, entry } = useInView({ threshold: 0.4 });
+    const { height } = useWindowSize();
 
     useEffect(() => {
         if (inView) {
@@ -12,27 +14,21 @@ const AboutMeDesc = () => {
         }
     }, [inView]);
     return (
-        <P.Container ref={ref}>
+        <P.Container ref={ref} currentScreenHeight={height}>
             <P.Line>
-                Obecnie umacniam szeregi na froncie w wiedzę o praktyczne
-                zastosowanie frameworka React na stanowisku Junior Frontend
-                Developera, gdzie jestem odpowiedzialny za tworzenie warstwy
-                wizualnej oraz elementów dynamicznych aktualnie tworzonej
-                aplikacji. Zamiłowanie do technologii jest moją pasją i hobby,
-                więc postawiłem sobie za cel, rozwijać się w tym zawodowo.
-                Pozwala mi to na ciągły rozwój i doskonalenie samego siebie
-                przez co, jak najlepiej mogę oddawać coraz to lepsze doznania i
-                wrażenia na ręce użytkowników aplikacji, do których tworzenia
-                mogłem się przyczynić.
+                Jako dynamiczny i ambitny junior frontend developer, pracujący obecnie z
+                frameworkiem React, posiadam wykształcenie inżynierskie oraz ponad półroczne
+                doświadczenie komercyjne w branży IT, gdzie obecnie tworzę projekty dla klientów
+                zewnętrznych. Zdobyłem szerokie umiejętności z zakresu HTML, CSS, JavaScript,
+                Typescript, React, dzięki samodzielnej nauce przez około dwa lata.
             </P.Line>
 
             <P.Line>
-                Dodatkowo ukończyłem studia inżynierskie o kierunku Edukacja
-                Techniczno-Informatyczna, a dziś chciałbym poszerzać swoje
-                umiejętności z zamiarem tworzenia nowoczesnych rozwiązań i
-                produktów oraz czerpać satysfakcję i dzielić się wiedzą z tej
-                dziedziny. W czasie wolnym obecnie dokształcam się z Next,
-                Typescript oraz GraphQL.
+                Aktywnie szukam nowych wyzwań i chętnie podejmuję nowe projekty, dzięki którym mogę
+                rozwijać swoje umiejętności i zdobywać cenne doświadczenie zawodowe. Moja pasja to
+                tworzenie nowoczesnych aplikacji internetowych oraz ciągły rozwój moich zdolności, a
+                determinacja i ciężka praca są dla mnie kluczem do osiągania sukcesów w branży IT i
+                bycia cenionym specjalistą w swojej dziedzinie.
             </P.Line>
         </P.Container>
     );

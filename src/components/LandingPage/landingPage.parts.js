@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import SectionWrapper from '../generics/SectionWrapper';
 import { Flex } from '../../styles/Mixins';
+import { device } from '../../constants/devices';
 
 export const LandingPageView = styled(SectionWrapper)`
+    position: relative;
+
     & .lines {
         position: absolute;
         top: 0;
@@ -36,12 +39,7 @@ export const LandingPageView = styled(SectionWrapper)`
             height: 15vh;
             width: 100%;
 
-            background: linear-gradient(
-                to bottom,
-                rgba(0, 0, 0, 0) 0%,
-                #000 75%,
-                #000 100%
-            );
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 75%, #000 100%);
 
             animation: drop 7s 0s infinite;
             animation-fill-mode: forwards;
@@ -76,20 +74,56 @@ export const LandingPageView = styled(SectionWrapper)`
 export const NavWrapper = styled.div`
     ${Flex('flex-end', 'flex-start')};
     flex-wrap: wrap;
-    grid-area: 1/13/13/6;
+    grid-area: 1/13/13/5;
 `;
 
 export const NavButtonsWrapper = styled.div`
     ${Flex()};
     flex-direction: column;
     gap: 20px;
+    margin: 0 30px;
 
     width: 100%;
     height: 310px;
+
+    @media ${device.desktop} {
+        height: 400px;
+    }
 `;
 
-export const PositionTitle = styled.div`
+export const PositionTitle = styled.h1`
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
     position: relative;
+    text-align: right;
+    padding: 10px 20px 0 0;
+
+    & .name {
+        display: block;
+        animation: shimmer 5s linear infinite;
+    }
+
+    & .title {
+        display: inline-block;
+        font-weight: normal;
+        color: ${({ theme }) => theme.mint_300};
+        margin-left: 10px;
+    }
+
+    @keyframes shimmer {
+        0% {
+            color: #333;
+        }
+        50% {
+            color: #999;
+        }
+        100% {
+            color: #333;
+        }
+    }
+    /* position: relative;
     z-index: 1;
 
     ${Flex()}
@@ -116,10 +150,16 @@ export const PositionTitle = styled.div`
 
     & :last-child {
         font-size: ${({ theme }) => theme.fontSize.xs};
-    }
+    } */
 `;
 
 export const BackgroundPhoto = styled.div`
+    background-size: 112.5vh 150vh;
+    /* background-position: -56.25vh
+        ${({ currentScreenHeight }) => (currentScreenHeight > 650 ? '-5vh' : '0vh')}; */
+
+    background-position: -56.25vh 0;
+
     position: absolute;
 
     width: 100%;
@@ -127,6 +167,7 @@ export const BackgroundPhoto = styled.div`
 
     background-image: url(${({ image }) => image});
     background-repeat: no-repeat;
-    background-size: 112.5vh 150vh;
-    background-position: -56.25vh 0;
+    /* background-size: 112.5vh 150vh;
+    background-position: -56.25vh -5vh;
+    background-attachment: fixed; */
 `;

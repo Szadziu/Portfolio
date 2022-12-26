@@ -3,7 +3,7 @@ import { device } from '../../../constants/devices';
 
 export const Container = styled.div`
     overflow: auto;
-    height: 100%;
+    height: 90%;
 
     &::-webkit-scrollbar {
         width: 6px;
@@ -22,7 +22,6 @@ export const Container = styled.div`
     }
 
     font-size: ${({ theme }) => theme.fontSize.m};
-    text-align: justify;
     hyphens: auto;
     padding: 0 ${({ theme }) => theme.padding.m};
 
@@ -35,7 +34,7 @@ export const Container = styled.div`
     }
 
     @media ${device.desktop} {
-        height: 70%;
+        height: ${({ currentScreenHeight }) => (currentScreenHeight >= 800 ? '60%' : '90%')};
         font-size: ${({ theme }) => theme.fontSize.l};
     }
 `;

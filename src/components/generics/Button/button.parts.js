@@ -18,7 +18,7 @@ export const Button = styled(Link)`
     background-color: ${({ theme }) => theme.white};
     color: ${({ theme }) => theme.black};
 
-    font-size: ${({ theme }) => theme.fontSize.l};
+    font-size: ${({ theme }) => theme.fontSize.m};
     font-weight: 300;
 
     cursor: pointer;

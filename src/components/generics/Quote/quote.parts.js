@@ -4,7 +4,7 @@ import { device } from '../../../constants/devices';
 
 export const QuoteParam = styled.p`
     ${Flex()};
-    grid-area: 12/2/13/12;
+    grid-area: 11/2/13/12;
     opacity: 0;
     padding: ${({ theme }) => theme.padding.xl};
 

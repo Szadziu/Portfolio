@@ -92,7 +92,8 @@ export const ProjectDescription = styled.section`
     padding: 0 ${({ theme }) => theme.padding.xl};
 
     font-size: ${({ theme }) => theme.fontSize.m};
-    text-align: justify;
+    text-align: left;
+    line-height: 1.5;
     hyphens: auto;
     overflow: auto;
 

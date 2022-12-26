@@ -21,7 +21,7 @@ const SkillsWrapper = () => {
         } else {
             document.removeEventListener('click', closeModal);
         }
-    }, [visibleModalIndex]);
+    }, [visibleModalIndex, closeModal]);
 
     const toggleDisplaySideMenu = () => {
         setIsSideMenuOpen(!isSideMenuOpen);
@@ -38,11 +38,7 @@ const SkillsWrapper = () => {
                         <div onClick={(e) => e.stopPropagation()}>
                             <P.InfoIconLink
                                 data-iconid={skill.id}
-                                onClick={() =>
-                                    setVisibleModalIndex(
-                                        isModalVisible ? null : index
-                                    )
-                                }
+                                onClick={() => setVisibleModalIndex(isModalVisible ? null : index)}
                             >
                                 <FontAwesomeIcon icon={faEllipsisH} />
                             </P.InfoIconLink>
@@ -66,10 +62,7 @@ const SkillsWrapper = () => {
             layout="position"
             isSideMenuOpen={isSideMenuOpen}
         >
-            <P.SkillLabel
-                isSideMenuOpen={isSideMenuOpen}
-                onClick={toggleDisplaySideMenu}
-            >
+            <P.SkillLabel isSideMenuOpen={isSideMenuOpen} onClick={toggleDisplaySideMenu}>
                 umiejętności
             </P.SkillLabel>
             {renderListOfSkills()}

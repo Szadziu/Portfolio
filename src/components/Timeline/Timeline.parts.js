@@ -7,7 +7,7 @@ export const Timeline = styled(motion.ul)`
     display: none;
 
     @media (${device.desktop}) {
-        display: block;
+        display: ${({ currentScreenHeight }) => (currentScreenHeight >= 800 ? 'block' : 'none')};
         grid-area: 2/2/4/12;
         position: relative;
         width: 100%;
