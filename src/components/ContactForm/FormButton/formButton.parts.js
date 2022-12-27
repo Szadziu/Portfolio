@@ -14,7 +14,6 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.black_20};
     color: ${({ theme }) => theme.pink_300};
 
-    font-weight: 300;
     font-size: ${({ theme }) => theme.fontSize.xs};
     font-family: 'Montserrat', 'sans-serif';
     letter-spacing: ${({ theme }) => theme.letterSpacing.s};

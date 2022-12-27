@@ -21,7 +21,6 @@ export const SectionTitle = (color) => css`
     color: ${color};
 
     font-size: ${({ theme }) => theme.fontSize.m};
-    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
 

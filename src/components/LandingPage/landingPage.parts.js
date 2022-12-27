@@ -8,6 +8,7 @@ export const LandingPageView = styled(SectionWrapper)`
 
     & .lines {
         position: absolute;
+        z-index: 1;
         top: 0;
         left: 0;
         right: 0;
@@ -78,27 +79,33 @@ export const NavWrapper = styled.div`
 `;
 
 export const NavButtonsWrapper = styled.div`
+    position: relative;
+    z-index: 2;
     ${Flex()};
     flex-direction: column;
     gap: 20px;
     margin: 0 30px;
 
     width: 100%;
-    height: 310px;
-
-    @media ${device.desktop} {
-        height: 400px;
-    }
+    height: 400px;
 `;
 
 export const PositionTitle = styled.h1`
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
     color: #333;
     text-transform: uppercase;
     position: relative;
     text-align: right;
     padding: 10px 20px 0 0;
+
+    @media ${device.mobileM} {
+        font-size: 30px;
+    }
+
+    @media ${device.mobileL} {
+        font-size: 36px;
+    }
 
     & .name {
         display: block;
@@ -114,60 +121,24 @@ export const PositionTitle = styled.h1`
 
     @keyframes shimmer {
         0% {
-            color: #333;
+            color: ${({ theme }) => theme.black};
         }
         50% {
-            color: #999;
+            color: ${({ theme }) => theme.black_50};
         }
         100% {
-            color: #333;
+            color: ${({ theme }) => theme.black};
         }
     }
-    /* position: relative;
-    z-index: 1;
-
-    ${Flex()}
-    flex-direction: column;
-    row-gap: 10px;
-
-    width: 220px;
-    height: 90px;
-    padding: ${({ theme }) => `${theme.padding.xl} ${theme.padding.s}`};
-    border-left: 1px solid ${({ theme }) => theme.mint_300};
-    border-bottom: 2px solid ${({ theme }) => theme.mint_300};
-
-    line-height: 18px;
-    text-align: right;
-    text-transform: uppercase;
-
-    color: ${({ theme }) => theme.black};
-
-    & :first-child {
-        font-weight: 400;
-        border-bottom: 1px solid ${({ theme }) => theme.mint_300};
-        padding-bottom: 5px;
-    }
-
-    & :last-child {
-        font-size: ${({ theme }) => theme.fontSize.xs};
-    } */
 `;
 
 export const BackgroundPhoto = styled.div`
-    background-size: 112.5vh 150vh;
-    /* background-position: -56.25vh
-        ${({ currentScreenHeight }) => (currentScreenHeight > 650 ? '-5vh' : '0vh')}; */
-
-    background-position: -56.25vh 0;
-
     position: absolute;
-
     width: 100%;
     height: 100%;
-
+    background-size: 112.5vh 150vh;
+    background-position: -56.25vh 0;
     background-image: url(${({ image }) => image});
     background-repeat: no-repeat;
-    /* background-size: 112.5vh 150vh;
-    background-position: -56.25vh -5vh;
-    background-attachment: fixed; */
+    background-attachment: fixed;
 `;

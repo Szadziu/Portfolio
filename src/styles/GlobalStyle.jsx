@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
+        font-weight: 400;
         height: 100%;
     }
 

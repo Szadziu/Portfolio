@@ -8,9 +8,10 @@ export const Button = styled(Link)`
 
     ${Flex()};
 
+    min-width: 160px;
     width: 100%;
     max-width: 300px;
-    height: 70px;
+    height: 12%;
 
     border-radius: ${({ theme }) => theme.borderRadius.s};
     box-shadow: 0 0 1px 1px ${({ theme }) => theme.black_20};
@@ -18,8 +19,9 @@ export const Button = styled(Link)`
     background-color: ${({ theme }) => theme.white};
     color: ${({ theme }) => theme.black};
 
-    font-size: ${({ theme }) => theme.fontSize.m};
-    font-weight: 300;
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
     cursor: pointer;
     user-select: none;
@@ -42,14 +44,13 @@ export const Button = styled(Link)`
     }
 
     @media ${device.mobileM} {
-        font-size: ${({ theme }) => theme.fontSize.xl};
-    }
-
-    @media ${device.mobileL} {
         height: 20%;
+        font-size: ${({ theme }) => theme.fontSize.m};
     }
 
     @media ${device.desktop} {
+        font-size: ${({ theme }) => theme.fontSize.l};
+
         &:hover {
             background-color: ${({ theme }) => theme.beige_20};
             &::before {
