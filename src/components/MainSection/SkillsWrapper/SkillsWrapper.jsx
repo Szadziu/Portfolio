@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
-import InfoBubble from '../../generics/InfoBubble';
+import SkillTooltip from '../../generics/SkillTooltip';
 import SkillBar from '../../generics/SkillBar';
 import { SKILL_BUNDLE } from '../../../constants';
 import * as P from './skillsWrapper.parts';
@@ -47,7 +47,7 @@ const SkillsWrapper = () => {
                     </P.SkillAdvancementInfo>
                     {isModalVisible && (
                         <div onClick={(e) => e.stopPropagation()}>
-                            <InfoBubble skill={skill} />
+                            <SkillTooltip skill={skill} />
                         </div>
                     )}
                 </SkillBar>

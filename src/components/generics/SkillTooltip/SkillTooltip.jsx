@@ -1,6 +1,6 @@
-import * as P from './infoBubble.parts';
+import * as P from './skillTooltip.parts';
 
-const InfoBubble = ({ skill: { name, desc, id } }) => {
+const SkillTooltip = ({ skill: { name, desc, id } }) => {
     return (
         <P.InfoModal id={id}>
             <P.ModalWrapper>
@@ -11,4 +11,4 @@ const InfoBubble = ({ skill: { name, desc, id } }) => {
     );
 };
 
-export default InfoBubble;
+export default SkillTooltip;
