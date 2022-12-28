@@ -136,9 +136,9 @@ export const BackgroundPhoto = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: 112.5vh 150vh;
-    background-position: -56.25vh 0;
+    top: 10px;
+    background-position: 0 bottom;
+    background-size: contain;
     background-image: url(${({ image }) => image});
     background-repeat: no-repeat;
-    background-attachment: fixed;
 `;
