@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../constants/devices';
 import { SectionTitle } from '../../styles/Mixins';
 
-export const FooterSectionTitle = styled.h1`
+export const FooterSectionTitle = styled.h2`
     ${SectionTitle(({ color }) => color)};
 `;
 

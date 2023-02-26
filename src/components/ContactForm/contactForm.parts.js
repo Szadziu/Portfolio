@@ -1,24 +1,20 @@
 import styled from 'styled-components';
-import { Form } from 'formik';
-
-import { device } from '../../constants/devices';
-import { Flex } from '../../styles/Mixins';
+import {Form} from 'formik';
+import {Flex} from '../../styles/Mixins';
 
 export const Wrapper = styled.div`
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
-
     display: flex;
     justify-content: center;
-    grid-area: 2/12/11/2;
-    border-radius: ${({ theme }) => theme.borderRadius.xxl};
-    min-height: 450px;
-    max-width: 800px;
+    width: 100%;
+    grid-area: 3/2/11/12;
+    margin: 0 auto;
+    border-radius: ${({theme}) => theme.borderRadius.l};
+    max-height: 500px;
+    max-width: 600px;
 
-    background-color: ${({ theme }) => theme.gray_500};
+    background-color: ${({theme}) => theme.gray_500};
 
     &:after {
         position: absolute;
@@ -29,8 +25,8 @@ export const Wrapper = styled.div`
         z-index: -1;
 
         display: block;
-        border-radius: ${({ theme }) => theme.borderRadius.xxl};
-        box-shadow: 0 5px 10px ${({ theme }) => theme.black_20};
+        border-radius: ${({theme}) => theme.borderRadius.xxl};
+        box-shadow: 0 5px 10px ${({theme}) => theme.black_20};
 
         content: '';
     }
@@ -39,31 +35,33 @@ export const Wrapper = styled.div`
 export const FormWrapper = styled(Form)`
     ${Flex()};
     flex-direction: column;
-    width: 90%;
+    row-gap: 30px;
+    width: 100%;
     height: 100%;
+    padding: ${({theme}) => theme.padding.xl};
 `;
 
-export const CooperateInfo = styled.p`
-    ${Flex('flex-start', 'flex-start')};
-    width: 90%;
-    padding: ${({ theme }) => theme.padding.m} 0;
+// export const CooperateInfo = styled.p`
+//     ${Flex('flex-start', 'flex-start')};
+//     width: 90%;
+//     padding: ${({ theme }) => theme.padding.m} 0;
 
-    margin-top: ${({ theme }) => theme.margin.m};
+//     margin-top: ${({ theme }) => theme.margin.m};
 
-    color: ${({ theme }) => theme.gray_300};
+//     color: ${({ theme }) => theme.gray_300};
 
-    font-size: ${({ theme }) => theme.fontSize.xxs};
+//     font-size: ${({ theme }) => theme.fontSize.xxs};
 
-    user-select: none;
+//     user-select: none;
 
-    @media ${device.mobileM} {
-        font-size: ${({ theme }) => theme.fontSize.xs};
-    }
+//     @media ${device.mobileM} {
+//         font-size: ${({ theme }) => theme.fontSize.xs};
+//     }
 
-    @media ${device.mobileL} {
-        font-size: ${({ theme }) => theme.fontSize.m};
-    }
-`;
+//     @media ${device.mobileL} {
+//         font-size: ${({ theme }) => theme.fontSize.m};
+//     }
+// `;
 
 export const ActionsWrapper = styled.div`
     ${Flex('flex-end')};

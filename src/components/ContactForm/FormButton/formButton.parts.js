@@ -4,14 +4,14 @@ import { Flex } from '../../../styles/Mixins';
 
 export const Button = styled.button`
     ${Flex()};
-    gap: 5px;
 
     height: 40px;
     min-width: 100px;
     align-self: flex-end;
     padding: ${({ theme }) => `${theme.padding.s} ${theme.padding.m}`};
 
-    background-color: ${({ theme }) => theme.black_20};
+    background-color: ${({ theme }) => theme.black_50};
+    border-radius: ${({ theme }) => theme.borderRadius.l};
     color: ${({ theme }) => theme.pink_300};
 
     font-size: ${({ theme }) => theme.fontSize.xs};

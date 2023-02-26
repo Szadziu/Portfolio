@@ -35,12 +35,13 @@ export const Input = styled(Field)`
 `;
 
 export const InputWrapper = styled.div`
+    position: relative;
     ${Flex()};
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     height: 15%;
     max-height: 50px;
-    margin: ${({ theme }) => theme.margin.l};
-
     font-family: 'Montserrat', sans-serif;
+
+    /* border: 1px solid red; */
 `;

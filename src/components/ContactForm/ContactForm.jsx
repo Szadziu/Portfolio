@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import { Formik } from 'formik';
+import {Formik} from 'formik';
 import Comment from '../generics/Comment';
-import { Spinner } from '../Spinner/spinner.parts';
+import {Spinner} from '../Spinner/spinner.parts';
 
 import Input from './Input';
 import FormButton from './FormButton';
@@ -30,7 +30,7 @@ const ContactForm = () => {
     const buttonRef = useRef(null);
     const formRef = useRef(null);
 
-    const handleSubmit = (_, { resetForm }) => {
+    const handleSubmit = (_, {resetForm}) => {
         if (formState === FORM_STATE.LOADING) return;
 
         setFormState(FORM_STATE.LOADING);
@@ -60,51 +60,18 @@ const ContactForm = () => {
 
     return (
         <P.Wrapper id="contact">
-            <Formik
-                initialValues={initialValues}
-                onSubmit={handleSubmit}
-                validationSchema={VALIDATION_SCHEMA}
-            >
-                {({ errors }) => (
+            <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={VALIDATION_SCHEMA}>
+                {({errors}) => (
                     <P.FormWrapper ref={formRef}>
-                        <Input
-                            errors={errors.username}
-                            type="text"
-                            name="username"
-                            label="Imię"
-                            id="username"
-                            placeholder="wpisz swoje imię"
-                        />
-                        <Input
-                            errors={errors.email}
-                            type="email"
-                            name="email"
-                            label="E-mail"
-                            id="email"
-                            placeholder="podaj e-mail"
-                        />
-                        <TextArea
-                            errors={errors.body}
-                            name="body"
-                            id="body"
-                            label="Wiadomość"
-                            placeholder="wpisz swoją wiadomość tutaj..."
-                        />
+                        <Input errors={errors.username} type="text" name="username" label="Imię" id="username" placeholder="wpisz swoje imię" />
+                        <Input errors={errors.email} type="email" name="email" label="E-mail" id="email" placeholder="podaj e-mail" />
+                        <TextArea errors={errors.body} name="body" id="body" label="Wiadomość" placeholder="wpisz swoją wiadomość tutaj..." />
                         <P.ActionsWrapper>
-                            {formState === FORM_STATE.SUCCESS && (
-                                <Comment info>Wysłano</Comment>
-                            )}
+                            {formState === FORM_STATE.SUCCESS && <Comment info>Wysłano</Comment>}
                             <FormButton ref={buttonRef} type="submit">
-                                {formState === FORM_STATE.LOADING ? (
-                                    <Spinner />
-                                ) : (
-                                    'Wyślij'
-                                )}
+                                {formState === FORM_STATE.LOADING ? <Spinner /> : 'Wyślij'}
                             </FormButton>
                         </P.ActionsWrapper>
-                        <P.CooperateInfo>
-                            W celu nawiązania współpracy proszę o kontakt
-                        </P.CooperateInfo>
                     </P.FormWrapper>
                 )}
             </Formik>

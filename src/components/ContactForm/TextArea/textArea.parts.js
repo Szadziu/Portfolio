@@ -34,9 +34,13 @@ export const TextAreaField = styled.textarea`
 `;
 
 export const TextAreaWrapper = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
 
-    width: 90%;
+    /* border: 1px solid blue; */
+
+    width: 100%;
     height: 40%;
+    max-height: 200px;
 `;

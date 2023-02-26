@@ -10,13 +10,13 @@ import * as P from './footer.parts';
 const Footer = () => {
     const theme = useTheme();
     return (
-        <SectionWrapper bgColor={theme.gray_300}>
+        <SectionWrapper bgColor={theme.gray_300} minHeight={600}>
             <P.FooterSectionTitle color={theme.white}>
                 kontakt do mnie
             </P.FooterSectionTitle>
             <ContactForm />
             <SocialsBanner icons={SOCIALS} />
-            <P.IconsLink href="https://www.flaticon.com" title="icons">
+            <P.IconsLink href="https://www.flaticon.com">
                 All icons created by Freepik or Authors from Flaticon
             </P.IconsLink>
         </SectionWrapper>
