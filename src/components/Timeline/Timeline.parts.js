@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { device } from '../../constants/devices';
-import { Flex } from '../../styles/Mixins';
-import { motion } from 'framer-motion';
+import {device} from '../../constants/devices';
+import {Flex} from '../../styles/Mixins';
+import {motion} from 'framer-motion';
 
 export const Timeline = styled(motion.ul)`
     display: none;
 
     @media (${device.desktop}) {
-        display: ${({ currentScreenHeight }) => (currentScreenHeight >= 800 ? 'block' : 'none')};
+        display: ${({currentScreenHeight}) => (currentScreenHeight >= 800 ? 'block' : 'none')};
         grid-area: 2/2/4/12;
         position: relative;
         width: 100%;
@@ -33,7 +33,7 @@ export const Timeline = styled(motion.ul)`
             top: calc(50% - 7.5px);
             left: 100%;
             clip-path: polygon(0 0, 0% 100%, 100% 50%);
-            background-color: ${({ theme }) => theme.mint_300};
+            background-color: ${({theme}) => theme.mint_300};
         }
     }
 `;
@@ -42,19 +42,19 @@ export const TimelineItem = styled.li`
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: ${({ theme }) => theme.pink_300};
-    box-shadow: 0 0 0 5px ${({ theme }) => theme.gray_300};
+    background-color: ${({theme}) => theme.pink_300};
+    box-shadow: 0 0 0 5px ${({theme}) => theme.gray_300};
     text-align: center;
     line-height: 1.2;
     position: relative;
     border-radius: 50%;
-    left: ${({ value }) => value}%;
+    left: ${({value}) => value}%;
     border: solid 1px white;
     color: white;
 
     &:before {
         ${Flex()};
-        content: ${({ text }) => `"${text}"`};
+        content: ${({text}) => `"${text}"`};
         font-size: 14px;
         position: absolute;
         left: 50%;
@@ -68,7 +68,7 @@ export const TimelineItem = styled.li`
 
     &:after {
         ${Flex()};
-        content: ${({ date }) => `"${date}"`};
+        content: ${({date}) => `"${date}"`};
         font-size: 14px;
         position: absolute;
         left: 50%;
