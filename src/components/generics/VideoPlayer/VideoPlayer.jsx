@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {useRef} from 'react';
 import * as P from './videoPlayer.parts';
+import playDemoIcon from '../../../assets/playDemo.png';
+
 
 const VideoPlayer = ({src}) => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -21,9 +23,10 @@ const VideoPlayer = ({src}) => {
                     onClick={() => {
                         setIsPlaying(true);
                         setIsVisible(true);
-                    }}>
+                    }}
+                    icon={playDemoIcon}
+                    >
                     <P.PlayIcon className="fa fa-play"></P.PlayIcon>
-                    <span>Guess My Number App</span>
                 </P.PlayButton>
             )}
             {isVisible && (
