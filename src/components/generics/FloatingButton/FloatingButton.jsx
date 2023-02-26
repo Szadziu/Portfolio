@@ -1,13 +1,16 @@
+import { useContext } from 'react';
 import { useState, useEffect, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 
 import floatingButtonImage from '../../../assets/upArrow.png';
+import { ProjectsContext } from '../../../contexts/ProjectsContext';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 
 import * as P from './floatingButton.parts';
 
 const FloatingButton = () => {
     const [visible, setVisible] = useState(false);
+    const {isModalOpen} = useContext(ProjectsContext);
 
     const { width } = useWindowSize();
     const floatingButtonXOffset = useMemo(
@@ -43,7 +46,7 @@ const FloatingButton = () => {
             onClick={scrollToTop}
             image={floatingButtonImage}
             xOffset={floatingButtonXOffset}
-            visible
+            visible={!isModalOpen}
         />,
         document.getElementById('floating-button')
     );
