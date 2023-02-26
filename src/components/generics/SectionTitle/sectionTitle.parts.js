@@ -15,7 +15,7 @@ export const Title = styled.h2`
     color: ${({ color }) => color};
 
     font-size: ${({ theme }) => theme.fontSize.m};
-    letter-spacing: ${({ theme }) => theme.letterSpacing.xs};
+    letter-spacing: ${({ theme }) => theme.letterSpacing.s};
     text-align: center;
     text-transform: uppercase;
 

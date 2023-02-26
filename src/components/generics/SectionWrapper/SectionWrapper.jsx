@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import * as P from './sectionWrapper.parts';
 
-const SectionWrapper = ({ children, bgColor, ...restProps }) => {
+const MAX_SECTION_HEIGHT = 1000;
+
+const SectionWrapper = ({children, bgColor, ...restProps}) => {
     const [minHeight, setMinHeight] = useState(0);
 
     useEffect(() => {
@@ -9,7 +11,7 @@ const SectionWrapper = ({ children, bgColor, ...restProps }) => {
     }, []);
 
     return (
-        <P.Wrapper bgColor={bgColor} minHeight={minHeight} {...restProps}>
+        <P.Wrapper bgColor={bgColor} maxHeight={MAX_SECTION_HEIGHT} minHeight={minHeight} {...restProps}>
             {children}
         </P.Wrapper>
     );

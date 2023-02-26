@@ -1,44 +1,32 @@
 import styled from 'styled-components';
 import {Flex} from '../../../styles/Mixins';
-import closeBtn from '../../../assets/closeBtn.png';
+import close from '../../../assets/closeBtn.png';
 import {motion} from 'framer-motion';
 import {device} from '../../../constants/devices';
 
 export const Modal = styled(motion.div)`
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     z-index: 1;
 
     ${Flex('center', 'flex-start')};
     flex-wrap: wrap;
-    width: 80%;
-    max-width: 380px;
-    height: 70%;
-    max-height: 500px;
-
+    width: 100%;
+    height: 100%;
     background-color: ${({theme}) => theme.white};
     color: ${({theme}) => theme.black};
-
     font-size: ${({theme}) => theme.fontSize.xl};
     text-align: center;
     overflow: hidden;
+    padding: ${({theme}) => theme.padding.xxl};
 
-    @media ${device.desktopFHD} {
-        max-width: 550px;
-    }
-`;
-
-export const ProjectTitle = styled.p`
-    width: 80%;
-    margin-top: ${({theme}) => theme.margin.l};
-    margin-bottom: ${({theme}) => theme.margin.m};
-    border-bottom: 1px solid ${({theme}) => theme.black};
-    padding-bottom: ${({theme}) => theme.padding.m};
-
-    @media ${device.desktopFHD} {
-        width: 90%;
+    @media ${device.desktop} {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 600px;
+        max-width: 800px;
     }
 `;
 
@@ -54,32 +42,72 @@ export const Overlay = styled.div`
     background-color: ${({theme}) => theme.black_50};
 `;
 
+export const ProjectHeader = styled.header`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: inset 0px -1px 0px ${({theme}) => theme.gray_200};
+    font-size: ${({theme}) => theme.fontSize.m};
+
+    @media ${device.mobileM} {
+        font-size: ${({theme}) => theme.fontSize.xl};
+    }
+
+    @media ${device.mobileL} {
+        font-size: ${({theme}) => theme.fontSize.xxl};
+    }
+`;
+
+export const ProjectTitle = styled.p`
+    font-weight: 700;
+    padding-bottom: ${({theme}) => theme.padding.l};
+`;
+
 export const CloseButton = styled.button`
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    width: 15px;
-    height: 15px;
-
-    background: center / contain url(${closeBtn});
+    width: 20px;
+    height: 20px;
+    background: center / contain url(${close});
 
     &:hover {
         cursor: pointer;
     }
+
+    @media ${device.mobileM} {
+        width: 25px;
+        height: 25px;
+    }
+
+    @media ${device.mobileL} {
+        width: 30px;
+        height: 30px;
+    }
+`;
+
+export const ProjectPreviewSection = styled.section`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 `;
 
 export const Icon = styled.a`
     display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto ${({theme}) => theme.margin.m};
+    width: 50px;
+    height: 50px;
+    background: center / contain url(${({icon}) => icon}) no-repeat;
 
-    background: center / contain url(${({icon}) => icon});
+    @media ${device.mobileM} {
+        width: 60px;
+        height: 60px;
+    }
 
-    transition: 0.3s;
+    @media ${device.mobileL} {
+        width: 80px;
+        height: 80px;
+    }
 
     @media ${device.desktop} {
+        transition: 0.3s;
+
         &:hover {
             transform: scale(1.2);
         }
@@ -88,18 +116,14 @@ export const Icon = styled.a`
 
 export const ProjectDescription = styled.section`
     width: 100%;
+    min-height: 100px;
     height: 50%;
-    padding: 0 ${({theme}) => theme.padding.xl};
-
-    font-size: ${({theme}) => theme.fontSize.m};
+    padding-right: ${({theme}) => theme.padding.l};
+    font-size: ${({theme}) => theme.fontSize.s};
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.6;
     hyphens: auto;
     overflow: auto;
-
-    @media ${device.desktopFHD} {
-        font-size: ${({theme}) => theme.fontSize.l};
-    }
 
     &::-webkit-scrollbar {
         width: 10px;
@@ -116,6 +140,21 @@ export const ProjectDescription = styled.section`
     &::-webkit-scrollbar-thumb:hover {
         background: ${({theme}) => theme.gray_500};
     }
+
+    @media ${device.mobileM} {
+        font-size: ${({theme}) => theme.fontSize.m};
+    }
+
+    @media ${device.mobileL} {
+        font-size: ${({theme}) => theme.fontSize.xl};
+    }
+`;
+
+export const TechnologyTagsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 `;
 
 export const UCBadge = styled.img`
