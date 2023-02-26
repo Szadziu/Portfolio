@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { Link } from 'react-scroll';
-import { device } from '../../../constants/devices';
-import { Flex } from '../../../styles/Mixins';
+import styled, {css} from 'styled-components';
+import {Link} from 'react-scroll';
+import {device} from '../../../constants/devices';
+import {Flex} from '../../../styles/Mixins';
 
-export const Button = styled(Link)`
+const ButtonStyles = css`
     position: relative;
 
     ${Flex()};
@@ -13,13 +13,13 @@ export const Button = styled(Link)`
     max-width: 300px;
     height: 12%;
 
-    border-radius: ${({ theme }) => theme.borderRadius.s};
-    box-shadow: 0 0 1px 1px ${({ theme }) => theme.black_20};
+    border-radius: ${({theme}) => theme.borderRadius.s};
+    box-shadow: 0 0 1px 1px ${({theme}) => theme.black_20};
 
-    background-color: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.black};
+    background-color: ${({theme}) => theme.white};
+    color: ${({theme}) => theme.black};
 
-    font-size: ${({ theme }) => theme.fontSize.xs};
+    font-size: ${({theme}) => theme.fontSize.xs};
     letter-spacing: 2px;
     text-transform: uppercase;
 
@@ -35,9 +35,9 @@ export const Button = styled(Link)`
         height: 100%;
 
         border-radius: 1px;
-        box-shadow: 0 0 1px 1px ${({ theme }) => theme.black};
+        box-shadow: 0 0 1px 1px ${({theme}) => theme.black};
 
-        background-color: ${({ theme }) => theme.mint_300};
+        background-color: ${({theme}) => theme.mint_300};
 
         transition: 0.5s;
         content: '';
@@ -45,14 +45,14 @@ export const Button = styled(Link)`
 
     @media ${device.mobileM} {
         height: 20%;
-        font-size: ${({ theme }) => theme.fontSize.m};
+        font-size: ${({theme}) => theme.fontSize.m};
     }
 
     @media ${device.desktop} {
-        font-size: ${({ theme }) => theme.fontSize.l};
+        font-size: ${({theme}) => theme.fontSize.l};
 
         &:hover {
-            background-color: ${({ theme }) => theme.beige_20};
+            background-color: ${({theme}) => theme.beige_20};
             &::before {
                 top: calc(50% - 5px);
                 left: calc(100% - 30px);
@@ -63,4 +63,13 @@ export const Button = styled(Link)`
             }
         }
     }
+`;
+
+export const StyledButton = styled(Link)`
+    ${ButtonStyles}
+`;
+
+export const LinkButton = styled.a`
+    ${ButtonStyles}
+    text-decoration: none;
 `;
