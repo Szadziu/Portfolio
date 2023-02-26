@@ -1,19 +1,10 @@
 import Button from '../generics/Button';
 import * as P from './landingPage.parts.js';
-import personalPhotoImage from '../../assets/personalPhoto.jpg';
-import { useWindowSize } from '../../hooks/useWindowSize';
+import personalPhotoImage from '../../assets/personalPhoto.png';
+import {useWindowSize} from '../../hooks/useWindowSize';
 
 const LandingPage = () => {
-    const { height } = useWindowSize();
-
-    const downloadFile = (fileUrl) => {
-        let link = document.createElement('a');
-        link.href = fileUrl;
-        link.download = fileUrl.substr(fileUrl.lastIndexOf('/') + 1);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+    const {height} = useWindowSize();
 
     return (
         <P.LandingPageView>
@@ -31,13 +22,13 @@ const LandingPage = () => {
                 <P.NavButtonsWrapper>
                     <Button text="Moje projekty" link="projects" />
                     <Button text="Umiejętności" link="skills" />
-                    <Button text="Blog" link="#" />
+                    {/* <Button text="Blog" href="https://web-dev-blog-6xs5kw8mj-centmsn.vercel.app/" link="#" target="_blank" /> */}
                     <Button
                         text="CV"
                         link="#"
-                        // onClick={() => downloadFile('/src/files/Maciej_Mikolajczak_CV_pl.pdf')}
+                        href="https://drive.google.com/file/d/1VkNVv8G11ZkvgaPtVt7MQ7yTgojAEsuI/view?usp=sharing"
+                        target="_blank"
                     />
-                    {/* <Button text="CV" link="#" download /> */}
                     <Button text="Kontakt" link="contact" />
                 </P.NavButtonsWrapper>
             </P.NavWrapper>

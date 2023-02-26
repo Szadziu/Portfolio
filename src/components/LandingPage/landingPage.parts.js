@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import SectionWrapper from '../generics/SectionWrapper';
-import { Flex } from '../../styles/Mixins';
-import { device } from '../../constants/devices';
+import {Flex} from '../../styles/Mixins';
+import {device} from '../../constants/devices';
 
 export const LandingPageView = styled(SectionWrapper)`
     position: relative;
@@ -26,7 +26,7 @@ export const LandingPageView = styled(SectionWrapper)`
         width: 1px;
         height: 100%;
 
-        background-color: ${({ theme }) => theme.white_10};
+        background-color: ${({theme}) => theme.white_10};
         overflow: hidden;
         filter: blur(2px);
 
@@ -76,6 +76,10 @@ export const NavWrapper = styled.div`
     ${Flex('flex-end', 'flex-start')};
     flex-wrap: wrap;
     grid-area: 1/13/13/5;
+
+    @media ${device.desktopFHD} {
+        grid-area: 1/13/13/7;
+    }
 `;
 
 export const NavButtonsWrapper = styled.div`
@@ -115,19 +119,19 @@ export const PositionTitle = styled.h1`
     & .title {
         display: inline-block;
         font-weight: normal;
-        color: ${({ theme }) => theme.mint_300};
+        color: ${({theme}) => theme.mint_300};
         margin-left: 10px;
     }
 
     @keyframes shimmer {
         0% {
-            color: ${({ theme }) => theme.black};
+            color: ${({theme}) => theme.black};
         }
         50% {
-            color: ${({ theme }) => theme.black_50};
+            color: ${({theme}) => theme.black_50};
         }
         100% {
-            color: ${({ theme }) => theme.black};
+            color: ${({theme}) => theme.black};
         }
     }
 `;
@@ -137,8 +141,12 @@ export const BackgroundPhoto = styled.div`
     width: 100%;
     height: 100%;
     top: 10px;
-    background-position: 0 bottom;
+    background-position: -100px bottom;
     background-size: contain;
-    background-image: url(${({ image }) => image});
+    background-image: url(${({image}) => image});
     background-repeat: no-repeat;
+
+    @media ${device.mobileM} {
+        background-position: -180px bottom;
+    }
 `;
