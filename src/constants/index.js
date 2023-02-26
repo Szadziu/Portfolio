@@ -4,29 +4,35 @@ import linkedinIcon from '../assets/socialIcons/linkedin.png';
 import whatsappIcon from '../assets/socialIcons/whatsapp.png';
 
 import omnifoodLayoutIcon from '../assets/projectsIcons/omnifoodLayout.png';
-// import themePaletteIcon from '../assets/projectsIcons/color-palette.png';
 import cssGeneratorIcon from '../assets/projectsIcons/cssGenerator.png';
 import creditCalculatorIcon from '../assets/projectsIcons/creditCalculator.png';
-import timerIcon from '../assets/projectsIcons/timer.png';
+import stopwatchIcon from '../assets/projectsIcons/stopwatch.png';
 import dungeonIcon from '../assets/projectsIcons/dungeon.png';
-import recruitmentTaskIcon from '../assets/projectsIcons/recruitmentTask.png';
+import todayILearnedIcon from '../assets/projectsIcons/todayILearned.png';
+import mobileAppIcon from '../assets/projectsIcons/mobileApp.png';
+import consumerBankruptcyIcon from '../assets/projectsIcons/consumerBankruptcy.png';
+
+import numberOfGuessDemoMovie from '../assets/videos/demos_of_guess_number_app.webm';
+import customerBankruptcyDemoMovie from '../assets/videos/demos_of_bankruptcy_app.MOV';
 
 export const QUOTE = `"Mądrzy ciągle się uczą, głupcy wszystko umieją."
   Apolinary Despinoix`;
 
-export const SKILL_BUNDLE = [
+export const SKILLS_BUNDLE = [
     {
         id: 'skill_1',
         name: 'HTML 5',
         advancement: 8,
-        desc: 'Posiadam dobrą znajomość HTML5, w tym tworzenia struktury strony za pomocą elementów semantycznych oraz wstawiania obrazków, linków i formularzy. Potrafię także wykorzystywać nowe elementy HTML5, takie jak audio, video, canvas czy mapy oraz dostosowywać stronę do potrzeb osób niepełnosprawnych. Tworzę poprawny kod HTML zgodnie ze standardami i dobrymi praktykami.',
+        desc: 'Znam HTML5 i umiem tworzyć struktury stron z użyciem elementów semantycznych, dodawać obrazy, linki i formularze. Potrafię także korzystać z nowych funkcji HTML5, takich jak audio i video, i tworzyć dostępne dla niepełnosprawnych strony zgodnie z dobrymi praktykami.',
+        // desc: 'Posiadam dobrą znajomość HTML5, w tym tworzenia struktury strony za pomocą elementów semantycznych oraz wstawiania obrazków, linków i formularzy. Potrafię także wykorzystywać nowe elementy HTML5, takie jak audio, video, jak i dostosowywać stronę do potrzeb osób niepełnosprawnych. Tworzę poprawny kod HTML zgodnie ze standardami i dobrymi praktykami.',
     },
 
     {
         id: 'skill_2',
         name: 'CSS / Sass',
         advancement: 7,
-        desc: 'Posiadam dobrą znajomość najważniejszych koncepcji języka CSS, takich jak selektory, reguły stylów, kaskadowość, dziedziczenie, jednostki miary i animacje. Potrafię również zaprojektować responsywne strony internetowe z wykorzystaniem narzędzi takich jak Flexbox i Grid. Moje umiejętności z zakresu SASS obejmują tworzenie bardziej złożonych arkuszy stylów z użyciem zmiennych, funkcji, dyrektyw @import i @mixin.',
+        desc: 'Znam ważne koncepcje języka CSS, takie jak selektory, reguły stylów, kaskadowość, dziedziczenie, jednostki miary i animacje. Tworzę także responsywne strony internetowe, wykorzystując Flexbox i Grid. Posiadam również umiejętności w SASS, tworząc bardziej zaawansowane arkusze stylów z użyciem zmiennych, funkcji i dyrektyw.',
+        // desc: 'Posiadam dobrą znajomość najważniejszych koncepcji języka CSS, takich jak selektory, reguły stylów, kaskadowość, dziedziczenie, jednostki miary i animacje. Potrafię również zaprojektować responsywne strony internetowe z wykorzystaniem narzędzi takich jak Flexbox i Grid. Moje umiejętności z zakresu SASS obejmują tworzenie bardziej złożonych arkuszy stylów z użyciem zmiennych, funkcji, dyrektyw @import i @mixin.',
     },
 
     {
@@ -40,7 +46,7 @@ export const SKILL_BUNDLE = [
         id: 'skill_4',
         name: 'Typescript',
         advancement: 4,
-        desc: 'Posiadam podstawową wiedzę na temat języka TypeScript, w tym znajomość typów danych i interfejsów. Korzystam z niego w połączeniu z frameworkiem React. Staram się stale rozszerzać moją wiedzę i umiejętności w tym zakresie, ale jeszcze nie jestem ekspertem w tej dziedzinie.',
+        desc: 'Posiadam podstawową wiedzę na temat języka TypeScript, w tym znajomość typów danych i interfejsów. Korzystam z niego w połączeniu z frameworkiem React. Staram się stale rozszerzać moją wiedzę i umiejętności w tym zakresie by kiedyś zostać ekspertem w tej dziedzinie.',
     },
 
     {
@@ -52,9 +58,23 @@ export const SKILL_BUNDLE = [
 
     {
         id: 'skill_6',
-        name: 'Vue',
+        name: 'Low-code',
+        advancement: 4,
+        desc: 'Posiadam znajomość takich narzędzi low-code takich jak, Retool, Appsmith, lecz głównie Bubble.io. Pozwala mi to na szybkie tworzenie aplikacji internetowych, które mogą być wykorzystywane zarówno w celach prywatnych, jak i komercyjnych. W przyszłości mógłbym rozwinąć swoje umiejętności w tym zakresie, aby móc tworzyć bardziej zaawansowane aplikacje.',
+    },
+
+    {
+        id: 'skill_7',
+        name: 'Integracja z backendem',
         advancement: 3,
-        desc: 'Posiadam podstawową wiedzę o frameworku Vue, którą zdobyłem podczas pracy przy jednym projekcie komercyjnym z wykorzystaniem Vue 2. Potrafię tworzyć komponenty oraz zarządzać ich stanem za pomocą obiektu "data". Znam również podstawy Vuex, biblioteki do zarządzania globalnym stanem aplikacji, oraz wykorzystywania mechanizmów reakcji w celu optymalizacji wydajności aplikacji.',
+        desc: 'Zdobyłem doświadczenie w tworzeniu zapytań GraphQL i odbieraniu odpowiedzi za pomocą biblioteki Apollo Client. Wykorzystywałem również Hasurę, jako platformę do zarządzania bazą danych i łatwej integracji z aplikacją frontendową. Dzięki temu byłem w stanie zapewnić dynamiczną i elastyczną komunikację pomiędzy aplikacją, a danymi przechowywanymi na serwerze.',
+    },
+
+    {
+        id: 'skill_8',
+        name: 'Zarządzanie projektem',
+        advancement: 6,
+        desc: 'Korzystałem z szerokiego zakresu narzędzi do zarządzania projektem, takich jak Jira, które umożliwiło mi efektywną współpracę z zespołem i zarządzanie zadaniami. Contentful to kolejne narzędzie, które służy mi do zarządzania treścią na współprowadzonym przeze mnie blogu. Narzędzia do zarządzania paczkami, z którymi do tej pory pracowałem to npm i yarn. Narzędzie do tworzenia i współdzielenia projektów interfejsu użytkownika, które poznałem to Figma. Git i GitHub to narzędzia, które pomagają mi zarządzać wersjami projektu i współpracować z innymi programistami.',
     },
 ];
 
@@ -65,8 +85,9 @@ export const PROJECTS = [
         img: dungeonIcon,
         link: 'https://szadziu.github.io/turnbasedgame/',
         ghLink: 'https://github.com/Szadziu/turnbasedgame',
-        desc: 'Chcesz poczuć dreszczyk emocji i rzucić wyzwanie najpotężniejszym potworom? Ta gra turowa to idealna rozrywka dla Ciebie! W grze będziesz mieć do dyspozycji swojego wyjątkowego bohatera, którego będziesz mógł ulepszać dzięki punktom umiejętności. Twoim zadaniem będzie toczenie walk z coraz potężniejszymi potworami, a każde zwycięstwo przybliży Cię do zdobycia sławy i chwały. Ale uważaj, porażka oznacza koniec Twojej przygody. Aplikacja została stworzona z użyciem frameworka Vue w wersji 2 i została oparta na klasach, dzięki czemu jest stabilna i łatwa w użytkowaniu.',
+        desc: 'Chcesz poczuć dreszczyk emocji i rzucić wyzwanie najpotężniejszym potworom? Ta gra turowa to idealna rozrywka dla Ciebie! W grze będziesz mieć do dyspozycji swojego wyjątkowego bohatera, którego będziesz mógł ulepszać dzięki punktom umiejętności. Twoim zadaniem będzie toczenie walk z coraz potężniejszymi potworami, a każde zwycięstwo przybliży Cię do zdobycia sławy i chwały. Ale uważaj, porażka oznacza koniec Twojej przygody. Aplikacja została stworzona z użyciem frameworka Vue w wersji 2.',
         done: true,
+        techTags: ['Vue', 'JavaScript', 'HTML', 'CSS'],
     },
     {
         id: 'prj_2',
@@ -74,8 +95,9 @@ export const PROJECTS = [
         img: cssGeneratorIcon,
         link: 'https://szadziu.github.io/boxShadowCSSGenerator/',
         ghLink: 'https://github.com/Szadziu/boxShadowCSSGenerator',
-        desc: 'Czy szukasz narzędzia, które pozwoli Ci szybko i łatwo stworzyć właściwości box-shadow (CSS)? Ta aplikacja to idealne rozwiązanie dla Ciebie! Pozwoli Ci na generowanie box-shadow za pomocą prostego i intuicyjnego narzędzia. Możesz dostosować ustawienia takie jak rozmiar, intensywność cienia czy odległość od elementu, a także wybrać kolor, który najlepiej pasuje do Twojego projektu. Co więcej, aplikacja oferuje również wizualny podgląd, dzięki czemu możesz zobaczyć, jak będzie wyglądać Twoje box-shadow na żywo. Aplikacja została stworzona z użyciem technologii React, a do tworzenia stylów została użyta biblioteka styled-components. Skorzystałem również z react hooks, dzięki czemu aplikacja jest prosta w obsłudze i elastyczna.',
+        desc: 'Czy szukasz narzędzia, które pozwoli Ci szybko i łatwo stworzyć właściwości box-shadow (CSS)? Ta aplikacja to idealne rozwiązanie dla Ciebie! Pozwoli Ci na generowanie box-shadow za pomocą prostego i intuicyjnego narzędzia. Możesz dostosować ustawienia takie jak rozmiar, intensywność cienia czy odległość od elementu, a także wybrać kolor, który najlepiej pasuje do Twojego projektu. Co więcej, aplikacja oferuje również wizualny podgląd, dzięki czemu możesz zobaczyć, jak będzie wyglądać stworzony cień.',
         done: true,
+        techTags: ['React', 'JavaScript', 'HTML', 'CSS', 'Styled Components'],
     },
     {
         id: 'prj_3',
@@ -83,18 +105,20 @@ export const PROJECTS = [
         img: creditCalculatorIcon,
         link: 'https://szadziu.github.io/CreditCalculator/',
         ghLink: 'https://github.com/Szadziu/CreditCalculator',
-        desc: 'Ten kalkulator umożliwia obliczenie rat kredytu w oparciu o wybrane przez Ciebie oprocentowanie. Wprowadź wymaganą kwotę kredytu, okres spłaty oraz oprocentowanie, a aplikacja obliczy dla Ciebie wysokość miesięcznej raty oraz całkowity koszt kredytu. Aplikacja została stworzona z użyciem technologii React, skorzystałem z komponentów klasowych oraz biblioteki styled-components, dzięki czemu jest prosta w obsłudze i atrakcyjna wizualnie. Dołożyłem również starań, aby aplikacja była przystosowana do urządzeń desktopowych i mobilnych, dzięki czemu możesz korzystać z niej w dowolnym miejscu i o dowolnej porze.',
+        desc: 'Ten kalkulator umożliwia obliczenie rat kredytu w oparciu o wybrane przez Ciebie oprocentowanie. Wprowadź wymaganą kwotę kredytu, okres spłaty oraz oprocentowanie, a aplikacja obliczy dla Ciebie wysokość miesięcznej raty oraz całkowity koszt kredytu. Dołożyłem również starań, aby aplikacja była przystosowana do urządzeń desktopowych, jak i mobilnych, dzięki czemu możesz korzystać z niej w dowolnym miejscu.',
         done: true,
+        techTags: ['React', 'JavaScript', 'HTML', 'CSS', 'Styled Components'],
     },
 
     {
         id: 'prj_4',
-        name: 'Timer',
-        img: timerIcon,
+        name: 'Stopwatch',
+        img: stopwatchIcon,
         link: 'https://szadziu.github.io/stoper',
         ghLink: 'https://github.com/Szadziu/stoper',
-        desc: 'Aplikacja umożliwia odmierzanie czasu, jak również jego zatrzymywanie oraz resetowanie. Dzięki prostym i intuicyjnym przyciskom będziesz mógł kontrolować stoper w dowolnym momencie. Jest niezwykle przydatna podczas treningów, kiedy chcesz mieć precyzyjny pomiar czasu, lub podczas wyzwań, kiedy liczy się każda sekunda. Aplikacja została stworzona z użyciem technologii React, gdzie skorzystałem z komponentów funkcyjnych oraz biblioteki styled-components, dzięki czemu jest prosta w obsłudze i atrakcyjna wizualnie. ',
+        desc: 'Aplikacja umożliwia odmierzanie czasu, jak również jego zatrzymywanie oraz resetowanie. Dzięki prostym i intuicyjnym przyciskom będziesz mógł kontrolować stoper w dowolnym momencie. Jest niezwykle przydatna podczas treningów, kiedy chcesz mieć precyzyjny pomiar czasu, lub podczas wyzwań, kiedy liczy się każda sekunda.',
         done: true,
+        techTags: ['React', 'JavaScript', 'HTML', 'CSS', 'Styled Components'],
     },
 
     {
@@ -103,26 +127,41 @@ export const PROJECTS = [
         img: omnifoodLayoutIcon,
         link: 'https://omnifood-layout.netlify.app/',
         ghLink: 'https://github.com/Szadziu/Omnifood_Layout_Page',
-        desc: 'Projekt przedstawia stronę internetową dla firmy oferującej dostawy jedzenia oparte na diecie z wykorzystaniem sztucznej inteligencji. Strona została zaprojektowana z wykorzystaniem znanych patternów, aby zapewnić przejrzystość i intuicyjność dla użytkowników. Całość została zaprojektowana z myślą o responsywności, co oznacza, że strona jest przystosowana do wyświetlania na różnych urządzeniach, takich jak komputery, tablety czy telefony komórkowe.',
+        desc: 'Projekt przedstawia stronę internetową dla firmy oferującej dostawy jedzenia oparte na diecie z wykorzystaniem sztucznej inteligencji. Strona została zaprojektowana z wykorzystaniem znanych patternów, aby zapewnić przejrzystość i intuicyjność dla użytkowników. Strona posiada pełną responsywność również na urządzenia mobilne. Projekt został stworzony w ramach kursu "Build Responsive Real-World Websites with HTML and CSS" autorstwa Jonasa Schmedtmanna.',
         done: true,
+        techTags: ['HTML', 'CSS', 'JavaScript'],
     },
-    // {
-    //     id: 'prj_5',
-    //     name: 'Paleta kolorów',
-    //     img: themePaletteIcon,
-    //     link: '#',
-    //     ghLink: '#',
-    //     desc: 'Aplikacja ma w przyszłości umożliwiać tworzenie własnych kompozycji kolorystycznych poprzez dodawanie poszczególnych barw i tworzenie setów, które można w prosty sposób udostępniać. Wszystko odbywać ma się na koncie korzystającego z niej użytkownika co pozwala też na archiwizację własnych setów. Obecnie projekt w budowie ... ',
-    //     done: false,
-    // },
     {
         id: 'prj_6',
-        name: 'Zadanie rekrutacyjne',
-        img: recruitmentTaskIcon,
+        name: 'Today I learned',
+        img: todayILearnedIcon,
+        link: 'https://todayilearned-web-app.netlify.app/',
+        ghLink: 'https://github.com/Szadziu/today_i_learned',
+        desc: 'Aplikacja jest przeznaczona do zapisywania i przeglądania informacji (faktów), które użytkownicy dodają do wspólnej bazy danych. Użytkownicy prócz możliwości dodawania nowych faktów oraz ich źródeł weryfikujących ich wiarygodność, mają opcję dodania kategorii, a po stworzeniu możliwość oceniania treści wiedzy. Lista faktów posiada filtrowanie po kategoriach dzięki czemu łatwiej jest znaleźć interesujące nas fakty. Jest to full-stack aplikacja, oparta na React oraz utworzonej bazie danych przy pomocy Supabase. Projekt został utworzony w ramach kursu "Crash Course: Build a Full-Stack Web App in a Weekend" autorstwa Jonasa Schmedtmanna.',
+        done: true,
+        techTags: ['React', 'JavaScript', 'HTML', 'CSS', 'Supabase'],
+    },
+    {
+        id: 'prj_7',
+        name: 'Guess the number',
+        img: mobileAppIcon,
         link: '#',
         ghLink: '#',
-        desc: 'Miejsce zostawione na zadanie rekrutacyjne :) zanim nie zastąpi go kolejny projekt.',
-        done: false,
+        demo: numberOfGuessDemoMovie,
+        desc: 'Demo prezentuje aplikację, którą napisałem w React Native z użyciem Expo w ramach kursu "React Native - The Practical Guide 2023" autorstwa Maximiliana Schwarzmüllera, jest to prosty wprowadzający do świata aplikacji mobilnych, projekt przedstawiający grę w której użytkownik wybiera liczbę, a komputer próbuje odgadnąć jego wybór otrzymując wskazówki nakierowujące na poprawną odpowiedź. Projekt nauczył mnie podstaw tworzenia w React Native.',
+        done: true,
+        techTags: ['React Native', 'JavaScript', 'HTML', 'CSS', 'Expo', 'Android Studio'],
+    },
+    {
+        id: 'prj_8',
+        name: 'Bankruptcy App',
+        img: consumerBankruptcyIcon,
+        link: '#',
+        ghLink: '#',
+        demo: customerBankruptcyDemoMovie,
+        desc: 'Demo prezentuje projekt komercyjny, przy którym miałem okazję pracować. Jest to aplikacja zbierająca szczegółowe dane od zarejestrowanego użytkownika, która ma za zadanie wygenerować wniosek o ogłoszenie upadłości konsumenckiej, który zostanie przekazany do rozpatrzenia. Głównym wyzwaniem w tej aplikacji była ankieta, która dynamicznie dopasowywała się do bieżących odpowiedzi, zawiera sporo pól formularzy różnego rodzaju i zależności między sobą. Sama ankieta składa się z ponad 60 pytań.',
+        done: true,
+        techTags: ['Vue', 'JavaScript', 'HTML', 'CSS'],
     },
 ];
 
@@ -155,19 +194,26 @@ export const SOCIALS = [
 
 export const TIMELINE_ITEMS = [
     {
-        text: 'Pravna Group - Junior Frontend Developer',
-        date: 'Maj 2022',
-        category: {
-            tag: 'DEV',
-            color: '#018f69',
-        },
+        text: 'Kursy ● Nauka ● Projekty ● Portfolio',
+        date: 'Styczeń 2020',
+        value: 25,
     },
     {
-        text: 'Kursy, szkolenia, nauka, własne projekty',
-        date: 'Sty 2020',
-        category: {
-            tag: 'Learn',
-            color: '#018f69',
-        },
+        text: 'Pravna Group ● Junior Frontend Developer',
+        date: 'Maj 2022',
+        value: 65,
     },
 ];
+
+export const TECH_COLOR_TAGS = {
+    JavaScript: '#F7DF1E',
+    React: '#61DAFB',
+    'React Native': '#61DAFB',
+    Vue: '#4FC08D',
+    HTML: '#E34F26',
+    CSS: '#1572B6',
+    'Styled Components': '#DB7093',
+    Supabase: '#1F8755',
+    Expo: '#000020',
+    'Android Studio': '#3DDC84',
+};

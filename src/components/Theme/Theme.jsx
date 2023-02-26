@@ -2,7 +2,7 @@ import { ThemeProvider } from 'styled-components';
 
 const THEME = {
     black_20: 'rgba(49,49,49,0.2)',
-    black_50: 'rgba(49,49,49,0.5)',
+    black_50: 'rgba(49, 49, 49, 0.5)',
     black: 'rgb(49, 49, 49)',
 
     white_10: 'rgba(255, 253, 250, 0.1)',
@@ -35,6 +35,7 @@ const THEME = {
         l: '18px',
         xl: '20px',
         xxl: '24px',
+        xxxl: '28px',
     },
 
     borderRadius: {
@@ -52,6 +53,7 @@ const THEME = {
         l: '12px',
         xl: '16px',
         xxl: '24px',
+        xl3: '45px',
     },
 
     margin: {
@@ -64,12 +66,12 @@ const THEME = {
     },
 
     letterSpacing: {
-        xs: '0.5px',
+        xs: '0.75px',
         s: '1px',
         m: '1.2px',
         l: '1.5px',
-        xl: '2px',
-        xxl: '2.5px',
+        xl: '1.8px',
+        xxl: '2px',
     },
 };
 

@@ -1,5 +1,5 @@
-import { css } from 'styled-components';
-import { device } from '../constants/devices';
+import {css} from 'styled-components';
+import {device} from '../constants/devices';
 
 export const Flex = (justify = 'center', align = 'center') => css`
     display: flex;
@@ -15,20 +15,25 @@ export const SectionTitle = (color) => css`
     border-width: 1.5px 0;
     border-style: solid;
     border-color: ${color};
-    margin: ${({ theme }) => theme.margin.xxl} auto;
-    padding: ${({ theme }) => theme.padding.s} 0;
+    border-top: none;
+    margin: ${({theme}) => theme.margin.xxl} auto;
+    padding: ${({theme}) => theme.padding.s} 0;
 
     color: ${color};
 
-    font-size: ${({ theme }) => theme.fontSize.m};
+    font-size: ${({theme}) => theme.fontSize.m};
     text-align: center;
     text-transform: uppercase;
 
     @media ${device.mobileM} {
-        font-size: ${({ theme }) => theme.fontSize.l};
+        font-size: ${({theme}) => theme.fontSize.l};
+    }
+
+    @media ${device.mobileL} {
+        font-size: ${({theme}) => theme.fontSize.xl};
     }
 
     @media ${device.desktop} {
-        font-size: ${({ theme }) => theme.fontSize.xl};
+        font-size: ${({theme}) => theme.fontSize.xxl};
     }
 `;

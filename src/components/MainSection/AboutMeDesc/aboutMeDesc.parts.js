@@ -1,41 +1,42 @@
 import styled from 'styled-components';
-import { device } from '../../../constants/devices';
+import {device} from '../../../constants/devices';
 
 export const Container = styled.div`
     overflow: auto;
     height: 90%;
+    padding: 0 ${({theme}) => theme.padding.m};
+
+    font-size: ${({theme}) => theme.fontSize.s};
+    letter-spacing: ${({theme}) => theme.letterSpacing.s};
+    hyphens: auto;
 
     &::-webkit-scrollbar {
         width: 6px;
     }
 
     &::-webkit-scrollbar-track {
-        background: ${({ theme }) => theme.gray_200};
+        background: ${({theme}) => theme.gray_200};
     }
 
     &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.gray_400};
+        background: ${({theme}) => theme.gray_400};
     }
 
     &::-webkit-scrollbar-thumb:hover {
-        background: ${({ theme }) => theme.gray_500};
+        background: ${({theme}) => theme.gray_500};
     }
 
-    font-size: ${({ theme }) => theme.fontSize.m};
-    hyphens: auto;
-    padding: 0 ${({ theme }) => theme.padding.m};
-
     @media ${device.mobileM} {
-        font-size: ${({ theme }) => theme.fontSize.l};
+        font-size: ${({theme}) => theme.fontSize.l};
     }
 
     @media ${device.mobileL} {
-        margin: 0 ${({ theme }) => theme.margin.xl};
+        margin: 0 ${({theme}) => theme.margin.xl};
     }
 
     @media ${device.desktop} {
-        height: ${({ currentScreenHeight }) => (currentScreenHeight >= 800 ? '60%' : '90%')};
-        font-size: ${({ theme }) => theme.fontSize.l};
+        height: ${({currentScreenHeight}) => (currentScreenHeight >= 800 ? '60%' : '90%')};
+        font-size: ${({theme}) => theme.fontSize.xl};
     }
 `;
 
@@ -45,13 +46,9 @@ export const Line = styled.span`
     display: none;
     overflow: hidden;
 
-    color: ${({ theme }) => theme.white};
+    color: ${({theme}) => theme.white};
 
-    line-height: 1.5;
-
-    @media ${device.desktop} {
-        line-height: 1.8;
-    }
+    line-height: 1.8;
 
     &::after {
         position: absolute;
@@ -62,7 +59,7 @@ export const Line = styled.span`
         height: 100%;
         transform: translateX(-101%);
 
-        background: ${({ theme }) => theme.white};
+        background: ${({theme}) => theme.white};
 
         animation: a-ltr-after 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
         content: '';
@@ -76,7 +73,7 @@ export const Line = styled.span`
         height: 100%;
         transform: translateX(0);
 
-        background: ${({ theme }) => theme.gray_300};
+        background: ${({theme}) => theme.gray_300};
 
         animation: a-ltr-before 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
         content: '';

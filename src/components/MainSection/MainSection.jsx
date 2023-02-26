@@ -1,9 +1,9 @@
 import { useTheme } from 'styled-components';
 import Quote from '../generics/Quote';
 import AboutMeDesc from './AboutMeDesc';
-import SkillsWrapper from './SkillsWrapper';
+import SkillsPanel from './SkillsPanel';
 import SectionWrapper from '../generics/SectionWrapper';
-import Timeline from '../Timeline/Timeline';
+import HorizontalTimeline from '../Timeline/Timeline';
 import { QUOTE } from '../../constants';
 import * as P from './mainSection.parts';
 
@@ -11,14 +11,14 @@ const MainSection = () => {
     const theme = useTheme();
 
     return (
-        <SectionWrapper bgColor={theme.gray_300} id="skills">
-            <P.MainSectionTitle color={theme.white}>kilka słów o mnie</P.MainSectionTitle>
+        <SectionWrapper bgColor={theme.gray_300} id="skills" minHeight={700}>
+            <P.AboutMeSectionTitle color={theme.white}>kilka słów o mnie</P.AboutMeSectionTitle>
             <P.AboutMeDescWrapper>
-                <Timeline />
+                <HorizontalTimeline />
                 <AboutMeDesc />
             </P.AboutMeDescWrapper>
             <Quote>{QUOTE}</Quote>
-            <SkillsWrapper />
+            <SkillsPanel />
         </SectionWrapper>
     );
 };
