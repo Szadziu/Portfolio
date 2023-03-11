@@ -22,7 +22,7 @@ const LandingPage = () => {
                 <P.NavButtonsWrapper>
                     <Button text="Moje projekty" link="projects" />
                     <Button text="Umiejętności" link="skills" />
-                    {/* <Button text="Blog" href="https://web-dev-blog-6xs5kw8mj-centmsn.vercel.app/" link="#" target="_blank" /> */}
+                    <Button text="Blog" href="https://4spacje.pl" link="#" target="_blank" />
                     <Button
                         text="CV"
                         link="#"
