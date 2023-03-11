@@ -38,9 +38,7 @@ export const TextAreaWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    /* border: 1px solid blue; */
-
     width: 100%;
     height: 40%;
-    max-height: 200px;
+    max-height: 20rem;
 `;

@@ -4,13 +4,13 @@ import { Flex } from '../../styles/Mixins';
 
 export const Img = styled.img`
     width: auto;
-    height: 40px;
+    height: 4rem;
     margin-left: ${({ theme }) => theme.margin.m};
 
-    transition: 0.4s;
+    transition: .4s;
 
     @media ${device.mobileM} {
-        height: 48px;
+        height: 4.8rem;
     }
 
     @media ${device.desktop} {
@@ -22,7 +22,7 @@ export const Img = styled.img`
     }
 
     @media ${device.desktopFHD} {
-        height: 55px;
+        height: 5.5rem;
     }
 `;
 

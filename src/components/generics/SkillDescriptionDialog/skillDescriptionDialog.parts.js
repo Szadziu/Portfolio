@@ -20,7 +20,7 @@ export const ModalWrapper = styled.div`
     }
 
     &::-webkit-scrollbar {
-        width: 10px;
+        width: 1rem;
     }
 
     &::-webkit-scrollbar-track {
@@ -40,13 +40,13 @@ export const InfoModal = styled(motion.div)`
     position: absolute;
     z-index: 999;
 
-    top: ${({oneOfTheLast}) => (oneOfTheLast ? '-212px' : '40px')};
-    left: -25px;
-    width: 240px;
-    height: 200px;
+    top: ${({oneOfTheLast}) => (oneOfTheLast ? '-21.2rem' : '4rem')};
+    left: -2.5rem;
+    width: 24rem;
+    height: 20rem;
 
     padding: ${({theme}) => `${theme.padding.xl} ${theme.padding.m}`};
-    box-shadow: 2px 2px 5px 0 ${({theme}) => theme.black};
+    box-shadow: .2rem .2rem .5rem 0 ${({theme}) => theme.black};
 
     background-color: ${({theme}) => theme.gray_500};
     color: ${({theme}) => theme.white};
@@ -57,30 +57,30 @@ export const InfoModal = styled(motion.div)`
         content: '';
         z-index: -1;
         position: absolute;
-        top: ${({oneOfTheLast}) => (oneOfTheLast ? '190px' : '-10px')};
-        left: 21px;
-        width: 20px;
-        height: 20px;
+        top: ${({oneOfTheLast}) => (oneOfTheLast ? '19rem' : '-1rem')};
+        left: 2.1rem;
+        width: 2rem;
+        height: 2rem;
         background-color: ${({theme}) => theme.gray_500};
         transform: rotate(45deg);
     }
 
     @media ${device.mobileM} {
-        left: -240px;
-        width: 300px;
+        left: -24rem;
+        width: 30rem;
 
         &:after {
-            left: 239px;
+            left: 23.9rem;
         }
     }
 
     @media ${device.mobileL} {
-        top: ${({oneOfTheLast}) => (oneOfTheLast ? '-140px' : 0)};
-        left: -315px;
+        top: ${({oneOfTheLast}) => (oneOfTheLast ? '-14rem' : 0)};
+        left: -31.5rem;
 
         &:after {
-            top: ${({oneOfTheLast}) => (oneOfTheLast ? '165px' : '30px')};
-            left: 290px;
+            top: ${({oneOfTheLast}) => (oneOfTheLast ? '16.5rem' : '3rem')};
+            left: 29rem;
         }
     }
 `;
@@ -94,18 +94,18 @@ export const CloseButton = styled.button`
 
 export const ModalTitle = styled.p`
     position: absolute;
-    top: 10px;
-    width: 210px;
+    top: 1rem;
+    width: 21rem;
     background-color: ${({theme}) => theme.gray_500};
     color: ${({theme}) => theme.mint_300};
     font-size: ${({theme}) => theme.fontSize.s};
 
 
     @media ${device.mobileM} {
-        width: 270px;
+        width: 27rem;
      }
 `;
 
 export const ModalDescription = styled.p`
-    margin-top: 30px;
+    margin-top: 3rem;
 `;

@@ -19,7 +19,7 @@ export const SkillLabel = styled.div`
     color: ${({theme}) => theme.white};
 
     font-size: ${({theme}) => theme.fontSize.xl};
-    line-height: 45px;
+    line-height: 4.5rem;
     text-transform: uppercase;
     letter-spacing: ${({theme}) => theme.letterSpacing.xxl};
     writing-mode: vertical-lr;
@@ -37,8 +37,8 @@ export const SkillLabel = styled.div`
         transform: rotateY(${({isSideMenuOpen}) => (isSideMenuOpen ? '0' : '180deg')});
         z-index: 1;
 
-        width: 30px;
-        height: 30px;
+        width: 3rem;
+        height: 3rem;
 
         background: center / contain no-repeat url(${slideArrow});
 
@@ -52,17 +52,17 @@ export const SkillLabel = styled.div`
 
 export const SkillsContainer = styled(motion.div)`
     position: absolute;
-    top: 50px;
+    top: 5rem;
     right: 0;
     padding: ${({theme}) => theme.padding.xl};
     ${Flex('space-around')}
     flex-direction: column;
 
-    width: 300px;
-    height: calc(100% - 166px);
-    min-height: 500px;
+    width: 30rem;
+    height: calc(100% - 16.6rem);
+    min-height: 50rem;
     border-radius: ${({theme}) => `${theme.borderRadius.m} 0 0 ${theme.borderRadius.m}`};
-    box-shadow: 0 0 5px 3px ${({theme}) => theme.mint_400};
+    box-shadow: 0 0 .5rem .3rem ${({theme}) => theme.mint_400};
 
     background-color: ${({theme}) => theme.white};
 

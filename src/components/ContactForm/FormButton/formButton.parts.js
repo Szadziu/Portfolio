@@ -5,8 +5,8 @@ import { Flex } from '../../../styles/Mixins';
 export const Button = styled.button`
     ${Flex()};
 
-    height: 40px;
-    min-width: 100px;
+    height: 4rem;
+    min-width: 10rem;
     align-self: flex-end;
     padding: ${({ theme }) => `${theme.padding.s} ${theme.padding.m}`};
 

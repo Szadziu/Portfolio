@@ -6,10 +6,10 @@ export const Button = styled.button`
     position: fixed;
     z-index: 2;
     right: ${({ xOffset }) => xOffset}px;
-    bottom: 10px;
+    bottom: 1rem;
 
-    width: 48px;
-    height: 48px;
+    width: 4.8rem;
+    height: 4.8rem;
     opacity: ${({ visible }) => visible || 0};
     border-radius: 50%;
 
@@ -19,23 +19,23 @@ export const Button = styled.button`
     cursor: ${({ visible }) => visible && 'pointer'};
 
     @media ${device.mobileM} {
-        width: 64px;
-        height: 64px;
+        width: 6.4rem;
+        height: 6.4rem;
     }
     @media ${device.desktop} {
-        bottom: 20px;
+        bottom: 2rem;
 
-        width: 80px;
-        height: 80px;
+        width: 8rem;
+        height: 8rem;
 
         &:hover {
             transform: scale(1.2);
         }
     }
     @media ${device.desktopFHD} {
-        bottom: 32px;
+        bottom: 3.2rem;
 
-        width: 100px;
-        height: 100px;
+        width: 10rem;
+        height: 10rem;
     }
 `;

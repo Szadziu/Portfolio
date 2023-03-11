@@ -20,7 +20,7 @@ const Projects = () => {
     return (
         <SectionWrapper id="projects" bgColor="white" minHeight={320}>
             <P.ProjectsSectionTitle ref={parentRef} color={theme.black}>
-                Moje projekty
+                projekty
             </P.ProjectsSectionTitle>
             <P.ProjectsWrapper>
                 {generateProjects()}

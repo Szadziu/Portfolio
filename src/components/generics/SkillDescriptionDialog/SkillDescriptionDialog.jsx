@@ -1,15 +1,8 @@
-import {AnimatePresence, motion} from 'framer-motion';
-import {createContext} from 'react';
-// import {createPortal} from 'react-dom';
+import { motion} from 'framer-motion';
 import * as P from './skillDescriptionDialog.parts';
 
 const SkillDescriptionDialog = ({currIndex, closeModal, skill: {name, desc, id}}) => {
-    // return createPortal(
-
     const oneOfTheLast = currIndex > 4;
-    const testContexr = createContext();
-
-    console.log(testContexr.Provider);
 
     return (
         <P.InfoModal
@@ -30,9 +23,6 @@ const SkillDescriptionDialog = ({currIndex, closeModal, skill: {name, desc, id}}
             <P.CloseButton onClick={closeModal}>zamknij</P.CloseButton>
         </P.InfoModal>
     );
-    //     ,
-    //     document.getElementById('tooltip')
-    // );
 };
 
 export default SkillDescriptionDialog;

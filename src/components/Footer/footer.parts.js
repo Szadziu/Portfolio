@@ -14,7 +14,7 @@ export const IconsLink = styled.a`
     left: 0;
 
     padding: ${({ theme }) => theme.padding.m};
-    font-size: 8px;
+    font-size: .8rem;
 
     cursor: pointer;
 

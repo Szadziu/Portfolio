@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const Spinner = styled.div`
-    width: 24px;
-    height: 24px;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    border: 1px solid;
+    border: .1rem solid;
     border-color: #fff #fff transparent transparent;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
@@ -21,20 +21,20 @@ export const Spinner = styled.div`
         top: 0;
         bottom: 0;
         margin: auto;
-        border: 1px solid;
+        border: .1rem solid;
         border-color: transparent transparent
             ${({ theme }) => `${theme.mint_300} ${theme.mint_300}`};
-        width: 20px;
-        height: 20px;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         box-sizing: border-box;
-        animation: rotationBack 0.5s linear infinite;
+        animation: rotationBack .5s linear infinite;
         transform-origin: center center;
     }
 
     &::before {
-        width: 16px;
-        height: 16px;
+        width: 1.6rem;
+        height: 1.6rem;
         border-color: ${({ theme }) => `${theme.pink_300} ${theme.pink_300}`}
             transparent transparent;
         animation: rotation 1.5s linear infinite;

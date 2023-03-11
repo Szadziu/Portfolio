@@ -17,7 +17,7 @@ const Footer = () => {
             <ContactForm />
             <SocialsBanner icons={SOCIALS} />
             <P.IconsLink href="https://www.flaticon.com">
-                All icons created by Freepik or Authors from Flaticon
+            Wszystkie użyte ikony zostały pobrane z Freepik/Flaticon.
             </P.IconsLink>
         </SectionWrapper>
     );

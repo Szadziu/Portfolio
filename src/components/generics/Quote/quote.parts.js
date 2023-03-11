@@ -8,10 +8,9 @@ export const QuoteParam = styled.p`
     opacity: 0;
     padding: ${({theme}) => theme.padding.xl};
 
-    color: ${({theme}) => theme.pink_300};
-
     font-style: italic;
     font-size: ${({theme}) => theme.fontSize.s};
+    color: ${({theme}) => theme.pink_300};
 
     @media ${device.desktop} {
         font-size: ${({theme}) => theme.fontSize.l};

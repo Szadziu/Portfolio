@@ -12,7 +12,7 @@ export const SectionTitle = (color) => css`
     width: 60%;
     max-width: 400px;
 
-    border-width: 1.5px 0;
+    border-width: .15rem 0;
     border-style: solid;
     border-color: ${color};
     border-top: none;

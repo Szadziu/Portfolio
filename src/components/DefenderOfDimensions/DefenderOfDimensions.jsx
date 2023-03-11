@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Defender } from './DefenderOfDimensions.parts';
 
+// At the moment it is not usable
+
 export const checkInitialDimensions = (min, max) => {
     if (window.innerWidth >= min && window.innerHeight >= max) return true;
     return false;

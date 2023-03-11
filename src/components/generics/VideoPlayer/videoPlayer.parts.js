@@ -1,25 +1,15 @@
 import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
-// export const PlayButton = styled.button`
-//     border-radius: 50%;
-//     background-color: red;
-//     width: 50px;
-//     height: 50px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// `;
-
 export const PlayButton = styled.a`
     display: inline-block;
-    width: 110px;
-    height: 110px;
+    width: 11rem;
+    height: 11rem;
     cursor: pointer;
 
     background: center / contain url(${({icon}) => icon});
 
-    transition: 0.3s;
+    transition: .3s;
 
     @media ${device.desktop} {
         &:hover {
@@ -29,7 +19,7 @@ export const PlayButton = styled.a`
 `;
 
 export const PlayIcon = styled.i`
-    font-size: 20px;
+    font-size: 2rem;
     color: #333;
 `;
 

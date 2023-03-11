@@ -24,7 +24,6 @@ export const SKILLS_BUNDLE = [
         name: 'HTML 5',
         advancement: 8,
         desc: 'Znam HTML5 i umiem tworzyć struktury stron z użyciem elementów semantycznych, dodawać obrazy, linki i formularze. Potrafię także korzystać z nowych funkcji HTML5, takich jak audio i video, i tworzyć dostępne dla niepełnosprawnych strony zgodnie z dobrymi praktykami.',
-        // desc: 'Posiadam dobrą znajomość HTML5, w tym tworzenia struktury strony za pomocą elementów semantycznych oraz wstawiania obrazków, linków i formularzy. Potrafię także wykorzystywać nowe elementy HTML5, takie jak audio, video, jak i dostosowywać stronę do potrzeb osób niepełnosprawnych. Tworzę poprawny kod HTML zgodnie ze standardami i dobrymi praktykami.',
     },
 
     {
@@ -32,7 +31,6 @@ export const SKILLS_BUNDLE = [
         name: 'CSS / Sass',
         advancement: 7,
         desc: 'Znam ważne koncepcje języka CSS, takie jak selektory, reguły stylów, kaskadowość, dziedziczenie, jednostki miary i animacje. Tworzę także responsywne strony internetowe, wykorzystując Flexbox i Grid. Posiadam również umiejętności w SASS, tworząc bardziej zaawansowane arkusze stylów z użyciem zmiennych, funkcji i dyrektyw.',
-        // desc: 'Posiadam dobrą znajomość najważniejszych koncepcji języka CSS, takich jak selektory, reguły stylów, kaskadowość, dziedziczenie, jednostki miary i animacje. Potrafię również zaprojektować responsywne strony internetowe z wykorzystaniem narzędzi takich jak Flexbox i Grid. Moje umiejętności z zakresu SASS obejmują tworzenie bardziej złożonych arkuszy stylów z użyciem zmiennych, funkcji, dyrektyw @import i @mixin.',
     },
 
     {
@@ -129,7 +127,7 @@ export const PROJECTS = [
         ghLink: 'https://github.com/Szadziu/Omnifood_Layout_Page',
         desc: 'Projekt przedstawia stronę internetową dla firmy oferującej dostawy jedzenia oparte na diecie z wykorzystaniem sztucznej inteligencji. Strona została zaprojektowana z wykorzystaniem znanych patternów, aby zapewnić przejrzystość i intuicyjność dla użytkowników. Strona posiada pełną responsywność również na urządzenia mobilne. Projekt został stworzony w ramach kursu "Build Responsive Real-World Websites with HTML and CSS" autorstwa Jonasa Schmedtmanna.',
         done: true,
-        techTags: ['HTML', 'CSS', 'JavaScript'],
+        techTags: ['HTML', 'CSS', 'Sass', 'JavaScript', ],
     },
     {
         id: 'prj_6',
@@ -139,7 +137,7 @@ export const PROJECTS = [
         ghLink: 'https://github.com/Szadziu/today_i_learned',
         desc: 'Aplikacja jest przeznaczona do zapisywania i przeglądania informacji (faktów), które użytkownicy dodają do wspólnej bazy danych. Użytkownicy prócz możliwości dodawania nowych faktów oraz ich źródeł weryfikujących ich wiarygodność, mają opcję dodania kategorii, a po stworzeniu możliwość oceniania treści wiedzy. Lista faktów posiada filtrowanie po kategoriach dzięki czemu łatwiej jest znaleźć interesujące nas fakty. Jest to full-stack aplikacja, oparta na React oraz utworzonej bazie danych przy pomocy Supabase. Projekt został utworzony w ramach kursu "Crash Course: Build a Full-Stack Web App in a Weekend" autorstwa Jonasa Schmedtmanna.',
         done: true,
-        techTags: ['React', 'JavaScript', 'HTML', 'CSS', 'Supabase'],
+        techTags: ['React', 'JavaScript', 'HTML', 'CSS', 'Supabase', 'Styled Components', 'Netlify',],
     },
     {
         id: 'prj_7',
@@ -161,7 +159,7 @@ export const PROJECTS = [
         demo: customerBankruptcyDemoMovie,
         desc: 'Demo prezentuje projekt komercyjny, przy którym miałem okazję pracować. Jest to aplikacja zbierająca szczegółowe dane od zarejestrowanego użytkownika, która ma za zadanie wygenerować wniosek o ogłoszenie upadłości konsumenckiej, który zostanie przekazany do rozpatrzenia. Głównym wyzwaniem w tej aplikacji była ankieta, która dynamicznie dopasowywała się do bieżących odpowiedzi, zawiera sporo pól formularzy różnego rodzaju i zależności między sobą. Sama ankieta składa się z ponad 60 pytań.',
         done: true,
-        techTags: ['Vue', 'JavaScript', 'HTML', 'CSS'],
+        techTags: ['Vue', 'JavaScript', 'HTML', 'CSS', 'Vuetify'],
     },
 ];
 
@@ -216,4 +214,7 @@ export const TECH_COLOR_TAGS = {
     Supabase: '#1F8755',
     Expo: '#000020',
     'Android Studio': '#3DDC84',
+    Vuetify: '#1867C0',
+    Netlify: '#00C7B7',
+    Sass: '#CC6699',
 };

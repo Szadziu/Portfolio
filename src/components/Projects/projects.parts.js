@@ -13,33 +13,33 @@ export const ProjectsWrapper = styled.div`
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-area: 2/2/12/12;
-    min-height: 400px;
-    max-height: 800px;
+    min-height: 40rem;
+    max-height: 80rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 40rem;
     margin: 0 auto;
     
     justify-items: center;
     align-items: center;
     
-    box-shadow: 0 0 4px 2px ${({theme}) => theme.gray_200};
+    box-shadow: 0 0 .4rem .2rem ${({theme}) => theme.gray_200};
 
     @media ${device.mobileL} {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        max-width: 800px;
+        max-width: 80rem;
     }
     
     @media (orientation: landscape) {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(4, 1fr);
-        min-height: 200px;
+        min-height: 20rem;
     }
     
     @media ${device.desktop} {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        min-height: 500px;
-        max-width: 1000px;
+        min-height: 50rem;
+        max-width: 100rem;
     }
 `;

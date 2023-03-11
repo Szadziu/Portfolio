@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
 import gsap from "gsap";
-
 import * as P from "./quote.parts";
 
 const Quote = ({ children }) => {

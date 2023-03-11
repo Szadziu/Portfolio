@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html {
+        font-size: 62.5%;
+    }
+
     body {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
@@ -15,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
     #floating-button {
         position: relative;
-        max-width: 1600px;
+        max-width: 160rem;
     }
 
     ul, ol {

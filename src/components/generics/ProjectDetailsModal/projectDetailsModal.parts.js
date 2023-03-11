@@ -25,8 +25,8 @@ export const Modal = styled(motion.div)`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        max-height: 600px;
-        max-width: 800px;
+        max-height: 60rem;
+        max-width: 80rem;
     }
 `;
 
@@ -46,7 +46,7 @@ export const ProjectHeader = styled.header`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    box-shadow: inset 0px -1px 0px ${({theme}) => theme.gray_200};
+    box-shadow: inset 0 -.1rem 0 ${({theme}) => theme.gray_200};
     font-size: ${({theme}) => theme.fontSize.m};
 
     @media ${device.mobileM} {
@@ -64,8 +64,8 @@ export const ProjectTitle = styled.p`
 `;
 
 export const CloseButton = styled.button`
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     background: center / contain url(${close});
 
     &:hover {
@@ -73,13 +73,13 @@ export const CloseButton = styled.button`
     }
 
     @media ${device.mobileM} {
-        width: 25px;
-        height: 25px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     @media ${device.mobileL} {
-        width: 30px;
-        height: 30px;
+        width: 3rem;
+        height: 3rem;
     }
 `;
 
@@ -91,22 +91,22 @@ export const ProjectPreviewSection = styled.section`
 
 export const Icon = styled.a`
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     background: center / contain url(${({icon}) => icon}) no-repeat;
 
     @media ${device.mobileM} {
-        width: 60px;
-        height: 60px;
+        width: 6rem;
+        height: 6rem;
     }
 
     @media ${device.mobileL} {
-        width: 80px;
-        height: 80px;
+        width: 8rem;
+        height: 8rem;
     }
 
     @media ${device.desktop} {
-        transition: 0.3s;
+        transition: .3s;
 
         &:hover {
             transform: scale(1.2);
@@ -126,7 +126,7 @@ export const ProjectDescription = styled.section`
     overflow: auto;
 
     &::-webkit-scrollbar {
-        width: 10px;
+        width: 1rem;
     }
 
     &::-webkit-scrollbar-track {
@@ -153,19 +153,19 @@ export const ProjectDescription = styled.section`
 export const TechnologyTagsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 1rem;
     width: 100%;
 `;
 
 export const UCBadge = styled.img`
     position: absolute;
 
-    width: 80px;
+    width: 8rem;
     bottom: 0px;
-    right: 40px;
-    transform: translate(0, -40px) rotate(-30deg);
+    right: 4rem;
+    transform: translate(0, -4rem) rotate(-30deg);
 
     @media ${device.desktop} {
-        width: 120px;
+        width: 12rem;
     }
 `;

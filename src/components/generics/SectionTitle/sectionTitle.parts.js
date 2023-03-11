@@ -4,7 +4,7 @@ import { device } from '../../../constants/devices';
 export const Title = styled.h2`
     grid-area: 1/1/2/13;
     width: 60%;
-    max-width: 400px;
+    max-width: 40rem;
 
     border-width: 1.5px 0;
     border-style: solid;

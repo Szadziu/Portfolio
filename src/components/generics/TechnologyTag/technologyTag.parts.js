@@ -7,9 +7,9 @@ export const StyledTag = styled.div`
     font-weight: 600;
     background-color: ${({children}) => TECH_COLOR_TAGS[children]};
     color: ${({theme}) => theme.white};
-    text-shadow: 0px 0px 2px ${({theme}) => theme.black};
-    padding: 4px 10px;
-    border-radius: 4px;
+    text-shadow: 0px 0px .2rem ${({theme}) => theme.black};
+    padding: .4rem 1rem;
+    border-radius: .4rem;
     user-select: none;
 
     @media ${device.mobileL} {

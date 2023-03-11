@@ -5,12 +5,12 @@ import {motion, AnimatePresence} from 'framer-motion';
 import githubIcon from '../../../assets/github.png';
 import liveIcon from '../../../assets/live.png';
 import underConstructionIcon from '../../../assets/projectsIcons/underConstruction.png';
-import * as P from './projectDetailsModal.parts';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import TechnologyTag from '../TechnologyTag';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useEffect } from 'react';
+import * as P from './projectDetailsModal.parts';
 
 const ProjectDetailsModal = () => {
     const {isModalOpen, setIsModalOpen, currentProject} = useContext(ProjectsContext);
@@ -31,10 +31,7 @@ const ProjectDetailsModal = () => {
     const closeModal = async () => {
         await gsap.to(modalRef.current, {
             duration: 0.3,
-            // scale: 0,
-            // opacity: 0.5,
             x: '-100vw',
-            // y: '50vh',
         });
         setIsModalOpen(false);
         document.querySelector('body').style.overflow = 'auto';

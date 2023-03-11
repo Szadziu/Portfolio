@@ -7,11 +7,11 @@ const infoComment = css`
 
 export const Comment = styled.p`
     position: absolute;
-    left: ${({ info }) => (info ? '20px' : "0")};
-    bottom: ${({ info }) => (info ? '30px' : "-20px")};
+    left: ${({ info }) => (info ? '2rem' : "0")};
+    bottom: ${({ info }) => (info ? '3rem' : "-2rem")};
     width: 100%;
-    height: 24px;
-    line-height: 20px;
+    height: 2.4rem;
+    line-height: 2rem;
     z-index: -1;
     padding-top: ${({ theme }) => theme.padding.s};
 

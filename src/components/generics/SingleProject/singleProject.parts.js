@@ -9,31 +9,31 @@ export const Project = styled.button`
     & .ch-item {
         position: relative;
 
-        width: 45px;
-        height: 45px;
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 50%;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.1);
 
         cursor: pointer;
 
         @media ${device.mobileS} {
-            width: 55px;
-            height: 55px;
+            width: 5.5rem;
+            height: 5.5rem;
         }
 
         @media ${device.mobileL} {
-            width: 120px;
-            height: 120px;
+            width: 12rem;
+            height: 12rem;
         }
 
         @media (orientation: landscape) {
-            width: 45px;
-            height: 45px;
+            width: 4.5rem;
+            height: 4.5rem;
         }
 
         @media ${device.desktop} {
-            width: 160px;
-            height: 160px;
+            width: 16rem;
+            height: 16rem;
         }
     }
 
@@ -42,34 +42,34 @@ export const Project = styled.button`
         top: 0;
         left: 0;
 
-        width: 45px;
-        height: 45px;
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 50%;
-        perspective: 800px;
-        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.2), inset 0 0 3px rgba(115, 114, 23, 0.8);
+        perspective: 80rem;
+        box-shadow: 0 0 0 2rem rgba(255, 255, 255, 0.2), inset 0 0 .3rem rgba(115, 114, 23, 0.8);
 
         background-color: ${({theme}) => theme.white};
 
-        transition: all 0.4s ease-in-out;
+        transition: all .4s ease-in-out;
 
         @media ${device.mobileS} {
-            width: 55px;
-            height: 55px;
+            width: 5.5rem;
+            height: 5.5rem;
         }
 
         @media ${device.mobileL} {
-            width: 120px;
-            height: 120px;
+            width: 12rem;
+            height: 12rem;
         }
 
         @media (orientation: landscape) {
-            width: 45px;
-            height: 45px;
+            width: 4.5rem;
+            height: 4.5rem;
         }
 
         @media ${device.desktop} {
-            width: 160px;
-            height: 160px;
+            width: 16rem;
+            height: 16rem;
         }
     }
 
@@ -77,30 +77,30 @@ export const Project = styled.button`
         position: absolute;
         transform-style: preserve-3d;
 
-        width: 45px;
-        height: 45px;
+        width: 4.5rem;
+        height: 4.5rem;
         border-radius: 50%;
 
-        transition: all 0.4s ease-in-out;
+        transition: all .4s ease-in-out;
 
         @media ${device.mobileS} {
-            width: 55px;
-            height: 55px;
+            width: 5.5rem;
+            height: 5.5rem;
         }
 
         @media ${device.mobileL} {
-            width: 120px;
-            height: 120px;
+            width: 12rem;
+            height: 12rem;
         }
 
         @media (orientation: landscape) {
-            width: 45px;
-            height: 45px;
+            width: 4.5rem;
+            height: 4.5rem;
         }
 
         @media ${device.desktop} {
-            width: 160px;
-            height: 160px;
+            width: 16rem;
+            height: 16rem;
         }
     }
 
@@ -137,7 +137,7 @@ export const Project = styled.button`
         letter-spacing: ${({theme}) => theme.letterSpacing.m};
         font-family: 'Montserrat', Arial, sans-serif;
         font-weight: 300;
-        text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 0 1px #fff, 0 .1rem .2rem rgba(0, 0, 0, 0.3);
 
         @media ${device.desktop} {
             font-size: ${({theme}) => theme.fontSize.s};
@@ -146,7 +146,7 @@ export const Project = styled.button`
 
     @media ${device.desktop} {
         & .ch-item:hover .ch-info-wrap {
-            box-shadow: 0 0 0 0 rgba(220, 220, 220, 0.8), inset 0 0 3px rgba(115, 114, 23, 0.8);
+            box-shadow: 0 0 0 0 rgba(220, 220, 220, 0.8), inset 0 0 .3rem rgba(115, 114, 23, 0.8);
         }
 
         & .ch-item:hover .ch-info {
@@ -157,9 +157,9 @@ export const Project = styled.button`
 
 export const TitleOfProject = styled.h3`
     ${Flex()};
-    width: 100px;
-    height: 35px;
-    box-shadow: 0 0 0.5px 0.5px ${({theme}) => theme.black};
+    width: 10rem;
+    height: 3.5rem;
+    box-shadow: 0 0 .05rem .05rem ${({theme}) => theme.black};
     padding: ${({theme}) => theme.padding.s};
     margin-top: ${({theme}) => theme.margin.m};
     background-color: ${({theme}) => theme.white};
@@ -173,28 +173,28 @@ export const TitleOfProject = styled.h3`
     }
 
     @media ${device.mobileL} {
-        width: 120px;
-        height: 50px;
+        width: 12rem;
+        height: 5rem;
         font-size: ${({theme}) => theme.fontSize.m};
     }
 
     @media (orientation: landscape) {
         font-size: ${({theme}) => theme.fontSize.xs};
-        width: 100px;
-        height: 30px;
+        width: 10rem;
+        height: 3rem;
     }
 
     @media ${device.mobileS} and (orientation: landscape) {
-        height: 35px;
+        height: 3.5rem;
     }
 
     @media ${device.mobileM} and (orientation: landscape) {
-        width: 90px;
+        width: 9rem;
     }
 
     @media ${device.mobileL} and (orientation: landscape) {
-        width: 120px;
-        height: 50px;
+        width: 12rem;
+        height: 5rem;
         font-size: ${({theme}) => theme.fontSize.m};
     }
 

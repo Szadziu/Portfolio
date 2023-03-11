@@ -5,7 +5,7 @@ import { Flex } from '../../../styles/Mixins';
 
 export const Input = styled(Field)`
     width: 100%;
-    height: 40px;
+    height: 4rem;
     border: none;
     border-bottom: ${({ error, theme }) =>
         error ? `1px solid ${theme.pink_300}` : `1px solid ${theme.gray_400}`};
@@ -42,6 +42,4 @@ export const InputWrapper = styled.div`
     height: 15%;
     max-height: 50px;
     font-family: 'Montserrat', sans-serif;
-
-    /* border: 1px solid red; */
 `;

@@ -11,10 +11,10 @@ export const Timeline = styled(motion.ul)`
         grid-area: 2/2/4/12;
         position: relative;
         width: 100%;
-        height: 20px;
+        height: 2rem;
         list-style: none;
         text-align: justify;
-        margin: 80px auto 100px;
+        margin: 8rem auto 10rem;
         background: linear-gradient(
             to bottom,
             rgba(255, 255, 255, 0) 0%,
@@ -27,10 +27,10 @@ export const Timeline = styled(motion.ul)`
         &::after {
             display: inline-block;
             content: '';
-            width: 15px;
-            height: 15px;
+            width: 1.5rem;
+            height: 1.5rem;
             position: absolute;
-            top: calc(50% - 7.5px);
+            top: calc(50% - .75rem);
             left: 100%;
             clip-path: polygon(0 0, 0% 100%, 100% 50%);
             background-color: ${({theme}) => theme.mint_300};
@@ -40,59 +40,59 @@ export const Timeline = styled(motion.ul)`
 
 export const TimelineItem = styled.li`
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     background-color: ${({theme}) => theme.pink_300};
-    box-shadow: 0 0 0 5px ${({theme}) => theme.gray_300};
+    box-shadow: 0 0 0 .5rem ${({theme}) => theme.gray_300};
     text-align: center;
     line-height: 1.2;
     position: relative;
     border-radius: 50%;
     left: ${({value}) => value}%;
-    border: solid 1px white;
+    border: solid .1rem white;
     color: white;
 
     &:before {
         ${Flex()};
         content: ${({text}) => `"${text}"`};
-        font-size: 14px;
+        font-size: 1.4rem;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        height: 55px;
-        width: 150px;
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        padding: 0 10px;
+        height: 5.5rem;
+        width: 15rem;
+        border-left: .1rem solid white;
+        border-right: .1rem solid white;
+        padding: 0 1rem;
     }
 
     &:after {
         ${Flex()};
         content: ${({date}) => `"${date}"`};
-        font-size: 14px;
+        font-size: 1.4rem;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        height: 40px;
-        width: 120px;
+        height: 4rem;
+        width: 12rem;
     }
 
     &:nth-child(odd):before {
-        top: -65px;
+        top: -6.5rem;
     }
 
     &:nth-child(even):before {
-        bottom: -65px;
+        bottom: -6.5rem;
     }
 
     &:nth-child(odd):after {
         bottom: 0;
-        margin-bottom: -10px;
+        margin-bottom: -1rem;
         transform: translate(-50%, 100%);
     }
     &:nth-child(even):after {
         top: 0;
-        margin-top: -10px;
+        margin-top: -1rem;
         transform: translate(-50%, -100%);
     }
 `;

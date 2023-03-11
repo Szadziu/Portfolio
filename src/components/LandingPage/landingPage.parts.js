@@ -23,12 +23,12 @@ export const LandingPageView = styled(SectionWrapper)`
         top: 0;
         left: 60%;
 
-        width: 1px;
+        width: .1rem;
         height: 100%;
 
         background-color: ${({theme}) => theme.white_10};
         overflow: hidden;
-        filter: blur(2px);
+        filter: blur(.2rem);
 
         &::after {
             content: '';
@@ -87,28 +87,28 @@ export const NavButtonsWrapper = styled.div`
     z-index: 2;
     ${Flex()};
     flex-direction: column;
-    gap: 20px;
-    margin: 0 30px;
+    gap: 2rem;
+    margin: 0 3rem;
 
     width: 100%;
-    height: 400px;
+    height: 40rem;
 `;
 
 export const PositionTitle = styled.h1`
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: bold;
     color: #333;
     text-transform: uppercase;
     position: relative;
     text-align: right;
-    padding: 10px 20px 0 0;
+    padding: 1rem 2rem 0 0;
 
     @media ${device.mobileM} {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     @media ${device.mobileL} {
-        font-size: 36px;
+        font-size: 3.6rem;
     }
 
     & .name {
@@ -120,7 +120,7 @@ export const PositionTitle = styled.h1`
         display: inline-block;
         font-weight: normal;
         color: ${({theme}) => theme.mint_300};
-        margin-left: 10px;
+        margin-left: 1rem;
     }
 
     @keyframes shimmer {
@@ -140,13 +140,13 @@ export const BackgroundPhoto = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 10px;
-    background-position: -100px bottom;
+    top: 1rem;
+    background-position: -10rem bottom;
     background-size: contain;
     background-image: url(${({image}) => image});
     background-repeat: no-repeat;
 
     @media ${device.mobileM} {
-        background-position: -180px bottom;
+        background-position: -18rem bottom;
     }
 `;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../../constants/devices';
 
 export const Label = styled.label`
-    height: 20px;
+    height: 2rem;
     width: 100%;
     color: ${({ theme }) => theme.mint_300};
     font-size: ${({ theme }) => theme.fontSize.s};

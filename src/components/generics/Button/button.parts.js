@@ -8,19 +8,19 @@ const ButtonStyles = css`
 
     ${Flex()};
 
-    min-width: 160px;
+    min-width: 16rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 30rem;
     height: 12%;
 
     border-radius: ${({theme}) => theme.borderRadius.s};
-    box-shadow: 0 0 1px 1px ${({theme}) => theme.black_20};
+    box-shadow: 0 0 .1rem .1rem ${({theme}) => theme.black_20};
 
     background-color: ${({theme}) => theme.white};
     color: ${({theme}) => theme.black};
 
     font-size: ${({theme}) => theme.fontSize.xs};
-    letter-spacing: 2px;
+    letter-spacing: ${({theme}) => theme.letterSpacing.xxl};
     text-transform: uppercase;
 
     cursor: pointer;
@@ -31,11 +31,11 @@ const ButtonStyles = css`
         top: 0;
         left: 0;
 
-        width: 5px;
+        width: .5rem;
         height: 100%;
 
-        border-radius: 1px;
-        box-shadow: 0 0 1px 1px ${({theme}) => theme.black};
+        border-radius: .1rem;
+        box-shadow: 0 0 .1rem .1rem ${({theme}) => theme.black};
 
         background-color: ${({theme}) => theme.mint_300};
 
@@ -54,11 +54,11 @@ const ButtonStyles = css`
         &:hover {
             background-color: ${({theme}) => theme.beige_20};
             &::before {
-                top: calc(50% - 5px);
-                left: calc(100% - 30px);
+                top: calc(50% - .5rem);
+                left: calc(100% - 3rem);
 
-                width: 10px;
-                height: 10px;
+                width: 1rem;
+                height: 1rem;
                 transform: rotate(1.125turn);
             }
         }

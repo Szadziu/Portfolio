@@ -11,7 +11,7 @@ export const Container = styled.div`
     hyphens: auto;
 
     &::-webkit-scrollbar {
-        width: 6px;
+        width: .6rem;
     }
 
     &::-webkit-scrollbar-track {
